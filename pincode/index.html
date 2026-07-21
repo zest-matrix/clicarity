@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5VDQQRVG0');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free India PIN Code Checker — Clicarity</title>
+<meta name="description" content="Free India PIN code checker. Verify any 6-digit pincode instantly — get post office, district, state and delivery status. A free tool by Clicarity." />
+<meta property="og:title" content="Free India PIN Code Checker — Clicarity">
+<meta property="og:description" content="Free India PIN code checker. Verify any 6-digit pincode instantly.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f9f8f6;
+    --surface: #ffffff;
+    --text: #0f0e0d;
+    --muted: #6b6860;
+    --accent: #186eac;
+    --accent-light: #e8f2f9;
+    --accent-hover: #238edb;
+    --green: #00b37e;
+    --green-bg: #ECFDF5;
+    --red: #dc2626;
+    --red-bg: #fee2e2;
+    --border: #e8e5e0;
+    --radius: 16px;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(249,248,246,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .logo img { height: 3.2rem; width: auto; display: block; }
+
+  .nav-cta { display: flex; gap: 10px; }
+
+  .btn {
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 14px rgba(66,133,180,0.25);
+  }
+  .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+  .btn-wa {
+    background: #25D366;
+    color: white;
+  }
+  .btn-wa:hover { background: #1da855; transform: translateY(-1px); }
+
+  /* HERO TOOL SECTION */
+  .tool-hero {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 5% 56px;
+    text-align: center;
+  }
+
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  .tool-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .tool-hero h1 span { color: var(--accent); }
+
+  .tool-hero p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  /* SEARCH BOX */
+  .search-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    box-shadow: 0 4px 24px rgba(15,14,13,0.07);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .search-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .pin-input {
+    flex: 1;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 14px 22px;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    background: var(--bg);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .pin-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(24,110,172,0.12);
+    background: white;
+  }
+
+  .pin-input::placeholder {
+    color: #c5bfb5;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .verify-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 14px 28px;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(24,110,172,0.25);
+  }
+
+  .verify-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+  .verify-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+  .search-hint {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .popular-pins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .popular-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .pin-chip {
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid transparent;
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .pin-chip:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  /* RESULTS */
+  #output { max-width: 560px; margin: 20px auto 0; }
+
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .result-header {
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .result-pin {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    color: var(--text);
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .pill-green { background: var(--green-bg); color: #065f46; }
+  .pill-red { background: var(--red-bg); color: var(--red); }
+  .pill-amber { background: #fef3c7; color: #92400e; }
+
+  .result-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .summary-cell {
+    padding: 16px 20px;
+    border-right: 1px solid var(--border);
+  }
+  .summary-cell:last-child { border-right: none; }
+
+  .summary-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .summary-value {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .offices-section { padding: 20px 22px; }
+  .offices-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .delivery-note {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 14px;
+    padding: 14px 16px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: #6b5f4d;
+  }
+
+  .delivery-note .note-icon {
+    color: #b8923d;
+    font-size: 1rem;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  .delivery-note strong { color: var(--text); }
+
+  .office-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin-bottom: 8px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .office-row:last-child { margin-bottom: 0; }
+  .office-row:hover { border-color: var(--accent); background: var(--accent-light); }
+
+  .office-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .office-type {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ERROR */
+  .error-card {
+    background: var(--surface);
+    border: 1px solid #fecaca;
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .error-icon { font-size: 2rem; margin-bottom: 8px; }
+
+  .error-text {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+
+  .error-sub { font-size: 0.875rem; color: var(--muted); }
+
+  /* LOADING */
+  .loading-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+  }
+
+  .spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 12px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .loading-text {
+    font-size: 0.875rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  /* STATS BAR */
+  .trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 18px auto 0;
+    color: var(--green);
+    font-size: 0.82rem;
+    font-weight: 500;
+    background: var(--green-bg);
+    border: 1px solid rgba(0,179,126,0.25);
+    padding: 8px 16px;
+    border-radius: 100px;
+  }
+
+  .trust-badge a {
+    color: var(--green);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .stats-bar {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item { text-align: center; }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--accent);
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid var(--border);
+  }
+
+  /* INFO SECTIONS */
+  .info-section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 5% 0;
+  }
+
+  .info-heading {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .info-subheading {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 36px;
+    font-size: 0.95rem;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .step-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+  }
+
+  .step-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* FAQ */
+  .faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .faq-q {
+    padding: 18px 22px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.98rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+  }
+
+  .faq-q::-webkit-details-marker { display: none; }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--accent);
+    font-weight: 400;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  details[open] .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    padding: 0 22px 20px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  /* CLICARITY CTA SECTION */
+  .clicarity-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 5%;
+  }
+
+  .clicarity-inner {
+    background: linear-gradient(135deg, #0a2540 0%, #186eac 100%);
+    border-radius: 24px;
+    padding: 64px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .clicarity-inner::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(122,184,217,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .clicarity-inner::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 10%;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,179,126,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .cta-left { position: relative; z-index: 1; }
+
+  .cta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    color: #7ab8d9;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(122,184,217,0.25);
+  }
+
+  .cta-heading {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .cta-heading span { color: #7ab8d9; }
+
+  .cta-sub {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--accent);
+    font-weight: 700;
+    font-family: var(--font-display);
+    padding: 13px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+  .btn-ghost {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    font-weight: 600;
+    font-family: var(--font-display);
+    padding: 13px 24px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
+
+  /* FEATURE PILLS */
+  .cta-right { position: relative; z-index: 1; }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(122,184,217,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .feature-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: white;
+    margin-bottom: 3px;
+  }
+
+  .feature-desc {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  /* BULK CHECKER */
+  .bulk-section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 5% 0;
+  }
+
+  .bulk-inner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px 44px;
+    box-shadow: 0 4px 24px rgba(15,14,13,0.06);
+  }
+
+  .bulk-header { text-align: center; margin-bottom: 32px; }
+
+  .bulk-heading {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+
+  .bulk-sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  .bulk-template {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--accent-light);
+    border: 1px solid rgba(24,110,172,0.2);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .template-info { display: flex; align-items: center; gap: 14px; }
+  .template-icon { font-size: 1.6rem; }
+  .template-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+  }
+  .template-desc { font-size: 0.82rem; color: var(--muted); }
+
+  .btn-download {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 22px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .btn-download:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+  .bulk-upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    padding: 32px;
+    text-align: center;
+    margin-bottom: 16px;
+    transition: border-color 0.2s, background 0.2s;
+    cursor: pointer;
+  }
+  .bulk-upload-area:hover, .bulk-upload-area.drag-over {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+
+  .upload-icon { font-size: 2rem; margin-bottom: 10px; }
+  .upload-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .upload-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 16px; }
+
+  .btn-browse {
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 9px 22px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-browse:hover { border-color: var(--accent); color: var(--accent); }
+
+  .file-selected {
+    margin-top: 12px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--green);
+  }
+
+  .bulk-email-row { margin-bottom: 20px; }
+
+  .email-label {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .email-input {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 13px 20px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--bg);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .email-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(24,110,172,0.1);
+    background: white;
+  }
+
+  .email-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 8px;
+    padding-left: 4px;
+  }
+
+  .btn-process {
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 16px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px rgba(24,110,172,0.25);
+  }
+  .btn-process:hover:not(:disabled) { background: var(--accent-hover); transform: translateY(-1px); }
+  .btn-process:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  .bulk-progress { margin-top: 20px; }
+
+  .progress-bar-wrap {
+    background: var(--border);
+    border-radius: 100px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 100px;
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+
+  .progress-text {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+
+  .bulk-results { margin-top: 24px; }
+
+  .bulk-results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .bulk-results-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .btn-download-results {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 22px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-download-results:hover { background: #009968; transform: translateY(-1px); }
+
+  .bulk-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .bulk-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  .bulk-table th {
+    background: var(--bg);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+  }
+
+  .bulk-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .bulk-table tr:last-child td { border-bottom: none; }
+  .bulk-table tr:hover td { background: var(--bg); }
+
+  .row-ok { color: var(--green); font-weight: 600; }
+  .row-no { color: var(--red); font-weight: 600; }
+  .row-invalid { color: var(--muted); font-style: italic; }
+
+  @media (max-width: 768px) {
+    .bulk-inner { padding: 28px 20px; }
+    .bulk-template { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* API CALLOUT */
+  .api-callout-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 5% 16px;
+  }
+
+  .api-callout {
+    background: var(--text);
+    border-radius: 20px;
+    padding: 40px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .api-callout-left { flex: 1; min-width: 280px; }
+
+  .api-tag {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7ab8d9;
+    margin-bottom: 12px;
+  }
+
+  .api-heading {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .api-sub {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    max-width: 540px;
+  }
+
+  .btn-api {
+    background: #25D366;
+    color: white;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 15px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .btn-api:hover { background: #1da855; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #0a0a09;
+    padding: 32px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-brand img { height: 2.4rem; width: auto; opacity: 0.8; }
+
+  .footer-text {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+  }
+
+  .footer-text a { color: rgba(255,255,255,0.5); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .steps-grid { grid-template-columns: 1fr; }
+    .info-heading { font-size: 1.4rem; }
+    .tool-hero { padding: 48px 5% 40px; }
+    .search-row { flex-direction: column; }
+    .verify-btn { border-radius: 100px; padding: 14px; }
+    .result-summary { grid-template-columns: 1fr 1fr; }
+    .result-summary .summary-cell:nth-child(3) {
+      grid-column: 1 / -1;
+      border-right: none;
+      border-top: 1px solid var(--border);
+    }
+    .clicarity-inner {
+      grid-template-columns: 1fr;
+      padding: 40px 28px;
+      gap: 36px;
+    }
+    footer { flex-direction: column; text-align: center; }
+    .footer-links { justify-content: center; }
+  }
+
+  /* WORKER BAND */
+  .worker-band {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 5% 0;
+  }
+
+  .worker-inner {
+    background: linear-gradient(135deg, #0a2540 0%, #186eac 100%);
+    border-radius: 24px;
+    padding: 56px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .worker-inner::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(122,184,217,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .worker-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(122,184,217,0.4);
+    position: relative;
+    z-index: 1;
+  }
+
+  .worker-heading {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: white;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .worker-heading span { color: #7ab8d9; }
+
+  .worker-sub {
+    color: rgba(255,255,255,0.72);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 620px;
+    margin: 0 auto 36px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .worker-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .worker-point {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 22px 20px;
+    text-align: left;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .wp-icon { font-size: 1.5rem; flex-shrink: 0; }
+
+  .wp-text { display: flex; flex-direction: column; gap: 4px; }
+  .wp-text strong {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: white;
+  }
+  .wp-text span {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  .worker-cta {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-ghost-dark {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    font-weight: 600;
+    font-family: var(--font-display);
+    padding: 13px 26px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-ghost-dark:hover { background: rgba(255,255,255,0.2); }
+
+  /* CLICARITY INTRO BANNER */
+  .clicarity-intro {
+    max-width: 1100px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--accent-light);
+    border: 1px solid rgba(24,110,172,0.2);
+    border-radius: 16px;
+    padding: 18px 24px;
+  }
+
+  .clicarity-intro-logo { height: 2.6rem; width: auto; flex-shrink: 0; }
+
+  .clicarity-intro-text {
+    font-size: 0.98rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .clicarity-intro-text strong { color: var(--accent); }
+
+  /* INDUSTRIES GRID */
+  .ind-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .ind-chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+
+  .ind-chip:hover {
+    border-color: var(--accent);
+    background: var(--accent-light);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    .worker-points { grid-template-columns: 1fr; }
+    .worker-inner { padding: 40px 24px; }
+    .clicarity-intro { flex-direction: column; text-align: center; }
+  }
+
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Free India PIN Code Checker — Clicarity">
+<meta name="twitter:description" content="Free India PIN code checker. Verify any 6-digit pincode instantly — get post office, district, state and delivery status. A free tool by Clicarity.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+<link rel="canonical" href="https://www.clicarity.com/pincode/">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<!-- TOOL HERO -->
+<section class="tool-hero">
+  <div class="section-tag">
+    <span class="badge-dot"></span>
+    Free Tool · India PIN Code
+  </div>
+  <h1>Check Any India <span>PIN Code</span> Instantly</h1>
+  <p>Verify if a PIN code is valid, find its post offices, district, state — and know if it's deliverable. Free, no login required.</p>
+
+  <!-- SEARCH CARD -->
+  <div class="search-card">
+    <div class="search-row">
+      <input
+        type="text"
+        id="pin"
+        class="pin-input"
+        inputmode="numeric"
+        maxlength="6"
+        placeholder="Enter 6-digit PIN"
+        autocomplete="off"
+        autofocus
+      />
+      <button class="verify-btn" id="go">Verify →</button>
+    </div>
+    <p class="search-hint">6 digits · No spaces · Press Enter to search</p>
+    <div class="popular-pins">
+      <span class="popular-label">Try:</span>
+      <button class="pin-chip" data-pin="400001">Mumbai</button>
+      <button class="pin-chip" data-pin="110001">New Delhi</button>
+      <button class="pin-chip" data-pin="560001">Bangalore</button>
+      <button class="pin-chip" data-pin="600001">Chennai</button>
+      <button class="pin-chip" data-pin="700001">Kolkata</button>
+      <button class="pin-chip" data-pin="500001">Hyderabad</button>
+    </div>
+  </div>
+
+  <!-- TRUST BADGE -->
+  <div class="trust-badge">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+    Official India Post data via <a href="https://www.data.gov.in/resource/all-india-pincode-directory-till-last-month" target="_blank" rel="noopener">data.gov.in</a> · Government of India
+  </div>
+
+  <!-- RESULTS -->
+  <div id="output"></div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">19,586</div>
+      <div class="stat-label">PIN codes covered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">1,65,000+</div>
+      <div class="stat-label">Post offices indexed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">37</div>
+      <div class="stat-label">States & UTs</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">Free</div>
+      <div class="stat-label">Always & forever</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- CLICARITY CTA -->
+<section class="clicarity-section">
+  <div class="clicarity-intro">
+    <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" class="clicarity-intro-logo" />
+    <p class="clicarity-intro-text">Liked how simple that was? <strong>This free tool is built by Clicarity</strong> — and your team's daily work can be just as effortless.</p>
+  </div>
+  <div class="clicarity-inner">
+
+    <div class="cta-left">
+      <div class="cta-tag">
+        ⚡ Built by Clicarity · Live Job Tracking
+      </div>
+      <h2 class="cta-heading">
+        Your OTD Goes Up.<br/>
+        <span>Your Follow-Up Calls Go Down.</span>
+      </h2>
+      <p class="cta-sub">
+        Clicarity is the world's easiest button to update work processes. Businesses using Clicarity see their On-Time Delivery (OTD) percentage rise — because every job's status is live, visible, and updated in real time. Two screens. Zero training. Go live in 5 days.
+      </p>
+      <div class="cta-actions">
+        <a class="btn-white" href="https://calendly.com/clicarity/demo" target="_blank">
+          Book a Free Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn-ghost" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Clicarity" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.49"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <div class="cta-right">
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon">📋</div>
+          <div>
+            <div class="feature-title">OTD % Rises Automatically</div>
+            <div class="feature-desc">When every job is tracked live, on-time delivery improves — your team stays ahead of every deadline without being chased.</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⏱️</div>
+          <div>
+            <div class="feature-title">TAT Improves Week on Week</div>
+            <div class="feature-desc">Live job visibility means your team spots and sorts slowdowns early — turnaround time tightens with every passing week.</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🚀</div>
+          <div>
+            <div class="feature-title">Live & Tracking in 5 Days</div>
+            <div class="feature-desc">Two screens. Your team starts updating jobs from day one — no IT project, no long setup, just results from week one.</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🏭</div>
+          <div>
+            <div class="feature-title">Trusted Across Indian Industries</div>
+            <div class="feature-desc">12,000+ jobs tracked across garments, pharma, engineering, packaging and more. Your industry is already on board.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- WORKER FOCUSED BAND -->
+<section class="worker-band">
+  <div class="worker-inner">
+    <div class="worker-tag">⚡ Built by Clicarity</div>
+    <h2 class="worker-heading">Made for the people<br/><span>actually doing the work.</span></h2>
+    <p class="worker-sub">Just like this PIN tool — one box, one click, instant answer — Clicarity is the simplest way for your team to update job status. No training. No long forms. No "where's the report?" calls. The person on the floor updates a job in seconds, and everyone instantly knows where things stand.</p>
+    <div class="worker-points">
+      <div class="worker-point">
+        <div class="wp-icon">👆</div>
+        <div class="wp-text"><strong>One tap to update</strong><span>Your team updates job status as easily as they just checked this PIN code.</span></div>
+      </div>
+      <div class="worker-point">
+        <div class="wp-icon">⏱️</div>
+        <div class="wp-text"><strong>Seconds, not forms</strong><span>No lengthy data entry. Workers stay on the job, not stuck in software.</span></div>
+      </div>
+      <div class="worker-point">
+        <div class="wp-icon">👀</div>
+        <div class="wp-text"><strong>Everyone sees it live</strong><span>The moment a job moves, the whole team knows. Zero follow-up calls.</span></div>
+      </div>
+    </div>
+    <div class="worker-cta">
+      <a class="btn-white" href="https://calendly.com/clicarity/demo" target="_blank">Book a Free Demo →</a>
+      <a class="btn-ghost-dark" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Clicarity" target="_blank">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES HUB -->
+<section class="info-section">
+  <h2 class="info-heading">Trusted Across 51+ Industries</h2>
+  <p class="info-subheading">From manufacturing to services — Clicarity adapts to how your industry works. Find yours:</p>
+  <div class="ind-grid">
+      <a class="ind-chip" href="/aerospace-components">Aerospace Components</a>
+      <a class="ind-chip" href="/aluminium-glass">Aluminium Glass</a>
+      <a class="ind-chip" href="/automotive-components">Automotive Components</a>
+      <a class="ind-chip" href="/ayurveda">Ayurveda</a>
+      <a class="ind-chip" href="/candles">Candles</a>
+      <a class="ind-chip" href="/ceramic-tiles">Ceramic Tiles</a>
+      <a class="ind-chip" href="/chemicals-paints">Chemicals Paints</a>
+      <a class="ind-chip" href="/cnc-machining">Cnc Machining</a>
+      <a class="ind-chip" href="/construction">Construction</a>
+      <a class="ind-chip" href="/construction-materials">Construction Materials</a>
+      <a class="ind-chip" href="/corrugation">Corrugation</a>
+      <a class="ind-chip" href="/dairy-plants">Dairy Plants</a>
+      <a class="ind-chip" href="/design-revision">Design Revision</a>
+      <a class="ind-chip" href="/education-training">Education Training</a>
+      <a class="ind-chip" href="/electrical-panels">Electrical Panels</a>
+      <a class="ind-chip" href="/electronics">Electronics</a>
+      <a class="ind-chip" href="/engineering">Engineering</a>
+      <a class="ind-chip" href="/events-production">Events Production</a>
+      <a class="ind-chip" href="/export-trading">Export Trading</a>
+      <a class="ind-chip" href="/food-processing">Food Processing</a>
+      <a class="ind-chip" href="/footwear">Footwear</a>
+      <a class="ind-chip" href="/furniture">Furniture</a>
+      <a class="ind-chip" href="/garments">Garments</a>
+      <a class="ind-chip" href="/healthcare">Healthcare</a>
+      <a class="ind-chip" href="/hvac-manufacturing">Hvac Manufacturing</a>
+      <a class="ind-chip" href="/industrial-projects">Industrial Projects</a>
+      <a class="ind-chip" href="/interior-design">Interior Design</a>
+      <a class="ind-chip" href="/jewellery">Jewellery</a>
+      <a class="ind-chip" href="/kitchen-manufacturing">Kitchen Manufacturing</a>
+      <a class="ind-chip" href="/label-printing">Label Printing</a>
+      <a class="ind-chip" href="/legal-services">Legal Services</a>
+      <a class="ind-chip" href="/medical-devices">Medical Devices</a>
+      <a class="ind-chip" href="/packaging">Packaging</a>
+      <a class="ind-chip" href="/paper-mills">Paper Mills</a>
+      <a class="ind-chip" href="/pharma-packaging">Pharma Packaging</a>
+      <a class="ind-chip" href="/pipe-manufacturing">Pipe Manufacturing</a>
+      <a class="ind-chip" href="/plastics">Plastics</a>
+      <a class="ind-chip" href="/plywood">Plywood</a>
+      <a class="ind-chip" href="/printing">Printing</a>
+      <a class="ind-chip" href="/real-estate">Real Estate</a>
+      <a class="ind-chip" href="/recruitment">Recruitment</a>
+      <a class="ind-chip" href="/rigid-boxes">Rigid Boxes</a>
+      <a class="ind-chip" href="/rubber-products">Rubber Products</a>
+      <a class="ind-chip" href="/sheet-metal">Sheet Metal</a>
+      <a class="ind-chip" href="/shipbuilding">Shipbuilding</a>
+      <a class="ind-chip" href="/solar-installation">Solar Installation</a>
+      <a class="ind-chip" href="/solar-panel-assembly">Solar Panel Assembly</a>
+      <a class="ind-chip" href="/steel-processing">Steel Processing</a>
+      <a class="ind-chip" href="/textile">Textile</a>
+      <a class="ind-chip" href="/wide-format-printing">Wide Format Printing</a>
+      <a class="ind-chip" href="/wire-cable">Wire Cable</a>
+  </div>
+  <div style="text-align:center;margin-top:28px;">
+    <a class="btn-primary" style="display:inline-flex;padding:12px 28px;border-radius:100px;text-decoration:none;font-family:var(--font-display);font-weight:700;font-size:0.9rem;" href="/pages">View All Industries →</a>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="info-section">
+  <h2 class="info-heading">How to Check a PIN Code</h2>
+  <p class="info-subheading">Three simple steps — no login, no sign-up, completely free.</p>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-title">Enter the PIN</div>
+      <div class="step-desc">Type any 6-digit Indian PIN code into the search box above.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-title">Hit Verify</div>
+      <div class="step-desc">Click Verify or press Enter. We check it against official India Post data instantly.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-title">Get the Details</div>
+      <div class="step-desc">See the district, state, every post office, and whether the area is deliverable.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="info-section">
+  <h2 class="info-heading">Frequently Asked Questions</h2>
+  <p class="info-subheading">Everything you need to know about Indian PIN codes.</p>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary class="faq-q">What is a PIN code?</summary>
+      <div class="faq-a">A PIN (Postal Index Number) code is a 6-digit number used by India Post to identify a specific delivery area. The first digit indicates the region, the first two the sub-region, the first three the sorting district, and the last three the specific post office.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">What does "Non-Delivery" mean?</summary>
+      <div class="faq-a">A "Non-Delivery" post office is one that does not deliver mail directly — it usually serves administrative or sorting functions. As long as at least one post office under a PIN code shows "Delivery", that area is deliverable. Mail is routed through the delivery post office.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Is this PIN code data official?</summary>
+      <div class="faq-a">Yes. Our data is sourced from the official All India Pincode Directory published by the Department of Posts, Government of India. It covers 19,586 PIN codes and over 1,65,000 post offices across all 37 states and union territories.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Why does one PIN code show multiple post offices?</summary>
+      <div class="faq-a">A single PIN code can cover several post offices — typically one main delivery office and multiple branch offices serving nearby localities. They all share the same PIN code but handle different areas within it.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Is this tool free to use?</summary>
+      <div class="faq-a">Completely free, with no login or sign-up required. This tool is provided by Clicarity as a free utility for businesses, e-commerce sellers, and anyone who needs to quickly verify Indian PIN codes.</div>
+    </details>
+  </div>
+</section>
+
+<!-- BULK CHECKER -->
+<section class="bulk-section">
+  <div class="bulk-inner">
+
+    <div class="bulk-header">
+      <div class="section-tag" style="margin-bottom:12px;">
+        <span class="badge-dot"></span>
+        Bulk PIN Validator
+      </div>
+      <h2 class="bulk-heading">Validate hundreds of PINs at once</h2>
+      <p class="bulk-sub">Upload a CSV of PIN codes, get a complete validation report — district, state, deliverable or not — downloaded back as a CSV. Free, instant, no login.</p>
+    </div>
+
+    <!-- DOWNLOAD TEMPLATE -->
+    <div class="bulk-template">
+      <div class="template-info">
+        <div class="template-icon">📄</div>
+        <div>
+          <div class="template-title">Step 1 — Download the template</div>
+          <div class="template-desc">Fill in your PIN codes, one per row. Keep the header row.</div>
+        </div>
+      </div>
+      <button class="btn-download" id="downloadTemplate">Download Template CSV ↓</button>
+    </div>
+
+    <!-- UPLOAD AREA -->
+    <div class="bulk-upload-area" id="dropZone">
+      <div class="upload-icon">📂</div>
+      <div class="upload-title">Step 2 — Upload your filled CSV</div>
+      <div class="upload-desc">Drag & drop your file here, or click to browse</div>
+      <input type="file" id="csvFile" accept=".csv" style="display:none" />
+      <button class="btn-browse" id="browseBtn">Choose File</button>
+      <div class="file-selected" id="fileSelected" style="display:none"></div>
+    </div>
+
+    <!-- EMAIL CAPTURE -->
+    <div class="bulk-email-row">
+      <div class="email-field">
+        <label class="email-label">Step 3 — Enter your email</label>
+        <input type="email" id="bulkEmail" class="email-input" placeholder="you@company.com" />
+        <span class="email-hint">Results will process on screen. We'll also keep you updated on new features.</span>
+      </div>
+    </div>
+
+    <!-- PROCESS BUTTON -->
+    <button class="btn-process" id="processBtn" disabled>
+      Validate PINs & Download Results
+    </button>
+
+    <!-- PROGRESS -->
+    <div class="bulk-progress" id="bulkProgress" style="display:none">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text" id="progressText">Validating PINs...</div>
+    </div>
+
+    <!-- RESULTS PREVIEW -->
+    <div class="bulk-results" id="bulkResults" style="display:none">
+      <div class="bulk-results-header">
+        <div class="bulk-results-title" id="bulkResultsTitle"></div>
+        <button class="btn-download-results" id="downloadResults">Download Results CSV ↓</button>
+      </div>
+      <div class="bulk-table-wrap">
+        <table class="bulk-table" id="bulkTable">
+          <thead>
+            <tr>
+              <th>PIN Code</th>
+              <th>District</th>
+              <th>State</th>
+              <th>Status</th>
+              <th>Post Offices</th>
+              <th>Delivery Count</th>
+            </tr>
+          </thead>
+          <tbody id="bulkTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- API ENQUIRY CALLOUT -->
+<section class="api-callout-section">
+  <div class="api-callout">
+    <div class="api-callout-left">
+      <div class="api-tag">⌗ For Developers</div>
+      <h3 class="api-heading">Want this PIN API on your own website?</h3>
+      <p class="api-sub">Building an e-commerce checkout, a CRM, or a logistics app? Connect to our PIN code API and validate addresses in real time — 19,586 PIN codes, official India Post data, served fast from our infrastructure. Get in touch and we'll set you up.</p>
+    </div>
+    <div class="api-callout-right">
+      <a class="btn-api" href="https://wa.me/919867800451?text=Hi%2C%20I%27m%20interested%20in%20the%20Clicarity%20PIN%20Code%20API%20for%20my%20website" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.49"/></svg>
+        Request API Access
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="https://www.clicarity.com">
+      <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" />
+    </a>
+  </div>
+  <div class="footer-text">
+    PIN data from the All India Pincode Directory, Department of Posts (India Post), Government of India · via data.gov.in under the Open Government Data License · A free utility by <a href="https://www.clicarity.com">Clicarity</a>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.clicarity.com/privacy-policy.html">Privacy</a>
+    <a href="https://www.clicarity.com/terms.html">Terms</a>
+    <a href="https://wa.me/919867800451">Contact</a>
+  </div>
+</footer>
+
+<script>
+  const pinInput = document.getElementById('pin');
+  const goBtn = document.getElementById('go');
+  const out = document.getElementById('output');
+
+  pinInput.addEventListener('input', e => {
+    e.target.value = e.target.value.replace(/\D/g, '');
+  });
+
+  pinInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') verify();
+  });
+
+  goBtn.addEventListener('click', verify);
+
+  document.querySelectorAll('.pin-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      pinInput.value = chip.dataset.pin;
+      verify();
+    });
+  });
+
+  async function verify() {
+    const pin = pinInput.value.trim();
+
+    if (!/^[1-9][0-9]{5}$/.test(pin)) {
+      renderError('Invalid PIN', 'Please enter a valid 6-digit PIN code that doesn\'t start with 0.');
+      return;
+    }
+
+    renderLoading();
+    goBtn.disabled = true;
+
+    try {
+      const res = await fetch(`https://pincode-api.contact-4b6.workers.dev/?pin=${pin}`);
+      const data = await res.json();
+
+      if (!data[0] || data[0].Status !== 'Success') {
+        renderError('PIN Not Found', `No records found for PIN <strong>${pin}</strong>. Please check and try again.`);
+        return;
+      }
+
+      renderResults(pin, data[0].PostOffice);
+    } catch (err) {
+      renderError('Connection Error', 'Could not reach the PIN database. Please check your connection and try again.');
+    } finally {
+      goBtn.disabled = false;
+    }
+  }
+
+  function renderLoading() {
+    out.innerHTML = `
+      <div class="loading-card">
+        <div class="spinner"></div>
+        <div class="loading-text">Looking up PIN code...</div>
+      </div>`;
+  }
+
+  function renderError(title, msg) {
+    out.innerHTML = `
+      <div class="error-card">
+        <div class="error-icon">⚠️</div>
+        <div class="error-text">${title}</div>
+        <div class="error-sub">${msg}</div>
+      </div>`;
+  }
+
+  function renderResults(pin, offices) {
+    const deliverable = offices.some(o => o.DeliveryStatus === 'Delivery');
+    const first = offices[0];
+    const deliveryCount = offices.filter(o => o.DeliveryStatus === 'Delivery').length;
+    const hasNonDelivery = offices.some(o => o.DeliveryStatus !== 'Delivery');
+
+    const statusPill = deliverable
+      ? `<span class="status-pill pill-green">✓ Deliverable</span>`
+      : `<span class="status-pill pill-red">✕ Not Deliverable</span>`;
+
+    const officeRows = offices.map(o => {
+      const isDelivery = o.DeliveryStatus === 'Delivery';
+      const pill = isDelivery
+        ? `<span class="status-pill pill-green" style="font-size:0.7rem;padding:4px 10px;">Delivery</span>`
+        : `<span class="status-pill pill-amber" style="font-size:0.7rem;padding:4px 10px;">Non-Delivery</span>`;
+      return `
+        <div class="office-row">
+          <div>
+            <div class="office-name">${esc(o.Name)}</div>
+            <div class="office-type">${esc(o.BranchType)}${o.Division ? ' · ' + esc(o.Division) : ''}</div>
+          </div>
+          ${pill}
+        </div>`;
+    }).join('');
+
+    const infoNote = hasNonDelivery ? `
+          <div class="delivery-note">
+            <span class="note-icon">ⓘ</span>
+            <span><strong>"Non-Delivery"</strong> doesn't mean the area is unreachable. These post offices handle counter services (stamps, parcels, money orders) — mail is delivered through the "Delivery" office for this PIN. As long as one office shows <strong>Delivery</strong>, the area is deliverable.</span>
+          </div>` : '';
+
+    out.innerHTML = `
+      <div class="result-card">
+        <div class="result-header">
+          <div class="result-pin">PIN ${pin}</div>
+          ${statusPill}
+        </div>
+        <div class="result-summary">
+          <div class="summary-cell">
+            <div class="summary-label">District</div>
+            <div class="summary-value">${esc(first.District)}</div>
+          </div>
+          <div class="summary-cell">
+            <div class="summary-label">State</div>
+            <div class="summary-value">${esc(first.State)}</div>
+          </div>
+          <div class="summary-cell">
+            <div class="summary-label">Post Offices</div>
+            <div class="summary-value">${offices.length} found · ${deliveryCount} delivery</div>
+          </div>
+        </div>
+        <div class="offices-section">
+          <div class="offices-label">Post Offices Under This PIN</div>
+          ${officeRows}
+          ${infoNote}
+        </div>
+      </div>`;
+
+    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function esc(s) {
+    if (!s) return '';
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  // =====================
+  // BULK CHECKER
+  // =====================
+  const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwZe02VrE6SyefNQGqIipS1mIzVkWgC-s80Iz9HBap02X0466sRCkQVTK8dsITgUApX9g/exec';
+
+  const dropZone    = document.getElementById('dropZone');
+  const csvFile     = document.getElementById('csvFile');
+  const browseBtn   = document.getElementById('browseBtn');
+  const fileSelected = document.getElementById('fileSelected');
+  const bulkEmail   = document.getElementById('bulkEmail');
+  const processBtn  = document.getElementById('processBtn');
+  const bulkProgress = document.getElementById('bulkProgress');
+  const progressFill = document.getElementById('progressFill');
+  const progressText = document.getElementById('progressText');
+  const bulkResults  = document.getElementById('bulkResults');
+  const bulkResultsTitle = document.getElementById('bulkResultsTitle');
+  const bulkTableBody = document.getElementById('bulkTableBody');
+  const downloadResults = document.getElementById('downloadResults');
+
+  let parsedPins = [];
+  let resultsData = [];
+
+  // --- Template download ---
+  document.getElementById('downloadTemplate').addEventListener('click', () => {
+    const csv = 'pincode\n400018\n110001\n560001\n700001\n';
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'pincode_template.csv';
+    a.click();
+  });
+
+  // --- File browse ---
+  browseBtn.addEventListener('click', () => csvFile.click());
+  dropZone.addEventListener('click', (e) => {
+    if (e.target === dropZone) csvFile.click();
+  });
+
+  // --- Drag and drop ---
+  dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('drag-over');
+  });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('drag-over');
+    const file = e.dataTransfer.files[0];
+    if (file) handleFile(file);
+  });
+
+  csvFile.addEventListener('change', (e) => {
+    if (e.target.files[0]) handleFile(e.target.files[0]);
+  });
+
+  function handleFile(file) {
+    if (!file.name.endsWith('.csv')) {
+      alert('Please upload a .csv file only.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const lines = e.target.result.split('\n').map(l => l.trim()).filter(Boolean);
+      // Skip header row if it says 'pincode'
+      const data = lines[0].toLowerCase() === 'pincode' ? lines.slice(1) : lines;
+      parsedPins = data.filter(p => p.length > 0);
+      fileSelected.style.display = 'block';
+      fileSelected.textContent = `✓ ${file.name} — ${parsedPins.length} PIN codes found`;
+      checkReady();
+    };
+    reader.readAsText(file);
+  }
+
+  bulkEmail.addEventListener('input', checkReady);
+
+  function checkReady() {
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(bulkEmail.value.trim());
+    processBtn.disabled = !(parsedPins.length > 0 && emailOk);
+  }
+
+  // --- Main process ---
+  processBtn.addEventListener('click', async () => {
+    processBtn.disabled = true;
+    bulkProgress.style.display = 'block';
+    bulkResults.style.display = 'none';
+    resultsData = [];
+
+    progressFill.style.width = '30%';
+    progressText.textContent = `Sending ${parsedPins.length} PIN codes for validation...`;
+
+    try {
+      const res = await fetch('https://pincode-api.contact-4b6.workers.dev/bulk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pins: parsedPins })
+      });
+
+      resultsData = await res.json();
+
+      progressFill.style.width = '100%';
+      progressText.textContent = `All ${parsedPins.length} PINs validated!`;
+
+      setTimeout(() => {
+        showResultsTable();
+        sendToSheets(bulkEmail.value.trim(), parsedPins.length);
+        processBtn.disabled = false;
+      }, 400);
+
+    } catch (err) {
+      progressText.textContent = 'Something went wrong. Please try again.';
+      processBtn.disabled = false;
+    }
+  });
+
+  function showResultsTable() {
+    const deliverable = resultsData.filter(r => r.status === 'Deliverable').length;
+    const invalid = resultsData.filter(r => r.status === 'Invalid PIN' || r.status === 'Not Found').length;
+
+    bulkResultsTitle.textContent = `${resultsData.length} PINs checked · ${deliverable} deliverable · ${invalid} invalid`;
+
+    bulkTableBody.innerHTML = resultsData.map(r => {
+      const cls = r.status === 'Deliverable' ? 'row-ok' : r.status === 'Not Deliverable' ? 'row-no' : 'row-invalid';
+      return `<tr>
+        <td style="font-family:var(--font-display);font-weight:700;letter-spacing:0.06em">${esc(r.pin)}</td>
+        <td>${esc(r.district)}</td>
+        <td>${esc(r.state)}</td>
+        <td class="${cls}">${esc(r.status)}</td>
+        <td>${r.offices || ''}</td>
+        <td>${r.delivery || ''}</td>
+      </tr>`;
+    }).join('');
+
+    bulkProgress.style.display = 'none';
+    bulkResults.style.display = 'block';
+    bulkResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // --- Download results CSV ---
+  downloadResults.addEventListener('click', () => {
+    const header = 'pincode,district,state,status,post_offices,delivery_count\n';
+    const rows = resultsData.map(r =>
+      `${r.pin},${r.district},${r.state},${r.status},${r.offices},${r.delivery}`
+    ).join('\n');
+    const blob = new Blob([header + rows], { type: 'text/csv' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `pincode_results_${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+  });
+
+  // --- Send lead to Google Sheets ---
+  function sendToSheets(email, pinCount) {
+    fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        pinCount,
+        status: 'Bulk Check Completed',
+        source: 'clicarity.com/pincode'
+      })
+    }).catch(() => {}); // Silent fail — user experience unaffected
+  }
+</script>
+
+</body>
+</html>

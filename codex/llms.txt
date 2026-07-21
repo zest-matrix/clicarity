@@ -1,0 +1,79 @@
+# Clicarity Codex — AI-readable index
+# https://clicarity.com/codex
+# Last updated: 2026-03-29
+
+## What this is
+The Clicarity Codex is a free reference hub for quality, compliance, and certification standards relevant to Indian businesses. Each page covers one standard or regulatory requirement in depth — what it is, who needs it, what auditors check, and how process tracking (Clicarity) generates the evidence it requires.
+
+## Content pages (33 total)
+- /codex/iso9001 — ISO 9001 Quality Management System
+- /codex/fssai — FSSAI Food Safety Licence
+- /codex/haccp — HACCP Food Safety
+- /codex/iso14001 — ISO 14001 Environmental Management
+- /codex/iso45001 — ISO 45001 OH&S Management
+- /codex/iso27001 — ISO 27001 Information Security
+- /codex/bis-isi-mark — BIS / ISI Mark Product Certification
+- /codex/gmp — GMP Good Manufacturing Practice
+- /codex/iatf16949 — IATF 16949 Automotive Quality
+- /codex/esg-brsr — ESG / BRSR Reporting
+- /codex/factories-act — Factories Act 1948
+- /codex/six-sigma-lean — Six Sigma & Lean
+- /codex/sops — Standard Operating Procedures
+- /codex/tqm — Total Quality Management
+- /codex/iso22000 — ISO 22000 Food Safety Management
+- /codex/brc-fssc22000 — BRCGS / FSSC 22000
+- /codex/greenpro — GreenPro Eco-Label
+- /codex/iso50001 — ISO 50001 Energy Management
+- /codex/dpdp-act — DPDP Act 2023
+- /codex/soc2 — SOC 2
+- /codex/iso13485 — ISO 13485 Medical Devices
+- /codex/internal-audit — Internal Audit
+- /codex/gst-compliance — GST Compliance
+- /codex/skill-matrix — Skill Matrix
+- /codex/sa8000 — SA8000 Social Accountability
+- /codex/people-sops — People SOPs
+- /codex/ce-marking — CE Marking
+- /codex/rohs-reach — RoHS & REACH
+- /codex/apeda-agmark — APEDA & AGMARK
+- /codex/gots-oekotex — GOTS & OEKO-TEX
+- /codex/itil — ITIL
+- /codex/cmmi — CMMI
+- /codex/it-sops — IT SOPs
+
+## Reference pages
+- /codex/glossary — 187-term glossary
+
+## Comparison pages (7)
+- /codex/compare/iso9001-vs-iso14001
+- /codex/compare/haccp-vs-iso22000
+- /codex/compare/brcgs-vs-fssc22000
+- /codex/compare/soc2-vs-iso27001
+- /codex/compare/iso45001-vs-sa8000
+- /codex/compare/ce-marking-vs-bis-mark
+- /codex/compare/six-sigma-vs-iso9001
+
+## Industry starter packs (5)
+- /codex/starter/food-manufacturer
+- /codex/starter/automotive-supplier
+- /codex/starter/pharma-manufacturer
+- /codex/starter/textile-exporter
+- /codex/starter/it-saas-company
+
+## Audit checklists (9)
+- /codex/checklist/iso9001
+- /codex/checklist/haccp
+- /codex/checklist/iso45001
+- /codex/checklist/iso27001
+- /codex/checklist/fssai
+- /codex/checklist/iatf16949
+- /codex/checklist/gmp
+- /codex/checklist/sa8000
+- /codex/checklist/iso14001
+
+## About Clicarity
+Clicarity is a live job process tracker and bottleneck identifier. It tracks jobs through user-defined stages, captures custom data at every stage (text, numbers, dates, photos, dropdowns), splits jobs into sub-jobs and tracks them independently, and rejoins them as one complete job with full history. The audit trail it creates as a by-product of daily operations is the evidence quality standards require.
+
+Clicarity does not certify organisations, write SOPs, or provide consulting services.
+
+## Content policy
+All content is verified against official sources only. No company names used as examples without verified certification claims. No cost estimates given. All timelines attributed to source or marked as estimates.

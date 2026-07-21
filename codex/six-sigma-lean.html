@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Six Sigma and Lean Manufacturing in India — The… | Clicarity</title>
+<meta name="description" content="Six Sigma and Lean explained. DMAIC methodology, Belt certification (ASQ, IASSC), Lean tools, how to start. No certification body required to implement. Official sources only.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://clicarity.com/codex/six-sigma-lean">
+<meta property="og:type" content="article"><meta property="og:title" content="Six Sigma and Lean Manufacturing in India — The Complete Guide | Clicarity Codex">
+<meta property="og:description" content="Six Sigma and Lean explained. DMAIC methodology, Belt certification (ASQ, IASSC), Lean tools, how to start. No certification body required to implement. Official sources only."><meta property="og:url" content="https://clicarity.com/codex/six-sigma-lean">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Six Sigma and Lean Manufacturing in India — The Complete Guide","url":"https://clicarity.com/codex/six-sigma-lean","publisher":{"@type":"Organization","name":"Clicarity","url":"https://clicarity.com"},"dateModified":"2026-03-29"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Six Sigma?","acceptedAnswer":{"@type":"Answer","text":"A data-driven methodology to reduce defects to no more than 3.4 per million opportunities. Uses the DMAIC cycle. No regulatory body — implemented by organisations, not licensed."}},{"@type":"Question","name":"What is the difference between Six Sigma and Lean?","acceptedAnswer":{"@type":"Answer","text":"Six Sigma reduces variation and defects. Lean eliminates waste and improves flow. Lean Six Sigma combines both."}},{"@type":"Question","name":"Which Six Sigma certification is recognised?","acceptedAnswer":{"@type":"Answer","text":"ASQ (American Society for Quality) and IASSC (International Association for Six Sigma Certification) are the two globally recognised bodies. Confirm your employer's requirement before registering."}},{"@type":"Question","name":"Do I need a completed project to get certified?","acceptedAnswer":{"@type":"Answer","text":"ASQ Belt certifications require a project affidavit plus work experience. IASSC certifications are exam-only with no project requirement."}}]}]}</script>
+<style>
+:root{
+  --bg:#f9f8f6;--surface:#fff;--text:#0f0e0d;--muted:#6b6860;
+  --accent:#1a56db;--al:#eef2ff;--ah:#1341b0;
+  --green:#00b37e;--gl:#dcfce7;
+  --orange:#f97316;--ol:#fff7ed;
+  --border:#e8e5e0;--r:16px;
+  --fd:'Plus Jakarta Sans',sans-serif;
+  --fb:'Inter',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:9999;width:0%;transition:width .08s linear}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 5%;background:rgba(249,248,246,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--muted);font-size:.88rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.btn{padding:9px 20px;border-radius:100px;font-family:var(--fb);font-weight:500;font-size:.88rem;cursor:pointer;transition:all .2s;border:none;text-decoration:none;display:inline-block}
+.btn-o{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-o:hover{border-color:var(--accent);color:var(--accent)}
+.btn-p{background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(26,86,219,.2)}
+.btn-p:hover{background:var(--ah);transform:translateY(-1px)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.ham span{display:block;height:1.5px;width:22px;background:var(--text);border-radius:2px;transition:all .25s}
+.ham.on span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.on span:nth-child(2){opacity:0}
+.ham.on span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{display:none;position:fixed;top:65px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:16px 5%;flex-direction:column;z-index:99}
+.mob.on{display:flex}
+.mob a{font-size:15px;color:var(--text);padding:11px 0;border-bottom:1px solid var(--border)}
+
+/* BREADCRUMB */
+.bread{background:var(--surface);border-bottom:1px solid var(--border);padding:11px 5%}
+.bread-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--muted)}
+.bread-in a{color:var(--muted);transition:color .15s}.bread-in a:hover{color:var(--accent)}
+.bsep{opacity:.35}
+
+/* VISITOR SELECTOR */
+.visitor-bar{background:var(--al);border-bottom:1.5px solid rgba(26,86,219,.12);padding:14px 5%}
+.visitor-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.visitor-lbl{font-size:.78rem;font-weight:600;color:var(--accent);white-space:nowrap}
+.visitor-btn{padding:6px 16px;border-radius:100px;font-size:.78rem;font-weight:500;border:1.5px solid rgba(26,86,219,.2);color:var(--muted);background:#fff;cursor:pointer;transition:all .15s;font-family:var(--fb)}
+.visitor-btn:hover,.visitor-btn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+
+/* HERO */
+.art-hero{max-width:880px;margin:0 auto;padding:32px 5% 24px}
+.hero-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.art-badge{display:inline-flex;align-items:center;gap:5px;background:var(--al);color:var(--accent);font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:100px;letter-spacing:.5px;text-transform:uppercase}
+.read-time{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.read-time svg{width:13px;height:13px;opacity:.5}
+.art-hero h1{font-family:var(--fd);font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:800;line-height:1.15;letter-spacing:-.3px;color:var(--text);margin-bottom:14px}
+.art-hero h1 span{color:var(--accent)}
+.hook{background:#0f0e0d;border-radius:14px;padding:20px 24px;margin-bottom:18px}
+.hook p{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.7}
+.hook p strong{color:#fff;font-weight:700}
+.hook-stats{display:flex;gap:24px;margin-top:14px;flex-wrap:wrap}
+.hstat-n{font-family:var(--fd);font-size:1.4rem;font-weight:800;color:#fff;line-height:1}
+.hstat-n span{color:#60a5fa}
+.hstat-l{font-size:.68rem;color:rgba(255,255,255,.4);margin-top:3px}
+.verdicts{display:flex;flex-wrap:wrap;gap:7px}
+.v{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:600;padding:4px 11px;border-radius:100px}
+.vt{background:#fef3c7;color:#92400e}
+.ve{background:#dbeafe;color:#1e40af}
+.vb{background:var(--gl);color:#166534}
+
+/* TOAST */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#0f0e0d;color:#fff;font-size:.8rem;padding:8px 18px;border-radius:100px;opacity:0;transition:all .3s;pointer-events:none;z-index:500;white-space:nowrap}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* TOC */
+.toc-wrap{max-width:880px;margin:0 auto 32px;padding:0 5%}
+.toc-in{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 22px}
+.toc-hd{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:12px}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.toc-btn{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:9px;font-size:.83rem;color:var(--muted);cursor:pointer;transition:all .15s;border:none;background:none;font-family:var(--fb);text-align:left;width:100%}
+.toc-btn:hover{background:var(--al);color:var(--accent)}
+.toc-n{width:20px;height:20px;background:var(--al);color:var(--accent);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;flex-shrink:0}
+.toc-btn:hover .toc-n{background:var(--accent);color:#fff}
+
+/* BODY */
+.art-body{max-width:880px;margin:0 auto;padding:0 5% 72px}
+.art-sec{margin-bottom:52px;scroll-margin-top:80px}
+
+/* SEC HEADER */
+.sec-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid var(--al)}
+.sec-hd-l{display:flex;align-items:center;gap:10px}
+.sec-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:5px 14px;border-radius:100px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.sec-badge-n{font-size:.7rem;opacity:.7}
+.sec-main{font-family:var(--fd);font-size:1rem;font-weight:800;color:var(--text);letter-spacing:-.1px}
+.share-btn{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;font-weight:600;color:var(--muted);border:1px solid var(--border);padding:5px 11px;border-radius:100px;cursor:pointer;transition:all .15s;background:none;font-family:var(--fb);white-space:nowrap;flex-shrink:0}
+.share-btn:hover{border-color:var(--accent);color:var(--accent)}
+.share-btn svg{width:11px;height:11px}
+
+.art-sec h2{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:12px;letter-spacing:-.1px;line-height:1.3}
+.art-sec p{font-size:.9rem;color:var(--muted);line-height:1.78;margin-bottom:12px}
+.art-sec p strong{color:var(--text);font-weight:600}
+.art-sec p:last-child{margin-bottom:0}
+
+/* CALLOUTS */
+.scenario{background:var(--al);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:13px 17px;margin:14px 0;font-size:.85rem;color:var(--text);line-height:1.65}
+.scenario strong{font-weight:700;display:block;margin-bottom:2px;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:var(--accent)}
+.frank{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:13px 17px;margin:14px 0}
+.frank p{font-size:.85rem;color:#78350f;line-height:1.65;margin-bottom:0}
+.frank p strong{color:#78350f}
+.insider{background:#f8fafc;border:1px solid #e2e8f0;border-left:3px solid var(--text);border-radius:0 10px 10px 0;padding:13px 17px;margin:14px 0}
+.insider-tag{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:5px}
+.insider p{font-size:.85rem;color:var(--text);line-height:1.65;margin-bottom:0;font-style:italic}
+
+/* VISITOR CONTENT — all handled by JS */
+.for-owner,.for-employee,.for-consultant,.for-student{display:none}
+.for-owner{display:block}/* default: business owner shown */
+
+/* WHO GRID */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.who-card{border-radius:12px;padding:13px 15px}
+.who-card.yes{background:var(--gl);border:1px solid #bbf7d0}
+.who-card.maybe{background:#fef3c7;border:1px solid #fde68a}
+.who-card.no{background:#f8fafc;border:1px solid #e2e8f0}
+.who-lbl{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px}
+.who-card.yes .who-lbl{color:#166534}
+.who-card.maybe .who-lbl{color:#92400e}
+.who-card.no .who-lbl{color:#64748b}
+.who-item{font-size:.78rem;color:var(--text);padding:2px 0;line-height:1.4}
+
+/* JOURNEY MAP */
+.journey{margin:16px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.journey-hd{background:var(--accent);padding:12px 20px;font-family:var(--fd);font-size:.82rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px}
+.journey-months{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+.jm{padding:14px 12px;border-right:1px solid var(--border);border-top:1px solid var(--border)}
+.jm:last-child{border-right:none}
+.jm-period{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-bottom:5px}
+.jm-title{font-family:var(--fd);font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.3}
+.jm-desc{font-size:.7rem;color:var(--muted);line-height:1.45}
+.jm-active{background:var(--al);border-left:3px solid var(--accent)}
+.jm-badge{display:none}/* removed — replaced by journey-start row */
+.journey-start{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--al);border:1.5px solid rgba(26,86,219,.15);border-radius:0 0 var(--r) var(--r);padding:14px 20px;margin-top:-1px}
+.journey-start-icon{font-size:.8rem;color:var(--accent);flex-shrink:0}
+.journey-start-text{font-size:.83rem;color:var(--text);line-height:1.5;flex:1}
+.journey-start-text strong{color:var(--accent)}
+.journey-start-btn{font-size:.78rem;font-weight:600;color:var(--accent);border:1.5px solid rgba(26,86,219,.25);padding:6px 14px;border-radius:100px;background:#fff;cursor:pointer;white-space:nowrap;transition:all .15s;font-family:var(--fb);flex-shrink:0}
+.journey-start-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* REQUIREMENTS */
+.req-list{display:flex;flex-direction:column;margin-top:4px}
+.req-item{display:grid;grid-template-columns:auto 1fr;gap:0}
+.req-side{display:flex;flex-direction:column;align-items:center;padding-top:13px;padding-right:15px}
+.req-num{width:26px;height:26px;background:var(--accent);color:#fff;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0}
+.req-line{width:2px;flex:1;background:var(--border);margin:5px auto 0;min-height:12px}
+.req-item:last-child .req-line{display:none}
+.req-body{padding:11px 0 18px;border-bottom:1px solid var(--border)}
+.req-item:last-child .req-body{border-bottom:none}
+.req-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;font-family:var(--fd)}
+.req-desc{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:0}
+.eg{font-size:.74rem;color:var(--accent);background:var(--al);padding:5px 10px;border-radius:7px;margin-top:7px;display:inline-block;line-height:1.5}
+.req-fail{font-size:.74rem;color:#b91c1c;background:#fee2e2;padding:5px 10px;border-radius:7px;margin-top:5px;display:inline-block;line-height:1.5}
+
+/* AUDIT SPOTLIGHT */
+.audit-spot{background:#0f0e0d;border-radius:14px;padding:18px 22px;margin:18px 0}
+.audit-tag{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#60a5fa;margin-bottom:6px}
+.audit-spot p{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:0}
+.audit-spot p strong{color:#fff}
+
+/* CONSULTANT TOOLKIT */
+.toolkit{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:22px 26px;margin-top:14px}
+.toolkit-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.toolkit-hd-icon{width:36px;height:36px;background:var(--al);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.toolkit-hd-icon svg{width:18px;height:18px;color:var(--accent)}
+.toolkit-title{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--text)}
+.toolkit-sub{font-size:.75rem;color:var(--muted)}
+.toolkit-items{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.toolkit-item{display:flex;align-items:flex-start;gap:10px;background:var(--bg);border-radius:10px;padding:12px 14px;cursor:pointer;transition:all .15s;border:1px solid transparent}
+.toolkit-item:hover{background:var(--al);border-color:rgba(26,86,219,.15)}
+.ti-icon{width:28px;height:28px;background:var(--al);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
+.ti-name{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.ti-desc{font-size:.72rem;color:var(--muted);line-height:1.35}
+
+/* CHECKLIST */
+.checklist{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:14px}
+.checklist-hd{background:var(--accent);padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.checklist-hd-title{font-family:var(--fd);font-size:.85rem;font-weight:700;color:#fff}
+.print-btn{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:100px;cursor:pointer;background:none;font-family:var(--fb);transition:all .15s}
+.print-btn:hover{background:rgba(255,255,255,.15);color:#fff}
+.cl-items{padding:4px 0}
+.cl-item{display:flex;align-items:flex-start;gap:12px;padding:11px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.cl-item:last-child{border-bottom:none}
+.cl-item:hover{background:var(--bg)}
+.cl-item.done .cl-check{background:var(--green);border-color:var(--green)}
+.cl-item.done .cl-text{text-decoration:line-through;opacity:.5}
+.cl-check{width:18px;height:18px;border:1.5px solid var(--border);border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;transition:all .15s}
+.cl-check svg{width:10px;height:10px;color:#fff;opacity:0;transition:opacity .15s}
+.cl-item.done .cl-check svg{opacity:1}
+.cl-text{font-size:.83rem;color:var(--text);line-height:1.5}
+.cl-sub{font-size:.73rem;color:var(--muted);margin-top:2px;line-height:1.4}
+.cl-progress{background:var(--bg);padding:10px 20px;display:flex;align-items:center;gap:12px;border-top:1px solid var(--border)}
+.cl-bar-wrap{flex:1;height:5px;background:var(--border);border-radius:100px;overflow:hidden}
+.cl-bar{height:100%;background:var(--green);border-radius:100px;transition:width .3s;width:0%}
+.cl-pct{font-size:.72rem;font-weight:600;color:var(--muted);white-space:nowrap}
+
+/* TIMELINE */
+.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.tl-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:15px 17px;transition:border-color .2s}
+.tl-card:hover{border-color:rgba(26,86,219,.2)}
+.tl-lbl{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:5px}
+.tl-val{font-family:var(--fd);font-size:1.2rem;font-weight:800;color:var(--text);line-height:1;margin-bottom:4px}
+.tl-val span{color:var(--accent)}
+.tl-sub{font-size:.74rem;color:var(--muted);line-height:1.5}
+
+/* COMPANIES */
+.co-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.co-row{display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;transition:border-color .2s;flex-wrap:wrap;gap:8px}
+.co-row:hover{border-color:rgba(26,86,219,.2)}
+.co-name{font-family:var(--fd);font-size:.87rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.co-ind{font-size:.72rem;color:var(--muted)}
+.co-link{font-size:.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(26,86,219,.2);padding:4px 11px;border-radius:100px;transition:all .15s;white-space:nowrap}
+.co-link:hover{background:var(--al)}
+.reg-link{display:inline-flex;align-items:center;gap:5px;margin-top:11px;font-size:.78rem;font-weight:600;color:var(--accent);background:var(--al);padding:7px 15px;border-radius:100px;transition:all .15s}
+.reg-link:hover{background:rgba(26,86,219,.12)}
+.reg-link svg{width:10px;height:10px}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;margin-top:8px}
+.step{display:flex;gap:15px;position:relative;padding-bottom:22px}
+.step:last-child{padding-bottom:0}
+.step::before{content:'';position:absolute;left:18px;top:38px;bottom:0;width:2px;background:var(--border)}
+.step:last-child::before{display:none}
+.step-circle{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:800;font-size:.8rem;flex-shrink:0;position:relative;z-index:1}
+.step-body{padding-top:6px;flex:1}
+.step-body strong{display:block;font-family:var(--fd);font-size:.92rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.step-body p{font-size:.82rem;color:var(--muted);line-height:1.65;margin-bottom:0}
+.step-tip{display:inline-flex;align-items:center;gap:5px;margin-top:9px;font-size:.73rem;font-weight:600;color:var(--accent);background:var(--al);padding:4px 11px;border-radius:100px}
+.step-tip svg{width:9px;height:9px}
+
+/* CLICARITY BLOCK */
+.clic-block{background:#0f0e0d;border-radius:20px;padding:28px 32px;margin-top:4px}
+.clic-tag{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#60a5fa;margin-bottom:9px}
+.clic-block h3{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:11px;line-height:1.3}
+.clic-block>p{font-size:.86rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px}
+.clic-pts{display:flex;flex-direction:column;gap:8px;margin-bottom:6px}
+.clic-pt{display:flex;gap:9px;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55}
+.clic-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px}
+.clic-disc{font-size:.75rem;color:rgba(255,255,255,.25);margin:14px 0 18px;line-height:1.5}
+.clic-btns{display:flex;gap:10px;flex-wrap:wrap}
+.cb-p{background:var(--accent);color:#fff;padding:10px 20px;border-radius:100px;font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:background .2s;font-family:var(--fb)}
+.cb-p:hover{background:var(--ah)}
+.cb-g{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:10px 20px;border-radius:100px;font-size:.84rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;transition:all .2s;font-family:var(--fb)}
+.cb-g:hover{border-color:rgba(255,255,255,.4);color:#fff}
+
+/* LINKS SECTION */
+.links-sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:22px 26px;margin-top:8px}
+.links-sec-hd{font-family:var(--fd);font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.links-sec-hd svg{width:15px;height:15px;color:var(--accent)}
+.lg{margin-bottom:16px}.lg:last-child{margin-bottom:0}
+.lg-title{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:9px}
+.link-row{display:flex;align-items:flex-start;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);gap:12px;flex-wrap:wrap}
+.link-row:last-child{border-bottom:none;padding-bottom:0}
+.link-name{font-size:.84rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.link-desc{font-size:.74rem;color:var(--muted);line-height:1.4}
+.ext-link{display:inline-flex;align-items:center;gap:4px;font-size:.73rem;font-weight:600;color:var(--accent);border:1px solid rgba(26,86,219,.2);padding:4px 11px;border-radius:100px;white-space:nowrap;transition:all .15s;flex-shrink:0}
+.ext-link:hover{background:var(--al)}
+.ext-link svg{width:9px;height:9px}
+
+/* VERIFY BAR */
+.vbar{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px}
+.vbar-l{display:flex;align-items:center;gap:6px;font-size:.74rem;color:var(--muted)}
+.vbar-l svg{width:12px;height:12px;opacity:.5;flex-shrink:0}
+.vbar-r{display:flex;gap:6px;flex-wrap:wrap}
+.vbtn{font-size:.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(26,86,219,.2);padding:4px 11px;border-radius:100px;background:none;cursor:pointer;transition:all .15s;font-family:var(--fb)}
+.vbtn:hover{background:var(--al)}
+
+/* RELATED */
+.related{border-top:1px solid var(--border);padding-top:26px;margin-top:40px}
+.rel-title{font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:13px}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rel-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 15px;transition:all .2s;display:block}
+.rel-card:hover{border-color:rgba(26,86,219,.25);transform:translateY(-2px);box-shadow:0 5px 18px rgba(26,86,219,.07)}
+.rel-tag{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-bottom:4px}
+.rel-name{font-family:var(--fd);font-size:.86rem;font-weight:700;color:var(--text);margin-bottom:3px}
+.rel-desc{font-size:.72rem;color:var(--muted);line-height:1.4}
+
+.sec-div{height:1px;background:var(--border);margin:0 0 52px}
+
+footer{background:#0a0a09;padding:30px 5%;color:rgba(255,255,255,.35);display:flex;align-items:center;justify-content:space-between;font-size:.77rem;flex-wrap:wrap;gap:12px}
+.ft-logo img{height:23px;width:auto;filter:brightness(0) invert(1);opacity:.65}
+.ft-links{display:flex;gap:18px;flex-wrap:wrap}
+.ft-links a{color:rgba(255,255,255,.3);transition:color .2s}
+.ft-links a:hover{color:#fff}
+.wa{position:fixed;bottom:24px;right:24px;width:50px;height:50px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.35);z-index:150;transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}.ham{display:flex}
+  .toc-grid{grid-template-columns:1fr}
+  .who-grid{grid-template-columns:1fr}
+  .journey-months{grid-template-columns:repeat(3,1fr)}
+  .tl-grid{grid-template-columns:1fr}
+  .toolkit-items{grid-template-columns:1fr}
+  .rel-grid{grid-template-columns:1fr 1fr}
+  .clic-block{padding:20px 18px}
+  .sec-hd{flex-direction:column;gap:7px}
+  .visitor-in{gap:8px}
+}
+@media(max-width:480px){.rel-grid{grid-template-columns:1fr}.art-hero h1{font-size:1.45rem}.journey-months{grid-template-columns:repeat(2,1fr)}}
+
+.pf-wrap{margin:20px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.pf-header{background:#0f0e0d;padding:11px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.pf-header-title{font-family:var(--fd);font-size:.8rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:7px}
+.pf-header-job{font-size:.7rem;color:rgba(255,255,255,.4)}
+.pf-body{padding:18px;overflow-x:auto}
+.pf-flow{display:flex;align-items:flex-start;gap:0;min-width:580px}
+.pf-stage{display:flex;flex-direction:column;align-items:center;flex:1}
+.pf-stage-box{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 11px;width:100%;max-width:130px}
+.pf-stage-box.ccp{border-color:var(--accent);background:var(--al)}
+.pf-stage-name{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.3}
+.pf-field{font-size:.6rem;color:var(--muted);padding:1.5px 0;display:flex;align-items:center;gap:3px;line-height:1.3}
+.pf-badge{display:inline-block;font-size:.55rem;font-weight:800;text-transform:uppercase;padding:2px 6px;border-radius:100px;margin-bottom:4px}
+.pf-badge.ccp-badge{background:var(--accent);color:#fff}
+.pf-arrow{display:flex;align-items:center;justify-content:center;padding:0 3px;margin-top:30px;color:var(--muted);font-size:.7rem;flex-shrink:0}
+.pf-split-section{padding:12px 18px;background:#fff7ed;border-top:1px solid #fed7aa;border-bottom:1px solid #fed7aa}
+.pf-split-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#ea580c;margin-bottom:9px}
+.pf-split-jobs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pf-sub-job{background:var(--surface);border:1px solid #fed7aa;border-radius:9px;padding:9px 11px}
+.pf-sub-job-id{font-size:.6rem;font-weight:800;color:#ea580c;margin-bottom:3px;font-family:var(--fd)}
+.pf-sub-job-name{font-size:.68rem;font-weight:600;color:var(--text);margin-bottom:5px}
+.pf-merge-section{padding:9px 18px;background:#f0fdf4;border-top:1px solid #bbf7d0;display:flex;align-items:center;gap:9px}
+.pf-merge-text{font-size:.75rem;color:#166534;line-height:1.5}
+.pf-merge-text strong{font-weight:700}
+.pf-wastage-bar{display:flex;align-items:center;gap:7px;padding:8px 18px;background:var(--bg);border-top:1px solid var(--border);flex-wrap:wrap}
+.pf-wastage-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.pf-wastage-item{font-size:.7rem;color:var(--text);background:var(--surface);border:1px solid var(--border);padding:2px 9px;border-radius:100px}
+.pf-note{font-size:.68rem;color:var(--muted);padding:8px 18px;border-top:1px solid var(--border);font-style:italic;line-height:1.5}
+.case-v2{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:16px 0}
+.case-v2-tag{background:var(--bg);border-bottom:1px solid var(--border);padding:7px 17px;font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+.case-v2-body{display:grid;grid-template-columns:1fr 1fr}
+.case-v2-col{padding:13px 17px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.case-v2-col:nth-child(even){border-right:none}
+.case-v2-col.span2{grid-column:1/-1;border-right:none}
+.case-v2-col.clic{background:rgba(26,86,219,.03);border-top:2px solid var(--accent);grid-column:1/-1;border-right:none}
+.case-v2-col.result{background:#f0fdf4;border-top:2px solid var(--green);grid-column:1/-1;border-right:none}
+.case-v2-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:4px}
+.case-v2-val{font-size:.82rem;color:var(--text);line-height:1.6}
+.case-v2-quote{font-style:italic;color:var(--muted);border-left:2px solid var(--accent);padding-left:9px;margin-top:7px;font-size:.78rem}
+.clic-contact{display:flex;align-items:center;justify-content:space-between;gap:11px;flex-wrap:wrap;margin-top:15px;padding:13px 16px;background:rgba(255,255,255,.06);border-radius:10px;border:1px solid rgba(255,255,255,.1)}
+.clic-contact-text{font-size:.79rem;color:rgba(255,255,255,.6);line-height:1.5}
+.clic-contact-text strong{color:rgba(255,255,255,.85)}
+.clic-contact-btns{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
+.clic-wa{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:#fff;background:#25d366;padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+.clic-mail{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+@media(max-width:600px){.pf-split-jobs{grid-template-columns:1fr}.case-v2-body{grid-template-columns:1fr}.case-v2-col,.case-v2-col.span2,.case-v2-col.clic,.case-v2-col.result{grid-column:auto;border-right:none}}
+
+
+.pf-wrap{margin:20px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.pf-header{background:#0f0e0d;padding:11px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.pf-header-title{font-family:var(--fd);font-size:.8rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:7px}
+.pf-header-job{font-size:.7rem;color:rgba(255,255,255,.4)}
+.pf-body{padding:18px;overflow-x:auto}
+.pf-flow{display:flex;align-items:flex-start;gap:0;min-width:580px}
+.pf-stage{display:flex;flex-direction:column;align-items:center;flex:1}
+.pf-stage-box{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 11px;width:100%;max-width:130px}
+.pf-stage-box.ccp{border-color:var(--accent);background:var(--al)}
+.pf-stage-name{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.3}
+.pf-field{font-size:.6rem;color:var(--muted);padding:1.5px 0;display:flex;align-items:center;gap:3px;line-height:1.3}
+.pf-badge{display:inline-block;font-size:.55rem;font-weight:800;text-transform:uppercase;padding:2px 6px;border-radius:100px;margin-bottom:4px}
+.pf-badge.ccp-badge{background:var(--accent);color:#fff}
+.pf-arrow{display:flex;align-items:center;justify-content:center;padding:0 3px;margin-top:30px;color:var(--muted);font-size:.7rem;flex-shrink:0}
+.pf-split-section{padding:12px 18px;background:#fff7ed;border-top:1px solid #fed7aa;border-bottom:1px solid #fed7aa}
+.pf-split-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#ea580c;margin-bottom:9px}
+.pf-split-jobs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pf-sub-job{background:var(--surface);border:1px solid #fed7aa;border-radius:9px;padding:9px 11px}
+.pf-sub-job-id{font-size:.6rem;font-weight:800;color:#ea580c;margin-bottom:3px;font-family:var(--fd)}
+.pf-sub-job-name{font-size:.68rem;font-weight:600;color:var(--text);margin-bottom:5px}
+.pf-merge-section{padding:9px 18px;background:#f0fdf4;border-top:1px solid #bbf7d0;display:flex;align-items:center;gap:9px}
+.pf-merge-text{font-size:.75rem;color:#166534;line-height:1.5}
+.pf-merge-text strong{font-weight:700}
+.pf-wastage-bar{display:flex;align-items:center;gap:7px;padding:8px 18px;background:var(--bg);border-top:1px solid var(--border);flex-wrap:wrap}
+.pf-wastage-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.pf-wastage-item{font-size:.7rem;color:var(--text);background:var(--surface);border:1px solid var(--border);padding:2px 9px;border-radius:100px}
+.pf-note{font-size:.68rem;color:var(--muted);padding:8px 18px;border-top:1px solid var(--border);font-style:italic;line-height:1.5}
+.case-v2{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:16px 0}
+.case-v2-tag{background:var(--bg);border-bottom:1px solid var(--border);padding:7px 17px;font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+.case-v2-body{display:grid;grid-template-columns:1fr 1fr}
+.case-v2-col{padding:13px 17px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.case-v2-col:nth-child(even){border-right:none}
+.case-v2-col.span2{grid-column:1/-1;border-right:none}
+.case-v2-col.clic{background:rgba(26,86,219,.03);border-top:2px solid var(--accent);grid-column:1/-1;border-right:none}
+.case-v2-col.result{background:#f0fdf4;border-top:2px solid var(--green);grid-column:1/-1;border-right:none}
+.case-v2-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:4px}
+.case-v2-val{font-size:.82rem;color:var(--text);line-height:1.6}
+.case-v2-quote{font-style:italic;color:var(--muted);border-left:2px solid var(--accent);padding-left:9px;margin-top:7px;font-size:.78rem}
+.clic-contact{display:flex;align-items:center;justify-content:space-between;gap:11px;flex-wrap:wrap;margin-top:15px;padding:13px 16px;background:rgba(255,255,255,.06);border-radius:10px;border:1px solid rgba(255,255,255,.1)}
+.clic-contact-text{font-size:.79rem;color:rgba(255,255,255,.6);line-height:1.5}
+.clic-contact-text strong{color:rgba(255,255,255,.85)}
+.clic-contact-btns{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
+.clic-wa{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:#fff;background:#25d366;padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+.clic-mail{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+@media(max-width:600px){.pf-split-jobs{grid-template-columns:1fr}.case-v2-body{grid-template-columns:1fr}.case-v2-col,.case-v2-col.span2,.case-v2-col.clic,.case-v2-col.result{grid-column:auto;border-right:none}}
+</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Six Sigma and Lean Manufacturing in India — The Complete Guide | Clicarity Codex">
+<meta name="twitter:description" content="Six Sigma and Lean explained. DMAIC methodology, Belt certification (ASQ, IASSC), Lean tools, how to start. No certification body required to implement. Officia">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+</head><body>
+<div id="prog"></div><div class="toast" id="toast"></div>
+<nav role="navigation">
+  <a href="https://www.clicarity.com" class="nav-logo"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" height="72"></a>
+  <ul class="nav-links"><li><a href="/codex">Codex Home</a></li><li><a href="/codex/glossary">Glossary</a></li><li><a href="/codex/compare">Compare</a></li><li><a href="/codex/starter">Starter Packs</a></li><li><a href="/codex/checklist">Checklists</a></li><li><a href="https://www.clicarity.com">Clicarity.com</a></li></ul>
+  <div class="nav-cta"><a class="btn btn-o" href="https://click.wa.expert" target="_blank" rel="noopener">Login</a></div>
+  <button class="ham" id="ham" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="/codex">Codex Home</a><a href="/codex/glossary">Glossary</a><a href="/codex/compare">Compare</a><a href="/codex/starter">Starter Packs</a><a href="/codex/checklist">Checklists</a><a href="https://www.clicarity.com">Clicarity.com</a><a href="https://click.wa.expert" target="_blank" rel="noopener">Login</a>
+</div>
+</div>
+<div class="visitor-bar"><div class="visitor-in"><span class="visitor-lbl">I am a &mdash;</span><button class="visitor-btn on" id="vb-owner" onclick="setVisitor('owner')">Business Owner</button><button class="visitor-btn" id="vb-employee" onclick="setVisitor('employee')">Employee / Manager</button><button class="visitor-btn" id="vb-consultant" onclick="setVisitor('consultant')">Consultant</button><button class="visitor-btn" id="vb-student" onclick="setVisitor('student')">Student / Researcher</button></div></div>
+<div class="art-hero">
+  <div class="hero-top"><div class="art-badge">Quality & Ops</div><div class="read-time"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M7 4.5v3L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>7 min read</div></div>
+  <h1>Six Sigma & Lean — <span>Process Improvement Methodologies</span></h1>
+  <div class="for-owner"><div class="hook"><p><strong>Six Sigma and Lean are not certifications you apply for — they are process improvement methodologies your team implements.</strong> The result is measurable: lower defect rates, shorter cycle times, less waste. For businesses supplying to large manufacturers or automotive OEMs, demonstrable Six Sigma capability is increasingly a vendor requirement.</p><div class="hook-stats"><div><div class="hstat-n">DMAIC</div><div class="hstat-l">Define Measure Analyse Improve Control</div></div><div><div class="hstat-n">No regulator</div><div class="hstat-l">Methodology, not a licence</div></div><div><div class="hstat-n">Belt levels</div><div class="hstat-l">Yellow, Green, Black, Master Black Belt</div></div></div></div></div>
+  <div class="for-employee"><div class="hook"><p><strong>Your company is implementing Six Sigma or Lean and you may be asked to get Belt certified.</strong> A Green Belt leads improvement projects within their function. A Black Belt leads cross-functional projects and coaches Green Belts. Yellow Belt is awareness level. All Belt certifications require demonstrating knowledge of the methodology — most also require a completed project.</p><div class="hook-stats"><div><div class="hstat-n">Yellow Belt</div><div class="hstat-l">Awareness and team member</div></div><div><div class="hstat-n">Green Belt</div><div class="hstat-l">Project leader within function</div></div><div><div class="hstat-n">Black Belt</div><div class="hstat-l">Cross-functional project leader and coach</div></div></div></div></div>
+  <div class="for-consultant"><div class="hook"><p><strong>Quick reference.</strong> Six Sigma: DMAIC (improvement) and DMADV/DFSS (design). Belt certification: ASQ (CSSyBB, CSSGB) and IASSC (ICBB, ICGB) are the two globally recognised bodies. Lean: Toyota Production System principles — value, value stream, flow, pull, perfection. Lean Six Sigma combines both. GE, Motorola origins. No mandatory accreditation body.</p><div class="hook-stats"><div><div class="hstat-n">ASQ / IASSC</div><div class="hstat-l">Two recognised Belt certification bodies</div></div><div><div class="hstat-n">DMAIC</div><div class="hstat-l">Improvement methodology</div></div><div><div class="hstat-n">Lean</div><div class="hstat-l">Waste elimination — Toyota origins</div></div></div></div></div>
+  <div class="for-student"><div class="hook"><p><strong>Six Sigma was developed at Motorola in 1986 and popularised by GE under Jack Welch in the 1990s.</strong> The name refers to the goal of achieving a defect rate of no more than 3.4 defects per million opportunities — statistically equivalent to six standard deviations from the mean. Lean manufacturing derives from the Toyota Production System developed from the 1940s.</p><div class="hook-stats"><div><div class="hstat-n">1986</div><div class="hstat-l">Six Sigma developed at Motorola</div></div><div><div class="hstat-n">TPS</div><div class="hstat-l">Toyota Production System — Lean origins</div></div><div><div class="hstat-n">DMAIC</div><div class="hstat-l">Improvement cycle formalised by GE</div></div></div></div></div>
+  <div class="verdicts"><span class="v vb">No regulatory certification body — methodology, not a licence</span><span class="v ve">Belt certification from ASQ or IASSC is the professional standard</span><span class="v v-tender">Required by many large manufacturers and automotive OEMs</span></div>
+</div>
+<div class="toc-wrap"><div class="toc-in"><div class="toc-hd">What&rsquo;s on this page</div><div class="toc-grid">
+  <button class="toc-btn" onclick="jumpTo('s1')"><span class="toc-n">1</span>What it is</button>
+  <button class="toc-btn" onclick="jumpTo('s2')"><span class="toc-n">2</span>Who needs it</button>
+  <button class="toc-btn" onclick="jumpTo('s3')"><span class="toc-n">3</span>What it requires</button>
+  <button class="toc-btn" onclick="jumpTo('s4')"><span class="toc-n">4</span>Official body in India</button>
+  <button class="toc-btn" onclick="jumpTo('s5')"><span class="toc-n">5</span>Timeline</button>
+  <button class="toc-btn" onclick="jumpTo('s6')"><span class="toc-n">6</span>Find certified companies</button>
+  <button class="toc-btn" onclick="jumpTo('s7')"><span class="toc-n">7</span>Your first 3 steps</button>
+  <button class="toc-btn" onclick="jumpTo('s8')"><span class="toc-n">8</span>How Clicarity fits</button>
+  <button class="toc-btn" onclick="jumpTo('links')" style="grid-column:1/-1"><span class="toc-n">&#10003;</span>All official links</button>
+</div></div></div>
+<div class="art-body" id="art-body">
+<section class="art-sec" id="s1"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">01 &mdash;</span>What it is</span><span class="sec-main">Understanding Six Sigma & Lean</span></div><button class="share-btn" onclick="shareSection('s1','s1')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>A methodology to reduce defects and eliminate waste — measurable results, no regulatory body required.</h2><p>Six Sigma is a data-driven process improvement methodology aimed at reducing defects. <strong>DMAIC</strong> — Define, Measure, Analyse, Improve, Control — is the core improvement cycle applied to existing processes. A Six Sigma process produces no more than 3.4 defects per million opportunities.</p>
+  <p>Lean manufacturing derives from the Toyota Production System and focuses on eliminating waste (muda) across eight categories: overproduction, waiting, transport, over-processing, inventory, motion, defects, and underutilised talent. <strong>Lean Six Sigma</strong> combines both — Lean removes waste, Six Sigma reduces variation.</p>
+  <p>Unlike ISO 9001 or BIS, there is <strong>no government regulatory body</strong> for Six Sigma or Lean. The methodology is implemented by your team. Belt certification (Yellow, Green, Black, Master Black Belt) is a professional credential — not a business licence. The two globally recognised certification bodies are <strong>ASQ</strong> (American Society for Quality) and <strong>IASSC</strong> (International Association for Six Sigma Certification).</p>
+  <div class="frank"><p><strong>Many Indian training providers issue "Six Sigma certificates" with no recognised standing.</strong> If your customer or employer asks for Six Sigma certification, confirm whether they require ASQ or IASSC certification specifically. A certificate from an unknown training institute is not equivalent to an ASQ or IASSC Belt.</p></div><div class="case-v2">
+  <div class="case-v2-tag">&#128101; Illustrative case &mdash; details changed for confidentiality</div>
+  <div class="case-v2-body">
+    <div class="case-v2-col"><div class="case-v2-lbl">The business</div><div class="case-v2-val">Precision turned parts manufacturer<br><small style="color:var(--muted)">Coimbatore &middot; 65 employees, Tier 2 automotive supplier</small></div></div>
+    <div class="case-v2-col"><div class="case-v2-lbl">The trigger</div><div class="case-v2-val">Their scrap rate on a high-volume CNC turning job was running at 4.2% — above their customer's acceptable limit of 2%. A customer audit noted this as a concern.</div></div>
+    <div class="case-v2-col span2"><div class="case-v2-lbl">The challenge</div><div class="case-v2-val">They knew they had a scrap problem but not where in the process it was originating. Scrap was recorded at end-of-line — not stage-by-stage. Root cause analysis was guesswork.</div></div>
+    <div class="case-v2-col clic"><div class="case-v2-lbl">Where Clicarity came in</div><div class="case-v2-val">They deployed <a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Clicarity</a> with rejection reason codes captured at every production stage. Within 6 weeks, the data showed that 73% of scrap originated at the third machining step — a specific machine with a worn spindle. The Six Sigma project used this stage-wise rejection data as the baseline for the Measure phase. The DMAIC project ran for 11 weeks.</div></div>
+    <div class="case-v2-col result"><div class="case-v2-lbl">The result</div><div class="case-v2-val">Scrap rate reduced to 1.6%. Customer audit concern closed.<div class="case-v2-quote">We had been guessing at the root cause for months. The stage-wise rejection data from Clicarity showed us exactly where to look.</div></div></div>
+  </div>
+</div></section><div class="sec-div"></div>
+<section class="art-sec" id="s2"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">02 &mdash;</span>Who needs it</span><span class="sec-main">Is it right for you?</span></div><button class="share-btn" onclick="shareSection('s2','s2')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Do you actually need it? Honest answer.</h2><div class="who-grid">
+    <div class="who-card yes"><div class="who-lbl">&#10003; You should implement it</div><div class="who-item">Manufacturers with high scrap rates or rework costs</div><div class="who-item">Businesses supplying to automotive OEMs (IATF 16949 expects Six Sigma capability)</div><div class="who-item">Operations with long cycle times or chronic bottlenecks</div><div class="who-item">Service businesses with high error rates or customer complaint volumes</div></div>
+    <div class="who-card maybe"><div class="who-lbl">&#8764; Belt certification worth considering</div><div class="who-item">Quality managers and engineers wanting a globally recognised credential</div><div class="who-item">Professionals in industries where Belt certification is a hiring requirement</div></div>
+    <div class="who-card no"><div class="who-lbl">&#8212; Not what you need right now</div><div class="who-item">Businesses without defined, repeatable processes (implement basic SOPs first)</div><div class="who-item">Very early-stage businesses where process stability hasn't been achieved</div></div>
+  </div></section><div class="sec-div"></div>
+<section class="art-sec" id="s3"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">03 &mdash;</span>What it requires</span><span class="sec-main">What is checked</span></div><button class="share-btn" onclick="shareSection('s3','s3')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>The DMAIC cycle — what each phase requires and what it produces.</h2>
+<div class="req-list"><div class="req-item"><div class="req-side"><span class="req-num">1</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Define — project charter and scope</div><div class="req-desc">A written project charter: problem statement, scope, goal, team, timeline, and sponsor sign-off. The project cannot proceed without a clear, agreed charter.</div><span class="eg">E.g. Problem: scrap rate on CNC turning Job X is 4.2% vs target of 2%. Scope: machining stages 2 to 5. Goal: reduce to below 2% by Q3.</span><span class="req-fail">Most common failure: Scope too large. Projects that try to fix everything fix nothing. Define phase must produce a focused, measurable problem statement.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">2</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Measure — baseline data collection</div><div class="req-desc">Quantitative measurement of the current process: defect rate, cycle time, DPMO. Includes a Measurement System Analysis (MSA / Gauge R&R) to verify the measurement system itself is reliable.</div><span class="eg">E.g. 6 weeks of stage-wise rejection data collected. Baseline DPMO calculated. Gauge R&R confirms measurement system acceptable.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">3</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Analyse — root cause identification</div><div class="req-desc">Identify and validate the root causes of the problem using statistical and analytical tools: fishbone diagrams, Pareto analysis, hypothesis testing.</div><span class="eg">E.g. Pareto chart shows 73% of scrap originates at Stage 3. Hypothesis test confirms correlation with spindle wear on Machine #4.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">4</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Improve — implement and pilot solutions</div><div class="req-desc">Design, test, and implement solutions targeting the validated root causes. Pilot before full-scale deployment.</div><span class="eg">E.g. Spindle replacement on Machine #4. Pilot run of 500 units shows scrap rate at 1.4%. Approved for full implementation.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">5</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Control — sustain the improvement</div><div class="req-desc">Update the control plan, implement SPC charts, and monitor sustained performance. Hand over to the process owner with documented controls.</div><span class="eg">E.g. SPC chart for Stage 3 scrap rate. Control limit set. Process owner responsible for monitoring.</span><span class="req-fail">Most common failure: Control phase skipped or weak. Improvement reverts within 3 months because the control mechanisms were not implemented.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">6</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Belt certification (for individuals)</div><div class="req-desc">For individual professionals: ASQ or IASSC Belt exam. ASQ CSSGB and CSSBB require project demonstration in addition to the written exam.</div><span class="eg">E.g. ASQ CSSGB: written exam + affidavit of completed project + 3 years of work experience.</span></div></div></div>
+<div class="audit-spot"><div class="audit-tag">What inspectors really check</div><p>There is no regulatory audit for Six Sigma. For Belt certification, ASQ and IASSC administer written exams. ASQ additionally requires project affidavits. For IATF 16949 customers, auditors may ask: <strong>"Describe a recent Six Sigma project. What was the baseline, what was improved, and how is the improvement being sustained?"</strong></p></div>
+<div id="checklist" style="scroll-margin-top:80px"><div class="checklist">
+  <div class="checklist-hd"><span class="checklist-hd-title">Gap analysis checklist &mdash; tick what you already have</span><button class="print-btn" onclick="window.print()">Print / Save PDF</button></div>
+  <div class="cl-items"><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Project charter written with problem statement, scope, goal, and sponsor sign-off</div><div class="cl-sub">Specific, measurable goal with a number.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Baseline data collected with defined measurement method</div><div class="cl-sub">Stage-wise data, not just end-of-line totals.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">MSA / Gauge R&R completed for measurement system</div><div class="cl-sub">Confirms the measurement itself is reliable.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Root causes validated with data — not assumed</div><div class="cl-sub">Hypothesis testing or Pareto analysis.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Improvement piloted before full deployment</div><div class="cl-sub">Pilot data showing improvement before rolling out.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Control plan updated after improvement</div><div class="cl-sub">Process owner named. SPC chart in place.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">30-day sustained performance review documented</div><div class="cl-sub">Improvement held after project closes.</div></div></div></div>
+  <div class="cl-progress"><div class="cl-bar-wrap"><div class="cl-bar" id="cl-bar"></div></div><span class="cl-pct" id="cl-pct">0 of 7 complete</span></div>
+</div></div></section><div class="sec-div"></div>
+<section class="art-sec" id="s4"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">04 &mdash;</span>Official body</span><span class="sec-main">Who certifies in India</span></div><button class="share-btn" onclick="shareSection('s4','s4')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Who issues this in India &mdash; and how to verify it.</h2><p>There is no Indian regulatory body for Six Sigma. The two globally recognised Belt certification bodies are:</p><div class="co-list"><div class="co-row"><div><div class="co-name">ASQ — American Society for Quality</div><div class="co-ind">CSSGB (Green Belt) and CSSBB (Black Belt). Requires project affidavit + exam. Most widely recognised globally.</div></div><a href="https://asq.org" target="_blank" rel="noopener" class="co-link">asq.org ↗</a></div><div class="co-row"><div><div class="co-name">IASSC — International Association for Six Sigma Certification</div><div class="co-ind">ICGB (Green Belt) and ICBB (Black Belt). Exam only — no project requirement. Widely recognised.</div></div><a href="https://www.iassc.org" target="_blank" rel="noopener" class="co-link">iassc.org ↗</a></div></div><div class="frank"><p><strong>Before enrolling in any Six Sigma training:</strong> Confirm with your employer or customer whether they require ASQ or IASSC certification specifically. Many training providers issue certificates under their own brand which carry no recognised standing with international employers.</p></div><div class="co-list"><div class="co-row"><div><div class="co-name">ASQ — American Society for Quality</div><div class="co-ind">CSSGB and CSSBB Belt exams. Globally recognised.</div></div><a href="https://asq.org" target="_blank" rel="noopener" class="co-link">asq.org ↗</a></div><div class="co-row"><div><div class="co-name">IASSC — International Association for Six Sigma</div><div class="co-ind">ICGB and ICBB Belt exams. Exam-only format.</div></div><a href="https://www.iassc.org" target="_blank" rel="noopener" class="co-link">iassc.org ↗</a></div><div class="co-row"><div><div class="co-name">Lean Enterprise Institute</div><div class="co-ind">Lean methodology resources and training.</div></div><a href="https://www.lean.org" target="_blank" rel="noopener" class="co-link">Website &#8599;</a></div><div class="co-row"><div><div class="co-name">AIAG — Automotive core tools</div><div class="co-ind">FMEA, MSA, SPC — frequently used alongside Six Sigma in automotive.</div></div><a href="https://www.aiag.org" target="_blank" rel="noopener" class="co-link">Website &#8599;</a></div></div><a href="https://asq.org/cert/directory" target="_blank" rel="noopener" class="reg-link">ASQ certified professionals directory <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M5 2h5v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></section><div class="sec-div"></div>
+<section class="art-sec" id="s5"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">05 &mdash;</span>Timeline</span><span class="sec-main">How long it takes</span></div><button class="share-btn" onclick="shareSection('s5','s5')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>What to expect &mdash; a typical journey.</h2>
+<p style="font-size:.75rem;color:var(--muted);margin-bottom:14px">Based on <a href="https://asq.org" target="_blank" rel="noopener" style="color:var(--accent)">asq.org / iassc.org</a>. Actual timelines vary. Confirm with your CB.</p>
+<div class="journey"><div class="journey-hd"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="white" stroke-width="1.3"/><path d="M7 4v3.5L9.5 9" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>Six Sigma & Lean Journey</div><div class="journey-months"><div class="jm  jm-active"><div class="jm-period">Step 1</div><div class="jm-title">Select a focused project</div><div class="jm-desc">Choose one process with a measurable problem. Project charter with sponsor.</div></div><div class="jm"><div class="jm-period">Step 2</div><div class="jm-title">Measure — collect baseline data</div><div class="jm-desc">Stage-wise data collection for 4-8 weeks. MSA to verify measurement system.</div></div><div class="jm"><div class="jm-period">Step 3</div><div class="jm-title">Analyse — find the root cause</div><div class="jm-desc">Pareto, fishbone, hypothesis tests. Validate — don't assume.</div></div><div class="jm"><div class="jm-period">Step 4</div><div class="jm-title">Improve — pilot and implement</div><div class="jm-desc">Solution targeting validated root cause. Pilot before full deployment.</div></div><div class="jm"><div class="jm-period">Step 5</div><div class="jm-title">Control — hand over with controls</div><div class="jm-desc">Updated control plan, SPC, process owner. 30-day sustained check.</div></div><div class="jm"><div class="jm-period">Belt exam</div><div class="jm-title">ASQ or IASSC</div><div class="jm-desc">If pursuing certification: register for ASQ or IASSC exam after completing a project.</div></div></div></div><div class="journey-start"><span class="journey-start-icon">&#9654;</span><span class="journey-start-text"><strong>Where to begin:</strong> Use the checklist in Section 3 to assess your readiness before contacting any CB.</span><button class="journey-start-btn" onclick="jumpTo('checklist')">Open gap analysis checklist</button></div><div class="tl-grid"><div class="tl-card"><div class="tl-lbl">DMAIC projects</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">4 to 16 weeks</div><div class="tl-sub">Depends on data collection time and scope. Focused projects complete faster.</div></div><div class="tl-card"><div class="tl-lbl">Belt exam — ASQ CSSGB</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">Written + project affidavit</div><div class="tl-sub">Exam + affidavit of completed project + work experience required.</div></div><div class="tl-card"><div class="tl-lbl">Belt exam — IASSC ICGB</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">Exam only</div><div class="tl-sub">No project requirement. Can be taken without prior experience.</div></div><div class="tl-card"><div class="tl-lbl">Cost</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">Varies by provider</div><div class="tl-sub">ASQ and IASSC exam fees published on their websites. Training costs vary widely.</div></div></div><div class="frank" style="margin-top:12px"><p><strong>The Control phase is where most Six Sigma projects fail.</strong> The improvement is real but within 3-6 months the process reverts to old performance because nobody is monitoring it. The Control phase is not optional — it is where the value is locked in.</p></div></section><div class="sec-div"></div>
+<section class="art-sec" id="s6"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">06 &mdash;</span>Find certified companies</span><span class="sec-main">How to verify</span></div><button class="share-btn" onclick="shareSection('s6','s6')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>How to find and verify certified organisations.</h2><p>Six Sigma Belt certifications from ASQ can be verified in the ASQ certified professionals directory. IASSC does not maintain a public directory — verification is through the certificate number issued at the time of examination.</p><div class="frank"><p><strong>How to verify:</strong> To confirm whether any organisation holds a current Six Sigma & Lean certification, use the official register. Verify the issuing CB's accreditation at nabcb.qci.org.in.</p></div><a href="https://asq.org/cert/directory" target="_blank" rel="noopener" class="reg-link">Verify ASQ certified professionals <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M5 2h5v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></section><div class="sec-div"></div>
+<section class="art-sec" id="s7"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">07 &mdash;</span>First 3 steps</span><span class="sec-main">How to actually start</span></div><button class="share-btn" onclick="shareSection('s7','s7')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>What to do this week if you want to get started.</h2><div class="steps"><div class="step"><div class="step-circle">1</div><div class="step-body"><strong>Pick one problem, not five — and write a one-page project charter</strong><p>The most common Six Sigma failure is starting too broad. Pick the single biggest quality or efficiency problem in your operation. Write the charter: what is the problem, what is the measurable goal, who is the sponsor, when does it close.</p></div></div><div class="step"><div class="step-circle">2</div><div class="step-body"><strong>Start collecting stage-wise rejection data today — not end-of-line totals</strong><p>End-of-line scrap rates tell you there is a problem. Stage-wise data tells you where it is. You cannot run Analyse phase without this.</p></div></div><div class="step"><div class="step-circle">3</div><div class="step-body"><strong>Register for an ASQ or IASSC Belt exam if pursuing individual certification</strong><p>Choose the level appropriate to your role. Confirm your employer's requirement before registering.</p><a href="https://asq.org/cert" target="_blank" rel="noopener" class="step-tip">ASQ Belt certification <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></section><div class="sec-div"></div>
+<section class="art-sec" id="s8"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">08 &mdash;</span>How Clicarity fits</span><span class="sec-main">Process tracking</span></div><button class="share-btn" onclick="shareSection('s8','s8')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Good records are the foundation. A process tracker builds them automatically.</h2><div class="clic-block">
+    <div class="clic-tag"><a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:#60a5fa">Clicarity</a> &mdash; Live Job Process Tracker &amp; Bottleneck Identifier</div>
+    <h3><a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:#fff">Clicarity</a> doesn't run your Six Sigma project. It gives you the stage-wise process data that makes Measure phase meaningful — and the control records that prove your improvements held.</h3><p>Six Sigma's DMAIC methodology lives or dies on data. The Measure phase requires a baseline — real process data showing where defects occur, at what rate, and at which stage. In <a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,.8);font-weight:600">Clicarity</a>, every production job captures quantity in, quantity out, rejects, and rejection reason at every stage. That stage-wise data is your Measure phase baseline. The Improve phase uses the same framework to capture post-implementation defect rates by stage. The Control phase uses it to track sustained performance — with the process now split into monitored lines, each tracked independently.</p>
+    <div class="clic-pts"><div class="clic-pt"><span class="clic-dot"></span>Stage-wise rejection data — quantity rejected and reason code at every production step — gives you the baseline DPMO calculation and root cause direction for Measure and Analyse phases.</div><div class="clic-pt"><span class="clic-dot"></span>When an improvement project splits across two production lines or processes, each is tracked as a sub-job through the DMAIC phases independently. Results from both lines preserved when the project closes.</div><div class="clic-pt"><span class="clic-dot"></span>Control phase monitoring: custom fields at each stage capture the sustained defect rate post-implementation. SPC chart data available from the stage-wise records.</div><div class="clic-pt"><span class="clic-dot"></span><a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7);font-weight:600">Clicarity</a> shows bottleneck stages — where jobs are held and for how long — which surfaces cycle time waste directly without a separate time study.</div></div>
+    <div class="pf-wrap">
+  <div class="pf-header"><div class="pf-header-title">&#128196; Job tracked in Clicarity</div><div class="pf-header-job">#IMP-2026-01 &mdash; Lean/Six Sigma improvement project</div></div>
+  <div class="pf-body"><div class="pf-flow"><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Define</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Problem statement</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Project scope</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Sponsor</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Black Belt / Green Belt</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Target completion</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Measure</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Process being measured</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Baseline defect rate (DPMO)</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Baseline cycle time (min)</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Data collection method</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>MSA completed</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Analyse</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Root causes identified</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Analysis tools used</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Validated root causes</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Fishbone / FMEA done</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Data analyst</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Improve</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Solutions implemented</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Pilot conducted</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Pilot defect rate (DPMO)</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Pilot cycle time (min)</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Approved by sponsor</div></div></div></div></div>
+  <div class="pf-split-section"><div class="pf-split-label">&#9660; Job splits &mdash; each component tracked independently</div><div class="pf-split-jobs"><div class="pf-sub-job"><div class="pf-sub-job-id">#IMP-2026-01-A</div><div class="pf-sub-job-name">Process A — Line 1 improvement</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Process owner</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Defect rate post</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Control plan updated</div></div><div class="pf-sub-job"><div class="pf-sub-job-id">#IMP-2026-01-B</div><div class="pf-sub-job-name">Process B — Line 2 improvement</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Process owner</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Defect rate post</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Control plan updated</div></div></div></div>
+  <div class="pf-merge-section"><span style="font-size:1rem">&#9650;</span><div class="pf-merge-text"><strong>Components rejoin as #IMP-2026-01</strong> &mdash; complete record of every branch, every data point, every sign-off preserved.</div></div>
+  <div class="pf-body"><div class="pf-flow"><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Control</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Control plan updated</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>SPC charts in place</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Monitoring owner</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Sustained defect rate (DPMO)</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>30-day review date</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Results review</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Sponsor sign-off</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Financial benefit (INR)</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Sigma level achieved</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Project closed</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Close date</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Handover to process owner</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Process owner confirmed</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Documentation handed over</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Training completed</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Project leader sign-off</div></div></div></div></div>
+  <div class="pf-wastage-bar"><span class="pf-wastage-label">Wastage tracked:</span><span class="pf-wastage-item">&#9648; Measure phase: baseline defect rate captured before improvement begins</span><span class="pf-wastage-item">&#9648; Each process line improved and tracked independently</span><span class="pf-wastage-item">&#9648; Control phase: sustained defect rate verified 30 days post-implementation</span></div>
+  <div class="pf-note">&#9432; Fields and stage names are fully customisable. This illustrates a typical manufacturing improvement project — Six Sigma DMAIC setup.</div>
+</div><div class="case-v2">
+  <div class="case-v2-tag">&#128101; Illustrative case &mdash; details changed for confidentiality</div>
+  <div class="case-v2-body">
+    <div class="case-v2-col"><div class="case-v2-lbl">The business</div><div class="case-v2-val">Precision turned parts manufacturer<br><small style="color:var(--muted)">Coimbatore &middot; 65 employees, Tier 2 automotive supplier</small></div></div>
+    <div class="case-v2-col"><div class="case-v2-lbl">The trigger</div><div class="case-v2-val">Their scrap rate on a high-volume CNC turning job was running at 4.2% — above their customer's acceptable limit of 2%. A customer audit noted this as a concern.</div></div>
+    <div class="case-v2-col span2"><div class="case-v2-lbl">The challenge</div><div class="case-v2-val">They knew they had a scrap problem but not where in the process it was originating. Scrap was recorded at end-of-line — not stage-by-stage. Root cause analysis was guesswork.</div></div>
+    <div class="case-v2-col clic"><div class="case-v2-lbl">Where Clicarity came in</div><div class="case-v2-val">They deployed <a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Clicarity</a> with rejection reason codes captured at every production stage. Within 6 weeks, the data showed that 73% of scrap originated at the third machining step — a specific machine with a worn spindle. The Six Sigma project used this stage-wise rejection data as the baseline for the Measure phase. The DMAIC project ran for 11 weeks.</div></div>
+    <div class="case-v2-col result"><div class="case-v2-lbl">The result</div><div class="case-v2-val">Scrap rate reduced to 1.6%. Customer audit concern closed.<div class="case-v2-quote">We had been guessing at the root cause for months. The stage-wise rejection data from Clicarity showed us exactly where to look.</div></div></div>
+  </div>
+</div>
+    <p class="clic-disc">Clicarity is a process tracking tool. It does not provide certification, consulting, or audit services.</p>
+    <div class="clic-btns">
+      <a href="https://www.clicarity.com" class="cb-p" target="_blank" rel="noopener">See how Clicarity works &#8594;</a>
+      <a href="https://calendly.com/clicarity/demo" class="cb-g" target="_blank" rel="noopener">Book a Demo</a>
+    </div>
+    <div class="clic-contact">
+  <div class="clic-contact-text"><strong>Wondering if Clicarity fits your process?</strong> Describe how your jobs flow and we&#8217;ll tell you honestly whether it&#8217;s the right fit.</div>
+  <div class="clic-contact-btns">
+    <a href="https://wa.me/919867800451?text=Hi%2C+I+read+the+Codex+and+want+to+know+if+Clicarity+fits+my+process" class="clic-wa" target="_blank" rel="noopener">Ask on WhatsApp</a>
+    <a href="/cdn-cgi/l/email-protection#066e636a6a6946656a6f6567746f727f2865696b397573646c6365723b567469656375752d606f722d777363747f2d6074696b2d456962637e" class="clic-mail">Email us</a>
+  </div>
+</div>
+  </div></section><div class="sec-div"></div>
+<section class="art-sec" id="links"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n"></span>All official links</span><span class="sec-main">Every resource in one place</span></div><button class="share-btn" onclick="shareSection('links','links')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Everything you need &mdash; no searching required.</h2>
+<div class="links-sec"><div class="links-sec-hd"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5L9.8 6h4.7L10.7 8.8l1.6 5.2L8 11.2l-4.3 2.8 1.6-5.2L1.5 6h4.7z" stroke="var(--accent)" stroke-width="1.3" stroke-linejoin="round"/></svg>Official links &mdash; Six Sigma & Lean</div><div class="lg"><div class="lg-title">Certification</div><div class="link-row"><div><div class="link-name">ASQ — Belt certification exams</div><div class="link-desc">CSSGB and CSSBB. Globally recognised.</div></div><a href="https://asq.org/cert" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="link-row"><div><div class="link-name">IASSC — Belt certification</div><div class="link-desc">ICGB and ICBB. Exam-only format.</div></div><a href="https://www.iassc.org" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="lg"><div class="lg-title">Methodology</div><div class="link-row"><div><div class="link-name">Lean Enterprise Institute</div><div class="link-desc">Lean methodology resources.</div></div><a href="https://www.lean.org" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="link-row"><div><div class="link-name">ASQ — Six Sigma resources</div><div class="link-desc">Articles, tools, and DMAIC guidance.</div></div><a href="https://asq.org/quality-resources/six-sigma" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="lg"><div class="lg-title">Tools</div><div class="link-row"><div><div class="link-name">AIAG — MSA and SPC manuals</div><div class="link-desc">Measurement System Analysis and Statistical Process Control.</div></div><a href="https://www.aiag.org" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="link-row"><div><div class="link-name">iSixSigma — free tools and templates</div><div class="link-desc">Commonly used free Six Sigma reference.</div></div><a href="https://www.isixsigma.com" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></section>
+<div class="vbar"><div class="vbar-l"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M7 4.5v3L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Last verified March 2026 &middot; asq.org · iassc.org · lean.org</div><div class="vbar-r"></div></div>
+<div class="related"><div class="rel-title">Related certifications</div><div class="rel-grid"><a href="/codex/iso9001" class="rel-card"><div class="rel-tag">Quality & Ops</div><div class="rel-name">ISO 9001</div><div class="rel-desc">Quality management system. Six Sigma and ISO 9001 are complementary.</div></a><a href="/codex/iatf16949" class="rel-card"><div class="rel-tag">Quality & Ops</div><div class="rel-name">IATF 16949</div><div class="rel-desc">Automotive quality. Expects Six Sigma capability in the supply chain.</div></a><a href="/codex/sops" class="rel-card"><div class="rel-tag">Quality & Ops</div><div class="rel-name">SOPs</div><div class="rel-desc">Standard Operating Procedures. The documented baseline Six Sigma projects build on.</div></a></div></div>
+</div><footer role="contentinfo">
+  <div class="ft-logo"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" height="23"></div>
+  <div class="ft-links"><a href="/codex">Codex home</a><a href="/codex/glossary">Glossary</a><a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy Policy</a><a href="https://www.clicarity.com/terms">Terms</a></div>
+  <div>&copy; 2026 Clicarity &middot; Mumbai &middot; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="462e232a2a2906252a2f2527342f323f6825292b">[email&#160;protected]</a></div>
+</footer>
+<a href="https://wa.me/919867800451" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.49"/></svg></a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer>window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('prog').style.width=((d.scrollTop/(d.scrollHeight-d.clientHeight))*100)+'%';});
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('on');ham.classList.toggle('on',o);ham.setAttribute('aria-expanded',o);});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mob.classList.remove('on');ham.classList.remove('on');}));
+function jumpTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+function shareSection(id,label){const url=window.location.origin+window.location.pathname+'#'+id;if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>showToast('Link copied — '+label));}else{const t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast('Link copied — '+label);}}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2600);}
+function setVisitor(type){document.querySelectorAll('.visitor-btn').forEach(b=>b.classList.remove('on'));document.getElementById('vb-'+type).classList.add('on');document.querySelectorAll('.for-owner,.for-employee,.for-consultant,.for-student').forEach(el=>{el.style.display='none';});document.querySelectorAll('.for-'+type).forEach(el=>{el.style.display='block';});}
+function toggleCheck(item){item.classList.toggle('done');updateProgress();}
+function updateProgress(){
+  var items=document.querySelectorAll('.gap-item');
+  if(!items.length) return;
+  var done=document.querySelectorAll('.gap-item.done').length;
+  var pct=Math.round((done/items.length)*100);
+  var bar=document.getElementById('gap-bar');
+  var txt=document.getElementById('gap-txt');
+  if(bar) bar.style.width=pct+'%';
+  if(txt) txt.textContent=done+' / '+items.length+' ('+pct+'%)';
+}
+
+</script>
+</body>
+</html>

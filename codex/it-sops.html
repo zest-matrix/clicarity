@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT SOPs — IT Standard Operating Procedures for … | Clicarity</title>
+<meta name="description" content="IT SOPs explained. Incident management, change management, access control, backup and recovery procedures. ISO 27001, SOC 2, and PCI-DSS alignment. How to write and control IT SOPs.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://clicarity.com/codex/it-sops">
+<meta property="og:type" content="article"><meta property="og:title" content="IT SOPs — IT Standard Operating Procedures for Indian Technology Companies | Clicarity Codex">
+<meta property="og:description" content="IT SOPs explained. Incident management, change management, access control, backup and recovery procedures. ISO 27001, SOC 2, and PCI-DSS alignment. How to write and control IT SOPs."><meta property="og:url" content="https://clicarity.com/codex/it-sops">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"IT SOPs — IT Standard Operating Procedures for Indian Technology Companies","url":"https://clicarity.com/codex/it-sops","publisher":{"@type":"Organization","name":"Clicarity","url":"https://clicarity.com"},"dateModified":"2026-03-29"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are IT SOPs?","acceptedAnswer":{"@type":"Answer","text":"Standard Operating Procedures for IT operations — incident response, change management, access control, backup and recovery. Required by ISO 27001, SOC 2, and PCI-DSS."}},{"@type":"Question","name":"Are IT SOPs mandatory?","acceptedAnswer":{"@type":"Answer","text":"Required by ISO 27001 clause 7.5, SOC 2 controls, and PCI-DSS requirement 12."}},{"@type":"Question","name":"What is the most common IT SOP gap?","acceptedAnswer":{"@type":"Answer","text":"Undocumented incident response procedure — the procedure exists in senior engineers' heads but has never been written down, version-controlled, or trained out."}},{"@type":"Question","name":"How often should IT SOPs be reviewed?","acceptedAnswer":{"@type":"Answer","text":"Annually, plus triggered by any significant system change, security incident, or failed audit finding."}}]}]}</script>
+<style>
+:root{
+  --bg:#f9f8f6;--surface:#fff;--text:#0f0e0d;--muted:#6b6860;
+  --accent:#1a56db;--al:#eef2ff;--ah:#1341b0;
+  --green:#00b37e;--gl:#dcfce7;
+  --orange:#f97316;--ol:#fff7ed;
+  --border:#e8e5e0;--r:16px;
+  --fd:'Plus Jakarta Sans',sans-serif;
+  --fb:'Inter',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:9999;width:0%;transition:width .08s linear}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 5%;background:rgba(249,248,246,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--muted);font-size:.88rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.btn{padding:9px 20px;border-radius:100px;font-family:var(--fb);font-weight:500;font-size:.88rem;cursor:pointer;transition:all .2s;border:none;text-decoration:none;display:inline-block}
+.btn-o{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-o:hover{border-color:var(--accent);color:var(--accent)}
+.btn-p{background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(26,86,219,.2)}
+.btn-p:hover{background:var(--ah);transform:translateY(-1px)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.ham span{display:block;height:1.5px;width:22px;background:var(--text);border-radius:2px;transition:all .25s}
+.ham.on span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.on span:nth-child(2){opacity:0}
+.ham.on span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{display:none;position:fixed;top:65px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:16px 5%;flex-direction:column;z-index:99}
+.mob.on{display:flex}
+.mob a{font-size:15px;color:var(--text);padding:11px 0;border-bottom:1px solid var(--border)}
+
+/* BREADCRUMB */
+.bread{background:var(--surface);border-bottom:1px solid var(--border);padding:11px 5%}
+.bread-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--muted)}
+.bread-in a{color:var(--muted);transition:color .15s}.bread-in a:hover{color:var(--accent)}
+.bsep{opacity:.35}
+
+/* VISITOR SELECTOR */
+.visitor-bar{background:var(--al);border-bottom:1.5px solid rgba(26,86,219,.12);padding:14px 5%}
+.visitor-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.visitor-lbl{font-size:.78rem;font-weight:600;color:var(--accent);white-space:nowrap}
+.visitor-btn{padding:6px 16px;border-radius:100px;font-size:.78rem;font-weight:500;border:1.5px solid rgba(26,86,219,.2);color:var(--muted);background:#fff;cursor:pointer;transition:all .15s;font-family:var(--fb)}
+.visitor-btn:hover,.visitor-btn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+
+/* HERO */
+.art-hero{max-width:880px;margin:0 auto;padding:32px 5% 24px}
+.hero-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.art-badge{display:inline-flex;align-items:center;gap:5px;background:var(--al);color:var(--accent);font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:100px;letter-spacing:.5px;text-transform:uppercase}
+.read-time{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.read-time svg{width:13px;height:13px;opacity:.5}
+.art-hero h1{font-family:var(--fd);font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:800;line-height:1.15;letter-spacing:-.3px;color:var(--text);margin-bottom:14px}
+.art-hero h1 span{color:var(--accent)}
+.hook{background:#0f0e0d;border-radius:14px;padding:20px 24px;margin-bottom:18px}
+.hook p{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.7}
+.hook p strong{color:#fff;font-weight:700}
+.hook-stats{display:flex;gap:24px;margin-top:14px;flex-wrap:wrap}
+.hstat-n{font-family:var(--fd);font-size:1.4rem;font-weight:800;color:#fff;line-height:1}
+.hstat-n span{color:#60a5fa}
+.hstat-l{font-size:.68rem;color:rgba(255,255,255,.4);margin-top:3px}
+.verdicts{display:flex;flex-wrap:wrap;gap:7px}
+.v{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:600;padding:4px 11px;border-radius:100px}
+.vt{background:#fef3c7;color:#92400e}
+.ve{background:#dbeafe;color:#1e40af}
+.vb{background:var(--gl);color:#166534}
+
+/* TOAST */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#0f0e0d;color:#fff;font-size:.8rem;padding:8px 18px;border-radius:100px;opacity:0;transition:all .3s;pointer-events:none;z-index:500;white-space:nowrap}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* TOC */
+.toc-wrap{max-width:880px;margin:0 auto 32px;padding:0 5%}
+.toc-in{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 22px}
+.toc-hd{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:12px}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.toc-btn{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:9px;font-size:.83rem;color:var(--muted);cursor:pointer;transition:all .15s;border:none;background:none;font-family:var(--fb);text-align:left;width:100%}
+.toc-btn:hover{background:var(--al);color:var(--accent)}
+.toc-n{width:20px;height:20px;background:var(--al);color:var(--accent);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;flex-shrink:0}
+.toc-btn:hover .toc-n{background:var(--accent);color:#fff}
+
+/* BODY */
+.art-body{max-width:880px;margin:0 auto;padding:0 5% 72px}
+.art-sec{margin-bottom:52px;scroll-margin-top:80px}
+
+/* SEC HEADER */
+.sec-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid var(--al)}
+.sec-hd-l{display:flex;align-items:center;gap:10px}
+.sec-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:5px 14px;border-radius:100px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.sec-badge-n{font-size:.7rem;opacity:.7}
+.sec-main{font-family:var(--fd);font-size:1rem;font-weight:800;color:var(--text);letter-spacing:-.1px}
+.share-btn{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;font-weight:600;color:var(--muted);border:1px solid var(--border);padding:5px 11px;border-radius:100px;cursor:pointer;transition:all .15s;background:none;font-family:var(--fb);white-space:nowrap;flex-shrink:0}
+.share-btn:hover{border-color:var(--accent);color:var(--accent)}
+.share-btn svg{width:11px;height:11px}
+
+.art-sec h2{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:12px;letter-spacing:-.1px;line-height:1.3}
+.art-sec p{font-size:.9rem;color:var(--muted);line-height:1.78;margin-bottom:12px}
+.art-sec p strong{color:var(--text);font-weight:600}
+.art-sec p:last-child{margin-bottom:0}
+
+/* CALLOUTS */
+.scenario{background:var(--al);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:13px 17px;margin:14px 0;font-size:.85rem;color:var(--text);line-height:1.65}
+.scenario strong{font-weight:700;display:block;margin-bottom:2px;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:var(--accent)}
+.frank{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:13px 17px;margin:14px 0}
+.frank p{font-size:.85rem;color:#78350f;line-height:1.65;margin-bottom:0}
+.frank p strong{color:#78350f}
+.insider{background:#f8fafc;border:1px solid #e2e8f0;border-left:3px solid var(--text);border-radius:0 10px 10px 0;padding:13px 17px;margin:14px 0}
+.insider-tag{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:5px}
+.insider p{font-size:.85rem;color:var(--text);line-height:1.65;margin-bottom:0;font-style:italic}
+
+/* VISITOR CONTENT — all handled by JS */
+.for-owner,.for-employee,.for-consultant,.for-student{display:none}
+.for-owner{display:block}/* default: business owner shown */
+
+/* WHO GRID */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.who-card{border-radius:12px;padding:13px 15px}
+.who-card.yes{background:var(--gl);border:1px solid #bbf7d0}
+.who-card.maybe{background:#fef3c7;border:1px solid #fde68a}
+.who-card.no{background:#f8fafc;border:1px solid #e2e8f0}
+.who-lbl{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px}
+.who-card.yes .who-lbl{color:#166534}
+.who-card.maybe .who-lbl{color:#92400e}
+.who-card.no .who-lbl{color:#64748b}
+.who-item{font-size:.78rem;color:var(--text);padding:2px 0;line-height:1.4}
+
+/* JOURNEY MAP */
+.journey{margin:16px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.journey-hd{background:var(--accent);padding:12px 20px;font-family:var(--fd);font-size:.82rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px}
+.journey-months{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+.jm{padding:14px 12px;border-right:1px solid var(--border);border-top:1px solid var(--border)}
+.jm:last-child{border-right:none}
+.jm-period{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-bottom:5px}
+.jm-title{font-family:var(--fd);font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.3}
+.jm-desc{font-size:.7rem;color:var(--muted);line-height:1.45}
+.jm-active{background:var(--al);border-left:3px solid var(--accent)}
+.jm-badge{display:none}/* removed — replaced by journey-start row */
+.journey-start{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--al);border:1.5px solid rgba(26,86,219,.15);border-radius:0 0 var(--r) var(--r);padding:14px 20px;margin-top:-1px}
+.journey-start-icon{font-size:.8rem;color:var(--accent);flex-shrink:0}
+.journey-start-text{font-size:.83rem;color:var(--text);line-height:1.5;flex:1}
+.journey-start-text strong{color:var(--accent)}
+.journey-start-btn{font-size:.78rem;font-weight:600;color:var(--accent);border:1.5px solid rgba(26,86,219,.25);padding:6px 14px;border-radius:100px;background:#fff;cursor:pointer;white-space:nowrap;transition:all .15s;font-family:var(--fb);flex-shrink:0}
+.journey-start-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* REQUIREMENTS */
+.req-list{display:flex;flex-direction:column;margin-top:4px}
+.req-item{display:grid;grid-template-columns:auto 1fr;gap:0}
+.req-side{display:flex;flex-direction:column;align-items:center;padding-top:13px;padding-right:15px}
+.req-num{width:26px;height:26px;background:var(--accent);color:#fff;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0}
+.req-line{width:2px;flex:1;background:var(--border);margin:5px auto 0;min-height:12px}
+.req-item:last-child .req-line{display:none}
+.req-body{padding:11px 0 18px;border-bottom:1px solid var(--border)}
+.req-item:last-child .req-body{border-bottom:none}
+.req-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;font-family:var(--fd)}
+.req-desc{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:0}
+.eg{font-size:.74rem;color:var(--accent);background:var(--al);padding:5px 10px;border-radius:7px;margin-top:7px;display:inline-block;line-height:1.5}
+.req-fail{font-size:.74rem;color:#b91c1c;background:#fee2e2;padding:5px 10px;border-radius:7px;margin-top:5px;display:inline-block;line-height:1.5}
+
+/* AUDIT SPOTLIGHT */
+.audit-spot{background:#0f0e0d;border-radius:14px;padding:18px 22px;margin:18px 0}
+.audit-tag{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#60a5fa;margin-bottom:6px}
+.audit-spot p{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:0}
+.audit-spot p strong{color:#fff}
+
+/* CONSULTANT TOOLKIT */
+.toolkit{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:22px 26px;margin-top:14px}
+.toolkit-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.toolkit-hd-icon{width:36px;height:36px;background:var(--al);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.toolkit-hd-icon svg{width:18px;height:18px;color:var(--accent)}
+.toolkit-title{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--text)}
+.toolkit-sub{font-size:.75rem;color:var(--muted)}
+.toolkit-items{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.toolkit-item{display:flex;align-items:flex-start;gap:10px;background:var(--bg);border-radius:10px;padding:12px 14px;cursor:pointer;transition:all .15s;border:1px solid transparent}
+.toolkit-item:hover{background:var(--al);border-color:rgba(26,86,219,.15)}
+.ti-icon{width:28px;height:28px;background:var(--al);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
+.ti-name{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.ti-desc{font-size:.72rem;color:var(--muted);line-height:1.35}
+
+/* CHECKLIST */
+.checklist{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:14px}
+.checklist-hd{background:var(--accent);padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.checklist-hd-title{font-family:var(--fd);font-size:.85rem;font-weight:700;color:#fff}
+.print-btn{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:100px;cursor:pointer;background:none;font-family:var(--fb);transition:all .15s}
+.print-btn:hover{background:rgba(255,255,255,.15);color:#fff}
+.cl-items{padding:4px 0}
+.cl-item{display:flex;align-items:flex-start;gap:12px;padding:11px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.cl-item:last-child{border-bottom:none}
+.cl-item:hover{background:var(--bg)}
+.cl-item.done .cl-check{background:var(--green);border-color:var(--green)}
+.cl-item.done .cl-text{text-decoration:line-through;opacity:.5}
+.cl-check{width:18px;height:18px;border:1.5px solid var(--border);border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;transition:all .15s}
+.cl-check svg{width:10px;height:10px;color:#fff;opacity:0;transition:opacity .15s}
+.cl-item.done .cl-check svg{opacity:1}
+.cl-text{font-size:.83rem;color:var(--text);line-height:1.5}
+.cl-sub{font-size:.73rem;color:var(--muted);margin-top:2px;line-height:1.4}
+.cl-progress{background:var(--bg);padding:10px 20px;display:flex;align-items:center;gap:12px;border-top:1px solid var(--border)}
+.cl-bar-wrap{flex:1;height:5px;background:var(--border);border-radius:100px;overflow:hidden}
+.cl-bar{height:100%;background:var(--green);border-radius:100px;transition:width .3s;width:0%}
+.cl-pct{font-size:.72rem;font-weight:600;color:var(--muted);white-space:nowrap}
+
+/* TIMELINE */
+.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.tl-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:15px 17px;transition:border-color .2s}
+.tl-card:hover{border-color:rgba(26,86,219,.2)}
+.tl-lbl{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:5px}
+.tl-val{font-family:var(--fd);font-size:1.2rem;font-weight:800;color:var(--text);line-height:1;margin-bottom:4px}
+.tl-val span{color:var(--accent)}
+.tl-sub{font-size:.74rem;color:var(--muted);line-height:1.5}
+
+/* COMPANIES */
+.co-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.co-row{display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;transition:border-color .2s;flex-wrap:wrap;gap:8px}
+.co-row:hover{border-color:rgba(26,86,219,.2)}
+.co-name{font-family:var(--fd);font-size:.87rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.co-ind{font-size:.72rem;color:var(--muted)}
+.co-link{font-size:.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(26,86,219,.2);padding:4px 11px;border-radius:100px;transition:all .15s;white-space:nowrap}
+.co-link:hover{background:var(--al)}
+.reg-link{display:inline-flex;align-items:center;gap:5px;margin-top:11px;font-size:.78rem;font-weight:600;color:var(--accent);background:var(--al);padding:7px 15px;border-radius:100px;transition:all .15s}
+.reg-link:hover{background:rgba(26,86,219,.12)}
+.reg-link svg{width:10px;height:10px}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;margin-top:8px}
+.step{display:flex;gap:15px;position:relative;padding-bottom:22px}
+.step:last-child{padding-bottom:0}
+.step::before{content:'';position:absolute;left:18px;top:38px;bottom:0;width:2px;background:var(--border)}
+.step:last-child::before{display:none}
+.step-circle{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:800;font-size:.8rem;flex-shrink:0;position:relative;z-index:1}
+.step-body{padding-top:6px;flex:1}
+.step-body strong{display:block;font-family:var(--fd);font-size:.92rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.step-body p{font-size:.82rem;color:var(--muted);line-height:1.65;margin-bottom:0}
+.step-tip{display:inline-flex;align-items:center;gap:5px;margin-top:9px;font-size:.73rem;font-weight:600;color:var(--accent);background:var(--al);padding:4px 11px;border-radius:100px}
+.step-tip svg{width:9px;height:9px}
+
+/* CLICARITY BLOCK */
+.clic-block{background:#0f0e0d;border-radius:20px;padding:28px 32px;margin-top:4px}
+.clic-tag{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#60a5fa;margin-bottom:9px}
+.clic-block h3{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:11px;line-height:1.3}
+.clic-block>p{font-size:.86rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px}
+.clic-pts{display:flex;flex-direction:column;gap:8px;margin-bottom:6px}
+.clic-pt{display:flex;gap:9px;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55}
+.clic-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px}
+.clic-disc{font-size:.75rem;color:rgba(255,255,255,.25);margin:14px 0 18px;line-height:1.5}
+.clic-btns{display:flex;gap:10px;flex-wrap:wrap}
+.cb-p{background:var(--accent);color:#fff;padding:10px 20px;border-radius:100px;font-size:.84rem;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:background .2s;font-family:var(--fb)}
+.cb-p:hover{background:var(--ah)}
+.cb-g{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:10px 20px;border-radius:100px;font-size:.84rem;font-weight:500;display:inline-flex;align-items:center;gap:5px;transition:all .2s;font-family:var(--fb)}
+.cb-g:hover{border-color:rgba(255,255,255,.4);color:#fff}
+
+/* LINKS SECTION */
+.links-sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:22px 26px;margin-top:8px}
+.links-sec-hd{font-family:var(--fd);font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.links-sec-hd svg{width:15px;height:15px;color:var(--accent)}
+.lg{margin-bottom:16px}.lg:last-child{margin-bottom:0}
+.lg-title{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:9px}
+.link-row{display:flex;align-items:flex-start;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);gap:12px;flex-wrap:wrap}
+.link-row:last-child{border-bottom:none;padding-bottom:0}
+.link-name{font-size:.84rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.link-desc{font-size:.74rem;color:var(--muted);line-height:1.4}
+.ext-link{display:inline-flex;align-items:center;gap:4px;font-size:.73rem;font-weight:600;color:var(--accent);border:1px solid rgba(26,86,219,.2);padding:4px 11px;border-radius:100px;white-space:nowrap;transition:all .15s;flex-shrink:0}
+.ext-link:hover{background:var(--al)}
+.ext-link svg{width:9px;height:9px}
+
+/* VERIFY BAR */
+.vbar{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px}
+.vbar-l{display:flex;align-items:center;gap:6px;font-size:.74rem;color:var(--muted)}
+.vbar-l svg{width:12px;height:12px;opacity:.5;flex-shrink:0}
+.vbar-r{display:flex;gap:6px;flex-wrap:wrap}
+.vbtn{font-size:.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(26,86,219,.2);padding:4px 11px;border-radius:100px;background:none;cursor:pointer;transition:all .15s;font-family:var(--fb)}
+.vbtn:hover{background:var(--al)}
+
+/* RELATED */
+.related{border-top:1px solid var(--border);padding-top:26px;margin-top:40px}
+.rel-title{font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:13px}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rel-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 15px;transition:all .2s;display:block}
+.rel-card:hover{border-color:rgba(26,86,219,.25);transform:translateY(-2px);box-shadow:0 5px 18px rgba(26,86,219,.07)}
+.rel-tag{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-bottom:4px}
+.rel-name{font-family:var(--fd);font-size:.86rem;font-weight:700;color:var(--text);margin-bottom:3px}
+.rel-desc{font-size:.72rem;color:var(--muted);line-height:1.4}
+
+.sec-div{height:1px;background:var(--border);margin:0 0 52px}
+
+footer{background:#0a0a09;padding:30px 5%;color:rgba(255,255,255,.35);display:flex;align-items:center;justify-content:space-between;font-size:.77rem;flex-wrap:wrap;gap:12px}
+.ft-logo img{height:23px;width:auto;filter:brightness(0) invert(1);opacity:.65}
+.ft-links{display:flex;gap:18px;flex-wrap:wrap}
+.ft-links a{color:rgba(255,255,255,.3);transition:color .2s}
+.ft-links a:hover{color:#fff}
+.wa{position:fixed;bottom:24px;right:24px;width:50px;height:50px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.35);z-index:150;transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}.ham{display:flex}
+  .toc-grid{grid-template-columns:1fr}
+  .who-grid{grid-template-columns:1fr}
+  .journey-months{grid-template-columns:repeat(3,1fr)}
+  .tl-grid{grid-template-columns:1fr}
+  .toolkit-items{grid-template-columns:1fr}
+  .rel-grid{grid-template-columns:1fr 1fr}
+  .clic-block{padding:20px 18px}
+  .sec-hd{flex-direction:column;gap:7px}
+  .visitor-in{gap:8px}
+}
+@media(max-width:480px){.rel-grid{grid-template-columns:1fr}.art-hero h1{font-size:1.45rem}.journey-months{grid-template-columns:repeat(2,1fr)}}
+
+.pf-wrap{margin:20px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.pf-header{background:#0f0e0d;padding:11px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.pf-header-title{font-family:var(--fd);font-size:.8rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:7px}
+.pf-header-job{font-size:.7rem;color:rgba(255,255,255,.4)}
+.pf-body{padding:18px;overflow-x:auto}
+.pf-flow{display:flex;align-items:flex-start;gap:0;min-width:580px}
+.pf-stage{display:flex;flex-direction:column;align-items:center;flex:1}
+.pf-stage-box{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 11px;width:100%;max-width:130px}
+.pf-stage-box.ccp{border-color:var(--accent);background:var(--al)}
+.pf-stage-name{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.3}
+.pf-field{font-size:.6rem;color:var(--muted);padding:1.5px 0;display:flex;align-items:center;gap:3px;line-height:1.3}
+.pf-badge{display:inline-block;font-size:.55rem;font-weight:800;text-transform:uppercase;padding:2px 6px;border-radius:100px;margin-bottom:4px}
+.pf-badge.ccp-badge{background:var(--accent);color:#fff}
+.pf-arrow{display:flex;align-items:center;justify-content:center;padding:0 3px;margin-top:30px;color:var(--muted);font-size:.7rem;flex-shrink:0}
+.pf-split-section{padding:12px 18px;background:#fff7ed;border-top:1px solid #fed7aa;border-bottom:1px solid #fed7aa}
+.pf-split-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#ea580c;margin-bottom:9px}
+.pf-split-jobs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pf-sub-job{background:var(--surface);border:1px solid #fed7aa;border-radius:9px;padding:9px 11px}
+.pf-sub-job-id{font-size:.6rem;font-weight:800;color:#ea580c;margin-bottom:3px;font-family:var(--fd)}
+.pf-sub-job-name{font-size:.68rem;font-weight:600;color:var(--text);margin-bottom:5px}
+.pf-merge-section{padding:9px 18px;background:#f0fdf4;border-top:1px solid #bbf7d0;display:flex;align-items:center;gap:9px}
+.pf-merge-text{font-size:.75rem;color:#166534;line-height:1.5}
+.pf-merge-text strong{font-weight:700}
+.pf-wastage-bar{display:flex;align-items:center;gap:7px;padding:8px 18px;background:var(--bg);border-top:1px solid var(--border);flex-wrap:wrap}
+.pf-wastage-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.pf-wastage-item{font-size:.7rem;color:var(--text);background:var(--surface);border:1px solid var(--border);padding:2px 9px;border-radius:100px}
+.pf-note{font-size:.68rem;color:var(--muted);padding:8px 18px;border-top:1px solid var(--border);font-style:italic;line-height:1.5}
+.case-v2{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:16px 0}
+.case-v2-tag{background:var(--bg);border-bottom:1px solid var(--border);padding:7px 17px;font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+.case-v2-body{display:grid;grid-template-columns:1fr 1fr}
+.case-v2-col{padding:13px 17px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.case-v2-col:nth-child(even){border-right:none}
+.case-v2-col.span2{grid-column:1/-1;border-right:none}
+.case-v2-col.clic{background:rgba(26,86,219,.03);border-top:2px solid var(--accent);grid-column:1/-1;border-right:none}
+.case-v2-col.result{background:#f0fdf4;border-top:2px solid var(--green);grid-column:1/-1;border-right:none}
+.case-v2-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:4px}
+.case-v2-val{font-size:.82rem;color:var(--text);line-height:1.6}
+.case-v2-quote{font-style:italic;color:var(--muted);border-left:2px solid var(--accent);padding-left:9px;margin-top:7px;font-size:.78rem}
+.clic-contact{display:flex;align-items:center;justify-content:space-between;gap:11px;flex-wrap:wrap;margin-top:15px;padding:13px 16px;background:rgba(255,255,255,.06);border-radius:10px;border:1px solid rgba(255,255,255,.1)}
+.clic-contact-text{font-size:.79rem;color:rgba(255,255,255,.6);line-height:1.5}
+.clic-contact-text strong{color:rgba(255,255,255,.85)}
+.clic-contact-btns{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
+.clic-wa{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:#fff;background:#25d366;padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+.clic-mail{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+@media(max-width:600px){.pf-split-jobs{grid-template-columns:1fr}.case-v2-body{grid-template-columns:1fr}.case-v2-col,.case-v2-col.span2,.case-v2-col.clic,.case-v2-col.result{grid-column:auto;border-right:none}}
+
+
+.pf-wrap{margin:20px 0;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.pf-header{background:#0f0e0d;padding:11px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.pf-header-title{font-family:var(--fd);font-size:.8rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:7px}
+.pf-header-job{font-size:.7rem;color:rgba(255,255,255,.4)}
+.pf-body{padding:18px;overflow-x:auto}
+.pf-flow{display:flex;align-items:flex-start;gap:0;min-width:580px}
+.pf-stage{display:flex;flex-direction:column;align-items:center;flex:1}
+.pf-stage-box{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 11px;width:100%;max-width:130px}
+.pf-stage-box.ccp{border-color:var(--accent);background:var(--al)}
+.pf-stage-name{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.3}
+.pf-field{font-size:.6rem;color:var(--muted);padding:1.5px 0;display:flex;align-items:center;gap:3px;line-height:1.3}
+.pf-badge{display:inline-block;font-size:.55rem;font-weight:800;text-transform:uppercase;padding:2px 6px;border-radius:100px;margin-bottom:4px}
+.pf-badge.ccp-badge{background:var(--accent);color:#fff}
+.pf-arrow{display:flex;align-items:center;justify-content:center;padding:0 3px;margin-top:30px;color:var(--muted);font-size:.7rem;flex-shrink:0}
+.pf-split-section{padding:12px 18px;background:#fff7ed;border-top:1px solid #fed7aa;border-bottom:1px solid #fed7aa}
+.pf-split-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#ea580c;margin-bottom:9px}
+.pf-split-jobs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pf-sub-job{background:var(--surface);border:1px solid #fed7aa;border-radius:9px;padding:9px 11px}
+.pf-sub-job-id{font-size:.6rem;font-weight:800;color:#ea580c;margin-bottom:3px;font-family:var(--fd)}
+.pf-sub-job-name{font-size:.68rem;font-weight:600;color:var(--text);margin-bottom:5px}
+.pf-merge-section{padding:9px 18px;background:#f0fdf4;border-top:1px solid #bbf7d0;display:flex;align-items:center;gap:9px}
+.pf-merge-text{font-size:.75rem;color:#166534;line-height:1.5}
+.pf-merge-text strong{font-weight:700}
+.pf-wastage-bar{display:flex;align-items:center;gap:7px;padding:8px 18px;background:var(--bg);border-top:1px solid var(--border);flex-wrap:wrap}
+.pf-wastage-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.pf-wastage-item{font-size:.7rem;color:var(--text);background:var(--surface);border:1px solid var(--border);padding:2px 9px;border-radius:100px}
+.pf-note{font-size:.68rem;color:var(--muted);padding:8px 18px;border-top:1px solid var(--border);font-style:italic;line-height:1.5}
+.case-v2{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:16px 0}
+.case-v2-tag{background:var(--bg);border-bottom:1px solid var(--border);padding:7px 17px;font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+.case-v2-body{display:grid;grid-template-columns:1fr 1fr}
+.case-v2-col{padding:13px 17px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.case-v2-col:nth-child(even){border-right:none}
+.case-v2-col.span2{grid-column:1/-1;border-right:none}
+.case-v2-col.clic{background:rgba(26,86,219,.03);border-top:2px solid var(--accent);grid-column:1/-1;border-right:none}
+.case-v2-col.result{background:#f0fdf4;border-top:2px solid var(--green);grid-column:1/-1;border-right:none}
+.case-v2-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:4px}
+.case-v2-val{font-size:.82rem;color:var(--text);line-height:1.6}
+.case-v2-quote{font-style:italic;color:var(--muted);border-left:2px solid var(--accent);padding-left:9px;margin-top:7px;font-size:.78rem}
+.clic-contact{display:flex;align-items:center;justify-content:space-between;gap:11px;flex-wrap:wrap;margin-top:15px;padding:13px 16px;background:rgba(255,255,255,.06);border-radius:10px;border:1px solid rgba(255,255,255,.1)}
+.clic-contact-text{font-size:.79rem;color:rgba(255,255,255,.6);line-height:1.5}
+.clic-contact-text strong{color:rgba(255,255,255,.85)}
+.clic-contact-btns{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
+.clic-wa{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:#fff;background:#25d366;padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+.clic-mail{display:inline-flex;align-items:center;gap:5px;font-size:.77rem;font-weight:600;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);padding:6px 13px;border-radius:100px;font-family:var(--fb)}
+@media(max-width:600px){.pf-split-jobs{grid-template-columns:1fr}.case-v2-body{grid-template-columns:1fr}.case-v2-col,.case-v2-col.span2,.case-v2-col.clic,.case-v2-col.result{grid-column:auto;border-right:none}}
+</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IT SOPs — IT Standard Operating Procedures for Indian Technology Companies | Clicarity Codex">
+<meta name="twitter:description" content="IT SOPs explained. Incident management, change management, access control, backup and recovery procedures. ISO 27001, SOC 2, and PCI-DSS alignment. How to write">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+</head><body>
+<div id="prog"></div><div class="toast" id="toast"></div>
+<nav role="navigation">
+  <a href="https://www.clicarity.com" class="nav-logo"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" height="72"></a>
+  <ul class="nav-links"><li><a href="/codex">Codex Home</a></li><li><a href="/codex/glossary">Glossary</a></li><li><a href="/codex/compare">Compare</a></li><li><a href="/codex/starter">Starter Packs</a></li><li><a href="/codex/checklist">Checklists</a></li><li><a href="https://www.clicarity.com">Clicarity.com</a></li></ul>
+  <div class="nav-cta"><a class="btn btn-o" href="https://click.wa.expert" target="_blank" rel="noopener">Login</a></div>
+  <button class="ham" id="ham" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="/codex">Codex Home</a><a href="/codex/glossary">Glossary</a><a href="/codex/compare">Compare</a><a href="/codex/starter">Starter Packs</a><a href="/codex/checklist">Checklists</a><a href="https://www.clicarity.com">Clicarity.com</a><a href="https://click.wa.expert" target="_blank" rel="noopener">Login</a>
+</div>
+</div>
+<div class="visitor-bar"><div class="visitor-in"><span class="visitor-lbl">I am a &mdash;</span><button class="visitor-btn on" id="vb-owner" onclick="setVisitor('owner')">Business Owner</button><button class="visitor-btn" id="vb-employee" onclick="setVisitor('employee')">Employee / Manager</button><button class="visitor-btn" id="vb-consultant" onclick="setVisitor('consultant')">Consultant</button><button class="visitor-btn" id="vb-student" onclick="setVisitor('student')">Student / Researcher</button></div></div>
+<div class="art-hero">
+  <div class="hero-top"><div class="art-badge">IT & Security</div><div class="read-time"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M7 4.5v3L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>6 min read</div></div>
+  <h1>IT SOPs — <span>IT Standard Operating Procedures</span></h1>
+  <div class="for-owner"><div class="hook"><p><strong>IT SOPs are the documented procedures for every significant IT operation — incident response, change management, access control, backup and recovery.</strong> ISO 27001, SOC 2, PCI-DSS, and CMMI all require them. Without them, every IT incident becomes improvised, and every security audit finds the same gap.</p><div class="hook-stats"><div><div class="hstat-n">ISO 27001 cl. 7.5</div><div class="hstat-l">Documented information control</div></div><div><div class="hstat-n">SOC 2</div><div class="hstat-l">Controls must be documented and followed</div></div><div><div class="hstat-n">Version-controlled</div><div class="hstat-l">Undated IT SOPs are not credible evidence</div></div></div></div></div>
+  <div class="for-employee"><div class="hook"><p><strong>An IT SOP is the written procedure your team follows for a specific IT operation.</strong> Incident response, deployment procedures, backup verification, user access provisioning — all should have documented steps. Following the SOP consistently is what makes your team's work auditable and reproducible.</p><div class="hook-stats"><div><div class="hstat-n">Follow</div><div class="hstat-l">The SOP — not your memory of it</div></div><div><div class="hstat-n">Current</div><div class="hstat-l">Check version before following old procedures</div></div><div><div class="hstat-n">Report</div><div class="hstat-l">Any SOP that doesn't match reality — flag it</div></div></div></div></div>
+  <div class="for-consultant"><div class="hook"><p><strong>Quick reference.</strong> IT SOPs required by: ISO 27001 cl. 7.5 (documented information), SOC 2 (controls must be documented, evidence of operation required), PCI-DSS requirement 12.5 (security policy and procedures), CMMI-DEV (defined processes). Key IT SOPs: incident response, change management, access provisioning and de-provisioning, backup and recovery, vulnerability management, business continuity.</p><div class="hook-stats"><div><div class="hstat-n">ISO 27001 cl. 7.5</div><div class="hstat-l">Documented information</div></div><div><div class="hstat-n">SOC 2 CC6</div><div class="hstat-l">Control documentation requirement</div></div><div><div class="hstat-n">PCI-DSS Req. 12</div><div class="hstat-l">Security policy and procedures</div></div></div></div></div>
+  <div class="for-student"><div class="hook"><p><strong>IT SOPs are the application of standard operating procedure principles to IT operations.</strong> They define who does what, in what sequence, with what authority, when a specific IT event or operation occurs. In ITSM frameworks like ITIL, IT SOPs are the documented work instructions that sit below process definitions.</p><div class="hook-stats"><div><div class="hstat-n">Reproducible</div><div class="hstat-l">Same outcome regardless of who follows the SOP</div></div><div><div class="hstat-n">Auditable</div><div class="hstat-l">Evidence that the right steps were followed</div></div><div><div class="hstat-n">Improvable</div><div class="hstat-l">SOPs can be updated when better approaches are found</div></div></div></div></div>
+  <div class="verdicts"><span class="v v-mandatory">Required by ISO 27001 cl. 7.5, SOC 2, PCI-DSS, and most IT compliance frameworks</span><span class="v ve">Incident procedures must be known before the incident — training is not optional</span><span class="v vb">Version control and change tracking required — an undated IT SOP is an untrustworthy IT SOP</span></div>
+</div>
+<div class="toc-wrap"><div class="toc-in"><div class="toc-hd">What&rsquo;s on this page</div><div class="toc-grid">
+  <button class="toc-btn" onclick="jumpTo('s1')"><span class="toc-n">1</span>What it is</button>
+  <button class="toc-btn" onclick="jumpTo('s2')"><span class="toc-n">2</span>Who needs it</button>
+  <button class="toc-btn" onclick="jumpTo('s3')"><span class="toc-n">3</span>What it requires</button>
+  <button class="toc-btn" onclick="jumpTo('s4')"><span class="toc-n">4</span>Official body in India</button>
+  <button class="toc-btn" onclick="jumpTo('s5')"><span class="toc-n">5</span>Timeline</button>
+  <button class="toc-btn" onclick="jumpTo('s6')"><span class="toc-n">6</span>Find certified companies</button>
+  <button class="toc-btn" onclick="jumpTo('s7')"><span class="toc-n">7</span>Your first 3 steps</button>
+  <button class="toc-btn" onclick="jumpTo('s8')"><span class="toc-n">8</span>How Clicarity fits</button>
+  <button class="toc-btn" onclick="jumpTo('links')" style="grid-column:1/-1"><span class="toc-n">&#10003;</span>All official links</button>
+</div></div></div>
+<div class="art-body" id="art-body">
+<section class="art-sec" id="s1"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">01 &mdash;</span>What it is</span><span class="sec-main">Understanding IT SOPs</span></div><button class="share-btn" onclick="shareSection('s1','s1')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>The documented procedures your IT team follows — and the evidence your auditors ask for.</h2><p>IT SOPs are the written, version-controlled procedures for IT operations. Incident response, change management, access provisioning, backup verification, deployment checklists — each should have a documented procedure that any trained team member can follow and produce a consistent, predictable result.</p>
+  <p>Every major IT compliance framework requires documented IT procedures: <strong>ISO 27001</strong> clause 7.5 requires documented information for IT operations. <strong>SOC 2</strong> requires controls to be documented and evidence of their operation. <strong>PCI-DSS</strong> requirement 12.5 requires written information security policies and procedures. <strong>CMMI Level 3</strong> requires defined processes with documented work instructions.</p>
+  <p><strong>The most common IT audit finding:</strong> IT procedures exist informally in senior engineers' knowledge — not written down, not trained out, not followed consistently. When two engineers handle the same type of incident differently, the result is unpredictable outcomes and non-compliance.</p>
+  <div class="frank"><p><strong>Incident procedures must be known before the incident occurs.</strong> Writing an incident response SOP after the incident is like installing fire exits after the fire. The procedure must be written, reviewed, trained, and practiced before the event it covers.</p></div><div class="case-v2">
+  <div class="case-v2-tag">&#128101; Illustrative case &mdash; details changed for confidentiality</div>
+  <div class="case-v2-body">
+    <div class="case-v2-col"><div class="case-v2-lbl">The business</div><div class="case-v2-val">FinTech company<br><small style="color:var(--muted)">Bangalore &middot; 160 employees, processing payment transactions</small></div></div>
+    <div class="case-v2-col"><div class="case-v2-lbl">The trigger</div><div class="case-v2-val">A PCI-DSS assessment and a concurrent ISO 27001 pre-audit both identified the same gap: IT procedures existed informally in engineers' heads but were not documented, version-controlled, or trained out.</div></div>
+    <div class="case-v2-col span2"><div class="case-v2-lbl">The challenge</div><div class="case-v2-val">When a production incident occurred at 2 AM, three different engineers followed three different escalation paths. The incident took 4 hours to resolve — longer than it should have because there was no documented procedure.</div></div>
+    <div class="case-v2-col clic"><div class="case-v2-lbl">Where Clicarity came in</div><div class="case-v2-val">They built their IT SOPs as tracked jobs in <a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Clicarity</a>. The incident management procedure was split into two sub-jobs: the technical classification and escalation procedure (owned by the on-call engineer), and the stakeholder communication procedure (owned by the operations lead). Both required security review and training before going live.</div></div>
+    <div class="case-v2-col result"><div class="case-v2-lbl">The result</div><div class="case-v2-val">PCI-DSS gap closed. ISO 27001 clause 7.5 (documented information) finding resolved. Next 2 AM incident resolved in 47 minutes.<div class="case-v2-quote">The procedure existed in everyone's head but differently. Writing it down unified the response.</div></div></div>
+  </div>
+</div></section><div class="sec-div"></div>
+<section class="art-sec" id="s2"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">02 &mdash;</span>Who needs it</span><span class="sec-main">Is it right for you?</span></div><button class="share-btn" onclick="shareSection('s2','s2')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Do you actually need it? Honest answer.</h2><div class="who-grid">
+    <div class="who-card yes"><div class="who-lbl">&#10003; You need IT SOPs</div><div class="who-item">IT companies and SaaS companies pursuing ISO 27001, SOC 2, or PCI-DSS</div><div class="who-item">Software companies pursuing CMMI Level 3</div><div class="who-item">IT departments of organisations with significant IT operations</div><div class="who-item">Managed service providers with multiple clients</div></div>
+    <div class="who-card maybe"><div class="who-lbl">&#8764; Useful even without formal compliance</div><div class="who-item">Growing IT teams where multiple people now share the same operations responsibilities</div><div class="who-item">After any significant IT incident — the post-incident review output</div></div>
+    <div class="who-card no"><div class="who-lbl">&#8212; Not a priority yet</div><div class="who-item">Single-engineer IT setups — knowledge is by definition with one person</div></div>
+  </div></section><div class="sec-div"></div>
+<section class="art-sec" id="s3"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">03 &mdash;</span>What it requires</span><span class="sec-main">What is checked</span></div><button class="share-btn" onclick="shareSection('s3','s3')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>The core IT SOPs every technology team needs.</h2>
+<div class="req-list"><div class="req-item"><div class="req-side"><span class="req-num">1</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Incident response procedure</div><div class="req-desc">Step-by-step procedure for identifying, classifying, escalating, resolving, and closing IT incidents. Includes severity classification matrix and escalation contacts.</div><span class="eg">E.g. P1 (complete outage): engineer assesses within 15 minutes, escalates to IT lead within 30 minutes, management notification within 1 hour, resolution target 4 hours.</span><span class="req-fail">Most common gap: Procedure exists but escalation contacts are outdated or the engineer on call hasn't been trained on it.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">2</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Change management procedure</div><div class="req-desc">Process for requesting, reviewing, approving, implementing, and verifying IT changes. Prevents unauthorised changes causing incidents.</div><span class="eg">E.g. Change request form: description, impact assessment, rollback plan, approval required. Emergency changes: verbal approval then retrospective documentation.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">3</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Access provisioning and de-provisioning</div><div class="req-desc">How IT access is granted, modified, and revoked. Role-based access. Joiner, mover, leaver process.</div><span class="eg">E.g. New employee joins: HR triggers access request. IT provisions based on approved role. Employee moves: access reviewed and adjusted. Employee leaves: access revoked within 24 hours.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">4</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Backup and recovery procedure</div><div class="req-desc">How data backups are performed, where stored, how frequently tested, and how recovery is performed in a disaster.</div><span class="eg">E.g. Daily backup of production database. Weekly backup test — restoration to test environment. Annual DR drill. Results documented.</span><span class="req-fail">Most common gap: Backups running but never tested. Backup restoration fails in a real disaster.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">5</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Vulnerability management procedure</div><div class="req-desc">How IT systems are scanned for vulnerabilities, how findings are prioritised, and how patches are applied.</div><span class="eg">E.g. Monthly vulnerability scan. Critical findings patched within 30 days. High findings within 60 days. Results tracked.</span></div></div><div class="req-item"><div class="req-side"><span class="req-num">6</span><div class="req-line"></div></div><div class="req-body"><div class="req-title">Business continuity and disaster recovery procedure</div><div class="req-desc">What happens when a major system or site failure occurs. Recovery Time Objective (RTO) and Recovery Point Objective (RPO) defined and tested.</div><span class="eg">E.g. RTO 4 hours (systems restored within 4 hours of disaster). RPO 1 hour (maximum 1 hour of data loss). Annual DR test documented.</span></div></div></div>
+<div class="audit-spot"><div class="audit-tag">What inspectors really check</div><p>ISO 27001 auditors ask: <strong>"Show me your incident response procedure and show me the last 3 incidents handled using it."</strong> SOC 2 auditors sample change management tickets from across the 12-month period. PCI-DSS assessors verify access de-provisioning records for employees who left during the year.</p></div>
+<div id="checklist" style="scroll-margin-top:80px"><div class="checklist">
+  <div class="checklist-hd"><span class="checklist-hd-title">Gap analysis checklist &mdash; tick what you already have</span><button class="print-btn" onclick="window.print()">Print / Save PDF</button></div>
+  <div class="cl-items"><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Incident response procedure documented and trained</div><div class="cl-sub">Staff know the procedure before an incident occurs.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Change management procedure — all production changes logged</div><div class="cl-sub">No undocumented changes to production systems.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Access provisioning and de-provisioning procedure</div><div class="cl-sub">Leaver access revoked within 24 hours, evidenced.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Backup procedure with tested recovery</div><div class="cl-sub">Restoration tested — not just backup running.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Vulnerability management with patching timelines</div><div class="cl-sub">Tracked by severity.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">Business continuity plan with defined RTO and RPO</div><div class="cl-sub">DR drill conducted and documented annually.</div></div></div><div class="cl-item" onclick="toggleCheck(this)"><div class="cl-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="cl-text">All IT SOPs version-controlled with review dates</div><div class="cl-sub">No undated IT SOPs in use.</div></div></div></div>
+  <div class="cl-progress"><div class="cl-bar-wrap"><div class="cl-bar" id="cl-bar"></div></div><span class="cl-pct" id="cl-pct">0 of 7 complete</span></div>
+</div></div></section><div class="sec-div"></div>
+<section class="art-sec" id="s4"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">04 &mdash;</span>Official body</span><span class="sec-main">Who certifies in India</span></div><button class="share-btn" onclick="shareSection('s4','s4')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Who issues this in India &mdash; and how to verify it.</h2><p>IT SOPs are internal documents. Their adequacy is assessed by external auditors (ISO 27001 CBs, SOC 2 CPA firms, PCI-DSS QSAs) during compliance assessments.</p><div class="frank"><p><strong>Version control is not optional for IT SOPs.</strong> An undated, unversioned IT SOP cannot demonstrate currency. When the auditor asks "is this the current version?" you must be able to answer definitively. Use a simple version number and effective date on every IT SOP.</p></div><div class="co-list"><div class="co-row"><div><div class="co-name">ISO 27001 cl. 7.5 — Documented information</div><div class="co-ind">Core documented information clause.</div></div><a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" class="co-link">Website &#8599;</a></div><div class="co-row"><div><div class="co-name">SOC 2 — AICPA Trust Service Criteria</div><div class="co-ind">SOC 2 documentation requirements.</div></div><a href="https://www.aicpa.org" target="_blank" rel="noopener" class="co-link">Website &#8599;</a></div><div class="co-row"><div><div class="co-name">PCI-DSS — Requirement 12</div><div class="co-ind">PCI-DSS security policy requirements.</div></div><a href="https://www.pcisecuritystandards.org" target="_blank" rel="noopener" class="co-link">Website &#8599;</a></div><div class="co-row"><div><div class="co-name">NIST SP 800-61 — Incident response guide</div><div class="co-ind">US government incident response guidance.</div></div><a href="https://www.nist.gov/privacy-framework" target="_blank" rel="noopener" class="co-link">Website &#8599;</a></div></div><a href="https://www.iaf.nu/articles/Certified_Organizations1/10" target="_blank" rel="noopener" class="reg-link">ISO 27001 certified organisations — IAF <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M5 2h5v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></section><div class="sec-div"></div>
+<section class="art-sec" id="s5"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">05 &mdash;</span>Timeline</span><span class="sec-main">How long it takes</span></div><button class="share-btn" onclick="shareSection('s5','s5')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>What to expect &mdash; a typical journey.</h2>
+<p style="font-size:.75rem;color:var(--muted);margin-bottom:14px">Based on <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" style="color:var(--accent)">iso.org / aicpa.org</a>. Actual timelines vary. Confirm with your CB.</p>
+<div class="journey"><div class="journey-hd"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="white" stroke-width="1.3"/><path d="M7 4v3.5L9.5 9" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>IT SOPs Journey</div><div class="journey-months"><div class="jm  jm-active"><div class="jm-period">Step 1</div><div class="jm-title">List all critical IT operations</div><div class="jm-desc">What would break if there were no documented procedure?</div></div><div class="jm"><div class="jm-period">Step 2</div><div class="jm-title">Write the 6 core IT SOPs</div><div class="jm-desc">Incident, change, access, backup, vulnerability, BCP.</div></div><div class="jm"><div class="jm-period">Step 3</div><div class="jm-title">Security and compliance review</div><div class="jm-desc">Check alignment with ISO 27001, SOC 2, or PCI-DSS as applicable.</div></div><div class="jm"><div class="jm-period">Step 4</div><div class="jm-title">Test run each SOP</div><div class="jm-desc">Follow it on a real event. Find and fix gaps.</div></div><div class="jm"><div class="jm-period">Step 5</div><div class="jm-title">Train all IT staff</div><div class="jm-desc">Acknowledgements signed.</div></div><div class="jm"><div class="jm-period">Ongoing</div><div class="jm-title">Version control and annual review</div><div class="jm-desc">Plus triggered review after any significant IT change.</div></div></div></div><div class="journey-start"><span class="journey-start-icon">&#9654;</span><span class="journey-start-text"><strong>Where to begin:</strong> Use the checklist in Section 3 to assess your readiness before contacting any CB.</span><button class="journey-start-btn" onclick="jumpTo('checklist')">Open gap analysis checklist</button></div><div class="tl-grid"><div class="tl-card"><div class="tl-lbl">Format</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">One SOP per process</div><div class="tl-sub">Incident SOP, change SOP — separate documents.</div></div><div class="tl-card"><div class="tl-lbl">Version control</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">Version number + effective date</div><div class="tl-sub">On every IT SOP — mandatory.</div></div><div class="tl-card"><div class="tl-lbl">Review trigger</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">After any significant system change</div><div class="tl-sub">Plus annual review.</div></div><div class="tl-card"><div class="tl-lbl">Training</div><div class="tl-val" style="font-size:.85rem;margin-top:4px">Before the SOP is needed</div><div class="tl-sub">Not during the incident.</div></div></div><div class="frank" style="margin-top:12px"><p><strong>The backup procedure is the most dangerous gap.</strong> Most IT teams run backups — but have never tested recovery. When the disaster happens, they discover the backup is corrupt or the recovery procedure doesn't work. Test the restoration. Document the result.</p></div></section><div class="sec-div"></div>
+<section class="art-sec" id="s6"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">06 &mdash;</span>Find certified companies</span><span class="sec-main">How to verify</span></div><button class="share-btn" onclick="shareSection('s6','s6')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>How to find and verify certified organisations.</h2><p>IT SOPs are internal documents. Compliance with IT SOP requirements is indirectly evidenced through ISO 27001 certification, SOC 2 reports, or PCI-DSS compliance certificates.</p><div class="frank"><p><strong>How to verify:</strong> To confirm whether any organisation holds a current IT SOPs certification, use the official register. Verify the issuing CB's accreditation at nabcb.qci.org.in.</p></div><a href="https://www.iaf.nu/articles/Certified_Organizations1/10" target="_blank" rel="noopener" class="reg-link">ISO 27001 certified organisations — IAF <svg viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M5 2h5v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></section><div class="sec-div"></div>
+<section class="art-sec" id="s7"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">07 &mdash;</span>First 3 steps</span><span class="sec-main">How to actually start</span></div><button class="share-btn" onclick="shareSection('s7','s7')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>What to do this week if you want to get started.</h2><div class="steps"><div class="step"><div class="step-circle">1</div><div class="step-body"><strong>Write your incident response procedure this week — based on the last incident you handled</strong><p>The best IT SOPs are written from real incidents. Take your last significant IT incident and document exactly what should have happened.</p></div></div><div class="step"><div class="step-circle">2</div><div class="step-body"><strong>Test your backup restoration — today, not when a disaster occurs</strong><p>Schedule a backup restoration test this week. Document the result. If it fails, fix it.</p></div></div><div class="step"><div class="step-circle">3</div><div class="step-body"><strong>Version-control every IT SOP you already have — add version number and effective date</strong><p>Take every existing IT document and add a version number and effective date. This makes existing work immediately auditable.</p></div></div></div></section><div class="sec-div"></div>
+<section class="art-sec" id="s8"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n">08 &mdash;</span>How Clicarity fits</span><span class="sec-main">Process tracking</span></div><button class="share-btn" onclick="shareSection('s8','s8')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Good records are the foundation. A process tracker builds them automatically.</h2><div class="clic-block">
+    <div class="clic-tag"><a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:#60a5fa">Clicarity</a> &mdash; Live Job Process Tracker &amp; Bottleneck Identifier</div>
+    <h3><a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:#fff">Clicarity</a> doesn't manage your IT systems. It tracks the IT SOP creation and approval process — ensuring every procedure has a security review, a training record, and a version trail.</h3><p>IT SOPs fail for the same reason production SOPs fail: written informally, not version-controlled, and the team finds out the SOP is wrong only when an incident occurs. In <a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,.8);font-weight:600">Clicarity</a>, each IT SOP is created as a job with stages: draft, technical review, security and compliance review, test run, approval, training, and publication. When a procedure has technical and communication components (as most incident procedures do), each component runs as a separate sub-job with its own owner. The SOP goes live only after all stages are complete — not when the engineer finishes writing it.</p>
+    <div class="clic-pts"><div class="clic-pt"><span class="clic-dot"></span>Security and compliance review stage required before publication — every IT SOP checked for ISO 27001, SOC 2, or PCI-DSS alignment before it goes live.</div><div class="clic-pt"><span class="clic-dot"></span>When a procedure has technical and communication components, each runs as a sub-job with its own technical owner and training audience.</div><div class="clic-pt"><span class="clic-dot"></span>Training stage: staff trained and acknowledgements signed before the SOP becomes effective — the incident procedure must be known before the incident occurs.</div><div class="clic-pt"><span class="clic-dot"></span><a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7);font-weight:600">Clicarity</a> shows which IT SOPs are overdue for review — when a procedure hasn't been reviewed after a significant system change, it's visible before the next incident or audit.</div></div>
+    <div class="pf-wrap">
+  <div class="pf-header"><div class="pf-header-title">&#128196; Job tracked in Clicarity</div><div class="pf-header-job">#ITSOP-2026-01 &mdash; IT SOP creation — Incident management procedure</div></div>
+  <div class="pf-body"><div class="pf-flow"><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">SOP initiated</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>SOP title</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>IT process covered</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Author — IT/DevOps</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>IT manager sponsor</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Draft due date</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Draft written</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>SOP ref. no.</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Version</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Draft author</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Draft date</div><div class="pf-field"><span class="pf-field-icon">&#128247;</span>Draft document</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Technical review</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>IT lead reviewed</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Security team reviewed</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Legal / compliance reviewed</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Changes made</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Review date</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Test run</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Test incidents handled</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Test outcome</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>Issues found</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Adjustments made</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Test date</div></div></div></div></div>
+  <div class="pf-split-section"><div class="pf-split-label">&#9660; Job splits &mdash; each component tracked independently</div><div class="pf-split-jobs"><div class="pf-sub-job"><div class="pf-sub-job-id">#ITSOP-2026-01-A</div><div class="pf-sub-job-name">Incident classification & escalation procedure</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Technical lead approval</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Training completed</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Staff trained</div></div><div class="pf-sub-job"><div class="pf-sub-job-id">#ITSOP-2026-01-B</div><div class="pf-sub-job-name">Communication & stakeholder notification procedure</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Comms lead approval</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Training completed</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Staff trained</div></div></div></div>
+  <div class="pf-merge-section"><span style="font-size:1rem">&#9650;</span><div class="pf-merge-text"><strong>Components rejoin as #ITSOP-2026-01</strong> &mdash; complete record of every branch, every data point, every sign-off preserved.</div></div>
+  <div class="pf-body"><div class="pf-flow"><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Security & compliance review</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>CISO / IT security reviewed</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>ISO 27001 / SOC 2 alignment checked</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Legal confirmed</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Date</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Approval & publish</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>IT director approved</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Effective date</div><div class="pf-field"><span class="pf-field-icon">&#9998;</span>SOP no. on master list</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Previous version archived</div></div></div><div class="pf-arrow">&#8594;</div><div class="pf-stage"><div class="pf-stage-box"><div class="pf-stage-name">Training rollout</div><div class="pf-field"><span class="pf-field-icon">&#35;</span>Staff trained</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Trainer</div><div class="pf-field"><span class="pf-field-icon">&#128197;</span>Training date</div><div class="pf-field"><span class="pf-field-icon">&#9660;</span>Acknowledgements signed</div></div></div></div></div>
+  <div class="pf-wastage-bar"><span class="pf-wastage-label">Wastage tracked:</span><span class="pf-wastage-item">&#9648; Incident classification and stakeholder communication are separate sub-procedures — different owners, different stakeholders</span><span class="pf-wastage-item">&#9648; Security compliance review required before publication — not optional</span><span class="pf-wastage-item">&#9648; Training completed before the SOP goes live — staff must know the procedure before an incident occurs</span></div>
+  <div class="pf-note">&#9432; Fields and stage names are fully customisable. This illustrates a typical IT team — IT SOP creation and approval process setup.</div>
+</div><div class="case-v2">
+  <div class="case-v2-tag">&#128101; Illustrative case &mdash; details changed for confidentiality</div>
+  <div class="case-v2-body">
+    <div class="case-v2-col"><div class="case-v2-lbl">The business</div><div class="case-v2-val">FinTech company<br><small style="color:var(--muted)">Bangalore &middot; 160 employees, processing payment transactions</small></div></div>
+    <div class="case-v2-col"><div class="case-v2-lbl">The trigger</div><div class="case-v2-val">A PCI-DSS assessment and a concurrent ISO 27001 pre-audit both identified the same gap: IT procedures existed informally in engineers' heads but were not documented, version-controlled, or trained out.</div></div>
+    <div class="case-v2-col span2"><div class="case-v2-lbl">The challenge</div><div class="case-v2-val">When a production incident occurred at 2 AM, three different engineers followed three different escalation paths. The incident took 4 hours to resolve — longer than it should have because there was no documented procedure.</div></div>
+    <div class="case-v2-col clic"><div class="case-v2-lbl">Where Clicarity came in</div><div class="case-v2-val">They built their IT SOPs as tracked jobs in <a href="https://www.clicarity.com" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Clicarity</a>. The incident management procedure was split into two sub-jobs: the technical classification and escalation procedure (owned by the on-call engineer), and the stakeholder communication procedure (owned by the operations lead). Both required security review and training before going live.</div></div>
+    <div class="case-v2-col result"><div class="case-v2-lbl">The result</div><div class="case-v2-val">PCI-DSS gap closed. ISO 27001 clause 7.5 (documented information) finding resolved. Next 2 AM incident resolved in 47 minutes.<div class="case-v2-quote">The procedure existed in everyone's head but differently. Writing it down unified the response.</div></div></div>
+  </div>
+</div>
+    <p class="clic-disc">Clicarity is a process tracking tool. It does not provide certification, consulting, or audit services.</p>
+    <div class="clic-btns">
+      <a href="https://www.clicarity.com" class="cb-p" target="_blank" rel="noopener">See how Clicarity works &#8594;</a>
+      <a href="https://calendly.com/clicarity/demo" class="cb-g" target="_blank" rel="noopener">Book a Demo</a>
+    </div>
+    <div class="clic-contact">
+  <div class="clic-contact-text"><strong>Wondering if Clicarity fits your process?</strong> Describe how your jobs flow and we&#8217;ll tell you honestly whether it&#8217;s the right fit.</div>
+  <div class="clic-contact-btns">
+    <a href="https://wa.me/919867800451?text=Hi%2C+I+read+the+Codex+and+want+to+know+if+Clicarity+fits+my+process" class="clic-wa" target="_blank" rel="noopener">Ask on WhatsApp</a>
+    <a href="/cdn-cgi/l/email-protection#69010c050506290a05000a081b001d10470a0604561a1c0b030c0a1d54391b060a0c1a1a420f001d42181c0c1b10420f1b0604422a060d0c11" class="clic-mail">Email us</a>
+  </div>
+</div>
+  </div></section><div class="sec-div"></div>
+<section class="art-sec" id="links"><div class="sec-hd"><div class="sec-hd-l"><span class="sec-badge"><span class="sec-badge-n"></span>All official links</span><span class="sec-main">Every resource in one place</span></div><button class="share-btn" onclick="shareSection('links','links')"><svg viewBox="0 0 14 14" fill="none"><circle cx="11" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="2.5" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 7.7l5.5 3.1M9.5 3.2L4 6.3" stroke="currentColor" stroke-width="1.2"/></svg>Share</button></div><h2>Everything you need &mdash; no searching required.</h2>
+<div class="links-sec"><div class="links-sec-hd"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5L9.8 6h4.7L10.7 8.8l1.6 5.2L8 11.2l-4.3 2.8 1.6-5.2L1.5 6h4.7z" stroke="var(--accent)" stroke-width="1.3" stroke-linejoin="round"/></svg>Official links &mdash; IT SOPs</div><div class="lg"><div class="lg-title">Standards</div><div class="link-row"><div><div class="link-name">ISO 27001 — Information security</div><div class="link-desc">Documented information requirements.</div></div><a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="link-row"><div><div class="link-name">SOC 2 — AICPA</div><div class="link-desc">SOC 2 control documentation.</div></div><a href="https://www.aicpa.org" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="link-row"><div><div class="link-name">PCI-DSS — Requirement 12</div><div class="link-desc">Security policy requirements.</div></div><a href="https://www.pcisecuritystandards.org" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="lg"><div class="lg-title">Guidance</div><div class="link-row"><div><div class="link-name">NIST SP 800-61 — Incident response</div><div class="link-desc">Computer security incident handling guide.</div></div><a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="link-row"><div><div class="link-name">CIS Controls</div><div class="link-desc">Centre for Internet Security — practical controls.</div></div><a href="https://www.cisecurity.org/controls" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="lg"><div class="lg-title">Related certifications</div><div class="link-row"><div><div class="link-name">ISO 27001</div><div class="link-desc">Information security management.</div></div><a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="link-row"><div><div class="link-name">SOC 2</div><div class="link-desc">US enterprise security audit.</div></div><a href="https://www.aicpa.org" target="_blank" rel="noopener" class="ext-link">Visit <svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M4 2h4v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></section>
+<div class="vbar"><div class="vbar-l"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M7 4.5v3L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Last verified March 2026 &middot; iso.org · aicpa.org · pcisecuritystandards.org</div><div class="vbar-r"></div></div>
+<div class="related"><div class="rel-title">Related certifications</div><div class="rel-grid"><a href="/codex/iso27001" class="rel-card"><div class="rel-tag">Info Security</div><div class="rel-name">ISO 27001</div><div class="rel-desc">Information security management. IT SOPs are cl. 7.5 documented information.</div></a><a href="/codex/soc2" class="rel-card"><div class="rel-tag">Info Security</div><div class="rel-name">SOC 2</div><div class="rel-desc">IT SOPs are the control documentation SOC 2 auditors sample from.</div></a><a href="/codex/sops" class="rel-card"><div class="rel-tag">Quality & Ops</div><div class="rel-name">SOPs</div><div class="rel-desc">Production SOPs — same creation and control principles as IT SOPs.</div></a></div></div>
+</div><footer role="contentinfo">
+  <div class="ft-logo"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" height="23"></div>
+  <div class="ft-links"><a href="/codex">Codex home</a><a href="/codex/glossary">Glossary</a><a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy Policy</a><a href="https://www.clicarity.com/terms">Terms</a></div>
+  <div>&copy; 2026 Clicarity &middot; Mumbai &middot; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e9818c858586a98a85808a889b809d90c78a8684">[email&#160;protected]</a></div>
+</footer>
+<a href="https://wa.me/919867800451" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.49"/></svg></a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer>window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('prog').style.width=((d.scrollTop/(d.scrollHeight-d.clientHeight))*100)+'%';});
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('on');ham.classList.toggle('on',o);ham.setAttribute('aria-expanded',o);});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mob.classList.remove('on');ham.classList.remove('on');}));
+function jumpTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+function shareSection(id,label){const url=window.location.origin+window.location.pathname+'#'+id;if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>showToast('Link copied — '+label));}else{const t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast('Link copied — '+label);}}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2600);}
+function setVisitor(type){document.querySelectorAll('.visitor-btn').forEach(b=>b.classList.remove('on'));document.getElementById('vb-'+type).classList.add('on');document.querySelectorAll('.for-owner,.for-employee,.for-consultant,.for-student').forEach(el=>{el.style.display='none';});document.querySelectorAll('.for-'+type).forEach(el=>{el.style.display='block';});}
+function toggleCheck(item){item.classList.toggle('done');updateProgress();}
+function updateProgress(){
+  var items=document.querySelectorAll('.gap-item');
+  if(!items.length) return;
+  var done=document.querySelectorAll('.gap-item.done').length;
+  var pct=Math.round((done/items.length)*100);
+  var bar=document.getElementById('gap-bar');
+  var txt=document.getElementById('gap-txt');
+  if(bar) bar.style.width=pct+'%';
+  if(txt) txt.textContent=done+' / '+items.length+' ('+pct+'%)';
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The WhatsApp Chaos — What Indian Factory Messag… | Clicarity</title>
+<meta name="description" content="The actual WhatsApp messages in an Indian factory group — before and after Clicarity. Every manufacturer will recognise this. See the difference in one scroll.">
+<meta property="og:title" content="The WhatsApp Chaos — Indian Factory Messages Before & After Clicarity">
+<meta property="og:description" content="Scroll through what your factory's WhatsApp looks like — and what it could look like instead.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/the-chaos/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--dark:#0E0D0B;--wa:#25D366;--wa-dark:#128C7E;--wa-bubble:#DCF8C6;--wa-bubble-in:#fff;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+.btn{padding:12px 28px;border-radius:100px;font-family:var(--font-body);font-weight:600;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:white}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+.hero{background:var(--dark);padding:60px 5% 48px;text-align:center}
+.hero-inner{max-width:680px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.2);border-radius:100px;padding:5px 14px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5BCF8A;margin-bottom:16px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:white;line-height:1.15;margin-bottom:12px;letter-spacing:-0.02em}
+.hero-sub{font-size:0.97rem;color:rgba(255,255,255,0.45);line-height:1.75;max-width:500px;margin:0 auto}
+
+/* COMPARISON LAYOUT */
+.comparison{max-width:1100px;margin:0 auto;padding:56px 5%}
+.comp-intro{text-align:center;margin-bottom:48px}
+.comp-intro h2{font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:8px}
+.comp-intro p{font-size:0.9rem;color:var(--muted)}
+
+.scenario{margin-bottom:64px}
+.scenario-title{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.scenario-title::before{content:'';display:block;height:2px;width:32px;background:var(--accent);flex-shrink:0}
+.phones-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.phone-col-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.phone-col-label.before-label{color:#DC2626}
+.phone-col-label.after-label{color:var(--accent)}
+
+/* WA PHONE MOCK */
+.phone{background:#E5DDD5;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.12)}
+.phone-header{background:var(--wa-dark);padding:12px 16px;display:flex;align-items:center;gap:10px}
+.phone-avatar{width:36px;height:36px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:white;flex-shrink:0}
+.phone-group-name{font-size:0.88rem;font-weight:600;color:white}
+.phone-group-sub{font-size:0.72rem;color:rgba(255,255,255,0.6)}
+.phone-body{padding:12px;display:flex;flex-direction:column;gap:6px;max-height:420px;overflow-y:auto;scroll-behavior:smooth}
+.msg{max-width:85%;padding:7px 10px 4px;border-radius:8px;font-size:0.82rem;line-height:1.5;position:relative}
+.msg.out{background:var(--wa-bubble);align-self:flex-end;border-radius:8px 0 8px 8px}
+.msg.in{background:var(--wa-bubble-in);align-self:flex-start;border-radius:0 8px 8px 8px;box-shadow:0 1px 2px rgba(0,0,0,0.08)}
+.msg-sender{font-size:0.7rem;font-weight:700;color:var(--wa-dark);margin-bottom:2px}
+.msg-time{font-size:0.65rem;color:var(--muted);text-align:right;margin-top:2px}
+.msg-time.out{color:rgba(0,0,0,0.35)}
+.date-chip{text-align:center;margin:4px 0}
+.date-chip span{background:rgba(0,0,0,0.1);padding:3px 10px;border-radius:100px;font-size:0.7rem;color:rgba(0,0,0,0.5)}
+.system-msg{text-align:center;font-size:0.72rem;color:rgba(0,0,0,0.4);margin:4px 0}
+.msg.red{background:#FFE5E5}
+.msg.annotation{background:transparent;box-shadow:none;padding:4px 10px}
+.msg.annotation .msg-sender{color:#DC2626;font-size:0.72rem}
+.annotation-text{font-size:0.75rem;color:#DC2626;font-style:italic}
+
+/* CLICARITY NOTIFICATION MOCK */
+.cli-notif{background:#fff;border-radius:12px;padding:12px 14px;margin:4px 0;border-left:3px solid var(--accent);box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.cli-notif-header{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.cli-notif-icon{width:24px;height:24px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:800;color:white;flex-shrink:0}
+.cli-notif-app{font-size:0.7rem;font-weight:700;color:var(--accent)}
+.cli-notif-time{font-size:0.65rem;color:var(--muted);margin-left:auto}
+.cli-notif-body{font-size:0.8rem;color:var(--text);line-height:1.5}
+.cli-notif-body strong{color:var(--accent)}
+
+/* INSIGHT BAND */
+.insight{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 24px;border-radius:0;margin:0 -5%;width:calc(100% + 10%)}
+.insight-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1100px;margin:0 auto}
+.insight-item{display:flex;gap:10px;align-items:flex-start}
+.insight-icon{font-size:1.1rem;flex-shrink:0}
+.insight-text{font-size:0.85rem;color:var(--text);line-height:1.6}
+.insight-text strong{color:var(--accent)}
+
+/* CTA */
+.cta-section{background:var(--dark);padding:64px 5%;text-align:center}
+.cta-inner{max-width:540px;margin:0 auto}
+.cta-section h2{font-family:var(--font-display);font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:800;color:white;margin-bottom:10px}
+.cta-section p{font-size:0.92rem;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:28px}
+.cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-wa-lg{background:var(--wa);color:white;padding:13px 28px;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa-lg:hover{background:#1ebe5d;transform:translateY(-1px)}
+
+footer{background:#0A0A0A;padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.8rem;color:rgba(255,255,255,0.25)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.25);text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,0.7)}
+@media(max-width:680px){.phones-row{grid-template-columns:1fr}.insight-grid{grid-template-columns:1fr}}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The WhatsApp Chaos — What Indian Factory Messages Actually Look Like | Clicarity">
+<meta name="twitter:description" content="The actual WhatsApp messages in an Indian factory group — before and after Clicarity. Every manufacturer will recognise this. See the difference in one scroll.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">You'll recognise this</div>
+    <h1>The WhatsApp chaos — and what it looks like after</h1>
+    <p class="hero-sub">These are fictional factory names — but every message here is real. If you've run an Indian factory, you've sent at least three of these today.</p>
+  </div>
+</div>
+
+<div class="comparison">
+  <div class="comp-intro">
+    <h2>3 scenarios. Same problem. Different ending.</h2>
+    <p>Left: what happens without Clicarity. Right: what happens after.</p>
+  </div>
+
+  <!-- SCENARIO 1 -->
+  <div class="scenario">
+    <div class="scenario-title">Scenario 1 — "Where is Job 1038?"</div>
+    <div class="phones-row">
+      <div>
+        <div class="phone-col-label before-label">✕ Without Clicarity</div>
+        <div class="phone">
+          <div class="phone-header">
+            <div class="phone-avatar">MP</div>
+            <div>
+              <div class="phone-group-name">Mehta Packaging Floor</div>
+              <div class="phone-group-sub">Ramesh, Suresh, Vikram, +4</div>
+            </div>
+          </div>
+          <div class="phone-body">
+            <div class="date-chip"><span>Today, 9:12 AM</span></div>
+            <div class="msg out">Ramesh bhai, Job 1038 kahan tak aaya?<div class="msg-time out">9:12 ✓✓</div></div>
+            <div class="msg in"><div class="msg-sender">Ramesh</div>Sir ji almost done hai<div class="msg-time">9:34</div></div>
+            <div class="msg out">Kal bhi almost done tha. Exactly kitna bacha?<div class="msg-time out">9:35 ✓</div></div>
+            <div class="msg in"><div class="msg-sender">Ramesh</div>Thoda lamination wala pending hai sir<div class="msg-time">9:51</div></div>
+            <div class="msg out">Lamination wala Suresh hai kya aaj?<div class="msg-time out">9:52 ✓✓</div></div>
+            <div class="msg in"><div class="msg-sender">Suresh</div>Haan sir main hun. Machine ka thoda problem tha subah. Ab theek hai<div class="msg-time">10:08</div></div>
+            <div class="msg out">Client ka call aa raha hai. Lunch tak hoga?<div class="msg-time out">10:09 ✓</div></div>
+            <div class="msg in"><div class="msg-sender">Suresh</div>Haan sir ho jayega<div class="msg-time">10:23</div></div>
+            <div class="msg out" style="background:#FFE5E5">Client ne phir call kiya. 3pm tak pakka chahiye unhe<div class="msg-time out">12:47 ✓✓</div></div>
+            <div class="msg in"><div class="msg-sender">Ramesh</div>Sir thoda delay hoga. Sheet mein kuch problem aayi<div class="msg-time">1:02</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="phone-col-label after-label">✓ With Clicarity</div>
+        <div class="phone">
+          <div class="phone-header" style="background:#128C7E">
+            <div class="phone-avatar" style="background:#0A7C52">C</div>
+            <div>
+              <div class="phone-group-name">Clicarity — Job Updates</div>
+              <div class="phone-group-sub">Automated · Mehta Packaging</div>
+            </div>
+          </div>
+          <div class="phone-body" style="background:#ECE5DD">
+            <div class="date-chip"><span>Today</span></div>
+            <div class="cli-notif">
+              <div class="cli-notif-header">
+                <div class="cli-notif-icon">C</div>
+                <div class="cli-notif-app">Clicarity</div>
+                <div class="cli-notif-time">7:31 AM</div>
+              </div>
+              <div class="cli-notif-body">Job #1038 updated to <strong>Finishing</strong> by Ramesh · 480/500 sheets · Stage started 7:28 AM</div>
+            </div>
+            <div class="cli-notif">
+              <div class="cli-notif-header">
+                <div class="cli-notif-icon">C</div>
+                <div class="cli-notif-app">Clicarity</div>
+                <div class="cli-notif-time">9:44 AM</div>
+              </div>
+              <div class="cli-notif-body">Job #1038 updated to <strong>QC</strong> by Suresh · 500/500 sheets complete</div>
+            </div>
+            <div class="cli-notif" style="border-left-color:#0A7C52">
+              <div class="cli-notif-header">
+                <div class="cli-notif-icon" style="background:#0A7C52">✓</div>
+                <div class="cli-notif-app" style="color:#0A7C52">Clicarity</div>
+                <div class="cli-notif-time">11:02 AM</div>
+              </div>
+              <div class="cli-notif-body">Job #1038 <strong>Ready for Dispatch</strong> · All stages complete · Updated by Vikram</div>
+            </div>
+            <div class="msg out" style="background:var(--wa-bubble)">Job 1038 is ready for dispatch. Sending delivery challan now.<div class="msg-time out">11:05 ✓✓</div></div>
+            <div class="system-msg">No follow-up calls needed today</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENARIO 2 -->
+  <div class="scenario">
+    <div class="scenario-title">Scenario 2 — Vendor job goes missing</div>
+    <div class="phones-row">
+      <div>
+        <div class="phone-col-label before-label">✕ Without Clicarity</div>
+        <div class="phone">
+          <div class="phone-header">
+            <div class="phone-avatar">GP</div>
+            <div>
+              <div class="phone-group-name">Gupta Packaging</div>
+              <div class="phone-group-sub">Vendor Chat</div>
+            </div>
+          </div>
+          <div class="phone-body">
+            <div class="date-chip"><span>3 days ago</span></div>
+            <div class="msg out">Gupta bhai, inner tray ka kaam lena hai. 500 pieces. Wednesday tak chahiye.<div class="msg-time out">3 days ago ✓✓</div></div>
+            <div class="msg in"><div class="msg-sender">Gupta</div>Haan bhai karenge 👍<div class="msg-time">3 days ago</div></div>
+            <div class="date-chip"><span>Yesterday</span></div>
+            <div class="msg out">Gupta bhai, kya status hai tray ka?<div class="msg-time out">Yesterday ✓✓</div></div>
+            <div class="date-chip"><span>Today, 9am</span></div>
+            <div class="msg out">Gupta bhai???<div class="msg-time out">9:02 ✓</div></div>
+            <div class="msg in"><div class="msg-sender">Gupta</div>Bhai maafi chahta hun. Material late aaya humein. Kal tak pakka.<div class="msg-time">11:34</div></div>
+            <div class="msg out" style="background:#FFE5E5">Client delivery kal hai. Yeh kaise possible hai 😤<div class="msg-time out">11:35 ✓✓</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="phone-col-label after-label">✓ With Clicarity</div>
+        <div class="phone">
+          <div class="phone-header" style="background:#128C7E">
+            <div class="phone-avatar" style="background:#0A7C52">C</div>
+            <div>
+              <div class="phone-group-name">Clicarity · Vendor Updates</div>
+              <div class="phone-group-sub">Gupta Packaging assigned</div>
+            </div>
+          </div>
+          <div class="phone-body" style="background:#ECE5DD">
+            <div class="date-chip"><span>3 days ago</span></div>
+            <div class="cli-notif">
+              <div class="cli-notif-header"><div class="cli-notif-icon">C</div><div class="cli-notif-app">Clicarity</div><div class="cli-notif-time">3 days ago</div></div>
+              <div class="cli-notif-body">Gupta Packaging assigned to Job #1047 — Inner Tray · Due: Wednesday · 500 pcs · WhatsApp notification sent ✓</div>
+            </div>
+            <div class="date-chip"><span>Yesterday 2pm</span></div>
+            <div class="cli-notif" style="border-left-color:#D97706">
+              <div class="cli-notif-header"><div class="cli-notif-icon" style="background:#D97706">!</div><div class="cli-notif-app" style="color:#D97706">Clicarity Alert</div><div class="cli-notif-time">2:00 PM</div></div>
+              <div class="cli-notif-body">Job #1047 vendor stage — <strong>no update from Gupta Packaging in 24 hours</strong> · Due tomorrow</div>
+            </div>
+            <div class="msg out" style="background:var(--wa-bubble)">Gupta bhai, Job 1047 inner tray — Clicarity pe update karo. Delivery kal hai.<div class="msg-time out">Yesterday 2:01 ✓✓</div></div>
+            <div class="msg in"><div class="msg-sender">Gupta</div>Bhai material thoda late aaya. Aaj raat tak ready hoga.<div class="msg-time">Yesterday 2:15</div></div>
+            <div class="msg out" style="background:var(--wa-bubble)">Okay. Client ko bol diya ek din delay. Update karte rehna Clicarity pe.<div class="msg-time out">Yesterday 2:17 ✓✓</div></div>
+            <div class="system-msg">Delay caught 1 day early. Client informed proactively.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENARIO 3 -->
+  <div class="scenario">
+    <div class="scenario-title">Scenario 3 — Morning panic call</div>
+    <div class="phones-row">
+      <div>
+        <div class="phone-col-label before-label">✕ Without Clicarity</div>
+        <div class="phone">
+          <div class="phone-header">
+            <div class="phone-avatar">MP</div>
+            <div>
+              <div class="phone-group-name">Mehta Packaging Floor</div>
+              <div class="phone-group-sub">8:47 AM</div>
+            </div>
+          </div>
+          <div class="phone-body">
+            <div class="date-chip"><span>Today</span></div>
+            <div class="msg out">Good morning. Aaj kitne jobs pending hain?<div class="msg-time out">8:47 ✓✓</div></div>
+            <div class="msg in"><div class="msg-sender">Supervisor Mohan</div>Sir 4-5 jobs hain. 1038 almost done. 1041 lamination mein hai. 1043 ka material aana baaki hai.<div class="msg-time">9:02</div></div>
+            <div class="msg out">1044 aur 1045 ka kya?<div class="msg-time out">9:03 ✓</div></div>
+            <div class="msg in"><div class="msg-sender">Supervisor Mohan</div>Sir 1044 abhi start nahi hua. 1045 ka mujhe pata nahi main check karta hun<div class="msg-time">9:19</div></div>
+            <div class="msg out">Kab tak pata chalega?<div class="msg-time out">9:20 ✓✓</div></div>
+            <div class="msg in"><div class="msg-sender">Supervisor Mohan</div>10 min sir<div class="msg-time">9:21</div></div>
+            <div class="date-chip"><span>9:55 AM — still waiting</span></div>
+            <div class="msg out" style="background:#FFE5E5">Mohan bhai??<div class="msg-time out">9:55 ✓</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="phone-col-label after-label">✓ With Clicarity</div>
+        <div class="phone">
+          <div class="phone-header" style="background:#1A1917">
+            <div class="phone-avatar" style="background:var(--accent)">C</div>
+            <div>
+              <div class="phone-group-name">Clicarity Dashboard</div>
+              <div class="phone-group-sub">Live · All jobs · 8:47 AM</div>
+            </div>
+          </div>
+          <div class="phone-body" style="background:#F0F0F0;padding:10px">
+            <div style="background:white;border-radius:10px;padding:10px;font-size:0.78rem;margin-bottom:6px">
+              <div style="font-weight:700;margin-bottom:6px;font-size:0.72rem;color:var(--muted);text-transform:uppercase">Active Jobs — Today</div>
+              <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee"><span>Job #1038</span><span style="color:#0A7C52;font-weight:600">Finishing ✓</span></div>
+              <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee"><span>Job #1041</span><span style="color:var(--accent);font-weight:600">Lamination</span></div>
+              <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee"><span>Job #1043</span><span style="color:#D97706;font-weight:600">Waiting — material</span></div>
+              <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #eee"><span>Job #1044</span><span style="color:#D97706;font-weight:600">Not started</span></div>
+              <div style="display:flex;justify-content:space-between;padding:5px 0"><span>Job #1045</span><span style="color:#0A7C52;font-weight:600">QC stage ✓</span></div>
+            </div>
+            <div class="system-msg" style="color:#0A7C52;font-weight:600">All 5 jobs visible instantly. No messages needed.</div>
+            <div class="cli-notif" style="margin-top:6px">
+              <div class="cli-notif-header"><div class="cli-notif-icon" style="background:#D97706">!</div><div class="cli-notif-app" style="color:#D97706">Priority Today</div><div class="cli-notif-time">8:47 AM</div></div>
+              <div class="cli-notif-body">Job #1044 not started — client delivery today at 5pm · <strong>Action needed</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2>Which side of this are you on?</h2>
+    <p>If the left column feels like your morning — a free demo takes 30 minutes. Most factories are live within a week.</p>
+    <div class="cta-row">
+      <a class="btn-wa-lg" href="https://wa.me/919867800451" target="_blank">WhatsApp Us Now</a>
+      <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo</a>
+    </div>
+    <p style="margin-top:20px;font-size:0.82rem;color:rgba(255,255,255,0.3)">Also read: <a href="/a-day-in-the-life/" style="color:rgba(255,255,255,0.5)">A Day in the Life →</a> &nbsp;·&nbsp; <a href="/vs-whatsapp/" style="color:rgba(255,255,255,0.5)">Clicarity vs WhatsApp →</a></p>
+  </div>
+</div>
+
+<footer>
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:3rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy">
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+    <a href="https://www.clicarity.com/terms">Terms</a>
+  </div>
+  <div>© 2026 Clicarity &nbsp;·&nbsp; <a href="/mumbai/" style="color:inherit;opacity:0.6">Mumbai</a> · <a href="/surat/" style="color:inherit;opacity:0.6">Surat</a> · <a href="/tirupur/" style="color:inherit;opacity:0.6">Tirupur</a> · <a href="/delhi/" style="color:inherit;opacity:0.6">Delhi</a> · <a href="/pune/" style="color:inherit;opacity:0.6">Pune</a> · <a href="/ludhiana/" style="color:inherit;opacity:0.6">Ludhiana</a></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISO 9001 Certification Checklist — Free Guide f… | Clicarity</title>
+<meta name="description" content="Free ISO 9001 certification checklist for Indian SMEs. Covers all major clauses with plain-language guidance. Download instantly.">
+<meta property="og:title" content="ISO 9001 Certification Checklist — Free Guide for Indian SMEs | Clicarity">
+<meta property="og:description" content="Free ISO 9001 certification checklist for Indian SMEs. Covers all major clauses with plain-language guidance. Download instantly.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --blue:#1B6CA8; --blue-dark:#0F4878; --blue-light:#E6F1FB;
+  --green:#0F6E56; --green-light:#E1F5EE;
+  --amber:#BA7517; --amber-light:#FAEEDA;
+  --red:#C0392B; --red-light:#FCEAEA;
+  --ink:#1A1A2E; --muted:#6B6B7B; --border:#E2E0DC;
+  --light:#F8F7F4; --white:#FFFFFF;
+  --mgr:#1B6CA8; --exe:#7B2D8B;
+}
+body{font-family:'Nunito Sans',sans-serif;background:var(--light);color:var(--ink);min-height:100vh;}
+
+/* ═══════════════════════════════════════════════
+   SITE HEADER
+═══════════════════════════════════════════════ */
+.site-header{background:var(--blue-dark);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;}
+.site-logo{font-family:'Nunito',sans-serif;font-weight:900;font-size:22px;color:white;letter-spacing:-0.5px;}
+.site-logo span{opacity:.6;font-weight:600;font-size:13px;margin-left:8px;vertical-align:middle;}
+.header-badge{background:rgba(255,255,255,.15);color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:.3px;}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero{background:var(--blue);color:white;padding:48px 32px 40px;text-align:center;}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.18);font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:16px;}
+.hero h1{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(26px,4vw,40px);line-height:1.2;margin-bottom:12px;}
+.hero p{font-size:15px;opacity:.82;max-width:560px;margin:0 auto 24px;line-height:1.65;}
+.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;}
+.hero-stat{text-align:center;}
+.hero-stat strong{display:block;font-family:'Nunito',sans-serif;font-weight:900;font-size:24px;}
+.hero-stat span{font-size:12px;opacity:.7;}
+
+/* ═══════════════════════════════════════════════
+   COMPANY SETUP PANEL
+═══════════════════════════════════════════════ */
+.setup-panel{background:white;border-bottom:2px solid var(--border);padding:28px 32px;}
+.setup-inner{max-width:900px;margin:0 auto;}
+.setup-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;color:var(--blue);margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.setup-title::before{content:"01";background:var(--blue);color:white;font-size:11px;font-weight:900;padding:2px 7px;border-radius:4px;}
+.setup-desc{font-size:13px;color:var(--muted);margin-bottom:18px;}
+.setup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+.setup-field{display:flex;flex-direction:column;gap:5px;}
+.setup-field label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
+.setup-field input,.setup-field select,.setup-field textarea{
+  border:2px solid var(--border);border-radius:8px;padding:9px 12px;
+  font-family:'Nunito Sans',sans-serif;font-size:13px;color:var(--ink);
+  background:var(--light);transition:border-color .2s;
+}
+.setup-field input:focus,.setup-field select:focus,.setup-field textarea:focus{outline:none;border-color:var(--blue);background:white;}
+.setup-field textarea{resize:vertical;min-height:60px;}
+.setup-field.wide{grid-column:1/-1;}
+.autofill-note{font-size:12px;color:var(--green);font-weight:700;margin-top:12px;display:flex;align-items:center;gap:6px;}
+
+/* ═══════════════════════════════════════════════
+   TOGGLE + CONTROLS
+═══════════════════════════════════════════════ */
+.controls{background:white;border-bottom:2px solid var(--border);padding:16px 32px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.controls-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.toggle-wrap{display:flex;background:var(--light);border-radius:10px;border:2px solid var(--border);overflow:hidden;flex-shrink:0;}
+.toggle-btn{padding:9px 20px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;border:none;background:transparent;cursor:pointer;color:var(--muted);transition:all .2s;display:flex;align-items:center;gap:6px;}
+.toggle-btn.active-mgr{background:var(--mgr);color:white;}
+.toggle-btn.active-exe{background:var(--exe);color:white;}
+.progress-mini{flex:1;min-width:160px;}
+.progress-mini-label{display:flex;justify-content:space-between;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:5px;}
+.progress-mini-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden;}
+.progress-mini-fill{height:100%;background:linear-gradient(90deg,var(--blue),#2ECC71);border-radius:4px;transition:width .4s;}
+.print-btn{padding:9px 18px;background:var(--ink);color:white;border:none;border-radius:9px;font-family:'Nunito',sans-serif;font-weight:800;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.print-btn:hover{background:#333;}
+
+/* ═══════════════════════════════════════════════
+   MAIN CONTENT
+═══════════════════════════════════════════════ */
+.main{max-width:900px;margin:0 auto;padding:28px 32px 80px;}
+
+/* ═══════════════════════════════════════════════
+   VIEW PANELS
+═══════════════════════════════════════════════ */
+.view{display:none;}
+.view.active{display:block;}
+
+/* VIEW HEADERS */
+.view-header{border-radius:14px;padding:22px 26px;margin-bottom:24px;color:white;}
+.view-header.mgr-header{background:var(--mgr);}
+.view-header.exe-header{background:var(--exe);}
+.view-header h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:20px;margin-bottom:4px;}
+.view-header p{font-size:13px;opacity:.82;}
+
+/* ═══════════════════════════════════════════════
+   PHASE
+═══════════════════════════════════════════════ */
+.phase{margin-bottom:28px;}
+.phase-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid var(--border);}
+.phase-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:white;flex-shrink:0;}
+.mgr-phase .phase-num{background:var(--mgr);}
+.exe-phase .phase-num{background:var(--exe);}
+.phase-info .phase-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:17px;}
+.phase-info .phase-meta{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px;}
+
+/* ═══════════════════════════════════════════════
+   TASK CARD
+═══════════════════════════════════════════════ */
+.task{background:white;border:2px solid var(--border);border-radius:12px;padding:15px 17px;margin-bottom:8px;display:grid;grid-template-columns:32px 1fr auto;gap:11px;align-items:start;transition:border-color .15s;}
+.task:hover{border-color:#C0BDBA;}
+.task.done{background:#F9FFF9;border-color:#C8F0D8;}
+.task.done .task-title{text-decoration:line-through;color:var(--muted);}
+
+.cb{width:28px;height:28px;border-radius:7px;border:2.5px solid var(--border);background:var(--light);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;flex-shrink:0;margin-top:2px;transition:all .15s;}
+.cb:hover{border-color:#2ECC71;background:#f0fdf4;}
+.cb.checked{background:#2ECC71;border-color:#2ECC71;color:white;}
+
+.task-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:13.5px;line-height:1.35;margin-bottom:3px;}
+.task-body{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.task-body strong{color:var(--ink);font-weight:700;}
+
+.tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.3px;white-space:nowrap;align-self:start;margin-top:3px;}
+.tag-mgr{background:#E6F1FB;color:var(--mgr);}
+.tag-exe{background:#F3E8FA;color:var(--exe);}
+.tag-both{background:#E1F5EE;color:var(--green);}
+
+/* ═══════════════════════════════════════════════
+   HELPER BOXES
+═══════════════════════════════════════════════ */
+.helper{border-radius:9px;padding:12px 15px;margin:6px 0 6px 43px;font-size:12.5px;line-height:1.6;}
+.helper-label{font-family:'Nunito',sans-serif;font-weight:800;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;}
+
+/* Blue — find it */
+.find-it{background:#EBF4FF;border:1.5px solid #B5D4F4;}
+.find-it .helper-label{color:var(--mgr);}
+.find-it p{color:#154F82;}
+
+/* Amber — ask box */
+.ask{background:#FFFBF0;border:1.5px dashed #F5A623;}
+.ask .helper-label{color:#C27A00;}
+.ask p{color:#7A5500;}
+
+/* Green — content embedded */
+.embed{background:var(--green-light);border:1.5px solid #5DCAA5;}
+.embed .helper-label{color:var(--green);}
+.embed p,.embed li{color:#0A3D2F;font-size:12.5px;}
+.embed ul{padding-left:16px;margin-top:4px;}
+.embed li{margin-bottom:3px;line-height:1.6;}
+
+/* Purple — executor note */
+.exe-note{background:#F3E8FA;border:1.5px solid #C9A8E8;}
+.exe-note .helper-label{color:var(--exe);}
+.exe-note p{color:#4A1070;}
+
+/* Input line for fill-in */
+.fill-line{display:flex;gap:8px;align-items:baseline;margin-top:6px;}
+.fill-line span{font-weight:700;color:var(--ink);font-size:12.5px;min-width:170px;flex-shrink:0;}
+.fill-line div{border-bottom:1.5px solid var(--border);flex:1;height:18px;}
+
+/* Scope boxes */
+.scope-box{border-radius:8px;padding:12px 14px;margin-top:8px;}
+.scope-9001{background:var(--green-light);border-left:4px solid var(--green);}
+.scope-label{font-family:'Nunito',sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:5px;}
+.scope-9001 .scope-label{color:var(--green);}
+.scope-text{font-size:12.5px;font-style:italic;color:var(--ink);line-height:1.65;}
+.scope-tick{margin-top:8px;font-size:12px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.scope-tick input{width:15px;height:15px;cursor:pointer;}
+
+/* Connector */
+.connector{display:flex;align-items:center;gap:8px;margin:2px 0 18px 16px;color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+.connector::before{content:'';width:2px;height:18px;background:var(--border);border-radius:2px;display:block;}
+
+/* ═══════════════════════════════════════════════
+   AUTOFILLED TEXT
+═══════════════════════════════════════════════ */
+.af{color:var(--blue);font-weight:700;}
+
+/* ═══════════════════════════════════════════════
+   PRINT STYLES
+═══════════════════════════════════════════════ */
+@media print {
+  .site-header,.hero,.setup-panel,.controls,.print-btn{display:none!important;}
+  body{background:white;padding:0;}
+  .main{padding:0;max-width:100%;}
+  .view{display:block!important;}
+  .view-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .task{break-inside:avoid;border:1.5px solid #ddd;}
+  .phase{break-inside:avoid;}
+  .cb{border:2px solid #999;}
+  .cb.checked{background:#2ECC71!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .separator-page{page-break-before:always;display:flex!important;align-items:center;justify-content:center;min-height:100vh;text-align:center;}
+  .helper{break-inside:avoid;}
+  @page{margin:1.5cm;size:A4;}
+}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #E4E0D8;position:sticky;top:0;z-index:100;}
+.nav-logo img{height:72px;width:auto;display:block;}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ISO 9001 Certification Checklist — Free Guide for Indian SMEs | Clicarity">
+<meta name="twitter:description" content="Free ISO 9001 certification checklist for Indian SMEs. Covers all major clauses with plain-language guidance. Download instantly.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+<link rel="canonical" href="https://www.clicarity.com/Clicarity-ISO-9001-Public-Checklist.html/">
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+
+<!-- SITE HEADER -->
+<div class="site-header">
+  <div class="site-logo">Clicarity <span>by Paper Print Services</span></div>
+  <div class="header-badge">Free ISO 9001 Toolkit</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">ISO 9001 · Quality Management · India</div>
+  <h1>Get ISO 9001 Certified — Step by Step<br>Without a Consultant</h1>
+  <p>A complete, free guide for Indian SMEs. One checklist for the manager. One for the team member who executes. Fill in your company details and print both.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>ISO 9001</strong><span>Standard covered</span></div>
+    <div class="hero-stat"><strong>2 Versions</strong><span>Manager + Executor</span></div>
+    <div class="hero-stat"><strong>Free</strong><span>No signup needed</span></div>
+    <div class="hero-stat"><strong>Printable</strong><span>A4 PDF both views</span></div>
+  </div>
+</div>
+
+<!-- COMPANY SETUP -->
+<div class="setup-panel">
+  <div class="setup-inner">
+    <div class="setup-title">Fill in your company details once — they appear throughout both checklists</div>
+    <div class="setup-desc">Type your details below. Every place that says [Company Name] or [City] will update automatically. Then print both checklists with your details already filled in.</div>
+    <div class="setup-grid">
+      <div class="setup-field">
+        <label>Company Name</label>
+        <input type="text" id="co-name" placeholder="e.g. Sharma Packaging Pvt Ltd" oninput="autofill()">
+      </div>
+      <div class="setup-field">
+        <label>City / Location</label>
+        <input type="text" id="co-city" placeholder="e.g. Andheri West, Mumbai" oninput="autofill()">
+      </div>
+      <div class="setup-field">
+        <label>Number of Employees</label>
+        <input type="text" id="co-emp" placeholder="e.g. 8" oninput="autofill()">
+      </div>
+      <div class="setup-field">
+        <label>What your business does (one line)</label>
+        <input type="text" id="co-biz" placeholder="e.g. Manufacturer of corrugated packaging boxes" oninput="autofill()">
+      </div>
+      <div class="setup-field">
+        <label>CEO / Owner Name</label>
+        <input type="text" id="co-ceo" placeholder="e.g. Rajesh Sharma" oninput="autofill()">
+      </div>
+      <div class="setup-field">
+        <label>Person executing this checklist</label>
+        <input type="text" id="co-exe" placeholder="e.g. Priya (Admin)" oninput="autofill()">
+      </div>
+      <div class="setup-field wide">
+        <label>ISO 9001 Scope Statement (edit this sentence to match your business)</label>
+        <textarea id="co-scope" oninput="autofill()">Design, development and supply of [YOUR PRODUCT/SERVICE] for [YOUR CUSTOMERS], from offices at [YOUR ADDRESS].</textarea>
+      </div>
+    </div>
+    <div class="autofill-note">✓ Details auto-fill throughout both checklists as you type</div>
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="controls-inner">
+    <div class="toggle-wrap">
+      <button class="toggle-btn active-mgr" id="btn-mgr" onclick="switchView('mgr')">👔 Manager View</button>
+      <button class="toggle-btn" id="btn-exe" onclick="switchView('exe')">✏️ Executor View</button>
+    </div>
+    <div class="progress-mini">
+      <div class="progress-mini-label">
+        <span id="progress-label">Manager progress</span>
+        <span id="progress-text">0 of 0 done</span>
+      </div>
+      <div class="progress-mini-bar"><div class="progress-mini-fill" id="progress-fill"></div></div>
+    </div>
+    <button class="print-btn" onclick="printBoth()">🖨️ Print Both (A4)</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- ════════════════════════════════
+     MANAGER VIEW
+════════════════════════════════ -->
+<div class="view active" id="view-mgr">
+
+  <div class="view-header mgr-header">
+    <h2>👔 Manager Checklist — ISO 9001</h2>
+    <p>For: <strong id="hdr-ceo">the CEO / Business Owner</strong> · Your job is to make decisions, sign documents, and answer your team member's questions. You do not need to know ISO — just follow this list.</p>
+  </div>
+
+  <!-- PHASE M1 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">1</div>
+      <div class="phase-info">
+        <div class="phase-title">Understand What You Are Committing To</div>
+        <div class="phase-meta">Do this first · Takes 1 hour · Read alone</div>
+      </div>
+    </div>
+
+    <div class="task" id="m1">
+      <div class="cb" onclick="tick('m1','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Understand what ISO 9001 means for <span class="af co-name">[Company Name]</span></div>
+        <div class="task-body">ISO 9001 is a certificate that proves <span class="af co-name">[Company Name]</span> has a proper quality system in place. It means you have documented how your business works, you measure your performance, and you fix problems when they happen. It is recognised internationally and opens doors to larger clients and government contracts.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m2">
+      <div class="cb" onclick="tick('m2','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Assign one person to execute this checklist — your <span class="af co-exe">[Executor Name]</span></div>
+        <div class="task-body">This person will do the day-to-day work of collecting documents, filling forms, and organising everything. They will have their own checklist. Your job is to be available when they ask you a question — usually 15–30 minutes per week.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Tell your executor this</div>
+      <p>I am assigning you to manage our ISO 9001 certification. You have your own checklist. Follow it step by step. When you are stuck, come to me with a specific question. I will answer and you move forward.</p>
+    </div>
+
+    <div class="task" id="m3">
+      <div class="cb" onclick="tick('m3','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Confirm the scope — what exactly is being certified at <span class="af co-name">[Company Name]</span></div>
+        <div class="task-body">Read the scope statement below carefully. This sentence will appear on your ISO 9001 certificate. Edit it in the Company Details box at the top of this page if anything is wrong.</div>
+        <div class="scope-box scope-9001" style="margin-top:10px;">
+          <div class="scope-label">Your ISO 9001 Scope Statement</div>
+          <div class="scope-text co-scope">[Your scope will appear here once you fill in the Company Details above]</div>
+          <div class="scope-tick"><input type="checkbox"> This is correct — I am happy with this scope</div>
+        </div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m4">
+      <div class="cb" onclick="tick('m4','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Check your Udyam MSME registration is active</div>
+        <div class="task-body">If <span class="af co-name">[Company Name]</span> is registered on udyamregistration.gov.in, you can claim 50–70% reimbursement of certification costs from the Government of India after you get certified. If not registered — register now before spending any money on ISO.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+    <div class="embed helper">
+      <div class="helper-label">📌 How to check Udyam registration</div>
+      <p>Go to <strong>udyamregistration.gov.in</strong> → click "Print/Verify" → enter your Udyam number. If you don't have one, registration is free and takes 10 minutes with your Aadhaar and PAN.</p>
+    </div>
+  </div>
+
+  <div class="connector">step 1 done — move to step 2</div>
+
+  <!-- PHASE M2 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">2</div>
+      <div class="phase-info">
+        <div class="phase-title">Sign the Quality Policy</div>
+        <div class="phase-meta">Takes 30 minutes · Your executor prepares it · You review and sign</div>
+      </div>
+    </div>
+
+    <div class="task" id="m5">
+      <div class="cb" onclick="tick('m5','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Review the Quality Policy document your executor has prepared</div>
+        <div class="task-body">Your executor will bring you a printed document on <span class="af co-name">[Company Name]</span> letterhead. Read it fully. The policy must say: you are committed to quality, you will improve continuously, and your team will follow this policy. If anything is wrong — tell your executor what to change.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 What the Quality Policy must include — check these 5 things</div>
+          <ul>
+            <li>Your company name and the word "Quality Policy" as the heading</li>
+            <li>A statement that <span class="af co-name">[Company Name]</span> is committed to delivering consistent quality</li>
+            <li>A commitment to continuous improvement</li>
+            <li>A commitment to meeting customer and legal requirements</li>
+            <li>Your signature, printed name, title, and today's date at the bottom</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m6">
+      <div class="cb" onclick="tick('m6','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Sign and date the Quality Policy with a real pen</div>
+        <div class="task-body">Use a pen — not a typed signature. Write today's date next to your signature. Hand it back to <span class="af co-exe">[Executor Name]</span> to scan and file.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m7">
+      <div class="cb" onclick="tick('m7','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Communicate the policy to your whole team</div>
+        <div class="task-body">Send the signed policy to every employee. WhatsApp is fine. The message must be clear: "This is our official Quality Policy. Please read it." Save the message as proof.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+  </div>
+
+  <div class="connector">step 2 done — move to step 3</div>
+
+  <!-- PHASE M3 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">3</div>
+      <div class="phase-info">
+        <div class="phase-title">Review and Approve the Risk Register</div>
+        <div class="phase-meta">Takes 1 hour · Your executor prepares it · You sit together and fill it in</div>
+      </div>
+    </div>
+
+    <div class="task" id="m8">
+      <div class="cb" onclick="tick('m8','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Sit with <span class="af co-exe">[Executor Name]</span> for 1 hour to go through the risk list</div>
+        <div class="task-body">Your executor will read each risk out loud. Your job is to say: does this risk apply to <span class="af co-name">[Company Name]</span>? If yes — rate it. If no — say skip. You do not need to know ISO to do this. You just need to know your business.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 The types of risks you will be asked about</div>
+          <ul>
+            <li>Platform or service going down (downtime)</li>
+            <li>Customer data going to the wrong person</li>
+            <li>Key person leaving the business</li>
+            <li>Supplier failing to deliver on time</li>
+            <li>Customer complaint not being resolved</li>
+            <li>New product release breaking existing service</li>
+            <li>Legal or regulatory change affecting your business</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m9">
+      <div class="cb" onclick="tick('m9','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Sign off the completed Risk Register</div>
+        <div class="task-body">Once your executor has filled in all the scores — review the final version. Sign and date it at the bottom. This becomes an official document. It must be reviewed again every 6 months.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+  </div>
+
+  <div class="connector">step 3 done — move to step 4</div>
+
+  <!-- PHASE M4 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">4</div>
+      <div class="phase-info">
+        <div class="phase-title">Set Quality Objectives (Your KPIs)</div>
+        <div class="phase-meta">Takes 1 hour · You decide the targets · Executor records them</div>
+      </div>
+    </div>
+
+    <div class="task" id="m10">
+      <div class="cb" onclick="tick('m10','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Decide measurable targets for <span class="af co-name">[Company Name]</span></div>
+        <div class="task-body">ISO 9001 requires you to have real, measurable quality targets — not vague ones like "improve quality." You need specific numbers you can prove. Fill in the targets below:</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 Fill in your targets — write a number for each</div>
+          <div class="fill-line"><span>On-time delivery target:</span><div></div><span style="min-width:20px;font-size:12px;color:var(--muted);">%</span></div>
+          <div class="fill-line"><span>Customer complaint response:</span><div></div><span style="min-width:60px;font-size:12px;color:var(--muted);">hours</span></div>
+          <div class="fill-line"><span>Defect / rejection rate target:</span><div></div><span style="min-width:20px;font-size:12px;color:var(--muted);">%</span></div>
+          <div class="fill-line"><span>Customer satisfaction target:</span><div></div><span style="min-width:80px;font-size:12px;color:var(--muted);">/5 rating</span></div>
+          <div class="fill-line"><span>Your own target:</span><div></div><span style="min-width:20px;"></span></div>
+        </div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m11">
+      <div class="cb" onclick="tick('m11','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Start recording these KPIs every month from today</div>
+        <div class="task-body">The auditor will ask to see 3 months of actual data. You cannot show targets without data. Tell <span class="af co-exe">[Executor Name]</span> to record these numbers every month in a simple spreadsheet or in Clicarity.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+  </div>
+
+  <div class="connector">step 4 done — move to step 5</div>
+
+  <!-- PHASE M5 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">5</div>
+      <div class="phase-info">
+        <div class="phase-title">Review and Approve the 10 SOPs</div>
+        <div class="phase-meta">Your executor writes all 10 · You review and approve each one</div>
+      </div>
+    </div>
+
+    <div class="task" id="m12">
+      <div class="cb" onclick="tick('m12','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Answer all questions from <span class="af co-exe">[Executor Name]</span> while they write the SOPs</div>
+        <div class="task-body">Your executor will come to you with specific questions for each SOP — how does onboarding work, how do we handle complaints, etc. Answer clearly. The more detail you give, the better the SOP.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m13">
+      <div class="cb" onclick="tick('m13','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Review each completed SOP — does it match what actually happens at <span class="af co-name">[Company Name]</span>?</div>
+        <div class="task-body">Read each SOP. If it says something that does not match reality — correct it. The auditor will check whether your documented procedures match your actual practice. <strong>Do not approve a SOP that is aspirational — only what actually happens today.</strong></div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m14">
+      <div class="cb" onclick="tick('m14','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Initial and date each approved SOP</div>
+        <div class="task-body">Write your initials and the date on each SOP page. This is your formal approval. If a SOP needs changes — send it back to <span class="af co-exe">[Executor Name]</span> with notes.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+  </div>
+
+  <div class="connector">step 5 done — move to step 6</div>
+
+  <!-- PHASE M6 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">6</div>
+      <div class="phase-info">
+        <div class="phase-title">Sit for the Internal Audit</div>
+        <div class="phase-meta">Takes 1 full day · Your executor runs it · You answer questions and provide proof</div>
+      </div>
+    </div>
+
+    <div class="task" id="m15">
+      <div class="cb" onclick="tick('m15','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Block a full day in your calendar for the internal audit</div>
+        <div class="task-body">The internal audit is a rehearsal for the real certification audit. Your executor will ask you 25 questions. For each one you must show proof — a document, a screenshot, a record. If you cannot show proof — that item fails and must be fixed before the real audit.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m16">
+      <div class="cb" onclick="tick('m16','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Fix every failed item (NC) from the audit — assign each one a due date</div>
+        <div class="task-body">Every item marked NC must be corrected before you contact a Certification Body. Write down what needs to be done, who will do it, and by when. <span class="af co-exe">[Executor Name]</span> tracks this list.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+  </div>
+
+  <div class="connector">step 6 done — move to step 7</div>
+
+  <!-- PHASE M7 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">7</div>
+      <div class="phase-info">
+        <div class="phase-title">Chair the Management Review Meeting</div>
+        <div class="phase-meta">Takes 2 hours · You chair it · Executor writes the minutes</div>
+      </div>
+    </div>
+
+    <div class="task" id="m17">
+      <div class="cb" onclick="tick('m17','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Book a 2-hour meeting and go through all 12 agenda items</div>
+        <div class="task-body">The Management Review is a formal meeting — not a casual chat. <span class="af co-exe">[Executor Name]</span> will have the printed agenda. You go through each item, make decisions, and assign actions. This meeting must happen at least once a year.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 The 12 agenda items you must cover</div>
+          <ul>
+            <li>Status of actions from last review</li>
+            <li>Internal audit results and findings</li>
+            <li>Customer feedback and complaints received</li>
+            <li>KPI performance vs targets this period</li>
+            <li>Process performance — where are we strong, where are we weak</li>
+            <li>Supplier performance — any issues with key vendors</li>
+            <li>Risks — any new risks or changes to existing ones</li>
+            <li>Resources needed — people, tools, training</li>
+            <li>Any changes that affect the quality system</li>
+            <li>Opportunities for improvement identified</li>
+            <li>Review and update of quality objectives</li>
+            <li>Actions from this meeting — owner and due date for each</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m18">
+      <div class="cb" onclick="tick('m18','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Sign the meeting minutes after <span class="af co-exe">[Executor Name]</span> types them up</div>
+        <div class="task-body">Review the typed minutes within 2 days of the meeting. If they are accurate — sign and date them. This is a required document. The auditor will ask to see it.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+  </div>
+
+  <div class="connector">step 7 done — final step</div>
+
+  <!-- PHASE M8 -->
+  <div class="phase mgr-phase">
+    <div class="phase-header">
+      <div class="phase-num">8</div>
+      <div class="phase-info">
+        <div class="phase-title">Choose the Certification Body and Book the Audit</div>
+        <div class="phase-meta">You make this decision · Executor handles the emails</div>
+      </div>
+    </div>
+
+    <div class="task" id="m19">
+      <div class="cb" onclick="tick('m19','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Review the 3 quotes <span class="af co-exe">[Executor Name]</span> has collected from Certification Bodies</div>
+        <div class="task-body">Your executor will bring you 3 quotes. Compare them on: total Year 1 cost, annual surveillance cost, NABCB accreditation status, and estimated timeline. <strong>All NABCB-accredited certificates carry equal weight</strong> — the cheapest accredited option is perfectly valid.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+
+    <div class="task" id="m20">
+      <div class="cb" onclick="tick('m20','mgr')"></div>
+      <div class="task-content">
+        <div class="task-title">Apply for MSME subsidy after certification is received</div>
+        <div class="task-body">With your Udyam certificate and ISO certificate in hand, apply to your state's District Industries Centre (DIC) for reimbursement under the MSME Technology Upgradation Scheme. <span class="af co-name">[Company Name]</span> can recover 50–70% of what was spent.</div>
+      </div>
+      <span class="tag tag-mgr">MANAGER</span>
+    </div>
+  </div>
+
+</div><!-- end manager view -->
+
+
+<!-- ════════════════════════════════
+     EXECUTOR VIEW
+════════════════════════════════ -->
+<div class="view" id="view-exe">
+
+  <div class="view-header exe-header">
+    <h2>✏️ Executor Checklist — ISO 9001</h2>
+    <p>For: <strong id="hdr-exe">the team member doing the work</strong> · You do not need to know ISO. Just follow this list one step at a time. The orange boxes tell you exactly what to ask. The blue boxes tell you exactly where to find things.</p>
+  </div>
+
+  <!-- PHASE E1 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">1</div>
+      <div class="phase-info">
+        <div class="phase-title">Set Up Your Google Drive Folder</div>
+        <div class="phase-meta">Do this first · Takes 30 minutes · You can do this alone</div>
+      </div>
+    </div>
+
+    <div class="task" id="e1">
+      <div class="cb" onclick="tick('e1','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Open Google Drive · go to <strong>drive.google.com</strong></div>
+        <div class="task-body">Log in with the <span class="af co-name">[Company Name]</span> Google account. If you don't have the login details — ask <span class="af co-ceo">[CEO Name]</span>.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="af co-ceo">[CEO Name]</span> if needed</div>
+      <p>Can you give me the login for the company Google account? I need to set up the ISO folder.</p>
+    </div>
+
+    <div class="task" id="e2" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e2','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Create a new folder called exactly: <strong>ISO 9001 — <span class="co-name">[Company Name]</span></strong></div>
+        <div class="task-body">Click the big <strong>+ New</strong> button on the left → click <strong>Folder</strong> → type the name exactly → click <strong>Create</strong>.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e3">
+      <div class="cb" onclick="tick('e3','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Share this folder with <span class="af co-ceo">[CEO Name]</span> as Editor</div>
+        <div class="task-body">Right-click the folder → <strong>Share</strong> → type their email → set permission to <strong>Editor</strong> → click <strong>Send</strong>.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e4">
+      <div class="cb" onclick="tick('e4','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Create these 8 sub-folders inside your ISO folder — copy the names exactly</div>
+        <div class="task-body">Open the ISO folder. Create one folder for each name below.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">Create these 8 folders — exact names</div>
+          <ul>
+            <li>1 — Quality Policy</li>
+            <li>2 — Risk Register</li>
+            <li>3 — Objectives and KPIs</li>
+            <li>4 — Processes and SOPs</li>
+            <li>5 — Training Records</li>
+            <li>6 — Internal Audit</li>
+            <li>7 — Management Review</li>
+            <li>8 — Certification Body</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 1 done — move to step 2</div>
+
+  <!-- PHASE E2 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">2</div>
+      <div class="phase-info">
+        <div class="phase-title">Prepare the Quality Policy for Signing</div>
+        <div class="phase-meta">Folder: 1 — Quality Policy · Takes half a day · <span class="co-ceo">[CEO Name]</span> must sign it</div>
+      </div>
+    </div>
+
+    <div class="task" id="e5">
+      <div class="cb" onclick="tick('e5','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Open a new Word or Google Doc · Type the Quality Policy</div>
+        <div class="task-body">Copy the text from the green box below exactly. Replace every <strong>[Company Name]</strong> with <strong><span class="co-name">[Company Name]</span></strong>. Add the company logo at the top if you have it.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 The Quality Policy text — copy this exactly</div>
+          <p style="margin-bottom:6px;"><strong>Document No: QP-001 &nbsp;|&nbsp; Version: 1.0 &nbsp;|&nbsp; Date: ___________</strong></p>
+          <p style="margin-bottom:8px; font-weight:700; font-size:13px; color:#0A3D2F;">QUALITY POLICY — <span class="co-name">[Company Name]</span></p>
+          <p style="margin-bottom:6px;"><span class="co-name">[Company Name]</span> is committed to providing products and services that consistently meet or exceed the expectations of our customers.</p>
+          <p style="margin-bottom:6px;">We are committed to:</p>
+          <ul style="margin-bottom:8px;">
+            <li>Delivering consistent quality in everything we do</li>
+            <li>Continuously improving our processes, products, and services</li>
+            <li>Meeting all applicable legal and regulatory requirements</li>
+            <li>Setting and reviewing measurable quality objectives regularly</li>
+            <li>Ensuring every team member understands and contributes to quality</li>
+          </ul>
+          <p>This policy is reviewed annually and communicated to all staff.</p>
+          <p style="margin-top:10px;">Signed: _________________________ &nbsp; Name: <span class="co-ceo">[CEO Name]</span></p>
+          <p>Title: CEO / Owner &nbsp;|&nbsp; Date: _________________________</p>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e6">
+      <div class="cb" onclick="tick('e6','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Print the Quality Policy · Take it to <span class="af co-ceo">[CEO Name]</span> to sign</div>
+        <div class="task-body">Print one copy. Hand it to <span class="af co-ceo">[CEO Name]</span>. Wait while they sign it with a real pen and write today's date.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 What to say to <span class="co-ceo">[CEO Name]</span></div>
+      <p>This is our Quality Policy for ISO 9001. I need your pen signature on the bottom line and today's date next to it. I will scan it after.</p>
+    </div>
+
+    <div class="task" id="e7" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e7','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Scan the signed policy or take a very clear photo · Save as PDF</div>
+        <div class="task-body">The full page must be visible. The signature must be clear. Nothing cut off. Save the file as: <strong>Quality-Policy-Signed.pdf</strong> · Upload to folder <strong>1 — Quality Policy</strong>.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e8">
+      <div class="cb" onclick="tick('e8','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Send the signed policy to every employee on WhatsApp · Save the screenshot</div>
+        <div class="task-body">Share the PDF in the team group. Write: <strong>"This is our official Quality Policy. Please read it."</strong> Take a screenshot of the sent message. Save it in folder <strong>1 — Quality Policy</strong> as: <strong>Policy-Shared-Proof.jpg</strong></div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 2 done — move to step 3</div>
+
+  <!-- PHASE E3 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">3</div>
+      <div class="phase-info">
+        <div class="phase-title">Fill In the Risk Register With <span class="co-ceo">[CEO Name]</span></div>
+        <div class="phase-meta">Folder: 2 — Risk Register · Takes 2–3 hours · Do this together</div>
+      </div>
+    </div>
+
+    <div class="task" id="e9">
+      <div class="cb" onclick="tick('e9','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Create a new document called <strong>Risk-Register-v1</strong> · Make a table with 5 columns</div>
+        <div class="task-body">Open Word or Google Docs. Insert a table. The 5 column headings are exactly: <strong>Risk Description &nbsp;|&nbsp; L (1–5) &nbsp;|&nbsp; I (1–5) &nbsp;|&nbsp; Score &nbsp;|&nbsp; What we do about it</strong></div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e10">
+      <div class="cb" onclick="tick('e10','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Ask <span class="af co-ceo">[CEO Name]</span> to sit with you · Go through the risks together</div>
+        <div class="task-body">Read each risk below out loud. <span class="af co-ceo">[CEO Name]</span> tells you the L number and the I number. You write them in the table. Then multiply them together to get the Score.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 Risk scoring — what the numbers mean</div>
+          <ul>
+            <li><strong>L = Likelihood</strong> — how likely is this to happen? 1 = very unlikely, 5 = very likely</li>
+            <li><strong>I = Impact</strong> — how bad is it if it happens? 1 = tiny problem, 5 = huge problem</li>
+            <li><strong>Score = L × I</strong> — if Score is 15 or more, it is a HIGH risk and needs a control written in the last column</li>
+          </ul>
+        </div>
+        <div class="embed helper" style="margin:8px 0 0 0;">
+          <div class="helper-label">📋 Read these risks to <span class="co-ceo">[CEO Name]</span> one by one</div>
+          <ul>
+            <li>Customer order not delivered on time</li>
+            <li>Product or service quality failure causing customer complaint</li>
+            <li>Key employee leaving — process knowledge lost</li>
+            <li>Main supplier failing to deliver materials or services</li>
+            <li>Customer data going to wrong person by accident</li>
+            <li>Equipment or system breakdown stopping work</li>
+            <li>Legal or government regulation changing unexpectedly</li>
+            <li>New product or service launch causing problems with existing work</li>
+            <li>Customer complaint not resolved in time</li>
+            <li>Cash flow problem affecting ability to deliver</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> before you start</div>
+      <p>Can we sit for 45 minutes? I will read each risk out loud. You give me a number from 1 to 5 for how likely it is, and a number from 1 to 5 for how bad it would be. I will write it all down. That is all I need from you for this step.</p>
+    </div>
+
+    <div class="task" id="e11" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e11','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Save the completed Risk Register · Ask <span class="af co-ceo">[CEO Name]</span> to sign the bottom</div>
+        <div class="task-body">Save as: <strong>Risk-Register-v1.docx</strong> · Upload to folder <strong>2 — Risk Register</strong>. Then print it, get a signature, scan, and save the signed version too.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 3 done — move to step 4</div>
+
+  <!-- PHASE E4 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">4</div>
+      <div class="phase-info">
+        <div class="phase-title">Record the Quality Objectives and KPIs</div>
+        <div class="phase-meta">Folder: 3 — Objectives and KPIs · Takes 1 hour · Get targets from <span class="co-ceo">[CEO Name]</span></div>
+      </div>
+    </div>
+
+    <div class="task" id="e12">
+      <div class="cb" onclick="tick('e12','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Ask <span class="af co-ceo">[CEO Name]</span> for the quality targets · Write them in a table</div>
+        <div class="task-body">Create a table with 5 columns: <strong>Objective &nbsp;|&nbsp; Target &nbsp;|&nbsp; How we measure it &nbsp;|&nbsp; How often &nbsp;|&nbsp; Who checks it</strong>. Fill one row for each target <span class="af co-ceo">[CEO Name]</span> gives you.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> for these numbers</div>
+      <p>I need your quality targets for our ISO documents. What is our target for on-time delivery? Customer complaint response time? Defect rate? Customer satisfaction score? I will write them all down and make the objectives table.</p>
+    </div>
+
+    <div class="task" id="e13" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e13','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Start a monthly KPI tracking sheet from today</div>
+        <div class="task-body">Create a simple spreadsheet. Every month, record the actual numbers for each target. <strong>The auditor will ask for 3 months of data.</strong> If you have no data — you fail the audit. Start recording now even if the numbers are not perfect.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e14">
+      <div class="cb" onclick="tick('e14','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Save everything in folder <strong>3 — Objectives and KPIs</strong></div>
+        <div class="task-body">File 1: <strong>Objectives-Table-v1.docx</strong> — the targets table. File 2: <strong>KPI-Tracking.xlsx</strong> — the monthly data sheet. Add to this sheet every month.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 4 done — move to step 5</div>
+
+  <!-- PHASE E5 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">5</div>
+      <div class="phase-info">
+        <div class="phase-title">Write the 10 Procedure Documents (SOPs)</div>
+        <div class="phase-meta">Folder: 4 — Processes and SOPs · Biggest step · One SOP per day · Ask questions for each one</div>
+      </div>
+    </div>
+
+    <div class="task" id="e15">
+      <div class="cb" onclick="tick('e15','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Understand what an SOP is before you start</div>
+        <div class="task-body">SOP = Standard Operating Procedure. It is a simple 1-page document that explains how <span class="af co-name">[Company Name]</span> does something. You write it in numbered steps. Use simple words. Write what actually happens — not what you wish happened.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 Every SOP must start with these 4 lines</div>
+          <ul>
+            <li><strong>SOP Number and Name</strong> — e.g. SOP-01 Customer Onboarding</li>
+            <li><strong>Version and Date</strong> — e.g. Version 1.0 · April 2026</li>
+            <li><strong>Owner</strong> — the person responsible — e.g. Priya</li>
+            <li><strong>Steps</strong> — numbered list of what happens in order</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e16">
+      <div class="cb" onclick="tick('e16','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 1 — How a new customer is onboarded · Save as <strong>SOP-01-Onboarding.docx</strong></div>
+        <div class="task-body">Write what happens from the moment someone places an order or signs up — to the moment they are fully set up and receiving your product or service. Who does what? In what order? How long does each step take?</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> before writing SOP 1</div>
+      <p>Can you walk me through our customer onboarding process step by step — from when they sign up to when they are fully set up? I will write it down as you talk.</p>
+    </div>
+
+    <div class="task" id="e17" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e17','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 2 — How we handle a customer complaint · Save as <strong>SOP-02-Complaints.docx</strong></div>
+        <div class="task-body">A customer is unhappy or has a problem. Write what happens next. Who receives the complaint? Who responds? By when? How do we fix it? How do we confirm the customer is satisfied?</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> before writing SOP 2</div>
+      <p>How do we handle a customer complaint today? Who gets it first? What are the steps to resolve it? By when must we respond?</p>
+    </div>
+
+    <div class="task" id="e18" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e18','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 3 — How we produce our main product or deliver our main service · Save as <strong>SOP-03-Production.docx</strong></div>
+        <div class="task-body">Write the core steps of what <span class="af co-name">[Company Name]</span> does every day to deliver its product or service. Stage by stage, from raw material or order received to finished and delivered.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e19">
+      <div class="cb" onclick="tick('e19','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 4 — How we check quality before delivering to the customer · Save as <strong>SOP-04-QC.docx</strong></div>
+        <div class="task-body">What checks happen before something leaves the building or is delivered to the customer? Who checks it? What are they looking for? What happens if something fails the check?</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> before writing SOP 4</div>
+      <p>What quality checks do we do before we send something to a customer? Who is responsible for checking and what exactly do they check?</p>
+    </div>
+
+    <div class="task" id="e20" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e20','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 5 — How we manage our suppliers and vendors · Save as <strong>SOP-05-Suppliers.docx</strong></div>
+        <div class="task-body">Who are our main suppliers? How do we choose them? How do we check if they are performing well? What do we do if a supplier lets us down?</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e21">
+      <div class="cb" onclick="tick('e21','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 6 — How a new employee is trained · Save as <strong>SOP-06-Training.docx</strong></div>
+        <div class="task-body">When someone new joins <span class="af co-name">[Company Name]</span> — what training do they receive? Who trains them? How long does it take? How do we know they are ready to work independently?</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e22">
+      <div class="cb" onclick="tick('e22','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 7 — How we manage documents and records · Save as <strong>SOP-07-Documents.docx</strong></div>
+        <div class="task-body">Write that all ISO documents have a version number. When something changes — a new version is created. Old versions are kept but labelled OLD. Only <span class="af co-exe">[Executor Name]</span> is responsible for filing ISO documents in the correct folders.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e23">
+      <div class="cb" onclick="tick('e23','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 8 — What we do when something goes wrong (Nonconformity) · Save as <strong>SOP-08-Nonconformity.docx</strong></div>
+        <div class="task-body">Something did not go as planned — a mistake, a defect, a customer complaint. Write: who logs it, how it is investigated, what action is taken to fix it, and how we make sure it does not happen again.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e24">
+      <div class="cb" onclick="tick('e24','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 9 — How we review our suppliers every year · Save as <strong>SOP-09-SupplierReview.docx</strong></div>
+        <div class="task-body">Write that once a year, <span class="af co-ceo">[CEO Name]</span> reviews each key supplier — was their quality good, did they deliver on time, should we continue using them. The result is recorded and kept on file.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e25">
+      <div class="cb" onclick="tick('e25','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">SOP 10 — How the internal audit is run · Save as <strong>SOP-10-Audit.docx</strong></div>
+        <div class="task-body">Write that <span class="af co-name">[Company Name]</span> runs an internal audit once a year. One person checks another person's work. Findings are written down. Problems (NCs) are fixed with a deadline. A report is saved.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e26">
+      <div class="cb" onclick="tick('e26','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Ask <span class="af co-ceo">[CEO Name]</span> to read and initial every SOP · Save all 10 into folder <strong>4 — Processes and SOPs</strong></div>
+        <div class="task-body">Print each SOP. <span class="af co-ceo">[CEO Name]</span> reads and initials the bottom of each page. Scan each one. All 10 signed SOPs go in folder 4.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 5 done — move to step 6</div>
+
+  <!-- PHASE E6 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">6</div>
+      <div class="phase-info">
+        <div class="phase-title">Collect Training Records for All Staff</div>
+        <div class="phase-meta">Folder: 5 — Training Records · Takes 1–2 hours</div>
+      </div>
+    </div>
+
+    <div class="task" id="e27">
+      <div class="cb" onclick="tick('e27','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Create a Training Record sheet for every employee at <span class="af co-name">[Company Name]</span></div>
+        <div class="task-body">For each person — record: their name, their role, what training they have received, the date of training, and who trained them. This can be a simple table in Word or Excel.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 Training records must cover these 4 things for each person</div>
+          <ul>
+            <li>Their job role and responsibilities</li>
+            <li>Any on-the-job training they received when they joined</li>
+            <li>Any safety or quality training relevant to their work</li>
+            <li>Any certifications or qualifications they hold</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e28">
+      <div class="cb" onclick="tick('e28','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Save as <strong>Training-Records-v1.docx</strong> · Upload to folder <strong>5 — Training Records</strong></div>
+        <div class="task-body">Get each employee to sign next to their own record. This is proof the training happened.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 6 done — move to step 7</div>
+
+  <!-- PHASE E7 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">7</div>
+      <div class="phase-info">
+        <div class="phase-title">Run the Internal Audit</div>
+        <div class="phase-meta">Folder: 6 — Internal Audit · Takes 1 full day · Do this with <span class="co-ceo">[CEO Name]</span></div>
+      </div>
+    </div>
+
+    <div class="task" id="e29">
+      <div class="cb" onclick="tick('e29','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Print the audit checklist below · Book a full day with <span class="af co-ceo">[CEO Name]</span></div>
+        <div class="task-body">The audit is a check — can we prove that everything in our ISO system is actually happening? You ask the questions. <span class="af co-ceo">[CEO Name]</span> shows proof. You write the result.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 The 3 ratings you write for each question</div>
+          <ul>
+            <li><strong>C</strong> = Conforming. We do this. We have proof. We are fine.</li>
+            <li><strong>NC</strong> = Nonconformity. We do NOT do this yet. It must be fixed before the real audit.</li>
+            <li><strong>OFI</strong> = Opportunity for Improvement. We do it but not perfectly.</li>
+          </ul>
+        </div>
+        <div class="embed helper" style="margin:8px 0 0 0;">
+          <div class="helper-label">📋 Ask these questions — write C, NC, or OFI for each</div>
+          <ul>
+            <li>Is the Quality Policy signed, dated, and shared with all staff? (show the WhatsApp screenshot)</li>
+            <li>Can <span class="co-ceo">[CEO Name]</span> say what our quality objectives are from memory?</li>
+            <li>Is the Risk Register completed with scores for every row?</li>
+            <li>Are all 10 SOPs written, approved by <span class="co-ceo">[CEO Name]</span>, and saved in the correct folder?</li>
+            <li>Do the SOPs describe what actually happens — or what we wish happened? (spot check 2 SOPs)</li>
+            <li>Do we have training records for every employee?</li>
+            <li>Do we have 3 months of KPI data recorded?</li>
+            <li>Are our KPI targets being met? If not — is there a corrective action plan?</li>
+            <li>If a customer complained this month — can we show what we did about it?</li>
+            <li>Is there a list of our approved suppliers?</li>
+            <li>Have we reviewed our main suppliers in the last 12 months?</li>
+            <li>If something went wrong recently — was a nonconformity report written?</li>
+            <li>Are all ISO documents saved in the correct Google Drive folders?</li>
+            <li>Are documents using version numbers (v1.0, v2.0)?</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> to book this day</div>
+      <p>I need a full day with you for our ISO internal audit. I will ask you 14 questions. For each one you need to show me proof — a document, a photo, a record. It takes about 6–7 hours. Can we book a date?</p>
+    </div>
+
+    <div class="task" id="e30" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e30','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">List every NC item · Fix every one before moving to Step 8</div>
+        <div class="task-body">Make a simple list: NC item, what needs to be done, who does it, by when. <strong>Do not move to Step 8 until every NC is fixed and rechecked.</strong></div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> about each NC</div>
+      <p>I found these items that are not yet done: [list them]. Can you tell me what action to take for each one and who will do it?</p>
+    </div>
+
+    <div class="task" id="e31" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e31','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Write the Internal Audit Report · Save in folder <strong>6 — Internal Audit</strong></div>
+        <div class="task-body">One document with: date of audit, who conducted it, list of all questions with C/NC/OFI ratings, and a summary of what was fixed. Name it: <strong>Internal-Audit-Report-v1.docx</strong></div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 7 done — move to step 8</div>
+
+  <!-- PHASE E8 -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">8</div>
+      <div class="phase-info">
+        <div class="phase-title">Write the Management Review Minutes</div>
+        <div class="phase-meta">Folder: 7 — Management Review · Takes 1 day · <span class="co-ceo">[CEO Name]</span> answers, you write</div>
+      </div>
+    </div>
+
+    <div class="task" id="e32">
+      <div class="cb" onclick="tick('e32','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Book a 2-hour meeting with <span class="af co-ceo">[CEO Name]</span> · Print the 12-item agenda below</div>
+        <div class="task-body">This is a formal meeting. You print the agenda, attend, and write notes. <span class="af co-ceo">[CEO Name]</span> answers the questions. You write what they say in the notes column.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📋 Print this agenda — write notes in the right column during the meeting</div>
+          <ul>
+            <li>1. Actions from last review — are they all done?</li>
+            <li>2. Internal audit results — what were the findings?</li>
+            <li>3. Customer feedback — any complaints this period?</li>
+            <li>4. KPI performance — are we hitting our targets?</li>
+            <li>5. Process performance — where are we strong or weak?</li>
+            <li>6. Supplier performance — any issues?</li>
+            <li>7. Risks — any new risks or changes?</li>
+            <li>8. Resources — do we need more people, tools, or training?</li>
+            <li>9. Changes — anything new that affects our quality system?</li>
+            <li>10. Opportunities — where can we improve?</li>
+            <li>11. Objectives — are our quality targets still right?</li>
+            <li>12. Actions from this meeting — who does what by when?</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> to book this meeting</div>
+      <p>I need 2 hours with you for the ISO Management Review meeting. I will print a 12-question agenda. You answer each one. I write the notes. We need the signed minutes before we can contact the Certification Body.</p>
+    </div>
+
+    <div class="task" id="e33" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e33','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Type up the meeting notes as a minutes document · Get <span class="af co-ceo">[CEO Name]</span> to sign</div>
+        <div class="task-body">Type your handwritten notes into a Word doc. Add at the top: meeting date, attendees, location. At the bottom: a signature line for <span class="af co-ceo">[CEO Name]</span>. Print. Get signed. Scan. Save as: <strong>Management-Review-Minutes-v1.docx</strong> in folder <strong>7 — Management Review</strong>.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+  <div class="connector">step 8 done — final step</div>
+
+  <!-- PHASE E9 — FINAL -->
+  <div class="phase exe-phase">
+    <div class="phase-header">
+      <div class="phase-num">✓</div>
+      <div class="phase-info">
+        <div class="phase-title">Contact the Certification Body</div>
+        <div class="phase-meta">Folder: 8 — Certification Body · Only do this when every box above is ticked</div>
+      </div>
+    </div>
+
+    <div class="task" id="e34">
+      <div class="cb" onclick="tick('e34','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Check all 8 Google Drive folders — every folder must have at least one file</div>
+        <div class="task-body">Open each folder one by one. If any is empty — go back and complete that step first. <strong>Do not send any emails until every folder has documents in it.</strong></div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e35">
+      <div class="cb" onclick="tick('e35','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Show <span class="af co-ceo">[CEO Name]</span> all 8 folders are complete · Get their go-ahead to contact CBs</div>
+        <div class="task-body">Do not contact a Certification Body without <span class="af co-ceo">[CEO Name]</span>'s confirmation. They need to make the final decision on which CB to use and approve the budget.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+
+    <div class="task" id="e36">
+      <div class="cb" onclick="tick('e36','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Send this email to 3 Certification Bodies · Ask for a quote</div>
+        <div class="task-body">Copy the email below exactly. Send it to all 3 email addresses. Do not change the subject line. Wait for replies — usually 2–3 business days.</div>
+        <div class="embed helper" style="margin:10px 0 0 0;">
+          <div class="helper-label">📧 Copy this email exactly — send to all 3 addresses below</div>
+          <p style="margin-bottom:6px;"><strong>Subject: ISO 9001:2015 Certification Quote — <span class="co-name">[Company Name]</span>, <span class="co-emp">[Number of Employees]</span> employees, <span class="co-city">[City]</span></strong></p>
+          <p style="line-height:1.8;">Dear Team,<br><br>
+          We are <span class="co-name">[Company Name]</span>, a <span class="co-biz">[What Your Business Does]</span> based in <span class="co-city">[City]</span>. We are seeking ISO 9001:2015 certification.<br><br>
+          Our details: <span class="co-emp">[Number of Employees]</span> employees · Single location · Udyam registered MSME<br><br>
+          Please send us a quote for: (1) Stage 1 + Stage 2 audit cost, (2) Annual surveillance audit cost, (3) Total estimated 3-year cost.<br><br>
+          Thank you.<br>
+          Regards,<br>
+          <span class="co-exe">[Executor Name]</span> on behalf of <span class="co-ceo">[CEO Name]</span><br>
+          <span class="co-name">[Company Name]</span></p>
+        </div>
+        <div class="embed helper" style="margin:8px 0 0 0;">
+          <div class="helper-label">📮 Send to these 3 companies</div>
+          <ul>
+            <li><strong>Bureau Veritas India</strong> → india@bureauveritas.com</li>
+            <li><strong>SGS India</strong> → in.sales@sgs.com</li>
+            <li><strong>DNV India</strong> → india.info@dnv.com</li>
+          </ul>
+        </div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+    <div class="ask helper">
+      <div class="helper-label">💬 Ask <span class="co-ceo">[CEO Name]</span> to check before sending</div>
+      <p>I have written the emails to the 3 Certification Bodies. Can you check my draft for 2 minutes before I send?</p>
+    </div>
+
+    <div class="task" id="e37" style="margin-top:8px;">
+      <div class="cb" onclick="tick('e37','exe')"></div>
+      <div class="task-content">
+        <div class="task-title">Save all 3 quote replies in folder <strong>8 — Certification Body</strong> · Show all quotes to <span class="af co-ceo">[CEO Name]</span></div>
+        <div class="task-body">Name them: <strong>Quote-BureauVeritas.pdf · Quote-SGS.pdf · Quote-DNV.pdf</strong>. <span class="af co-ceo">[CEO Name]</span> decides which one to use. That is not your decision.</div>
+      </div>
+      <span class="tag tag-exe">EXECUTOR</span>
+    </div>
+  </div>
+
+</div><!-- end executor view -->
+
+
+<!-- HIDDEN SEPARATOR PAGE (only shows when printing) -->
+<div class="separator-page" style="display:none;" id="separator">
+  <div>
+    <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:48px;color:var(--blue);margin-bottom:12px;">CLICARITY</div>
+    <div style="font-size:20px;font-weight:700;color:var(--ink);margin-bottom:8px;">ISO 9001 Certification Toolkit</div>
+    <div style="font-size:16px;color:var(--muted);margin-bottom:32px;font-style:italic;" id="sep-name">Company Name</div>
+    <div style="width:80px;height:4px;background:var(--blue);margin:0 auto 32px;border-radius:2px;"></div>
+    <div style="font-size:14px;color:var(--muted);">— — — — — — — — — — — — — — — —</div>
+    <div style="font-size:18px;font-weight:700;color:var(--exe);margin:16px 0;">EXECUTOR CHECKLIST STARTS ON NEXT PAGE</div>
+    <div style="font-size:14px;color:var(--muted);">— — — — — — — — — — — — — — — —</div>
+    <div style="margin-top:40px;font-size:12px;color:#aaa;">Generated by Clicarity · clicarity.com · Free ISO 9001 Toolkit for Indian SMEs</div>
+  </div>
+</div>
+
+</div><!-- end main -->
+
+<script>
+// ── AUTO FILL ──────────────────────────────────────────────────────
+function autofill() {
+  const fields = {
+    'co-name': document.getElementById('co-name').value || '[Company Name]',
+    'co-city': document.getElementById('co-city').value || '[City]',
+    'co-emp':  document.getElementById('co-emp').value  || '[Number of Employees]',
+    'co-biz':  document.getElementById('co-biz').value  || '[What Your Business Does]',
+    'co-ceo':  document.getElementById('co-ceo').value  || '[CEO Name]',
+    'co-exe':  document.getElementById('co-exe').value  || '[Executor Name]',
+    'co-scope':document.getElementById('co-scope').value|| '[Your scope statement]',
+  };
+
+  // Update all span/div elements with matching class
+  Object.keys(fields).forEach(cls => {
+    document.querySelectorAll('.'+cls).forEach(el => {
+      el.textContent = fields[cls];
+    });
+  });
+
+  // Update header names
+  const ceoEl = document.getElementById('hdr-ceo');
+  const exeEl = document.getElementById('hdr-exe');
+  if (ceoEl) ceoEl.textContent = fields['co-ceo'];
+  if (exeEl) exeEl.textContent = fields['co-exe'];
+
+  // Update separator
+  const sepEl = document.getElementById('sep-name');
+  if (sepEl) sepEl.textContent = fields['co-name'];
+}
+
+// ── VIEW TOGGLE ────────────────────────────────────────────────────
+let currentView = 'mgr';
+function switchView(v) {
+  currentView = v;
+  document.getElementById('view-mgr').classList.toggle('active', v==='mgr');
+  document.getElementById('view-exe').classList.toggle('active', v==='exe');
+  document.getElementById('btn-mgr').className = 'toggle-btn' + (v==='mgr'?' active-mgr':'');
+  document.getElementById('btn-exe').className = 'toggle-btn' + (v==='exe'?' active-exe':'');
+  document.getElementById('progress-label').textContent = v==='mgr'?'Manager progress':'Executor progress';
+  updateProgress();
+}
+
+// ── TICK ───────────────────────────────────────────────────────────
+function tick(id, view) {
+  const card = document.getElementById(id);
+  const box  = card.querySelector('.cb');
+  const done = box.classList.contains('checked');
+  if (done) { box.classList.remove('checked'); box.textContent=''; card.classList.remove('done'); }
+  else      { box.classList.add('checked');    box.textContent='✓'; card.classList.add('done'); }
+  updateProgress();
+}
+
+function updateProgress() {
+  const prefix = currentView==='mgr' ? 'm' : 'e';
+  const all    = document.querySelectorAll('#view-'+currentView+' .cb').length;
+  const done   = document.querySelectorAll('#view-'+currentView+' .cb.checked').length;
+  const pct    = all ? Math.round((done/all)*100) : 0;
+  document.getElementById('progress-fill').style.width = pct+'%';
+  document.getElementById('progress-text').textContent = done+' of '+all+' done';
+}
+
+// ── PRINT BOTH ─────────────────────────────────────────────────────
+function printBoth() {
+  // Show both views + separator
+  document.getElementById('view-mgr').style.display = 'block';
+  document.getElementById('view-exe').style.display = 'block';
+  document.getElementById('separator').style.display = 'flex';
+
+  // Insert a page break between manager and separator
+  document.getElementById('view-mgr').style.pageBreakAfter = 'always';
+
+  window.print();
+
+  // Restore state after print
+  setTimeout(() => {
+    document.getElementById('view-mgr').style.display = '';
+    document.getElementById('view-exe').style.display = '';
+    document.getElementById('separator').style.display = 'none';
+    document.getElementById('view-mgr').style.pageBreakAfter = '';
+    switchView(currentView);
+  }, 1000);
+}
+
+// Init
+updateProgress();
+autofill();
+</script>
+</body>
+</html>

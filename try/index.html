@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Try Clicarity — Live Demo Sandbox | No Signup Required</title>
+<meta name="description" content="Try Clicarity right now — no signup, no download. A simulated factory with real jobs, real stages, real updates. See how it feels before you commit.">
+<meta property="og:title" content="Try Clicarity — Live Demo Sandbox">
+<meta property="og:description" content="A real factory simulation in your browser. Create jobs, update stages, see the dashboard. No signup required.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/try/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--accent-light:#E8F2F9;--dark:#0E0D0B;--green:#0A7C52;--green-light:#E6F5EE;--amber:#D97706;--red:#991B1B;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--radius:12px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:#0E0D0B;color:var(--text);font-size:15px;line-height:1.6}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(14,13,11,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+
+/* APP SHELL */
+.app-shell{max-width:1100px;margin:0 auto;padding:32px 5% 64px}
+.app-intro{text-align:center;padding:32px 0 40px;max-width:600px;margin:0 auto}
+.app-intro h1{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:white;line-height:1.15;margin-bottom:10px;letter-spacing:-0.02em}
+.app-intro p{font-size:0.92rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:12px}
+.sandbox-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(24,110,172,0.15);border:1px solid rgba(24,110,172,0.25);border-radius:100px;padding:4px 12px;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#7AB8D9}
+.sandbox-dot{width:6px;height:6px;border-radius:50%;background:#25D366;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* TWO PANEL LAYOUT */
+.panels{display:grid;grid-template-columns:340px 1fr;gap:20px;align-items:start}
+
+/* LEFT: OPERATOR PANEL */
+.op-panel{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;overflow:hidden}
+.op-header{background:var(--accent);padding:16px 20px;display:flex;align-items:center;gap:10px}
+.op-avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:800;color:white;flex-shrink:0}
+.op-name{font-weight:700;font-size:0.88rem;color:white}
+.op-role{font-size:0.72rem;color:rgba(255,255,255,0.65)}
+.op-panel-title{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.3);padding:14px 20px 8px}
+.op-body{padding:0 16px 20px}
+
+/* FORM ELEMENTS */
+.form-group{margin-bottom:14px}
+.form-label{font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.5);margin-bottom:6px;display:block}
+.form-select,.form-input{width:100%;padding:10px 12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;font-size:0.88rem;font-family:var(--font-body);color:white;outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+.form-select:focus,.form-input:focus{border-color:var(--accent)}
+.form-select option{background:#1A1917;color:white}
+.qty-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.submit-btn{width:100%;padding:13px;background:var(--accent);color:white;border:none;border-radius:10px;font-family:var(--font-display);font-weight:700;font-size:0.95rem;cursor:pointer;transition:all 0.2s;margin-top:4px}
+.submit-btn:hover{background:#1580C8;transform:translateY(-1px)}
+.submit-btn:active{transform:scale(0.98)}
+.form-divider{height:1px;background:rgba(255,255,255,0.06);margin:16px 0}
+.create-btn{width:100%;padding:11px;background:rgba(10,124,82,0.2);color:#5BC49A;border:1px solid rgba(10,124,82,0.3);border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:0.85rem;cursor:pointer;transition:all 0.2s}
+.create-btn:hover{background:rgba(10,124,82,0.35)}
+
+/* RIGHT: OWNER DASHBOARD */
+.dash-panel{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:20px;overflow:hidden}
+.dash-header{padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between}
+.dash-title{font-family:var(--font-display);font-weight:800;font-size:0.95rem;color:white}
+.dash-live{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:#25D366;font-weight:600}
+.dash-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.dash-stat{padding:14px 16px;border-right:1px solid rgba(255,255,255,0.07)}
+.dash-stat:last-child{border-right:none}
+.dash-stat-n{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:white;line-height:1}
+.dash-stat-l{font-size:0.68rem;color:rgba(255,255,255,0.3);margin-top:3px}
+.dash-jobs{padding:0}
+.dash-job-header{display:grid;grid-template-columns:60px 1fr 100px 90px 80px;gap:8px;padding:10px 16px;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.25);border-bottom:1px solid rgba(255,255,255,0.06)}
+.dash-job-row{display:grid;grid-template-columns:60px 1fr 100px 90px 80px;gap:8px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.04);transition:background 0.2s;align-items:center}
+.dash-job-row:hover{background:rgba(255,255,255,0.02)}
+.dash-job-row.new-update{animation:highlightRow 1.5s ease}
+@keyframes highlightRow{0%{background:rgba(24,110,172,0.2)}100%{background:transparent}}
+.job-id{font-family:var(--font-display);font-weight:700;font-size:0.82rem;color:rgba(255,255,255,0.5)}
+.job-name{font-size:0.85rem;color:white;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.job-stage{display:inline-flex;align-items:center;gap:4px}
+.stage-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.stage-name{font-size:0.78rem;font-weight:600}
+.job-updated{font-size:0.75rem;color:rgba(255,255,255,0.3)}
+.job-qty{font-size:0.78rem;color:rgba(255,255,255,0.4)}
+
+/* ACTIVITY LOG */
+.activity-panel{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:0;margin-top:16px;overflow:hidden}
+.activity-header{padding:12px 16px;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.25);border-bottom:1px solid rgba(255,255,255,0.06)}
+.activity-log{max-height:140px;overflow-y:auto;padding:8px 0}
+.activity-item{padding:7px 16px;font-size:0.78rem;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:8px;animation:slideIn 0.3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.activity-item .ai-time{color:rgba(255,255,255,0.2);min-width:40px;font-family:var(--font-display);font-size:0.7rem}
+.activity-item .ai-text{flex:1}
+.activity-item .ai-badge{font-size:0.65rem;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.badge-update{background:rgba(24,110,172,0.2);color:#7AB8D9}
+.badge-create{background:rgba(10,124,82,0.2);color:#5BC49A}
+.badge-complete{background:rgba(10,124,82,0.3);color:#5BC49A}
+
+/* CTA AFTER */
+.after-cta{margin-top:20px;background:rgba(24,110,172,0.1);border:1px solid rgba(24,110,172,0.2);border-radius:16px;padding:20px;text-align:center}
+.after-cta p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:12px;line-height:1.6}
+.after-cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-accent{background:var(--accent);color:white;padding:10px 20px;border-radius:100px;font-weight:600;font-size:0.85rem;text-decoration:none;transition:all 0.2s}
+.btn-accent:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-ghost-sm{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:10px 20px;border-radius:100px;font-size:0.85rem;text-decoration:none;font-weight:500;transition:all 0.2s}
+.btn-ghost-sm:hover{border-color:rgba(255,255,255,0.25);color:white}
+
+footer{background:rgba(0,0,0,0.3);padding:28px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:0.78rem;color:rgba(255,255,255,0.2)}
+.footer-links{display:flex;gap:18px}
+.footer-links a{color:rgba(255,255,255,0.2);text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,0.6)}
+@media(max-width:800px){.panels{grid-template-columns:1fr}.dash-job-header,.dash-job-row{grid-template-columns:50px 1fr 80px}.job-updated,.job-qty{display:none}.dash-stats{grid-template-columns:1fr 1fr}}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Try Clicarity — Live Demo Sandbox | No Signup Required">
+<meta name="twitter:description" content="Try Clicarity right now — no signup, no download. A simulated factory with real jobs, real stages, real updates. See how it feels before you commit.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="app-shell">
+  <div class="app-intro">
+    <div class="sandbox-badge"><span class="sandbox-dot"></span> Live Sandbox</div>
+    <h1>Try Clicarity — right now</h1>
+    <p>This is a simulated Mehta Packaging factory. Update a job below as if you're an operator. Watch the owner's dashboard update live. No signup, no download — just the real feeling.</p>
+  </div>
+
+  <div class="panels">
+    <!-- OPERATOR PANEL -->
+    <div class="op-panel">
+      <div class="op-header">
+        <div class="op-avatar">R</div>
+        <div>
+          <div class="op-name">Ramesh Kumar</div>
+          <div class="op-role">Press Operator — Mehta Packaging</div>
+        </div>
+      </div>
+      <div class="op-panel-title">Update a job</div>
+      <div class="op-body">
+        <div class="form-group">
+          <label class="form-label" for="selJob">Select Job</label>
+          <select class="form-select" id="selJob" onchange="onJobSelect()">
+            <option value="">— Choose a job —</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="selStage">Update Stage to</label>
+          <select class="form-select" id="selStage">
+            <option value="">— Select stage —</option>
+            <option>Prepress / DTP</option>
+            <option>Printing</option>
+            <option>Lamination</option>
+            <option>Die Cutting</option>
+            <option>Finishing</option>
+            <option>QC Check</option>
+            <option>Ready for Dispatch</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Quantity</label>
+          <div class="qty-row">
+            <div>
+              <label class="form-label" style="font-size:0.7rem">Completed</label>
+              <input class="form-input" type="number" id="qtyDone" placeholder="e.g. 450">
+            </div>
+            <div>
+              <label class="form-label" style="font-size:0.7rem">Total</label>
+              <input class="form-input" type="number" id="qtyTotal" placeholder="e.g. 500">
+            </div>
+          </div>
+        </div>
+        <button class="submit-btn" onclick="submitUpdate()">✓ Update Job Status</button>
+
+        <div class="form-divider"></div>
+        <div class="op-panel-title" style="padding:0 0 8px">Or create a new job</div>
+        <div class="form-group">
+          <label class="form-label" for="newJobName">Job Name / Client</label>
+          <input class="form-input" type="text" id="newJobName" placeholder="e.g. Sharma Labels — 1000 pcs">
+        </div>
+        <button class="create-btn" onclick="createJob()">+ Create New Job</button>
+      </div>
+    </div>
+
+    <!-- OWNER DASHBOARD -->
+    <div>
+      <div class="dash-panel">
+        <div class="dash-header">
+          <div class="dash-title">📊 Owner Dashboard — Mehta Packaging</div>
+          <div class="dash-live"><span class="sandbox-dot"></span> Live</div>
+        </div>
+        <div class="dash-stats">
+          <div class="dash-stat"><div class="dash-stat-n" id="statTotal">5</div><div class="dash-stat-l">Active jobs</div></div>
+          <div class="dash-stat"><div class="dash-stat-n" id="statUpdated">0</div><div class="dash-stat-l">Updated today</div></div>
+          <div class="dash-stat"><div class="dash-stat-n" id="statReady">1</div><div class="dash-stat-l">Ready to dispatch</div></div>
+          <div class="dash-stat"><div class="dash-stat-n" id="statAlerts">0</div><div class="dash-stat-l" style="color:#D97706">Alerts</div></div>
+        </div>
+        <div class="dash-job-header">
+          <span>Job ID</span><span>Client / Job</span><span>Stage</span><span>Last Update</span><span>Qty</span>
+        </div>
+        <div id="jobTable"></div>
+      </div>
+
+      <div class="activity-panel">
+        <div class="activity-header">Activity Log</div>
+        <div class="activity-log" id="activityLog">
+          <div class="activity-item"><span class="ai-time">Start</span><span class="ai-text">Sandbox loaded — Mehta Packaging, 5 jobs</span><span class="ai-badge badge-create">System</span></div>
+        </div>
+      </div>
+
+      <div class="after-cta">
+        <p>This is a simplified simulation. The real Clicarity includes vendor tracking, wastage logging, role-based access, and WhatsApp notifications. Book a demo to see the full system.</p>
+        <div class="after-cta-row">
+          <a class="btn-accent" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo</a>
+          <a class="btn-ghost-sm" href="/is-clicarity-for-me/">Is Clicarity right for me? →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:2.5rem;width:auto;filter:brightness(0) invert(1);opacity:0.4;" loading="lazy">
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+  </div>
+  <div>© 2026 Clicarity · This is a sandbox demo only</div>
+</footer>
+
+<script>
+const STAGES = ['Prepress / DTP','Printing','Lamination','Die Cutting','Finishing','QC Check','Ready for Dispatch'];
+const STAGE_COLORS = {'Prepress / DTP':'#6366F1','Printing':'#186EAC','Lamination':'#D97706','Die Cutting':'#7C3524','Finishing':'#0A7C52','QC Check':'#0891B2','Ready for Dispatch':'#0A7C52'};
+
+let jobs = [
+  {id:'#1038',name:'Bharat Offset — 500 brochures',stage:'Finishing',qty:'480/500',updated:'7:31 AM',operator:'Ramesh'},
+  {id:'#1039',name:'Patel Packaging — 200 boxes',stage:'Printing',qty:'120/200',updated:'8:45 AM',operator:'Suresh'},
+  {id:'#1040',name:'Kumar Labels — 1000 labels',stage:'Lamination',qty:'600/1000',updated:'6:20 AM',operator:'Vikram'},
+  {id:'#1041',name:'Sharma Corp — letterheads',stage:'Prepress / DTP',qty:'—',updated:'9:00 AM',operator:'Mohan'},
+  {id:'#1042',name:'GP Offset — 300 flyers',stage:'Ready for Dispatch',qty:'300/300',updated:'7:15 AM',operator:'Ramesh'},
+];
+let updateCount = 0;
+let nextId = 1043;
+const now = new Date();
+function timeNow(){const h=now.getHours(),m=now.getMinutes();return (h%12||12)+':'+(m<10?'0'+m:m)+' '+(h>=12?'PM':'AM')}
+
+function renderTable(){
+  const sel = document.getElementById('selJob');
+  const curVal = sel.value;
+  sel.innerHTML = '<option value="">— Choose a job —</option>';
+  jobs.forEach((j,i)=>{
+    const o = document.createElement('option');
+    o.value=i; o.textContent=j.id+' — '+j.name.split('—')[0].trim();
+    sel.appendChild(o);
+  });
+  if(curVal) sel.value=curVal;
+
+  const table = document.getElementById('jobTable');
+  table.innerHTML = jobs.map((j,i)=>{
+    const color = STAGE_COLORS[j.stage]||'#6B6860';
+    const isReady = j.stage==='Ready for Dispatch';
+    return `<div class="dash-job-row" id="row${i}">
+      <div class="job-id">${j.id}</div>
+      <div class="job-name">${j.name}</div>
+      <div class="job-stage"><div class="stage-dot" style="background:${color}"></div><span class="stage-name" style="color:${color}">${j.stage}</span></div>
+      <div class="job-updated">${j.updated} · ${j.operator}</div>
+      <div class="job-qty">${j.qty}</div>
+    </div>`;
+  }).join('');
+
+  const ready = jobs.filter(j=>j.stage==='Ready for Dispatch').length;
+  document.getElementById('statTotal').textContent = jobs.length;
+  document.getElementById('statReady').textContent = ready;
+  document.getElementById('statUpdated').textContent = updateCount;
+}
+
+function onJobSelect(){
+  const idx = document.getElementById('selJob').value;
+  if(idx==='') return;
+  const j = jobs[idx];
+  const stageEl = document.getElementById('selStage');
+  stageEl.value = '';
+  // Pre-fill qty
+  if(j.qty && j.qty!=='—'){
+    const parts = j.qty.split('/');
+    if(parts.length===2){
+      document.getElementById('qtyDone').value=parts[0].trim();
+      document.getElementById('qtyTotal').value=parts[1].trim();
+    }
+  }
+}
+
+function submitUpdate(){
+  const idx = document.getElementById('selJob').value;
+  const stage = document.getElementById('selStage').value;
+  if(idx===''||!stage){alert('Please select a job and a stage first.');return;}
+  const qDone = document.getElementById('qtyDone').value;
+  const qTotal = document.getElementById('qtyTotal').value;
+  const qty = (qDone&&qTotal) ? qDone+'/'+qTotal : (qDone||'—');
+  const op = ['Ramesh','Suresh','Vikram','Mohan'][Math.floor(Math.random()*4)];
+  jobs[idx].stage = stage;
+  jobs[idx].qty = qty;
+  jobs[idx].updated = timeNow();
+  jobs[idx].operator = op;
+  updateCount++;
+  renderTable();
+  // Flash row
+  setTimeout(()=>{
+    const row=document.getElementById('row'+idx);
+    if(row){row.classList.add('new-update');setTimeout(()=>row.classList.remove('new-update'),1600);}
+  },50);
+  // Log activity
+  addActivity(jobs[idx].id+' updated to '+stage+' by '+op, 'badge-update');
+  // Clear form
+  document.getElementById('selStage').value='';
+  document.getElementById('qtyDone').value='';
+  document.getElementById('qtyTotal').value='';
+  if(stage==='Ready for Dispatch') addActivity(jobs[idx].id+' is ready for dispatch!','badge-complete');
+}
+
+function createJob(){
+  const name = document.getElementById('newJobName').value.trim();
+  if(!name){alert('Please enter a job name.');return;}
+  const j={id:'#'+nextId++,name,stage:'Prepress / DTP',qty:'—',updated:timeNow(),operator:'New'};
+  jobs.push(j);
+  addActivity(j.id+' created — '+name,'badge-create');
+  document.getElementById('newJobName').value='';
+  renderTable();
+  document.getElementById('statAlerts').textContent=0;
+}
+
+function addActivity(text, badge){
+  const log=document.getElementById('activityLog');
+  const item=document.createElement('div');
+  item.className='activity-item';
+  item.innerHTML=`<span class="ai-time">${timeNow()}</span><span class="ai-text">${text}</span><span class="ai-badge ${badge}">${badge.includes('create')?'New Job':badge.includes('complete')?'Complete':'Update'}</span>`;
+  log.insertBefore(item,log.firstChild);
+  if(log.children.length>20) log.removeChild(log.lastChild);
+}
+
+renderTable();
+</script>
+</body>
+</html>

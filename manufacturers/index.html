@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturer Hub — Everything Clicarity | Clicarity</title>
+<meta name="description" content="Your complete guide to Clicarity — industry pages, tools, comparisons, case studies, city pages and resources. Built for Indian manufacturers and MSMEs.">
+<meta property="og:title" content="Manufacturer Hub — Everything Clicarity">
+<meta property="og:description" content="Industry pages, tools, comparisons, case studies and resources — all in one place for Indian manufacturers.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F5F0;
+  --surface: #ffffff;
+  --text: #0E0D0B;
+  --muted: #6B6860;
+  --border: #E4E0D8;
+  --accent: #186EAC;
+  --accent-light: #E8F2F9;
+  --dark: #0E0D0B;
+  --green: #0A7C52;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 12px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+
+/* NAV */
+nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 5%; background: rgba(247,245,240,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+.nav-logo img { height: 72px; width: auto; display: block; }
+.btn-wa { background: #25D366; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-wa:hover { background: #1ebe5d; transform: translateY(-1px); }
+
+/* HERO */
+.hero { background: var(--dark); padding: 56px 5% 48px; }
+.hero-inner { max-width: 1100px; margin: 0 auto; }
+.hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(24,110,172,0.15); border: 1px solid rgba(24,110,172,0.25); border-radius: 100px; padding: 4px 14px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #7AB8D9; margin-bottom: 16px; }
+.hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.02em; }
+.hero p { font-size: 0.98rem; color: rgba(255,255,255,0.45); max-width: 560px; line-height: 1.7; }
+
+/* SEARCH */
+.search-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 5%; position: sticky; top: 105px; z-index: 90; }
+.search-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+.search-input { flex: 1; padding: 10px 16px; border: 1.5px solid var(--border); border-radius: 100px; font-size: 0.88rem; font-family: var(--font-body); outline: none; background: var(--bg); transition: border-color 0.2s; }
+.search-input:focus { border-color: var(--accent); }
+.search-count { font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+
+/* SECTIONS */
+.hub-section { padding: 48px 5% 32px; border-bottom: 1px solid var(--border); }
+.hub-section:last-child { border-bottom: none; }
+.hub-section.alt { background: var(--surface); }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
+.section-label { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--text); }
+.section-count { font-size: 0.78rem; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 100px; padding: 2px 10px; }
+.section-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; line-height: 1.6; max-width: 600px; }
+
+/* GRID CARDS */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.grid.tight { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s; display: flex; align-items: flex-start; gap: 10px; }
+.card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); transform: translateY(-1px); border-color: var(--accent); }
+.card-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.card-body { flex: 1; min-width: 0; }
+.card-title { font-weight: 600; font-size: 0.85rem; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+.card-sub { font-size: 0.75rem; color: var(--muted); }
+.card.accent { border-left: 2px solid var(--accent); }
+.card.green { border-left: 2px solid var(--green); }
+.card.coming { opacity: 0.5; cursor: default; }
+.card.coming:hover { transform: none; box-shadow: none; border-color: var(--border); }
+.coming-tag { font-size: 0.65rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; color: var(--muted); margin-left: 6px; vertical-align: middle; }
+
+/* PRESS CARDS */
+.press-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.press-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; text-decoration: none; color: var(--text); transition: all 0.15s; display: flex; align-items: center; gap: 14px; }
+.press-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.press-badge { font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; flex-shrink: 0; }
+.press-badge.pw { background: var(--accent); color: white; }
+.press-badge.pb { background: #C10000; color: white; }
+.press-title { font-weight: 700; font-size: 0.88rem; margin-bottom: 2px; }
+.press-meta { font-size: 0.75rem; color: var(--muted); }
+
+/* FOOTER */
+.hub-footer { background: var(--dark); padding: 32px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.hub-footer img { height: 3rem; width: auto; filter: brightness(0) invert(1); opacity: 0.5; }
+.hub-footer a { color: rgba(255,255,255,0.3); font-size: 0.8rem; text-decoration: none; }
+.hub-footer a:hover { color: rgba(255,255,255,0.7); }
+.footer-links { display: flex; gap: 20px; }
+
+/* SEARCH HIDE */
+.card.hidden { display: none; }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .press-row { grid-template-columns: 1fr; }
+  .search-bar { top: 88px; }
+}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Manufacturer Hub — Everything Clicarity | For Indian Manufacturers & MSMEs">
+<meta name="twitter:description" content="Your complete guide to Clicarity — industry pages, tools, comparisons, case studies, city pages and resources. Built for Indian manufacturers and MSMEs.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+<link rel="canonical" href="https://www.clicarity.com/manufacturers/">
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">For Indian Manufacturers</div>
+    <h1>Everything Clicarity,<br>in one place</h1>
+    <p>Industry pages, tools, case studies, comparisons and resources — built for Indian manufacturers and MSMEs. Find what's relevant to your factory.</p>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-bar">
+  <div class="search-inner">
+    <input class="search-input" type="text" id="hubSearch" placeholder="Search — garments, delays, Mumbai, compare ERP..." oninput="filterCards()">
+    <span class="search-count" id="searchCount"></span>
+  </div>
+</div>
+
+<!-- TOOLS & RESOURCES -->
+<div class="hub-section alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">🛠 Tools & Resources</span>
+      <span class="section-count">8 items</span>
+    </div>
+    <p class="section-desc">Interactive tools, calculators and guides to help you understand your factory's problems — and whether Clicarity solves them.</p>
+    <div class="grid">
+      <a class="card accent searchable" href="/is-clicarity-for-me/" data-search="quiz is clicarity for me fit right">
+        <div class="card-icon">🎯</div>
+        <div class="card-body"><div class="card-title">Is Clicarity Right for Me?</div><div class="card-sub">5-question quiz → personalised answer</div></div>
+      </a>
+      <a class="card accent searchable" href="/calculator/" data-search="calculator cost delay loss money">
+        <div class="card-icon">🧮</div>
+        <div class="card-body"><div class="card-title">Cost of Delay Calculator</div><div class="card-sub">See exactly what delays cost your business</div></div>
+      </a>
+      <a class="card accent searchable" href="/try/" data-search="demo try sandbox live preview">
+        <div class="card-icon">▶️</div>
+        <div class="card-body"><div class="card-title">Live Demo Sandbox</div><div class="card-sub">Try Clicarity in your browser — no signup</div></div>
+      </a>
+      <a class="card searchable" href="/a-day-in-the-life/" data-search="before after day life story factory">
+        <div class="card-icon">🏭</div>
+        <div class="card-body"><div class="card-title">A Day in the Life</div><div class="card-sub">Before & after Clicarity — hour by hour</div></div>
+      </a>
+      <a class="card searchable" href="/shop-floor-dictionary/" data-search="dictionary phrases hindi factory floor chaos">
+        <div class="card-icon">📖</div>
+        <div class="card-body"><div class="card-title">Shop Floor Dictionary</div><div class="card-sub">Every phrase said on an Indian factory floor</div></div>
+      </a>
+      <a class="card searchable" href="/the-chaos/" data-search="whatsapp chaos messages before after">
+        <div class="card-icon">💬</div>
+        <div class="card-body"><div class="card-title">The WhatsApp Chaos</div><div class="card-sub">What your factory messages actually look like</div></div>
+      </a>
+      <a class="card searchable" href="/honest-answers/" data-search="objections honest answers questions doubts">
+        <div class="card-icon">🤝</div>
+        <div class="card-body"><div class="card-title">Honest Answers</div><div class="card-sub">Every objection — answered straight</div></div>
+      </a>
+      <a class="card searchable" href="/press/" data-search="press kit media investor about company">
+        <div class="card-icon">📰</div>
+        <div class="card-body"><div class="card-title">Press Kit</div><div class="card-sub">For journalists, investors & partners</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARE -->
+<div class="hub-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">⚖️ Compare</span>
+      <span class="section-count">5 pages</span>
+    </div>
+    <p class="section-desc">Honest comparisons — Clicarity vs the way most Indian factories manage today.</p>
+    <div class="grid">
+      <a class="card searchable" href="/vs-whatsapp/" data-search="compare vs whatsapp alternative">
+        <div class="card-icon">📱</div>
+        <div class="card-body"><div class="card-title">Clicarity vs WhatsApp</div><div class="card-sub">Why group chats aren't job tracking</div></div>
+      </a>
+      <a class="card searchable" href="/vs-spreadsheet/" data-search="compare vs excel spreadsheet">
+        <div class="card-icon">📊</div>
+        <div class="card-body"><div class="card-title">Clicarity vs Spreadsheets</div><div class="card-sub">What Excel can't do for a live factory</div></div>
+      </a>
+      <a class="card searchable" href="/vs-erp/" data-search="compare vs erp sap zoho">
+        <div class="card-icon">🖥️</div>
+        <div class="card-body"><div class="card-title">Clicarity vs Full ERP</div><div class="card-sub">Why most MSMEs don't need ERP</div></div>
+      </a>
+      <a class="card searchable" href="/vs-tally/" data-search="compare vs tally accounting">
+        <div class="card-icon">🧾</div>
+        <div class="card-body"><div class="card-title">Clicarity vs Tally</div><div class="card-sub">Accounting ≠ production tracking</div></div>
+      </a>
+      <a class="card searchable" href="/vs-paper/" data-search="compare vs paper docket manual">
+        <div class="card-icon">📋</div>
+        <div class="card-body"><div class="card-title">Clicarity vs Paper Dockets</div><div class="card-sub">The real cost of paper job cards</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PRESS COVERAGE -->
+<div class="hub-section alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">📰 In the Press</span>
+      <span class="section-count">2 features</span>
+    </div>
+    <div class="press-row">
+      <a class="press-card searchable" href="/printweek/" data-search="printweek press coverage media magazine april 2026">
+        <span class="press-badge pw">PrintWeek</span>
+        <div>
+          <div class="press-title">PrintWeek India — April 2026</div>
+          <div class="press-meta">2-page case study spread · Vol 18, Issue 12 · Pages 28–29</div>
+        </div>
+      </a>
+      <a class="press-card searchable" href="/print-bulletin/" data-search="print bulletin bmpa mms press coverage media may 2026">
+        <span class="press-badge pb">Print Bulletin</span>
+        <div>
+          <div class="press-title">Print Bulletin — May 2026</div>
+          <div class="press-meta">Learning Curve feature · BMPA & MMS · Pages 20–21</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CASE STUDIES -->
+<div class="hub-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">📁 Case Studies</span>
+      <span class="section-count">2 stories</span>
+    </div>
+    <div class="grid">
+      <a class="card green searchable" href="/case-study/gp-offset.html" data-search="gp offset case study printing mumbai">
+        <div class="card-icon">🖨️</div>
+        <div class="card-body"><div class="card-title">GP Offset, Mumbai</div><div class="card-sub">Real-time tracking ends the blame game</div></div>
+      </a>
+      <a class="card green searchable" href="/case-study/hrimkar-creations.html" data-search="hrimkar hc boxes rigid box case study mumbai">
+        <div class="card-icon">📦</div>
+        <div class="card-body"><div class="card-title">Hrimkar Creations (HC Boxes), Mumbai</div><div class="card-sub">Multi-component wastage puzzle solved</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MANUFACTURING PROBLEMS -->
+<div class="hub-section alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">⚙️ Manufacturing Problems</span>
+      <span class="section-count">8 pages</span>
+    </div>
+    <p class="section-desc">Every common problem on the factory floor — each with its own dedicated page.</p>
+    <div class="grid tight">
+      <a class="card searchable" href="/manufacturing/delays/" data-search="delays production late deadline missing">
+        <div class="card-body"><div class="card-title">Production Delays</div><div class="card-sub">Stop missing deadlines</div></div>
+      </a>
+      <a class="card searchable" href="/manufacturing/status/" data-search="job status update chasing where is order">
+        <div class="card-body"><div class="card-title">Job Status</div><div class="card-sub">Know where every job is</div></div>
+      </a>
+      <a class="card searchable" href="/manufacturing/visibility/" data-search="visibility shop floor see factory">
+        <div class="card-body"><div class="card-title">Shop Floor Visibility</div><div class="card-sub">See without being there</div></div>
+      </a>
+      <a class="card searchable" href="/manufacturing/wastage/" data-search="wastage material loss tracking">
+        <div class="card-body"><div class="card-title">Wastage Tracking</div><div class="card-sub">Stop losing material</div></div>
+      </a>
+      <a class="card searchable" href="/manufacturing/rework/" data-search="rework quality failure repeat stage">
+        <div class="card-body"><div class="card-title">Rework</div><div class="card-sub">Fix the stage causing repeat failures</div></div>
+      </a>
+      <a class="card searchable" href="/manufacturing/vendors/" data-search="vendor outsource delay update">
+        <div class="card-body"><div class="card-title">Vendor Delays</div><div class="card-sub">Stop vendors blindsiding production</div></div>
+      </a>
+      <a class="card searchable" href="/manufacturing/shifts/" data-search="shift handover change operator">
+        <div class="card-body"><div class="card-title">Shift Handover</div><div class="card-sub">Stop losing time between shifts</div></div>
+      </a>
+      <a class="card searchable" href="/manufacturing/dispatch/" data-search="dispatch finished goods delivery">
+        <div class="card-body"><div class="card-title">Dispatch</div><div class="card-sub">Stop goods sitting after completion</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES — INDIA -->
+<div class="hub-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">🇮🇳 Industries — India (₹)</span>
+      <span class="section-count">51 pages</span>
+    </div>
+    <p class="section-desc">India-specific pages with ₹ pricing for every manufacturing sector.</p>
+    <div class="grid tight">
+      <a class="card searchable" href="/in/printing/" data-search="printing india msme label offset">
+        <div class="card-body"><div class="card-title">Printing</div></div></a>
+      <a class="card searchable" href="/in/packaging/" data-search="packaging india msme box carton">
+        <div class="card-body"><div class="card-title">Packaging</div></div></a>
+      <a class="card searchable" href="/in/garments/" data-search="garments textile apparel india surat tirupur">
+        <div class="card-body"><div class="card-title">Garments</div></div></a>
+      <a class="card searchable" href="/in/rigid-boxes/" data-search="rigid box packaging india">
+        <div class="card-body"><div class="card-title">Rigid Boxes</div></div></a>
+      <a class="card searchable" href="/in/label-printing/" data-search="label printing india">
+        <div class="card-body"><div class="card-title">Label Printing</div></div></a>
+      <a class="card searchable" href="/in/corrugation/" data-search="corrugation corrugated box india">
+        <div class="card-body"><div class="card-title">Corrugation</div></div></a>
+      <a class="card searchable" href="/in/pharma-packaging/" data-search="pharma packaging india medicine">
+        <div class="card-body"><div class="card-title">Pharma Packaging</div></div></a>
+      <a class="card searchable" href="/in/textile/" data-search="textile fabric weaving india surat ludhiana">
+        <div class="card-body"><div class="card-title">Textile</div></div></a>
+      <a class="card searchable" href="/in/food-processing/" data-search="food processing fmcg india">
+        <div class="card-body"><div class="card-title">Food Processing</div></div></a>
+      <a class="card searchable" href="/in/electronics/" data-search="electronics assembly pcb india">
+        <div class="card-body"><div class="card-title">Electronics Assembly</div></div></a>
+      <a class="card searchable" href="/in/cnc-machining/" data-search="cnc machining precision engineering india pune">
+        <div class="card-body"><div class="card-title">CNC Machining</div></div></a>
+      <a class="card searchable" href="/in/automotive-components/" data-search="auto automotive components india pune">
+        <div class="card-body"><div class="card-title">Automotive Components</div></div></a>
+      <a class="card searchable" href="/in/sheet-metal/" data-search="sheet metal fabrication india">
+        <div class="card-body"><div class="card-title">Sheet Metal</div></div></a>
+      <a class="card searchable" href="/in/steel-processing/" data-search="steel processing plant india">
+        <div class="card-body"><div class="card-title">Steel Processing</div></div></a>
+      <a class="card searchable" href="/in/engineering/" data-search="engineering fabrication india">
+        <div class="card-body"><div class="card-title">Engineering & Fabrication</div></div></a>
+      <a class="card searchable" href="/in/plywood/" data-search="plywood wood panel india">
+        <div class="card-body"><div class="card-title">Plywood & Wood Panels</div></div></a>
+      <a class="card searchable" href="/in/furniture/" data-search="furniture manufacturing india">
+        <div class="card-body"><div class="card-title">Furniture</div></div></a>
+      <a class="card searchable" href="/in/kitchen-manufacturing/" data-search="modular kitchen furniture india">
+        <div class="card-body"><div class="card-title">Modular Kitchen</div></div></a>
+      <a class="card searchable" href="/in/footwear/" data-search="footwear shoes india agra">
+        <div class="card-body"><div class="card-title">Footwear</div></div></a>
+      <a class="card searchable" href="/in/jewellery/" data-search="jewellery gold silver india surat">
+        <div class="card-body"><div class="card-title">Jewellery</div></div></a>
+      <a class="card searchable" href="/in/rubber-products/" data-search="rubber products india">
+        <div class="card-body"><div class="card-title">Rubber Products</div></div></a>
+      <a class="card searchable" href="/in/plastics/" data-search="plastics injection moulding india">
+        <div class="card-body"><div class="card-title">Plastics & Injection Moulding</div></div></a>
+      <a class="card searchable" href="/in/chemicals-paints/" data-search="chemicals paints india">
+        <div class="card-body"><div class="card-title">Chemicals & Paints</div></div></a>
+      <a class="card searchable" href="/in/pipe-manufacturing/" data-search="pipe tube manufacturing india">
+        <div class="card-body"><div class="card-title">Pipe & Tube Manufacturing</div></div></a>
+      <a class="card searchable" href="/in/wire-cable/" data-search="wire cable manufacturing india">
+        <div class="card-body"><div class="card-title">Wire & Cable</div></div></a>
+      <a class="card searchable" href="/in/dairy-plants/" data-search="dairy milk processing india">
+        <div class="card-body"><div class="card-title">Dairy Plants</div></div></a>
+      <a class="card searchable" href="/in/ayurveda/" data-search="ayurveda nutraceutical india">
+        <div class="card-body"><div class="card-title">Ayurveda & Nutraceuticals</div></div></a>
+      <a class="card searchable" href="/in/medical-devices/" data-search="medical devices india">
+        <div class="card-body"><div class="card-title">Medical Devices</div></div></a>
+      <a class="card searchable" href="/in/solar-panel-assembly/" data-search="solar panel assembly india">
+        <div class="card-body"><div class="card-title">Solar Panel Assembly</div></div></a>
+      <a class="card searchable" href="/in/solar-installation/" data-search="solar installation india">
+        <div class="card-body"><div class="card-title">Solar Installation</div></div></a>
+      <a class="card searchable" href="/in/electrical-panels/" data-search="electrical panel manufacturing india">
+        <div class="card-body"><div class="card-title">Electrical Panels</div></div></a>
+      <a class="card searchable" href="/in/hvac-manufacturing/" data-search="hvac equipment manufacturing india">
+        <div class="card-body"><div class="card-title">HVAC Manufacturing</div></div></a>
+      <a class="card searchable" href="/in/aerospace-components/" data-search="aerospace components india">
+        <div class="card-body"><div class="card-title">Aerospace Components</div></div></a>
+      <a class="card searchable" href="/in/shipbuilding/" data-search="shipbuilding marine india">
+        <div class="card-body"><div class="card-title">Shipbuilding & Marine</div></div></a>
+      <a class="card searchable" href="/in/construction-materials/" data-search="construction materials india">
+        <div class="card-body"><div class="card-title">Construction Materials</div></div></a>
+      <a class="card searchable" href="/in/construction/" data-search="construction contracting project india">
+        <div class="card-body"><div class="card-title">Construction</div></div></a>
+      <a class="card searchable" href="/in/ceramic-tiles/" data-search="ceramic tiles india morbi">
+        <div class="card-body"><div class="card-title">Ceramic & Tiles</div></div></a>
+      <a class="card searchable" href="/in/aluminium-glass/" data-search="aluminium glass fabrication india">
+        <div class="card-body"><div class="card-title">Aluminium & Glass</div></div></a>
+      <a class="card searchable" href="/in/candles/" data-search="candle home fragrance india">
+        <div class="card-body"><div class="card-title">Candles & Home Fragrance</div></div></a>
+      <a class="card searchable" href="/in/wide-format-printing/" data-search="wide format signage printing india">
+        <div class="card-body"><div class="card-title">Wide Format & Signage</div></div></a>
+      <a class="card searchable" href="/in/interior-design/" data-search="interior design project india">
+        <div class="card-body"><div class="card-title">Interior Design</div></div></a>
+      <a class="card searchable" href="/in/real-estate/" data-search="real estate developer project india">
+        <div class="card-body"><div class="card-title">Real Estate</div></div></a>
+      <a class="card searchable" href="/in/export-trading/" data-search="export trading order shipment india">
+        <div class="card-body"><div class="card-title">Export & Trading</div></div></a>
+      <a class="card searchable" href="/in/industrial-projects/" data-search="industrial epc projects india">
+        <div class="card-body"><div class="card-title">Industrial Projects (EPC)</div></div></a>
+      <a class="card searchable" href="/in/events-production/" data-search="events production company india">
+        <div class="card-body"><div class="card-title">Events & Production</div></div></a>
+      <a class="card searchable" href="/in/education-training/" data-search="education training institute india">
+        <div class="card-body"><div class="card-title">Education & Training</div></div></a>
+      <a class="card searchable" href="/in/healthcare/" data-search="healthcare clinic hospital india">
+        <div class="card-body"><div class="card-title">Healthcare & Clinics</div></div></a>
+      <a class="card searchable" href="/in/legal-services/" data-search="legal law firm services india">
+        <div class="card-body"><div class="card-title">Legal Services</div></div></a>
+      <a class="card searchable" href="/in/recruitment/" data-search="recruitment hiring staffing india">
+        <div class="card-body"><div class="card-title">Recruitment</div></div></a>
+      <a class="card searchable" href="/in/design-revision/" data-search="design revision creative india">
+        <div class="card-body"><div class="card-title">Design & Revisions</div></div></a>
+    </div>
+  </div>
+</div>
+
+<!-- CITIES — COMING SOON -->
+<div class="hub-section alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">📍 By City</span>
+      <span class="section-count">6 cities</span>
+    </div>
+    <p class="section-desc">Clicarity for manufacturers in specific Indian cities — with local industry context.</p>
+    <div class="grid tight">
+      <a class="card searchable" href="/mumbai/" data-search="mumbai city print packaging pharma">
+        <div class="card-body"><div class="card-title">🏙️ Mumbai</div><div class="card-sub">Print, packaging, pharma, engineering</div></div>
+      </a>
+      <a class="card searchable" href="/surat/" data-search="surat city textile diamond printing">
+        <div class="card-body"><div class="card-title">🏭 Surat</div><div class="card-sub">Textile, diamond, packaging</div></div>
+      </a>
+      <a class="card searchable" href="/tirupur/" data-search="tirupur city garments knitwear">
+        <div class="card-body"><div class="card-title">👕 Tirupur</div><div class="card-sub">Knitwear, garments, exports</div></div>
+      </a>
+      <a class="card searchable" href="/delhi/" data-search="delhi ncr city packaging pharma auto">
+        <div class="card-body"><div class="card-title">🏛️ Delhi NCR</div><div class="card-sub">Packaging, pharma, auto components</div></div>
+      </a>
+      <a class="card searchable" href="/pune/" data-search="pune city engineering auto electronics">
+        <div class="card-body"><div class="card-title">⚙️ Pune</div><div class="card-sub">Auto, CNC, engineering, food</div></div>
+      </a>
+      <a class="card searchable" href="/ludhiana/" data-search="ludhiana city woollens hosiery bicycle">
+        <div class="card-body"><div class="card-title">🔧 Ludhiana</div><div class="card-sub">Woollens, hosiery, bicycles</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG -->
+<div class="hub-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">✍️ Factory Problems Blog</span>
+      <span class="section-count">608 stories</span>
+    </div>
+    <p class="section-desc">608 real problems Indian factory owners face — told as stories with realistic outcomes. Every post is a different industry, a different city, a different human moment.</p>
+    <div class="grid">
+      <a class="card searchable" href="/blog/" data-search="blog all factory problems">
+        <div class="card-icon">📖</div>
+        <div class="card-body"><div class="card-title">Browse All 608 Stories</div><div class="card-sub">Search by industry, city, category</div></div>
+      </a>
+      <a class="card searchable" href="/blog/why-does-my-supervisor-always-say-almost-done/" data-search="supervisor almost done status visibility">
+        <div class="card-icon">📊</div>
+        <div class="card-body"><div class="card-title">Why does my supervisor always say "almost done"?</div><div class="card-sub">Status & Visibility · Mumbai</div></div>
+      </a>
+      <a class="card searchable" href="/blog/the-team-is-not-weak-it-is-the-system-that-is-missing/" data-search="team system missing accountability">
+        <div class="card-icon">🤝</div>
+        <div class="card-body"><div class="card-title">The team is not weak — it is the system that is missing</div><div class="card-sub">Accountability · Mumbai</div></div>
+      </a>
+      <a class="card searchable" href="/blog/how-do-i-stop-firefighting-and-start-running-my-business/" data-search="firefighting owner mindset">
+        <div class="card-icon">🧠</div>
+        <div class="card-body"><div class="card-title">How do I stop firefighting and start running my business?</div><div class="card-sub">Owner Mindset · Pune</div></div>
+      </a>
+      <a class="card searchable" href="/blog/my-vendor-said-bhej-diya-3-hours-ago-and-nothing-arrived/" data-search="vendor bhej diya vendors">
+        <div class="card-icon">🚚</div>
+        <div class="card-body"><div class="card-title">My vendor said "bhej diya" 3 hours ago and nothing arrived</div><div class="card-sub">Vendor Management · Mumbai</div></div>
+      </a>
+      <a class="card searchable" href="/blog/what-is-thoda-wastage-hua-costing-my-factory/" data-search="thoda wastage material">
+        <div class="card-icon">⚠️</div>
+        <div class="card-body"><div class="card-title">What is "thoda wastage hua" costing my factory?</div><div class="card-sub">Wastage & Materials · Surat</div></div>
+      </a>
+      <a class="card searchable" href="/blog/why-does-my-factory-always-struggle-during-diwali-orders/" data-search="diwali festival peak season">
+        <div class="card-icon">🎉</div>
+        <div class="card-body"><div class="card-title">Why does my factory always struggle during Diwali orders?</div><div class="card-sub">Peak Season · Bhiwandi</div></div>
+      </a>
+      <a class="card searchable" href="/blog/i-am-taking-over-my-fathers-factory-where-do-i-start/" data-search="second generation takeover factory">
+        <div class="card-icon">🔄</div>
+        <div class="card-body"><div class="card-title">I am taking over my father's factory — where do I start?</div><div class="card-sub">Second Generation · Mumbai</div></div>
+      </a>
+    </div>
+    <div style="margin-top:16px;text-align:center">
+      <a href="/blog/" style="display:inline-flex;align-items:center;gap:8px;padding:10px 24px;background:#186EAC;color:white;border-radius:100px;font-size:0.85rem;font-weight:600;text-decoration:none">View all 608 stories →</a>
+    </div>
+  </div>
+</div>
+

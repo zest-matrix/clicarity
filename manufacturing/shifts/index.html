@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop Losing Time at Every Shift Change | Clicarity</title>
+<meta name="description" content="The incoming shift doesn't know what's pending. Jobs sit unclaimed for hours. Clicarity gives every shift a live handover — automatically.">
+<meta name="keywords" content="shift handover manufacturing, factory shift management, production shift tracking, shift gap visibility, Clicarity">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clicarity.com/manufacturing/shifts">
+<link rel="alternate" hreflang="en" href="https://www.clicarity.com/manufacturing/shifts">
+<link rel="alternate" hreflang="en-IN" href="https://www.clicarity.com/in/manufacturing/shifts">
+<link rel="alternate" hreflang="x-default" href="https://www.clicarity.com/manufacturing/shifts">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.clicarity.com/manufacturing/shifts">
+<meta property="og:title" content="Stop Losing Time at Every Shift Change | Clicarity">
+<meta property="og:description" content="The incoming shift doesn't know what's pending. Jobs sit unclaimed for hours. Clicarity gives every shift a live handover — automatically.">
+<meta property="og:site_name" content="Clicarity">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How does Clicarity fix shift handover gaps?","acceptedAnswer":{"@type":"Answer","text":"Every job shows its current stage and how long it has been there — live. When the incoming shift starts, they open one screen and immediately see what's pending, what's urgent, and what was completed. No briefing call needed."}},
+{"@type":"Question","name":"Do workers need training?","acceptedAnswer":{"@type":"Answer","text":"No. The update screen has two fields — Job ID and Status. Under a minute. No training needed."}},
+{"@type":"Question","name":"Is our data safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. AES-256 at rest, TLS in transit. AWS EC2 and S3, PostgreSQL on Oracle servers. ISO 27001 in progress."}}
+]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="image" href="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" fetchpriority="high">
+<link rel="icon" type="image/png" href="https://click.wa.expert/Images/favicon.png">
+<style>
+@font-face{font-family:'Plus Jakarta Sans';font-display:swap;}
+@font-face{font-family:'Inter';font-display:swap;}
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--accent-light:#E8F2F9;--green:#0A7C52;--green-light:#E6F5EE;--amber:#92400E;--amber-light:#FEF3C7;--red:#991B1B;--red-light:#FEF2F2;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--radius:16px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block;aspect-ratio:3/1}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.btn{padding:10px 22px;border-radius:100px;font-family:var(--font-body);font-weight:500;font-size:0.88rem;cursor:pointer;transition:all 0.2s;border:none;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 4px 14px rgba(24,110,172,0.2)}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-wa{background:#25D366;color:white}
+.btn-lg{padding:14px 32px;font-size:0.95rem}
+@media(max-width:768px){.nav-actions .btn-outline{display:none}}
+.hero{max-width:820px;margin:0 auto;padding:72px 5% 56px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);color:var(--accent);font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:24px}
+.eyebrow-dot{width:5px;height:5px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+h1{font-family:var(--font-display);font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:800;line-height:1.2;letter-spacing:-0.3px;margin-bottom:16px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:520px;margin:0 auto 36px}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.proof-note{font-size:0.82rem;color:var(--muted)}
+.proof-note strong{color:var(--text)}
+.visual-section{max-width:560px;margin:0 auto;padding:0 5% 64px}
+.main-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:0 12px 40px rgba(0,0,0,0.06)}
+.mc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.mc-title{font-family:var(--font-display);font-weight:700;font-size:0.92rem}
+.mc-tag{font-size:0.72rem;color:var(--muted);background:var(--bg);padding:3px 10px;border-radius:100px}
+.shift-block{margin-bottom:16px}
+.shift-label{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.shift-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.shift-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;margin-bottom:5px;font-size:0.8rem}
+.shift-row.done{background:var(--green-light);color:var(--green)}
+.shift-row.pending{background:var(--amber-light);color:var(--amber)}
+.shift-row.gap{background:var(--red-light);color:var(--red);font-weight:600}
+.s-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.mc-alert{padding:14px;background:var(--red-light);border-radius:10px;border:1px solid #FECACA;font-size:0.82rem;color:var(--red);font-weight:500;margin-top:12px}
+.mc-fix{padding:14px;background:var(--green-light);border-radius:10px;border:1px solid #A7F3D0;font-size:0.82rem;color:var(--green);font-weight:500;margin-top:8px}
+.why-section{background:#0F0E0D;padding:64px 5%}
+.why-inner{max-width:860px;margin:0 auto}
+.section-tag-dark{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#7AB8D9;margin-bottom:12px}
+.why-inner h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.4vw,2rem);font-weight:800;color:white;line-height:1.25;letter-spacing:-0.2px;margin-bottom:40px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:24px}
+.why-num{font-family:var(--font-display);font-size:2rem;font-weight:800;color:rgba(255,255,255,0.1);line-height:1;margin-bottom:12px}
+.why-card h3{font-family:var(--font-display);font-size:0.92rem;font-weight:700;color:white;margin-bottom:8px}
+.why-card p{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.65}
+@media(max-width:680px){.why-grid{grid-template-columns:1fr}}
+.changes-section{max-width:860px;margin:0 auto;padding:64px 5%}
+.section-tag{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.changes-section h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.4vw,2rem);font-weight:800;line-height:1.25;letter-spacing:-0.2px;margin-bottom:36px}
+.changes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.change-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;border-top:3px solid var(--green)}
+.change-card h3{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.change-card p{font-size:0.82rem;color:var(--muted);line-height:1.65}
+@media(max-width:680px){.changes-grid{grid-template-columns:1fr}}
+.proof-section{background:var(--surface);padding:64px 5%}
+.proof-inner{max-width:720px;margin:0 auto;text-align:center}
+.proof-section h2{font-family:var(--font-display);font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:800;line-height:1.25;letter-spacing:-0.2px;margin-bottom:36px}
+.proof-quote{background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:32px;text-align:left;margin-bottom:24px}
+.pq-text{font-size:1.05rem;line-height:1.75;color:var(--text);margin-bottom:20px}
+.pq-text strong{color:var(--green)}
+.pq-author{display:flex;align-items:center;gap:14px}
+.pq-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.82rem;font-weight:700;color:white;flex-shrink:0}
+.pq-name{font-family:var(--font-display);font-weight:700;font-size:0.9rem;color:var(--text)}
+.pq-role{font-size:0.78rem;color:var(--muted)}
+.pw-mention{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);border-radius:100px;padding:6px 16px;font-size:0.78rem;color:var(--accent);font-weight:500;text-decoration:none}
+.how-section{max-width:860px;margin:0 auto;padding:64px 5%}
+.how-section h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.4vw,2rem);font-weight:800;line-height:1.25;letter-spacing:-0.2px;margin-bottom:36px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px}
+.step-num{font-family:var(--font-display);font-size:2.2rem;font-weight:800;color:#B8D9F0;line-height:1;margin-bottom:14px}
+.step h3{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.step p{font-size:0.82rem;color:var(--muted);line-height:1.65}
+@media(max-width:680px){.steps{grid-template-columns:1fr}}
+.pricing-section{background:#0F0E0D;padding:64px 5%}
+.pricing-inner{max-width:860px;margin:0 auto;text-align:center}
+.pricing-inner h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.4vw,2rem);font-weight:800;color:white;line-height:1.25;margin-bottom:12px}
+.pricing-inner p{font-size:0.92rem;color:rgba(255,255,255,0.5);margin-bottom:36px}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:640px;margin:0 auto 28px}
+.price-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px;text-align:left}
+.price-card.featured{background:var(--accent);border-color:var(--accent)}
+.price-name{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px}
+.price-card.featured .price-name{color:rgba(255,255,255,0.7)}
+.price-title{font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:white;margin-bottom:8px}
+.price-desc{font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.6;margin-bottom:20px}
+.price-card.featured .price-desc{color:rgba(255,255,255,0.75)}
+.price-cta{display:block;text-align:center;padding:10px 20px;border-radius:100px;font-size:0.85rem;font-weight:600;text-decoration:none;background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2)}
+.price-card.featured .price-cta{background:white;color:var(--accent)}
+.pricing-note{font-size:0.78rem;color:rgba(255,255,255,0.3)}
+@media(max-width:540px){.pricing-grid{grid-template-columns:1fr}}
+.faq-section{max-width:720px;margin:0 auto;padding:64px 5%}
+.faq-section h2{font-family:var(--font-display);font-size:clamp(1.4rem,2vw,1.8rem);font-weight:800;line-height:1.25;letter-spacing:-0.2px;margin-bottom:28px}
+.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:8px;overflow:hidden;background:var(--surface)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-weight:600;font-size:0.9rem;cursor:pointer;gap:12px;user-select:none}
+.faq-arrow{flex-shrink:0;color:var(--muted);transition:transform 0.25s}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s ease;font-size:0.85rem;color:var(--muted);line-height:1.7;padding:0 20px}
+.faq-item.open .faq-a{max-height:300px;padding:0 20px 16px}
+.final-cta{background:var(--accent);padding:64px 5%;text-align:center}
+.final-cta h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.4vw,2rem);font-weight:800;color:white;line-height:1.25;margin-bottom:12px}
+.final-cta p{font-size:0.95rem;color:rgba(255,255,255,0.75);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto}
+.final-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.btn-white{background:white;color:var(--accent);font-weight:700}
+.btn-ghost-white{background:transparent;border:1.5px solid rgba(255,255,255,0.4);color:white}
+.cta-micro{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:0.78rem;color:rgba(255,255,255,0.6)}
+.cta-micro span::before{content:'✓ ';color:rgba(255,255,255,0.4)}
+footer{background:#0A0A09;padding:28px 5%;display:flex;align-items:center;justify-content:space-between;font-size:0.78rem;color:rgba(255,255,255,0.3);flex-wrap:wrap;gap:14px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.3);text-decoration:none}
+.footer-links a:hover{color:white}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stop Losing Time at Every Shift Change | Clicarity">
+<meta name="twitter:description" content="The incoming shift doesn't know what's pending. Jobs sit unclaimed for hours. Clicarity gives every shift a live handover — automatically.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+<main>
+<div class="hero">
+  <div class="eyebrow"><div class="eyebrow-dot"></div>Manufacturing · Shift Handover</div>
+  <h1>Every shift change,<br>you lose <em>hours you can't see.</em></h1>
+  <p class="hero-sub">Incoming shift doesn't know what's pending. Jobs sit unclaimed. Work stops — but nobody notices.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary btn-lg" href="https://calendly.com/clicarity/demo" target="_blank">Book Demo</a>
+    <a class="btn btn-outline btn-lg" href="https://wa.me/919867800451" target="_blank">WhatsApp Us</a>
+  </div>
+  <div class="proof-note"><strong>12,000+ production jobs tracked.</strong> Zero shift briefing calls needed.</div>
+</div>
+
+<div class="visual-section">
+  <div class="main-card">
+    <div class="mc-header">
+      <div class="mc-title">Shift Handover · Live View</div>
+      <div class="mc-tag">Morning shift starting</div>
+    </div>
+    <div class="shift-block">
+      <div class="shift-label">Night shift completed</div>
+      <div class="shift-row done"><div class="s-dot" style="background:var(--green)"></div><span style="flex:1">Job #1041 — Cutting</span><span>Done 2:30 AM</span></div>
+      <div class="shift-row done"><div class="s-dot" style="background:var(--green)"></div><span style="flex:1">Job #1042 — Pasting</span><span>Done 4:15 AM</span></div>
+    </div>
+    <div class="shift-block">
+      <div class="shift-label">Pending for morning shift</div>
+      <div class="shift-row pending"><div class="s-dot" style="background:var(--amber)"></div><span style="flex:1">Job #1043 — QC</span><span>Waiting 3h 20m</span></div>
+      <div class="shift-row pending"><div class="s-dot" style="background:var(--amber)"></div><span style="flex:1">Job #1044 — Dispatch</span><span>Ready to ship</span></div>
+      <div class="shift-row gap"><div class="s-dot" style="background:var(--red)"></div><span style="flex:1">Job #1038 — Stitching</span><span>Stuck since yesterday</span></div>
+    </div>
+    <div class="mc-alert">Job #1038 has been stuck at Stitching for 14 hours. Needs immediate attention.</div>
+    <div class="mc-fix">Before Clicarity — how would the morning shift know any of this? They wouldn't. Until someone called.</div>
+  </div>
+</div>
+
+<div class="why-section">
+  <div class="why-inner">
+    <div class="section-tag-dark">Why It Happens</div>
+    <h2>The outgoing shift knows everything.<br>The incoming shift knows nothing.</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>No automatic handover</h3>
+        <p>What was completed. What is pending. What is stuck. None of it transfers automatically. The incoming shift starts blind.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>The briefing call takes 20 minutes</h3>
+        <p>Every shift change needs a call or a physical meeting. That's 20 minutes of lost production time — every single day.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Stuck jobs stay stuck</h3>
+        <p>A job stuck at the end of one shift stays stuck through the change. Nobody picks it up for hours because nobody knows it's waiting.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="changes-section">
+  <div class="section-tag">What Changes</div>
+  <h2>Incoming shift knows everything. Instantly.</h2>
+  <div class="changes-grid">
+    <div class="change-card">
+      <h3>Live handover — automatic</h3>
+      <p>Every job's current stage and time there is visible the moment the shift starts. No briefing call needed.</p>
+    </div>
+    <div class="change-card">
+      <h3>Stuck jobs flagged immediately</h3>
+      <p>Any job waiting too long shows up automatically. The incoming shift sees it the moment they open the dashboard.</p>
+    </div>
+    <div class="change-card">
+      <h3>Zero time lost at changeover</h3>
+      <p>The new shift starts working immediately. No 20-minute briefing. No confusion. No unclaimed jobs sitting idle.</p>
+    </div>
+  </div>
+</div>
+
+<div class="proof-section">
+  <div class="proof-inner">
+    <h2>Real factory. Real result.</h2>
+    <div class="proof-quote">
+      <p class="pq-text">"My mornings used to start with me running around asking where each job was. Half the time nobody had a clear answer. <strong>Now I open one screen and I have everything.</strong> The team has also become more responsible on their own — because they know it's all visible."</p>
+      <div class="pq-author">
+        <div class="pq-avatar" style="background:linear-gradient(135deg,#186EAC,#238EDB);">VT</div>
+        <div>
+          <div class="pq-name">Vivek Tibrewala</div>
+          <div class="pq-role">Owner, GP Offset — Commercial Printing, Mumbai</div>
+        </div>
+      </div>
+    </div>
+    <a class="pw-mention" href="https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834" target="_blank">As featured in PrintWeek India, April 2026 ↗</a>
+    <a class="pw-mention" href="/print-bulletin/" style="background:rgba(193,0,0,0.1);border-color:rgba(193,0,0,0.3);color:#E07070;margin-left:8px;text-decoration:none;">Also in Print Bulletin, May 2026 — Pages 20–21 ↗</a>
+  </div>
+</div>
+
+<div class="how-section">
+  <div class="section-tag">How It Works</div>
+  <h2>Three steps. Live in 5 days.</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Share your stages</h3>
+      <p>Tell us how your jobs move through your factory. We configure everything around your process and your shifts.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Worker updates status</h3>
+      <p>Job ID and new status. Under a minute. Every update is timestamped. Shift change data builds automatically.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Every shift starts informed</h3>
+      <p>One screen. Every pending job. Every stuck job. Every completed job. No call needed. No confusion.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pricing-section">
+  <div class="pricing-inner">
+    <h2>One licence. Whole team. All shifts.</h2>
+    <p>No per-user fees. Full setup by the Clicarity team. Go live in 5 days.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">Single Licence</div>
+        <div class="price-title">Single Process</div>
+        <div class="price-desc">One production line. Full shift visibility from day one.</div>
+        <a class="price-cta" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20the%20Single%20Licence" target="_blank">Get a Quote</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-name">Most Popular</div>
+        <div class="price-title">Multi Licence</div>
+        <div class="price-desc">Multiple processes, teams, shifts. Full visibility across your entire operation.</div>
+        <a class="price-cta" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20the%20Multi%20Licence" target="_blank">Get a Quote</a>
+      </div>
+    </div>
+    <div class="pricing-note">Annual billing · No hidden fees · Full setup by Clicarity team · Go live in 5 days</div>
+  </div>
+</div>
+
+<div class="faq-section">
+  <h2>Questions</h2>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How does Clicarity fix shift handover gaps?<span class="faq-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div><div class="faq-a">Every job shows its current stage and how long it has been there — live. When the incoming shift starts, they open one screen and immediately see what's pending, what's urgent, and what was completed. No briefing call needed.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Does it work for night shifts too?<span class="faq-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div><div class="faq-a">Yes. Clicarity runs 24/7. Every update is timestamped regardless of when it happens. The night shift's work is fully visible to the morning shift the moment they start — and vice versa.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do workers need training?<span class="faq-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div><div class="faq-a">No. The update screen has two fields — Job ID and Status. Under a minute. No training needed. A floor worker who has never used a smartphone can do it.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is our data safe?<span class="faq-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div><div class="faq-a">Yes. AES-256 at rest, TLS in transit. AWS EC2 and S3, PostgreSQL on Oracle servers. ISO 27001 in progress. Your data belongs entirely to your business.</div></div>
+</div>
+
+
+<!-- PRICING -->
+<section id="pricing" style="background:var(--surface);padding:80px 5%">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-tag" style="text-align:center">Pricing</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.4vw,2rem);font-weight:800;color:var(--text);line-height:1.25;letter-spacing:-0.2px;margin-bottom:10px">One licence. No per-user fees. Full setup included.</h2>
+      <p style="font-size:0.92rem;color:var(--muted);max-width:500px;margin:0 auto">Add your entire team, floor staff, vendors — the cost stays the same. Go live in 5 days.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:0 auto 20px;align-items:stretch">
+      <!-- Single -->
+      <div style="background:white;border:1.5px solid var(--border);border-radius:20px;padding:32px;display:flex;flex-direction:column">
+        <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:6px">Single Licence</div>
+        <div style="font-size:0.85rem;color:var(--muted);margin-bottom:16px">Full production visibility from day one.</div>
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:8px">
+          <span style="font-size:0.78rem;color:#9E9A94;text-decoration:line-through;display:block;margin-bottom:2px">₹1,00,000 / year</span><span style="font-family:'Inter',sans-serif;font-size:1.5rem;font-weight:600;color:var(--text)">₹30,000</span>
+          <span style="font-size:0.82rem;color:var(--muted)">/ year</span>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:5px;font-size:0.74rem;font-weight:600;color:#0A7C52;background:#E6F5EE;padding:4px 11px;border-radius:100px;margin-bottom:12px;border:1px solid rgba(10,124,82,0.15);width:fit-content"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Early Access — price locked for as long as you stay</div>
+        <div style="font-size:0.79rem;color:var(--muted);line-height:1.6;padding:10px 13px;background:var(--bg);border-radius:9px;margin-bottom:20px;border:1px solid var(--border)"><strong style="color:var(--text)">₹82 a day.</strong> Less than a daily meal for one person — for your entire operation's visibility, all year.</div>
+        <div style="margin-top:auto;padding-top:16px;border-top:1px solid var(--border)">
+          <div style="font-size:0.75rem;color:var(--muted);margin-bottom:12px">Billed annually · No hidden fees · Full setup by Clicarity team</div>
+          <a href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20the%20Single%20Licence" target="_blank" style="display:block;text-align:center;padding:12px;border-radius:100px;font-size:0.88rem;font-weight:600;border:1.5px solid var(--border);color:var(--text);text-decoration:none">Get a Quote</a>
+        </div>
+      </div>
+      <!-- Multi -->
+      <div style="background:var(--accent);border:1.5px solid var(--accent);border-radius:20px;padding:32px;display:flex;flex-direction:column;position:relative">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#F59E0B;color:white;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 14px;border-radius:100px">Most Popular</div>
+        <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:white;margin-bottom:6px">Multi Licence</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.65);margin-bottom:16px">Full command of your entire operation.</div>
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:8px">
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.38);text-decoration:line-through;display:block;margin-bottom:2px">₹3,00,000 / year</span><span style="font-family:'Inter',sans-serif;font-size:1.75rem;font-weight:700;color:white">₹55,000</span>
+          <span style="font-size:0.82rem;color:rgba(255,255,255,0.6)">/ year</span>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:5px;font-size:0.74rem;font-weight:600;color:white;background:rgba(255,255,255,0.2);padding:4px 11px;border-radius:100px;margin-bottom:12px;width:fit-content"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Early Access — price locked for as long as you stay</div>
+        <div style="font-size:0.79rem;color:rgba(255,255,255,0.8);line-height:1.6;padding:10px 13px;background:rgba(255,255,255,0.12);border-radius:9px;margin-bottom:20px;border:1px solid rgba(255,255,255,0.2)"><strong style="color:white">₹150 a day.</strong> Less than the cost of one missed delivery — for full visibility across your entire team.</div>
+        <div style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,0.15)">
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-bottom:12px">Billed annually · No hidden fees · Full setup by Clicarity team</div>
+          <a href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20the%20Multi%20Licence" target="_blank" style="display:block;text-align:center;padding:12px;border-radius:100px;font-size:0.88rem;font-weight:700;background:white;color:var(--accent);text-decoration:none">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:0.82rem">Annual billing only · Full setup by the Clicarity team · Go live in 5 days · Early Access pricing locked for your account for as long as you stay</p>
+  </div>
+</section>
+
+<div class="final-cta">
+  <h2>Every shift starts informed.</h2>
+  <p>Book a free demo. We'll show you what shift handover looks like on one screen.</p>
+  <div class="final-btns">
+    <a class="btn btn-white btn-lg" href="https://calendly.com/clicarity/demo" target="_blank">Book Demo</a>
+    <a class="btn btn-ghost-white btn-lg" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20to%20know%20how%20Clicarity%20fixes%20shift%20handover%20gaps" target="_blank">WhatsApp Us</a>
+  </div>
+  <div class="cta-micro">
+    <span>No commitment required</span>
+    <span>Live in 5 days</span>
+    <span>No per-user fees</span>
+    <span>Full setup by Clicarity</span>
+  </div>
+</div>
+</main>
+<footer>
+  <div><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" width="168" height="56" style="height:2.8rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy"></div>
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="https://www.clicarity.com/pages">All Pages</a>
+    <a href="https://www.clicarity.com/in/manufacturing/shifts">India Version (₹)</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+  </div>
+  <div>© 2026 Clicarity. All rights reserved.</div>
+</footer>
+<script>function toggleFaq(el){const isOpen=el.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(a=>a.classList.remove('open'));if(!isOpen)el.classList.add('open');}</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clicarity in Print Bulletin — May 2026 Feature</title>
+<meta name="description" content="Print Bulletin (BMPA & MMS) featured Clicarity in a 2-page Learning Curve story in their May 2026 edition. Vol 64, Issue 5, Pages 20–21.">
+<meta property="og:title" content="Clicarity in Print Bulletin — May 2026">
+<meta property="og:description" content="From Chaos to Clarity — Print Bulletin's Learning Curve feature on how Clicarity is solving the oldest problem on the shop floor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F5F0;
+  --surface: #ffffff;
+  --text: #0E0D0B;
+  --muted: #6B6860;
+  --border: #E4E0D8;
+  --accent: #186EAC;
+  --accent-light: #E8F2F9;
+  --dark: #0E0D0B;
+  --dark2: #1A1917;
+  --green: #0A7C52;
+  --green-light: #E6F5EE;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 14px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 5%; background: rgba(247,245,240,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.nav-logo img { height: 72px; width: auto; display: block; }
+.nav-back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; padding: 6px 12px; border-radius: 100px; border: 1px solid var(--border); }
+.nav-back:hover { color: var(--accent); border-color: var(--accent); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.btn { padding: 10px 22px; border-radius: 100px; font-family: var(--font-body); font-weight: 500; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; border: none; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: #1580C8; transform: translateY(-1px); }
+.btn-lg { padding: 13px 28px; font-size: 0.92rem; }
+
+/* HERO */
+.hero { background: var(--dark); padding: 72px 5% 64px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 55% at 95% 50%, rgba(10,124,82,0.1) 0%, transparent 65%); pointer-events: none; }
+.hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; position: relative; }
+.hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(10,124,82,0.15); border: 1px solid rgba(10,124,82,0.25); border-radius: 100px; padding: 5px 14px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5BC49A; margin-bottom: 8px; }
+.hero-tag span { width: 5px; height: 5px; background: var(--green); border-radius: 50%; display: inline-block; }
+.hero-section-label { font-size: 0.82rem; color: rgba(255,255,255,0.3); margin-bottom: 14px; font-style: italic; }
+.hero-headline { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 6px; letter-spacing: -0.02em; }
+.hero-subtitle { font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.6rem); font-weight: 600; color: rgba(255,255,255,0.35); margin-bottom: 24px; letter-spacing: -0.01em; }
+.hero-sub { font-size: 0.97rem; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 500px; margin-bottom: 28px; }
+.hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.chip { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 4px 12px; font-size: 0.75rem; color: rgba(255,255,255,0.45); }
+.hero-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-dark-outline { background: transparent; border: 1.5px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.65); }
+.btn-dark-outline:hover { border-color: rgba(255,255,255,0.4); color: white; }
+
+/* STAT CARD */
+.stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 18px; padding: 28px 24px; min-width: 200px; }
+.stat-card-title { font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.stat-row { margin-bottom: 16px; }
+.stat-n { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; color: white; line-height: 1; }
+.stat-l { font-size: 0.72rem; color: rgba(255,255,255,0.3); margin-top: 3px; }
+.stat-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 14px 0; }
+
+/* PULL QUOTE */
+.quote-section { background: var(--surface); border-top: 3px solid var(--green); padding: 56px 5%; }
+.quote-inner { max-width: 780px; margin: 0 auto; }
+.quote-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+.quote-text { font-family: var(--font-display); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--text); line-height: 1.45; margin-bottom: 14px; border-left: 3px solid var(--border); padding-left: 24px; }
+.quote-text strong { color: var(--green); font-weight: 800; }
+.quote-source { font-size: 0.8rem; color: var(--muted); padding-left: 27px; }
+
+/* STORY SECTION */
+.section { padding: 72px 5%; }
+.section.alt { background: var(--surface); }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+.section-title { font-family: var(--font-display); font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 10px; letter-spacing: -0.02em; }
+.section-sub { font-size: 0.92rem; color: var(--muted); max-width: 560px; margin-bottom: 40px; line-height: 1.7; }
+
+.story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.story-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; border-top: 2px solid var(--border); }
+.story-card:first-child { border-top-color: var(--green); }
+.story-icon { font-size: 1.4rem; margin-bottom: 12px; }
+.story-title { font-weight: 700; font-size: 0.9rem; color: var(--text); margin-bottom: 8px; }
+.story-body { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
+/* HINDI CARDS */
+.hindi-section { background: var(--dark); padding: 60px 5%; }
+.hindi-inner { max-width: 1000px; margin: 0 auto; }
+.hindi-header { margin-bottom: 32px; }
+.hindi-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+.hindi-title { font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 700; color: rgba(255,255,255,0.6); line-height: 1.45; max-width: 600px; }
+.hindi-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.hindi-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 20px; }
+.hindi-phrase { font-family: var(--font-display); font-size: 0.98rem; font-weight: 700; color: white; margin-bottom: 8px; font-style: italic; }
+.hindi-meaning { font-size: 0.78rem; color: rgba(255,255,255,0.3); line-height: 1.55; }
+
+/* ABOUT BAND */
+.about-band { background: var(--dark2); border-top: 1px solid rgba(255,255,255,0.06); padding: 64px 5%; }
+.about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.about-band h2 { font-family: var(--font-display); font-size: clamp(1.3rem, 2.2vw, 1.8rem); font-weight: 800; color: white; margin-bottom: 14px; line-height: 1.25; }
+.about-band p { font-size: 0.92rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-bottom: 12px; }
+.stat-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stat-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px; }
+.stat-box-n { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: white; }
+.stat-box-l { font-size: 0.7rem; color: rgba(255,255,255,0.25); margin-top: 3px; }
+
+/* FOUNDER NOTE */
+.founder-section { background: var(--green-light); border-top: 1px solid #B2DFD0; border-bottom: 1px solid #B2DFD0; padding: 52px 5%; }
+.founder-inner { max-width: 720px; margin: 0 auto; }
+.founder-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
+.founder-quote { font-family: var(--font-display); font-size: clamp(0.95rem, 1.8vw, 1.2rem); font-weight: 500; color: var(--text); line-height: 1.75; margin-bottom: 14px; font-style: italic; }
+.founder-attr { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+
+/* PRESS STRIP */
+.press-strip { background: var(--dark2); border-top: 1px solid rgba(255,255,255,0.06); padding: 32px 5%; }
+.press-strip-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.press-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.25); white-space: nowrap; }
+.press-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+.press-chip { display: inline-flex; align-items: center; gap: 7px; padding: 7px 16px; border-radius: 100px; font-size: 0.78rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid; }
+.press-chip.current { background: rgba(10,124,82,0.15); border-color: rgba(10,124,82,0.3); color: #5BC49A; cursor: default; }
+.press-chip.other { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.45); }
+.press-chip.other:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: white; }
+
+/* CTA */
+.cta-section { background: var(--accent-light); border-top: 1px solid #C8DFF0; padding: 72px 5%; text-align: center; }
+.cta-inner { max-width: 540px; margin: 0 auto; }
+.cta-section h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 800; color: var(--text); margin-bottom: 10px; }
+.cta-section p { font-size: 0.92rem; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+.cta-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+/* FOOTER */
+footer { background: var(--dark); padding: 36px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 0.8rem; color: rgba(255,255,255,0.25); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { color: rgba(255,255,255,0.25); text-decoration: none; }
+.footer-links a:hover { color: rgba(255,255,255,0.6); }
+
+@media (max-width: 768px) {
+  .hero-inner, .story-grid, .hindi-cards, .about-inner { grid-template-columns: 1fr; }
+  .stat-card { display: none; }
+}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px);}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clicarity in Print Bulletin — May 2026 Feature">
+<meta name="twitter:description" content="Print Bulletin (BMPA & MMS) featured Clicarity in a 2-page Learning Curve story in their May 2026 edition. Vol 64, Issue 5, Pages 20–21.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+<link rel="canonical" href="https://www.clicarity.com/print-bulletin/">
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><span></span> Learning Curve · May 2026</div>
+      <div class="hero-section-label">Print Bulletin — BMPA &amp; MMS</div>
+      <h1 class="hero-headline">From Chaos<br>to Clarity</h1>
+      <div class="hero-subtitle">— Clicarity</div>
+      <p class="hero-sub">Print Bulletin — Mumbai's print industry monthly, an initiative by BMPA &amp; MMS — featured Clicarity in a 2-page Learning Curve story in their May 2026 edition.</p>
+      <div class="hero-chips">
+        <span class="chip">Vol 64, Issue 5</span>
+        <span class="chip">May 2026</span>
+        <span class="chip">Pages 20–21</span>
+        <span class="chip">Learning Curve Feature</span>
+        <span class="chip">BMPA &amp; MMS</span>
+      </div>
+      <div class="hero-btns">
+        <a class="btn btn-primary btn-lg" href="https://calendly.com/clicarity/demo" target="_blank">Book a Demo</a>
+        <a class="btn btn-dark-outline btn-lg" href="https://wa.me/919867800451" target="_blank">WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-title">Print Bulletin</div>
+      <div class="stat-row"><div class="stat-n">Vol 64</div><div class="stat-l">Issue 5 · May 2026</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat-row"><div class="stat-n">Pg 20–21</div><div class="stat-l">2-page Learning Curve</div></div>
+      <div class="stat-divider"></div>
+      <div style="font-size:0.7rem;color:rgba(255,255,255,0.2);">Mumbai · English · Monthly<br>An initiative by BMPA &amp; MMS</div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <div class="quote-inner">
+    <div class="quote-label">The quote that defined the feature</div>
+    <div class="quote-text">"The team is not weak. They work hard. <strong>It is the system that is missing."</strong></div>
+    <div class="quote-source">Puneet Rawat, Founder — Clicarity &nbsp;·&nbsp; Print Bulletin, May 2026 · Pages 20–21</div>
+  </div>
+</div>
+
+<!-- STORY -->
+<div class="section">
+  <div class="section-inner">
+    <div class="section-label">Learning Curve · As published</div>
+    <h2 class="section-title">The full founder story</h2>
+    <p class="section-sub">Unlike a standard product feature, Print Bulletin's Learning Curve format told the complete narrative — the problem, the insight, the solution, and the real businesses using it.</p>
+    <div class="story-grid">
+      <div class="story-card">
+        <div class="story-icon">🏭</div>
+        <div class="story-title">Where it started</div>
+        <div class="story-body">Puneet Rawat — Mumbai-based printpreneur — saw the same chaos across nearly two decades in printing and packaging. Production updates via phone calls, handwritten notes, verbal confirmations. Every factory had the same broken system.</div>
+      </div>
+      <div class="story-card">
+        <div class="story-icon">💡</div>
+        <div class="story-title">The insight</div>
+        <div class="story-body">The problem was never the people. It was the absence of a simple, visible system. When there's no visibility, blame circulates. Everyone waits. No one knows. The article named this the "standardisation of excuses."</div>
+      </div>
+      <div class="story-card">
+        <div class="story-icon">📱</div>
+        <div class="story-title">The solution</div>
+        <div class="story-body">Two screens. Create Job. Update Status. If someone can use WhatsApp, they can use Clicarity. No training required. Live in days. Built around the client's own job docket — their format, their stages, their language.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HINDI CARDS -->
+<div class="hindi-section">
+  <div class="hindi-inner">
+    <div class="hindi-header">
+      <div class="hindi-label">What made this article unforgettable</div>
+      <div class="hindi-title">The feature used the exact words every shop floor manager in India has heard — written as illustration captions in the magazine.</div>
+    </div>
+    <div class="hindi-cards">
+      <div class="hindi-card">
+        <div class="hindi-phrase">"Client ko kya bolun?"</div>
+        <div class="hindi-meaning">What do I tell the client? — The daily anxiety of not knowing where a job actually is.</div>
+      </div>
+      <div class="hindi-card">
+        <div class="hindi-phrase">"Sir, kal tak ho jayega"</div>
+        <div class="hindi-meaning">Sir, it'll be done by tomorrow — the verbal promise with no system behind it.</div>
+      </div>
+      <div class="hindi-card">
+        <div class="hindi-phrase">"Humein toh material late mila"</div>
+        <div class="hindi-meaning">We got the material late — the blame that circulates when there's no production trail.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT PRINT BULLETIN -->
+<div class="about-band">
+  <div class="about-inner">
+    <div>
+      <h2>What is Print Bulletin — and why this placement matters</h2>
+      <p>Print Bulletin is an initiative by BMPA (Bombay Master Printers' Association) and MMS — one of Mumbai's most respected trade associations for the print and packaging industry.</p>
+      <p>The Learning Curve section is reserved for stories the editorial team believes the industry should learn from. This isn't an ad — it's an editorial endorsement.</p>
+    </div>
+    <div class="stat-boxes">
+      <div class="stat-box"><div class="stat-box-n">Vol 64</div><div class="stat-box-l">64 volumes of publication</div></div>
+      <div class="stat-box"><div class="stat-box-n">Issue 5</div><div class="stat-box-l">May 2026 edition</div></div>
+      <div class="stat-box"><div class="stat-box-n">Pg 20–21</div><div class="stat-box-l">2-page spread</div></div>
+      <div class="stat-box"><div class="stat-box-n">BMPA</div><div class="stat-box-l">Mumbai's print association</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER NOTE -->
+<div class="founder-section">
+  <div class="founder-inner">
+    <div class="founder-label">📝 From the article</div>
+    <div class="founder-quote">"Mumbai-based printpreneur, Puneet Rawat, saw this problem up close over nearly two decades in the printing and packaging industry. As a student in the U.S., he had seen systems and dignity of labour. Back here, India's hierarchy, its initial resistance to ISO, and the long waiting periods posed an initial challenge — but now Indians are more open to automation, conversant with ChatGPT, and thus less dependent on others."</div>
+    <div class="founder-attr">Print Bulletin · Learning Curve · May 2026 · Pages 20–21</div>
+  </div>
+</div>
+
+<!-- PRESS STRIP -->
+<div class="press-strip">
+  <div class="press-strip-inner">
+    <div class="press-label">Clicarity in the press</div>
+    <div class="press-chips">
+      <span class="press-chip current">📗 Print Bulletin · May 2026 · You are here</span>
+      <a class="press-chip other" href="/printweek/">📘 PrintWeek India · April 2026 ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2>See the system Print Bulletin wrote about</h2>
+    <p>Book a free demo — we'll show you how Clicarity goes from chaos to clarity on your shop floor, in days, not months.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary btn-lg" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo</a>
+      <a class="btn btn-outline btn-lg" href="https://wa.me/919867800451" target="_blank">WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" width="168" height="56" style="height:3.5rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy"></div>
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="https://www.clicarity.com/in/risk">India Version (₹)</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy Policy</a>
+    <a href="https://www.clicarity.com/terms">Terms</a>
+  </div>
+  <div>© 2026 Clicarity. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Day in the Life — Before & After Clicarity | Clicarity</title>
+<meta name="description" content="8am to 6pm in an Indian print factory — before and after Clicarity. The same people, the same floor, a completely different reality. Scroll through and see yourself.">
+<meta property="og:title" content="A Day in the Life — Before & After Clicarity">
+<meta property="og:description" content="8am to 6pm in an Indian factory. Before Clicarity vs after. Scroll through and recognise your factory.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/a-day-in-the-life/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--dark:#0E0D0B;--before:#7C3524;--before-light:#FEF0EC;--after:#0A7C52;--after-light:#E6F5EE;--font-display:'Plus Jakarta Sans',sans-serif;--font-serif:'Lora',serif;--font-body:'Inter',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+.btn{padding:12px 28px;border-radius:100px;font-family:var(--font-body);font-weight:600;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 4px 14px rgba(24,110,172,0.2)}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-ghost{background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7)}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.35);color:white}
+
+/* HERO */
+.hero{background:var(--dark);padding:64px 5% 52px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 120%,rgba(10,124,82,0.12) 0%,transparent 65%)}
+.hero-inner{max-width:740px;margin:0 auto;position:relative}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.hero h1{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.4rem);font-weight:600;color:white;line-height:1.2;margin-bottom:14px}
+.hero h1 em{font-style:italic;color:rgba(255,255,255,0.5)}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.45);line-height:1.75;max-width:540px;margin:0 auto 28px}
+.hero-factory{font-size:0.82rem;color:rgba(255,255,255,0.25);font-style:italic}
+
+/* LEGEND */
+.legend{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 5%;position:sticky;top:105px;z-index:90}
+.legend-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.leg-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;font-weight:600}
+.leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.leg-dot.before{background:var(--before)}
+.leg-dot.after{background:var(--after)}
+.leg-sep{color:var(--border);font-size:1.2rem}
+.leg-note{font-size:0.78rem;color:var(--muted);margin-left:auto}
+
+/* TIMELINE */
+.timeline{max-width:1100px;margin:0 auto;padding:56px 5%}
+.time-block{margin-bottom:48px}
+.time-header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.time-stamp{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--text);min-width:80px}
+.time-title{font-family:var(--font-serif);font-size:1rem;font-style:italic;color:var(--muted)}
+.time-divider{flex:1;height:1px;background:var(--border)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.side{border-radius:14px;padding:22px 24px;position:relative}
+.side.before{background:var(--before-light);border:1px solid rgba(124,53,36,0.15)}
+.side.after{background:var(--after-light);border:1px solid rgba(10,124,82,0.15)}
+.side-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.side.before .side-label{color:var(--before)}
+.side.after .side-label{color:var(--after)}
+.side-content{font-size:0.9rem;line-height:1.75;color:var(--text)}
+.side-content .quote{font-family:var(--font-serif);font-style:italic;font-size:0.95rem;color:var(--before);margin:8px 0;padding-left:12px;border-left:2px solid rgba(124,53,36,0.3)}
+.side.after .side-content .quote{color:var(--after);border-left-color:rgba(10,124,82,0.3)}
+.side-content .detail{font-size:0.8rem;color:var(--muted);margin-top:8px}
+.side-content strong{font-weight:700}
+
+/* DIVIDER BAND */
+.mid-band{background:var(--dark);padding:40px 5%;text-align:center;margin:0}
+.mid-band-inner{max-width:600px;margin:0 auto}
+.mid-band p{font-family:var(--font-serif);font-size:1.1rem;font-style:italic;color:rgba(255,255,255,0.5);line-height:1.6}
+.mid-band strong{color:white;font-style:normal}
+
+/* END SECTION */
+.end-section{background:var(--surface);border-top:1px solid var(--border);padding:64px 5%;text-align:center}
+.end-inner{max-width:600px;margin:0 auto}
+.end-section h2{font-family:var(--font-serif);font-size:clamp(1.4rem,2.8vw,2rem);font-weight:600;color:var(--text);margin-bottom:12px;line-height:1.35}
+.end-section p{font-size:0.95rem;color:var(--muted);line-height:1.75;margin-bottom:28px}
+.end-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+footer{background:var(--dark);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.8rem;color:rgba(255,255,255,0.25)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.25);text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,0.7)}
+@media(max-width:700px){.split{grid-template-columns:1fr}.legend{top:88px}.leg-note{display:none}}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Day in the Life — Before & After Clicarity | Indian Manufacturer Story">
+<meta name="twitter:description" content="8am to 6pm in an Indian print factory — before and after Clicarity. The same people, the same floor, a completely different reality. Scroll through and see your">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">A true story, told twice</div>
+    <h1>A day in the life<br><em>of an Indian factory owner</em></h1>
+    <p class="hero-sub">The same factory. The same people. The same floor. Scroll through one complete day — before Clicarity, and after. See which one is yours.</p>
+    <p class="hero-factory">Mehta Packaging, Vasai — offset printing & packaging, 22 people</p>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-inner">
+    <div class="leg-item"><div class="leg-dot before"></div> Before Clicarity</div>
+    <div class="leg-sep">·</div>
+    <div class="leg-item"><div class="leg-dot after"></div> After Clicarity</div>
+    <div class="leg-note">Same factory · Same people · Different reality</div>
+  </div>
+</div>
+
+<div class="timeline">
+
+  <div class="time-block">
+    <div class="time-header">
+      <div class="time-stamp">7:45 AM</div>
+      <div class="time-title">Owner wakes up</div>
+      <div class="time-divider"></div>
+    </div>
+    <div class="split">
+      <div class="side before">
+        <div class="side-label">✕ Before</div>
+        <div class="side-content">
+          First thought: <em>"Is Job #1038 done yet?"</em> Opens WhatsApp. Scrolls through three groups. No update from Ramesh since yesterday evening.<br><br>
+          <div class="quote">"Ramesh bhai, Job 1038 kahan tak aaya?"</div>
+          No reply. It's 7:45am. Ramesh is probably at the machine already — but there's no way to know.
+          <div class="detail">Time spent worrying before the day begins: 15 minutes</div>
+        </div>
+      </div>
+      <div class="side after">
+        <div class="side-label">✓ After</div>
+        <div class="side-content">
+          Opens Clicarity dashboard. Job #1038 — updated to Finishing at 7:31 AM by Ramesh. 480 sheets completed, 20 in QC.<br><br>
+          <div class="quote">"Theek hai. Dispatch by lunch possible hai."</div>
+          Goes back to sleep for 15 minutes. No calls needed.
+          <div class="detail">Time spent: 45 seconds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-header">
+      <div class="time-stamp">9:15 AM</div>
+      <div class="time-title">Client calls asking for delivery update</div>
+      <div class="time-divider"></div>
+    </div>
+    <div class="split">
+      <div class="side before">
+        <div class="side-label">✕ Before</div>
+        <div class="side-content">
+          <div class="quote">"Sir, your Job 1038 — by when can we expect it?"</div>
+          Owner puts client on hold. Calls Ramesh. Ramesh doesn't pick up — he's at the press. Calls supervisor. Supervisor says <em>"almost done, sir."</em><br><br>
+          Owner goes back to client: <strong>"By end of day, definitely."</strong><br><br>
+          This is a guess. Both parties know it.
+          <div class="detail">Client confidence: low. Owner's anxiety: high.</div>
+        </div>
+      </div>
+      <div class="side after">
+        <div class="side-label">✓ After</div>
+        <div class="side-content">
+          <div class="quote">"Sir, your Job 1038 — by when can we expect it?"</div>
+          Owner opens Clicarity while still on the call. Job is at Finishing, 480/500 sheets done, started at 7:31 AM.<br><br>
+          <strong>"By 1pm today. I'm looking at the system right now."</strong><br><br>
+          Client hears confidence. Confidence is real.
+          <div class="detail">Client confidence: high. No hold, no callbacks.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-header">
+      <div class="time-stamp">10:30 AM</div>
+      <div class="time-title">New job needs to be started — 3 components</div>
+      <div class="time-divider"></div>
+    </div>
+    <div class="split">
+      <div class="side before">
+        <div class="side-label">✕ Before</div>
+        <div class="side-content">
+          Paper job card created. Supervisor writes job number on card. Card goes to press with the material.<br><br>
+          Component B — the inner tray — is outsourced to Gupta Packaging in Bhandup. Supervisor sends a WhatsApp message. Gupta replies <em>"haan bhai, karenge"</em>. Nobody writes down when they were supposed to deliver.
+          <div class="detail">Accountability for Gupta job: zero</div>
+        </div>
+      </div>
+      <div class="side after">
+        <div class="side-label">✓ After</div>
+        <div class="side-content">
+          Job #1047 created in Clicarity. Three components configured: outer box, inner tray (outsourced), label. Gupta Packaging assigned to inner tray — gets WhatsApp notification automatically with job details and expected date.<br><br>
+          Every component has its own tracking path. Owner can see all three anytime.
+          <div class="detail">Setup time: 4 minutes. Gupta accountability: logged.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-header">
+      <div class="time-stamp">12:00 PM</div>
+      <div class="time-title">Lunch — floor is unsupervised for 45 minutes</div>
+      <div class="time-divider"></div>
+    </div>
+    <div class="split">
+      <div class="side before">
+        <div class="side-label">✕ Before</div>
+        <div class="side-content">
+          Nobody updates anything during lunch. The paper job card stays with the job. The owner has no idea if morning shifts completed their targets or not.<br><br>
+          Post-lunch restart happens based on verbal briefings. <em>"Where were we? Kitna hua tha?"</em> 20 minutes lost getting everyone back up to speed.
+          <div class="detail">Productive time lost every day at lunch: ~20 minutes</div>
+        </div>
+      </div>
+      <div class="side after">
+        <div class="side-label">✓ After</div>
+        <div class="side-content">
+          Last operator logged their update at 11:52 AM before going to lunch — stage, quantity, any issue. Dashboard shows exactly where each job was left.<br><br>
+          Post-lunch: operators open Clicarity, see their pending tasks, pick up exactly where they left off. No verbal briefing needed.
+          <div class="detail">Productive time lost: near zero</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-header">
+      <div class="time-stamp">2:30 PM</div>
+      <div class="time-title">A job has been stuck at lamination since morning</div>
+      <div class="time-divider"></div>
+    </div>
+    <div class="split">
+      <div class="side before">
+        <div class="side-label">✕ Before</div>
+        <div class="side-content">
+          Nobody noticed. The lamination operator had a machine issue at 10am — switched to a different job. Job #1041 has been sitting for 4 hours.<br><br>
+          Owner finds out at 2:30pm when the client calls asking for a dispatch update. Panic. Rush. Overtime likely.
+          <div class="quote">"Kyu nahi bataya?!" "Sir, socha aap ko pata hai."</div>
+          <div class="detail">4.5 hours of delay discovered too late to fix easily</div>
+        </div>
+      </div>
+      <div class="side after">
+        <div class="side-label">✓ After</div>
+        <div class="side-content">
+          Clicarity flagged Job #1041 at 12:45 PM — no update on lamination stage for over 2 hours. Alert sent to supervisor's phone.<br><br>
+          Supervisor reassigned job to second lamination operator at 1:02 PM. Job back on track. Client doesn't call. Nobody panics.
+          <div class="detail">Delay caught and fixed 1.5 hours before it became a crisis</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-header">
+      <div class="time-stamp">4:00 PM</div>
+      <div class="time-title">Shift change — day shift out, evening shift in</div>
+      <div class="time-divider"></div>
+    </div>
+    <div class="split">
+      <div class="side before">
+        <div class="side-label">✕ Before</div>
+        <div class="side-content">
+          Day shift supervisor briefs evening supervisor verbally in 5 minutes. <em>"1038 is almost done, 1041 is at lamination, 1043 hasn't started yet."</em><br><br>
+          Evening supervisor writes this on a notepad. Three jobs are not mentioned at all. By 6pm, two of those jobs are delayed because nobody told the evening team they existed.
+          <div class="detail">Jobs lost in handover: 2–3 per week on average</div>
+        </div>
+      </div>
+      <div class="side after">
+        <div class="side-label">✓ After</div>
+        <div class="side-content">
+          Evening supervisor opens Clicarity at 4:00 PM. Every active job is visible — stage, quantity completed, who last updated, what's pending tonight.<br><br>
+          No verbal briefing needed for job status. Day supervisor spends 3 minutes on actual exceptions — machine notes, material issues — not chasing status.
+          <div class="detail">Jobs lost in handover: zero</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-block">
+    <div class="time-header">
+      <div class="time-stamp">6:00 PM</div>
+      <div class="time-title">Owner reviews the day</div>
+      <div class="time-divider"></div>
+    </div>
+    <div class="split">
+      <div class="side before">
+        <div class="side-label">✕ Before</div>
+        <div class="side-content">
+          Owner tries to piece together what happened today. Checks WhatsApp messages. Calls supervisor. Gets a summary that's partially accurate, partially optimistic.<br><br>
+          Tomorrow's plan is made on uncertain information. Goes home tired, slightly anxious. Three things he doesn't know are already problems.
+          <div class="detail">Decisions made on good data: ~50%</div>
+        </div>
+      </div>
+      <div class="side after">
+        <div class="side-label">✓ After</div>
+        <div class="side-content">
+          Opens dashboard. 6 jobs updated today. 2 completed and ready for dispatch. 1 flagged — material arrived late from Gupta, will delay by one day. Owner messages client proactively.<br><br>
+          Tomorrow's priorities are clear. Goes home with a complete picture. No anxiety about unknowns.
+          <div class="detail">Decisions made on good data: ~95%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mid-band">
+  <div class="mid-band-inner">
+    <p>Same factory. Same 22 people. Same floor.<br><strong>The only difference is visibility.</strong><br>That's what Clicarity gives you.</p>
+  </div>
+</div>
+
+<div class="end-section">
+  <div class="end-inner">
+    <h2>Which day is yours right now?</h2>
+    <p>If the "Before" column felt familiar — book a demo. We'll show you how quickly the "After" becomes your reality. Most factories are live within a week.</p>
+    <div class="end-btns">
+      <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo</a>
+      <a class="btn btn-outline" href="https://wa.me/919867800451" target="_blank">WhatsApp Us</a>
+    </div>
+    <p style="margin-top:20px;font-size:0.82rem;color:var(--muted)">Also read: <a href="/vs-whatsapp/" style="color:var(--accent)">Clicarity vs WhatsApp →</a> &nbsp;·&nbsp; <a href="/honest-answers/" style="color:var(--accent)">Honest Answers →</a></p>
+  </div>
+</div>
+
+<footer>
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:3rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy">
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+    <a href="https://www.clicarity.com/terms">Terms</a>
+  </div>
+  <div>© 2026 Clicarity &nbsp;·&nbsp; <a href="/mumbai/" style="color:inherit;opacity:0.6">Mumbai</a> · <a href="/surat/" style="color:inherit;opacity:0.6">Surat</a> · <a href="/tirupur/" style="color:inherit;opacity:0.6">Tirupur</a> · <a href="/delhi/" style="color:inherit;opacity:0.6">Delhi</a> · <a href="/pune/" style="color:inherit;opacity:0.6">Pune</a> · <a href="/ludhiana/" style="color:inherit;opacity:0.6">Ludhiana</a></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factory Problems Blog — 195 Real Problems Indian M… | Clicarity</title>
+<meta name="description" content="195 real factory problems faced by Indian manufacturers — told as stories with realistic outcomes. Status, delays, wastage, vendors, accountability, rework. All industries, all cities.">
+<meta property="og:title" content="Factory Problems Blog — Clicarity">
+<meta property="og:description" content="100 real factory problems. Real industries. Real cities. Realistic outcomes. Find your problem here.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--dark:#0E0D0B;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--radius:12px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+
+.hero{background:var(--dark);padding:52px 5% 44px}
+.hero-inner{max-width:1100px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:white;line-height:1.15;margin-bottom:10px;letter-spacing:-0.02em}
+.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.4);line-height:1.7;max-width:600px}
+
+.search-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 5%;position:sticky;top:105px;z-index:90}
+.search-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.search-input{flex:1;padding:9px 16px;border:1.5px solid var(--border);border-radius:100px;font-size:0.85rem;font-family:var(--font-body);outline:none;background:var(--bg);transition:border-color 0.2s}
+.search-input:focus{border-color:var(--accent)}
+.search-count{font-size:0.75rem;color:var(--muted);white-space:nowrap}
+
+.filter-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:10px 5%;overflow-x:auto;white-space:nowrap}
+.filter-inner{max-width:1100px;margin:0 auto;display:flex;gap:8px}
+.filter-btn{padding:5px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:transparent;color:var(--muted);transition:all 0.2s;font-family:var(--font-body);white-space:nowrap}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);color:white;border-color:var(--accent)}
+
+.blog-grid-wrap{max-width:1100px;margin:0 auto;padding:40px 5%}
+.cat-section{margin-bottom:48px}
+.cat-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+.cat-icon{font-size:1.1rem}
+.cat-name{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--text)}
+.cat-count{font-size:0.72rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:2px 10px}
+
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.post-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;text-decoration:none;color:var(--text);transition:box-shadow 0.15s,transform 0.15s,border-color 0.15s;display:flex;flex-direction:column;gap:8px}
+.post-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.07);transform:translateY(-1px);border-color:var(--accent)}
+.post-card.hidden{display:none}
+.post-title{font-weight:700;font-size:0.88rem;color:var(--text);line-height:1.4}
+.post-meta{display:flex;flex-wrap:wrap;gap:5px}
+.post-tag{font-size:0.68rem;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--bg);color:var(--muted);border:1px solid var(--border)}
+.post-arrow{font-size:0.75rem;color:var(--accent);font-weight:700;margin-top:auto}
+
+footer{background:var(--dark);padding:28px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:0.78rem;color:rgba(255,255,255,0.25)}
+.footer-links{display:flex;gap:18px}
+.footer-links a{color:rgba(255,255,255,0.25);text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,0.6)}
+@media(max-width:640px){.search-bar{top:88px}.posts-grid{grid-template-columns:1fr}}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Factory Problems Blog — 195 Real Problems Indian Manufacturers Face | Clicarity">
+<meta name="twitter:description" content="195 real factory problems faced by Indian manufacturers — told as stories with realistic outcomes. Status, delays, wastage, vendors, accountability, rework. All">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com"}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">✍️ Factory Problems Blog</div>
+    <h1>608 real problems.<br>Indian factories. Realistic outcomes.</h1>
+    <p class="hero-sub">Every story here is based on real patterns from Indian manufacturing floors — different industries, different cities, different roles. Find your problem. See what fixed it.</p>
+  </div>
+</div>
+
+<div class="search-bar">
+  <div class="search-inner">
+    <input class="search-input" type="text" id="blogSearch" placeholder="Search — 'lamination', 'vendor', 'tirupur', 'rework'..." oninput="filterPosts()">
+    <span class="search-count" id="blogCount"></span>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" onclick="filterCat('all',this)">All (608)</button>
+    <button class="filter-btn" onclick="filterCat('status',this)">📊 Status & Visibility (20)</button>
+    <button class="filter-btn" onclick="filterCat('delays',this)">⏰ Delays (20)</button>
+    <button class="filter-btn" onclick="filterCat('wastage',this)">⚠️ Wastage (15)</button>
+    <button class="filter-btn" onclick="filterCat('vendors',this)">🚚 Vendors (15)</button>
+    <button class="filter-btn" onclick="filterCat('accountability',this)">🤝 Accountability (15)</button>
+    <button class="filter-btn" onclick="filterCat('rework',this)">🔧 Rework (15)</button>
+  </div>
+</div>
+
+<div class="blog-grid-wrap">
+
+  <div class="cat-section" id="cat-status">
+    <div class="cat-header"><span class="cat-icon">📊</span><span class="cat-name">Status & Visibility</span><span class="cat-count">20 stories</span></div>
+    <div class="posts-grid">
+      <a class="post-card" href="/blog/why-does-my-supervisor-always-say-almost-done/" data-cat="status" data-search="supervisor almost done offset printing vasai mumbai owner"><div class="post-title">Why does my supervisor always say 'almost done'?</div><div class="post-meta"><span class="post-tag">Offset Printing</span><span class="post-tag">Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-know-where-my-job-is-without-calling-anyone/" data-cat="status" data-search="job status calling label printing navi mumbai owner"><div class="post-title">How do I know where my job is without calling anyone?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Navi Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/my-morning-starts-with-8-phone-calls-to-my-floor/" data-cat="status" data-search="morning calls floor corrugation bhiwandi owner"><div class="post-title">My morning starts with 8 phone calls to my floor</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Bhiwandi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-information-travel-slower-than-the-job-itself/" data-cat="status" data-search="information delay engineering pune manager"><div class="post-title">Why does information travel slower than the job itself?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Pune</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/i-found-out-a-job-was-delayed-when-the-client-called/" data-cat="status" data-search="client called delay packaging surat owner"><div class="post-title">I found out a job was delayed when the client called</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-check-production-status-from-home/" data-cat="status" data-search="status home remote textile ludhiana owner"><div class="post-title">How do I check production status from home?</div><div class="post-meta"><span class="post-tag">Textile</span><span class="post-tag">Ludhiana</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/my-operators-update-status-at-end-of-day-not-real-time/" data-cat="status" data-search="end of day update real time printing delhi owner"><div class="post-title">My operators update status at end of day, not real time</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-does-chal-raha-hai-actually-mean-in-a-factory/" data-cat="status" data-search="chal raha hai auto components faridabad supervisor"><div class="post-title">What does 'chal raha hai' actually mean in a factory?</div><div class="post-meta"><span class="post-tag">Auto Components</span><span class="post-tag">Faridabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-is-there-always-a-gap-between-what-supervisor-says-and-reality/" data-cat="status" data-search="supervisor reality gap garments tirupur owner"><div class="post-title">Why is there always a gap between what supervisor says and reality?</div><div class="post-meta"><span class="post-tag">Garments</span><span class="post-tag">Tirupur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-many-follow-up-calls-does-a-normal-factory-make-per-day/" data-cat="status" data-search="follow-up calls per day packaging noida owner"><div class="post-title">How many follow-up calls does a normal factory make per day?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Noida</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/can-i-see-my-factory-floor-on-my-phone/" data-cat="status" data-search="phone dashboard pharma packaging thane owner"><div class="post-title">Can I see my factory floor on my phone?</div><div class="post-meta"><span class="post-tag">Pharma Packaging</span><span class="post-tag">Thane</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-operators-not-update-job-status-unless-asked/" data-cat="status" data-search="operator update label printing ahmedabad owner"><div class="post-title">Why do operators not update job status unless asked?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Ahmedabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-happens-to-job-visibility-during-lunch-break/" data-cat="status" data-search="lunch break visibility engineering pune manager"><div class="post-title">What happens to job visibility during lunch break?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Pune</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-every-job-seem-to-be-almost-done-forever/" data-cat="status" data-search="almost done forever offset printing chennai owner"><div class="post-title">Why does every job seem to be 'almost done' forever?</div><div class="post-meta"><span class="post-tag">Offset Printing</span><span class="post-tag">Chennai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-get-real-time-updates-without-buying-erp/" data-cat="status" data-search="real time no erp packaging kochi owner"><div class="post-title">How do I get real-time updates without buying ERP?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Kochi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/my-night-shift-starts-without-knowing-where-day-shift-left-off/" data-cat="status" data-search="night shift day shift handover printing raipur supervisor"><div class="post-title">My night shift starts without knowing where day shift left off</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Raipur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/i-have-40-jobs-on-the-floor-and-no-idea-which-is-urgent/" data-cat="status" data-search="40 jobs urgent priority corrugation surat owner"><div class="post-title">I have 40 jobs on the floor and no idea which is urgent</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-the-owner-always-have-to-be-on-the-floor-to-know-status/" data-cat="status" data-search="owner floor status engineering gurgaon"><div class="post-title">Why does the owner always have to be on the floor to know status?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Gurgaon</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-wip-and-why-cant-my-factory-see-it/" data-cat="status" data-search="wip work in progress plastics noida manager"><div class="post-title">What is WIP and why can't my factory see it?</div><div class="post-meta"><span class="post-tag">Plastics</span><span class="post-tag">Noida</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-tell-a-client-when-their-job-will-be-ready/" data-cat="status" data-search="client eta delivery date packaging kolkata owner"><div class="post-title">How do I tell a client when their job will be ready?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Kolkata</span></div><div class="post-arrow">Read →</div></a>
+    </div>
+  </div>
+
+  <div class="cat-section" id="cat-delays">
+    <div class="cat-header"><span class="cat-icon">⏰</span><span class="cat-name">Production Delays</span><span class="cat-count">20 stories</span></div>
+    <div class="posts-grid">
+      <a class="post-card" href="/blog/why-do-jobs-always-get-stuck-at-lamination/" data-cat="delays" data-search="stuck lamination offset printing mumbai supervisor"><div class="post-title">Why do jobs always get stuck at lamination?</div><div class="post-meta"><span class="post-tag">Offset Printing</span><span class="post-tag">Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-stop-production-delays-in-my-garment-factory/" data-cat="delays" data-search="stop delays garment factory tirupur owner"><div class="post-title">How do I stop production delays in my garment factory?</div><div class="post-meta"><span class="post-tag">Garments</span><span class="post-tag">Tirupur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-my-delivery-date-always-slip-by-one-day/" data-cat="delays" data-search="delivery date slip one day label printing bhiwandi owner"><div class="post-title">Why does my delivery date always slip by one day?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Bhiwandi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-a-bottleneck-and-how-do-i-find-it-in-my-factory/" data-cat="delays" data-search="bottleneck find engineering rajkot manager"><div class="post-title">What is a bottleneck and how do I find it in my factory?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Rajkot</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-small-jobs-always-miss-deadlines/" data-cat="delays" data-search="small jobs miss deadlines packaging delhi owner"><div class="post-title">Why do small jobs always miss deadlines?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-catch-a-delay-before-it-becomes-a-crisis/" data-cat="delays" data-search="catch delay early warning corrugation pune owner"><div class="post-title">How do I catch a delay before it becomes a crisis?</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Pune</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-die-cutting-always-slow-everything-down/" data-cat="delays" data-search="die cutting slow rigid boxes navi mumbai supervisor"><div class="post-title">Why does die cutting always slow everything down?</div><div class="post-meta"><span class="post-tag">Rigid Boxes</span><span class="post-tag">Navi Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/my-job-was-done-yesterday-but-dispatch-hasnt-happened/" data-cat="delays" data-search="done dispatch label printing ludhiana owner"><div class="post-title">My job was done yesterday but dispatch hasn't happened</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Ludhiana</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-causes-production-delays-in-a-printing-factory/" data-cat="delays" data-search="causes delays printing factory delhi owner"><div class="post-title">What causes production delays in a printing factory?</div><div class="post-meta"><span class="post-tag">Offset Printing</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-reduce-turnaround-time-without-adding-more-workers/" data-cat="delays" data-search="turnaround time tat packaging surat owner"><div class="post-title">How do I reduce turnaround time without adding more workers?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-the-qc-stage-always-hold-up-the-entire-floor/" data-cat="delays" data-search="qc quality check hold up pharma packaging hyderabad manager"><div class="post-title">Why does the QC stage always hold up the entire floor?</div><div class="post-meta"><span class="post-tag">Pharma Packaging</span><span class="post-tag">Hyderabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-delays-compound-across-multiple-jobs/" data-cat="delays" data-search="cascade compound multiple jobs engineering howrah owner"><div class="post-title">How do delays compound across multiple jobs?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Howrah</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-i-always-find-out-about-delays-too-late/" data-cat="delays" data-search="find out late textile coimbatore owner"><div class="post-title">Why do I always find out about delays too late?</div><div class="post-meta"><span class="post-tag">Textile</span><span class="post-tag">Coimbatore</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-happens-to-my-factory-when-one-machine-breaks-down/" data-cat="delays" data-search="machine breakdown printing nagpur owner"><div class="post-title">What happens to my factory when one machine breaks down?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Nagpur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-prioritise-jobs-when-everything-is-urgent/" data-cat="delays" data-search="prioritise urgent packaging ahmedabad owner"><div class="post-title">How do I prioritise jobs when everything is urgent?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Ahmedabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-my-corrugation-plant-lose-3-hours-every-morning/" data-cat="delays" data-search="morning 3 hours corrugation faridabad owner"><div class="post-title">Why does my corrugation plant lose 3 hours every morning?</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Faridabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-turnaround-time-and-how-do-i-track-it/" data-cat="delays" data-search="turnaround time track printing chandigarh manager"><div class="post-title">What is turnaround time and how do I track it?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Chandigarh</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-rush-orders-always-disrupt-my-regular-production/" data-cat="delays" data-search="rush orders disrupt label printing chennai owner"><div class="post-title">Why do rush orders always disrupt my regular production?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Chennai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-much-does-one-day-of-production-delay-actually-cost/" data-cat="delays" data-search="cost one day delay packaging kochi owner"><div class="post-title">How much does one day of production delay actually cost?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Kochi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-is-my-finishing-stage-always-the-last-to-know-about-delays/" data-cat="delays" data-search="finishing last know delay packaging delhi supervisor"><div class="post-title">Why is my finishing stage always the last to know about delays?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+    </div>
+  </div>
+
+  <div class="cat-section" id="cat-wastage">
+    <div class="cat-header"><span class="cat-icon">⚠️</span><span class="cat-name">Wastage & Materials</span><span class="cat-count">15 stories</span></div>
+    <div class="posts-grid" id="posts-wastage">
+      <a class="post-card" href="/blog/why-cant-i-find-where-my-material-is-going/" data-cat="wastage" data-search="material going corrugation bhiwandi owner"><div class="post-title">Why can't I find where my material is going?</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Bhiwandi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-thoda-wastage-hua-costing-my-factory/" data-cat="wastage" data-search="thoda wastage hua packaging surat owner"><div class="post-title">What is 'thoda wastage hua' costing my factory?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-track-wastage-at-each-production-stage/" data-cat="wastage" data-search="track wastage stage label printing mumbai manager"><div class="post-title">How do I track wastage at each production stage?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-my-rigid-box-factory-lose-material-at-lamination/" data-cat="wastage" data-search="rigid box lamination material loss delhi owner"><div class="post-title">Why does my rigid box factory lose material at lamination?</div><div class="post-meta"><span class="post-tag">Rigid Boxes</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-calculate-actual-vs-expected-material-usage/" data-cat="wastage" data-search="actual expected material usage packaging rajkot owner"><div class="post-title">How do I calculate actual vs expected material usage?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Rajkot</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-paper-mills-struggle-with-wastage-visibility/" data-cat="wastage" data-search="paper mills wastage visibility pune manager"><div class="post-title">Why do paper mills struggle with wastage visibility?</div><div class="post-meta"><span class="post-tag">Paper Mills</span><span class="post-tag">Pune</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-lot-wise-tracking-and-why-does-it-matter/" data-cat="wastage" data-search="lot wise tracking textile surat owner"><div class="post-title">What is lot-wise tracking and why does it matter?</div><div class="post-meta"><span class="post-tag">Textile</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-garment-factories-track-fabric-wastage-per-order/" data-cat="wastage" data-search="garment fabric wastage order tirupur owner"><div class="post-title">How do garment factories track fabric wastage per order?</div><div class="post-meta"><span class="post-tag">Garments</span><span class="post-tag">Tirupur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-my-pharma-packaging-plant-fail-quantity-reconciliation/" data-cat="wastage" data-search="pharma packaging reconciliation quantity ahmedabad manager"><div class="post-title">Why does my pharma packaging plant fail quantity reconciliation?</div><div class="post-meta"><span class="post-tag">Pharma Packaging</span><span class="post-tag">Ahmedabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-stop-blaming-operators-for-wastage-i-cant-prove/" data-cat="wastage" data-search="blame operators wastage prove printing hyderabad owner"><div class="post-title">How do I stop blaming operators for wastage I can't prove?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Hyderabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-does-15-percent-wastage-look-like-in-rupees/" data-cat="wastage" data-search="15 percent wastage rupees packaging kochi owner"><div class="post-title">What does 15% wastage look like in rupees?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Kochi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-is-my-corrugated-box-plant-losing-board-at-die-cutting/" data-cat="wastage" data-search="corrugated box board die cutting raipur owner"><div class="post-title">Why is my corrugated box plant losing board at die cutting?</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Raipur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-find-the-stage-where-most-wastage-happens/" data-cat="wastage" data-search="find stage wastage engineering surat manager"><div class="post-title">How do I find the stage where most wastage happens?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-wastage-only-become-visible-at-month-end/" data-cat="wastage" data-search="month end wastage visible packaging faridabad owner"><div class="post-title">Why does wastage only become visible at month-end?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Faridabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-auto-reconciliation-and-can-it-replace-manual-counting/" data-cat="wastage" data-search="auto reconciliation manual counting label printing ludhiana manager"><div class="post-title">What is auto-reconciliation and can it replace manual counting?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Ludhiana</span></div><div class="post-arrow">Read →</div></a>
+    </div>
+  </div>
+
+  <div class="cat-section" id="cat-vendors">
+    <div class="cat-header"><span class="cat-icon">🚚</span><span class="cat-name">Vendor Management</span><span class="cat-count">15 stories</span></div>
+    <div class="posts-grid">
+      <a class="post-card" href="/blog/my-vendor-said-bhej-diya-3-hours-ago-and-nothing-arrived/" data-cat="vendors" data-search="vendor bhej diya label printing mumbai owner"><div class="post-title">My vendor said 'bhej diya' 3 hours ago and nothing arrived</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-track-outsourced-jobs-without-constant-follow-up/" data-cat="vendors" data-search="outsourced jobs follow-up engineering pune owner"><div class="post-title">How do I track outsourced jobs without constant follow-up?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Pune</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-vendor-delays-always-surprise-me/" data-cat="vendors" data-search="vendor delays surprise packaging noida owner"><div class="post-title">Why do vendor delays always surprise me?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Noida</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-assign-jobs-to-vendors-and-track-them-digitally/" data-cat="vendors" data-search="assign vendors digital rigid boxes bhiwandi manager"><div class="post-title">How do I assign jobs to vendors and track them digitally?</div><div class="post-meta"><span class="post-tag">Rigid Boxes</span><span class="post-tag">Bhiwandi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-happens-when-a-vendor-goes-silent-mid-job/" data-cat="vendors" data-search="vendor silent mid job corrugation surat owner"><div class="post-title">What happens when a vendor goes silent mid-job?</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-give-vendors-job-updates-without-sharing-my-system/" data-cat="vendors" data-search="vendor updates sharing system label printing delhi owner"><div class="post-title">How do I give vendors job updates without sharing my system?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-outsourcing-always-create-a-visibility-black-hole/" data-cat="vendors" data-search="outsourcing black hole pharma packaging baddi manager"><div class="post-title">Why does outsourcing always create a visibility black hole?</div><div class="post-meta"><span class="post-tag">Pharma Packaging</span><span class="post-tag">Baddi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-hold-vendors-accountable-without-damaging-the-relationship/" data-cat="vendors" data-search="vendor accountable relationship printing ahmedabad owner"><div class="post-title">How do I hold vendors accountable without damaging the relationship?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Ahmedabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-vendor-dashboard-access-and-how-does-it-work/" data-cat="vendors" data-search="vendor dashboard access engineering rajkot manager"><div class="post-title">What is vendor dashboard access and how does it work?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Rajkot</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/my-three-vendors-are-all-working-on-one-job-how-do-i-track-it/" data-cat="vendors" data-search="three vendors one job packaging hyderabad owner"><div class="post-title">My 3 vendors are all working on one job — how do I track it?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Hyderabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-send-job-updates-to-vendors-via-whatsapp-automatically/" data-cat="vendors" data-search="whatsapp vendor update automatic rigid boxes kochi owner"><div class="post-title">How do I send job updates to vendors via WhatsApp automatically?</div><div class="post-meta"><span class="post-tag">Rigid Boxes</span><span class="post-tag">Kochi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-is-vendor-coordination-the-hardest-part-of-production/" data-cat="vendors" data-search="vendor coordination hardest textile surat owner"><div class="post-title">Why is vendor coordination the hardest part of production?</div><div class="post-meta"><span class="post-tag">Textile</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-should-i-do-when-a-vendor-keeps-missing-deadlines/" data-cat="vendors" data-search="vendor missing deadlines packaging chennai owner"><div class="post-title">What should I do when a vendor keeps missing deadlines?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Chennai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-small-factories-manage-multiple-job-workers/" data-cat="vendors" data-search="small factories job workers label printing ludhiana owner"><div class="post-title">How do small factories manage multiple job workers?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Ludhiana</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-vendor-jobs-always-come-back-with-quality-issues/" data-cat="vendors" data-search="vendor quality issues engineering gurgaon manager"><div class="post-title">Why do vendor jobs always come back with quality issues?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Gurgaon</span></div><div class="post-arrow">Read →</div></a>
+    </div>
+  </div>
+
+  <div class="cat-section" id="cat-accountability">
+    <div class="cat-header"><span class="cat-icon">🤝</span><span class="cat-name">Team & Accountability</span><span class="cat-count">15 stories</span></div>
+    <div class="posts-grid">
+      <a class="post-card" href="/blog/the-team-is-not-weak-it-is-the-system-that-is-missing/" data-cat="accountability" data-search="team weak system missing offset printing mumbai owner"><div class="post-title">The team is not weak — it is the system that is missing</div><div class="post-meta"><span class="post-tag">Offset Printing</span><span class="post-tag">Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-know-which-operator-made-an-error/" data-cat="accountability" data-search="operator error accountability packaging vasai owner"><div class="post-title">How do I know which operator made an error?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Vasai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-blame-always-circulate-when-a-job-goes-wrong/" data-cat="accountability" data-search="blame circulate job wrong label printing bhiwandi supervisor"><div class="post-title">Why does blame always circulate when a job goes wrong?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Bhiwandi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-create-accountability-without-creating-fear/" data-cat="accountability" data-search="accountability fear engineering pune owner"><div class="post-title">How do I create accountability without creating fear?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Pune</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-shift-handovers-always-lose-information/" data-cat="accountability" data-search="shift handover information loss printing delhi manager"><div class="post-title">Why do shift handovers always lose information?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-build-a-production-trail-without-paperwork/" data-cat="accountability" data-search="production trail paperwork digital packaging surat owner"><div class="post-title">How do I build a production trail without paperwork?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-role-based-access-and-why-does-it-help-factories/" data-cat="accountability" data-search="role based access rigid boxes navi mumbai manager"><div class="post-title">What is role-based access and why does it help factories?</div><div class="post-meta"><span class="post-tag">Rigid Boxes</span><span class="post-tag">Navi Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-the-supervisor-always-say-i-was-not-informed/" data-cat="accountability" data-search="supervisor not informed garments tirupur owner"><div class="post-title">Why does the supervisor always say 'I was not informed'?</div><div class="post-meta"><span class="post-tag">Garments</span><span class="post-tag">Tirupur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-get-my-team-to-update-job-status-consistently/" data-cat="accountability" data-search="team update status consistently corrugation faridabad owner"><div class="post-title">How do I get my team to update job status consistently?</div><div class="post-meta"><span class="post-tag">Corrugation</span><span class="post-tag">Faridabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-happens-when-operators-update-the-wrong-job-by-mistake/" data-cat="accountability" data-search="wrong job update mistake label printing ahmedabad owner"><div class="post-title">What happens when operators update the wrong job by mistake?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Ahmedabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-make-my-factory-less-dependent-on-one-supervisor/" data-cat="accountability" data-search="dependent one supervisor engineering hyderabad owner"><div class="post-title">How do I make my factory less dependent on one supervisor?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Hyderabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-problems-always-surface-at-the-worst-possible-time/" data-cat="accountability" data-search="problems surface worst time printing kochi owner"><div class="post-title">Why do problems always surface at the worst possible time?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Kochi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-train-new-operators-on-production-tracking/" data-cat="accountability" data-search="train new operators textile ludhiana supervisor"><div class="post-title">How do I train new operators on production tracking?</div><div class="post-meta"><span class="post-tag">Textile</span><span class="post-tag">Ludhiana</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-the-standardisation-of-excuses-in-manufacturing/" data-cat="accountability" data-search="standardisation excuses manufacturing packaging surat owner"><div class="post-title">What is the 'standardisation of excuses' in manufacturing?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-factories-run-on-trust-instead-of-data/" data-cat="accountability" data-search="trust data packaging delhi owner"><div class="post-title">Why do factories run on trust instead of data?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+    </div>
+  </div>
+
+  <div class="cat-section" id="cat-rework">
+    <div class="cat-header"><span class="cat-icon">🔧</span><span class="cat-name">Rework & Quality</span><span class="cat-count">15 stories</span></div>
+    <div class="posts-grid">
+      <a class="post-card" href="/blog/why-does-the-same-stage-keep-causing-rework-every-month/" data-cat="rework" data-search="same stage rework every month label printing mumbai owner"><div class="post-title">Why does the same stage keep causing rework every month?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-find-which-stage-is-causing-quality-failures/" data-cat="rework" data-search="stage quality failure rigid boxes bhiwandi manager"><div class="post-title">How do I find which stage is causing quality failures?</div><div class="post-meta"><span class="post-tag">Rigid Boxes</span><span class="post-tag">Bhiwandi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-does-pehle-se-aisa-tha-cost-my-factory/" data-cat="rework" data-search="pehle se aisa tha cost packaging surat owner"><div class="post-title">What does 'pehle se aisa tha' cost my factory?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Surat</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-track-rework-without-slowing-down-production/" data-cat="rework" data-search="track rework garments tirupur supervisor"><div class="post-title">How do I track rework without slowing down production?</div><div class="post-meta"><span class="post-tag">Garments</span><span class="post-tag">Tirupur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-quality-rejections-only-surface-at-packing-stage/" data-cat="rework" data-search="quality rejection packing stage label printing delhi owner"><div class="post-title">Why do quality rejections only surface at packing stage?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Delhi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-reduce-rework-in-a-pharma-packaging-plant/" data-cat="rework" data-search="reduce rework pharma packaging baddi manager"><div class="post-title">How do I reduce rework in a pharma packaging plant?</div><div class="post-meta"><span class="post-tag">Pharma Packaging</span><span class="post-tag">Baddi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-stage-wise-quality-logging-and-why-does-it-matter/" data-cat="rework" data-search="stage quality logging engineering pune manager"><div class="post-title">What is stage-wise quality logging and why does it matter?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Pune</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-my-rigid-box-factory-have-so-many-component-mismatches/" data-cat="rework" data-search="rigid box component mismatch navi mumbai owner"><div class="post-title">Why does my rigid box factory have so many component mismatches?</div><div class="post-meta"><span class="post-tag">Rigid Boxes</span><span class="post-tag">Navi Mumbai</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-stop-blaming-the-lamination-machine-for-everything/" data-cat="rework" data-search="lamination machine blame printing ahmedabad owner"><div class="post-title">How do I stop blaming the lamination machine for everything?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Ahmedabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-do-rework-instructions-never-reach-the-right-person/" data-cat="rework" data-search="rework instructions person packaging hyderabad supervisor"><div class="post-title">Why do rework instructions never reach the right person?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Hyderabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-build-a-rework-history-for-my-factory/" data-cat="rework" data-search="rework history label printing kochi manager"><div class="post-title">How do I build a rework history for my factory?</div><div class="post-meta"><span class="post-tag">Label Printing</span><span class="post-tag">Kochi</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/what-is-the-real-cost-of-one-rework-in-a-print-factory/" data-cat="rework" data-search="real cost rework print factory nagpur owner"><div class="post-title">What is the real cost of one rework in a print factory?</div><div class="post-meta"><span class="post-tag">Printing</span><span class="post-tag">Nagpur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-stitching-quality-vary-so-much-across-operators/" data-cat="rework" data-search="stitching quality operators garments tirupur owner"><div class="post-title">Why does stitching quality vary so much across operators?</div><div class="post-meta"><span class="post-tag">Garments</span><span class="post-tag">Tirupur</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/how-do-i-create-a-zero-rework-culture-in-my-factory/" data-cat="rework" data-search="zero rework culture engineering faridabad owner"><div class="post-title">How do I create a zero-rework culture in my factory?</div><div class="post-meta"><span class="post-tag">Engineering</span><span class="post-tag">Faridabad</span></div><div class="post-arrow">Read →</div></a>
+      <a class="post-card" href="/blog/why-does-my-client-always-find-quality-issues-i-didnt/" data-cat="rework" data-search="client quality issues packaging chandigarh owner"><div class="post-title">Why does my client always find quality issues I didn't?</div><div class="post-meta"><span class="post-tag">Packaging</span><span class="post-tag">Chandigarh</span></div><div class="post-arrow">Read →</div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:2.5rem;width:auto;filter:brightness(0) invert(1);opacity:0.4;" loading="lazy">
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+    <a href="https://www.clicarity.com/terms">Terms</a>
+  </div>
+  <div>© 2026 Clicarity</div>
+</footer>
+
+<script>
+let currentCat = 'all';
+function filterPosts() {
+  const q = document.getElementById('blogSearch').value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.post-card');
+  let vis = 0;
+  cards.forEach(c => {
+    const text = (c.textContent + ' ' + (c.dataset.search||'')).toLowerCase();
+    const catOk = currentCat === 'all' || c.dataset.cat === currentCat;
+    const show = catOk && (!q || text.includes(q));
+    c.classList.toggle('hidden', !show);
+    if(show) vis++;
+  });
+  document.getElementById('blogCount').textContent = q ? vis + ' posts' : '';
+}
+function filterCat(cat, btn) {
+  currentCat = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterPosts();
+}
+</script>
+</body>
+</html>

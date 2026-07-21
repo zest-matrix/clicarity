@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit-Ready Manufacturing | Clicarity</title>
+<meta name="description" content="Indian manufacturers face BIS surveillance, ISO 9001 renewals, IATF audits, and OEM supplier audits. Clicarity gives you batch-wise traceability, process records, and wastage data — built every day as you operate. Audit-ready without preparation.">
+<meta name="keywords" content="BIS audit ready, ISO 9001 batch records, IATF 16949 traceability, OEM supplier audit, manufacturing audit preparation, audit ready software India, Clicarity audit">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clicarity.com/audit-ready">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.clicarity.com/audit-ready">
+<meta property="og:title" content="Audit-Ready Manufacturing | Clicarity">
+<meta property="og:description" content="BIS surveillance. ISO renewals. OEM audits. Every auditor asks for the same thing — batch records, traceability, process data. Clicarity builds it every day as you operate.">
+<meta property="og:site_name" content="Clicarity">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F7F5F0;--surface:#FFFFFF;--border:#E4E0D8;--text:#0F0E0D;--muted:#6B6860;
+  --accent:#186EAC;--accent-dark:#126096;--green:#0A7C52;--green-light:#E6F5EE;
+  --font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;
+  --nav-h:64px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(247,245,240,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);height:var(--nav-h);display:flex;align-items:center;padding:0 5%}
+.nav-inner{max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-logo img{height:28px;display:block}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:0.88rem;font-weight:500;transition:color 0.15s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:100px;font-size:0.85rem;font-weight:600;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:all 0.15s;font-family:var(--font-body)}
+.btn-primary{background:var(--accent);color:white;border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-dark)}
+.btn-outline{border-color:var(--border);color:var(--text);background:transparent}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.btn-wa{background:#25D366;color:white;border-color:#25D366;padding:9px 14px}
+
+/* HERO */
+.hero{padding:72px 5% 64px;max-width:1200px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;line-height:1.18;letter-spacing:-0.4px;color:var(--text);max-width:820px;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.05rem;color:var(--muted);max-width:640px;line-height:1.75;margin-bottom:32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:40px}
+.hero-proof{display:flex;gap:24px;flex-wrap:wrap}
+.proof-pill{display:inline-flex;align-items:center;gap:7px;font-size:0.78rem;font-weight:500;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:6px 13px;border-radius:100px}
+.proof-pill svg{color:var(--green);flex-shrink:0}
+
+/* SCROLL OFFSET for all anchor sections */
+[id]{scroll-margin-top:calc(var(--nav-h) + 24px)}
+
+/* LAYOUT: sticky sidenav + content */
+.page-body{max-width:1200px;margin:0 auto;padding:0 5% 80px;display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start}
+.sidenav{position:sticky;top:calc(var(--nav-h) + 24px);background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 0;overflow:hidden}
+.sidenav-title{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:0 20px 12px;border-bottom:1px solid var(--border);margin-bottom:8px}
+.sidenav a{display:block;padding:9px 20px;font-size:0.82rem;color:var(--muted);text-decoration:none;transition:all 0.15s;border-left:3px solid transparent}
+.sidenav a:hover{color:var(--text);background:#F7F5F0;border-left-color:var(--accent)}
+.sidenav a.active{color:var(--accent);font-weight:600;background:#EFF6FF;border-left-color:var(--accent)}
+
+/* CONTENT SECTIONS */
+.content-area{}
+.audit-section{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;margin-bottom:28px}
+.audit-section:last-child{margin-bottom:0}
+.audit-label{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.audit-h2{font-family:var(--font-display);font-size:1.35rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.3}
+.audit-lead{font-size:0.95rem;color:var(--muted);line-height:1.75;margin-bottom:28px}
+.req-table{width:100%;border-collapse:collapse;margin-bottom:24px}
+.req-table th{font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);padding:10px 14px;background:#F7F5F0;border-bottom:1px solid var(--border);text-align:left}
+.req-table td{font-size:0.85rem;padding:12px 14px;border-bottom:1px solid #F0EDE8;vertical-align:top;line-height:1.6}
+.req-table tr:last-child td{border-bottom:none}
+.req-table td:first-child{color:var(--text);font-weight:500;width:38%}
+.req-table td:last-child{color:var(--muted)}
+.clicarity-answer{display:inline-flex;align-items:center;gap:5px;font-size:0.75rem;font-weight:600;color:var(--green);background:var(--green-light);padding:3px 10px;border-radius:100px;margin-top:4px;border:1px solid rgba(10,124,82,0.15)}
+.highlight-box{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:16px 20px;font-size:0.88rem;color:#1e40af;line-height:1.7;margin-top:16px}
+.highlight-box strong{color:#1e3a8a}
+
+/* CORE ARGUMENT */
+.core-section{background:var(--text);color:white;border-radius:20px;padding:48px;margin-bottom:28px}
+.core-section .audit-label{color:#60A5FA}
+.core-section .audit-h2{color:white}
+.core-section .audit-lead{color:rgba(255,255,255,0.7)}
+.five-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:24px}
+.five-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px;text-align:center}
+.five-icon{font-size:1.4rem;margin-bottom:8px}
+.five-label{font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.9);line-height:1.4}
+
+/* CONTRAST SECTION */
+.contrast-section{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+.contrast-card{border-radius:16px;padding:28px}
+.contrast-before{background:#FEF2F2;border:1px solid #FECACA}
+.contrast-after{background:var(--green-light);border:1px solid rgba(10,124,82,0.2)}
+.contrast-label{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px}
+.contrast-before .contrast-label{color:#991B1B}
+.contrast-after .contrast-label{color:var(--green)}
+.contrast-list{list-style:none}
+.contrast-list li{font-size:0.88rem;padding:7px 0;border-bottom:1px solid rgba(0,0,0,0.06);color:var(--text);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.contrast-list li:last-child{border-bottom:none}
+.contrast-list li svg{flex-shrink:0;margin-top:2px}
+
+/* PROOF QUOTE */
+.proof-section{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;margin-bottom:28px}
+.proof-quote-text{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--text);line-height:1.65;margin-bottom:20px}
+.proof-quote-text em{font-style:normal;color:var(--accent)}
+.proof-attr{display:flex;align-items:center;gap:14px}
+.proof-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#186EAC,#238EDB);display:flex;align-items:center;justify-content:center;color:white;font-size:0.78rem;font-weight:700;flex-shrink:0}
+.proof-name{font-weight:600;font-size:0.9rem;color:var(--text)}
+.proof-role{font-size:0.8rem;color:var(--muted)}
+
+/* PRICING */
+.pricing-section{margin-bottom:28px}
+.pricing-section h2{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:6px;text-align:center}
+.pricing-section .sub{font-size:0.9rem;color:var(--muted);text-align:center;margin-bottom:28px}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:720px;margin:0 auto}
+.pc{background:var(--surface);border:1.5px solid var(--border);border-radius:20px;padding:28px;display:flex;flex-direction:column}
+.pc.feat{background:var(--accent);border-color:var(--accent);position:relative}
+.pop-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#F59E0B;color:white;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 13px;border-radius:100px;white-space:nowrap}
+.pc-name{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.pc.feat .pc-name{color:white}
+.pc-desc{font-size:0.83rem;color:var(--muted);margin-bottom:16px}
+.pc.feat .pc-desc{color:rgba(255,255,255,0.65)}
+.list-price{font-size:0.78rem;color:rgba(15,14,13,0.38);text-decoration:line-through;margin-bottom:2px}
+.pc.feat .list-price{color:rgba(255,255,255,0.38)}
+.price-row{display:flex;align-items:baseline;gap:5px;margin-bottom:8px}
+.price-num{font-family:var(--font-body);font-size:1.6rem;font-weight:600;color:var(--text)}
+.pc.feat .price-num{color:white}
+.price-per{font-size:0.8rem;color:var(--muted)}
+.pc.feat .price-per{color:rgba(255,255,255,0.6)}
+.early-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.71rem;font-weight:600;color:var(--green);background:var(--green-light);padding:3px 10px;border-radius:100px;margin-bottom:14px;border:1px solid rgba(10,124,82,0.15)}
+.pc.feat .early-badge{color:white;background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3)}
+.reframe{font-size:0.78rem;color:var(--muted);line-height:1.6;padding:10px 13px;background:var(--bg);border-radius:9px;margin-bottom:16px;border:1px solid var(--border)}
+.pc.feat .reframe{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.2)}
+.reframe strong{color:var(--text)}
+.pc.feat .reframe strong{color:white}
+.billing-note{font-size:0.72rem;color:rgba(15,14,13,0.45);margin-bottom:12px;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)}
+.pc.feat .billing-note{color:rgba(255,255,255,0.4);border-top-color:rgba(255,255,255,0.15)}
+.pc-cta{display:block;text-align:center;padding:11px;border-radius:100px;font-size:0.86rem;font-weight:600;text-decoration:none;border:1.5px solid var(--border);color:var(--text);transition:all 0.2s}
+.pc-cta:hover{border-color:var(--accent);color:var(--accent)}
+.pc.feat .pc-cta{background:white;color:var(--accent);border-color:white}
+.pricing-footer{text-align:center;font-size:0.78rem;color:var(--muted);margin-top:14px}
+
+/* FINAL CTA */
+.final-cta{background:var(--accent);border-radius:20px;padding:48px 40px;text-align:center;margin-bottom:0}
+.final-cta h2{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:white;margin-bottom:10px}
+.final-cta p{color:rgba(255,255,255,0.75);font-size:0.95rem;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+.final-cta .micro{font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:14px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.final-cta .micro span::before{content:'✓ '}
+
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,0.6);padding:40px 5%;font-size:0.82rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-inner a{color:rgba(255,255,255,0.5);text-decoration:none}
+.footer-inner a:hover{color:white}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .page-body{grid-template-columns:1fr}
+  .sidenav{position:static;display:flex;overflow-x:auto;padding:12px 0;gap:0;border-radius:12px;white-space:nowrap}
+  .sidenav-title{display:none}
+  .sidenav a{display:inline-block;border-left:none;border-bottom:3px solid transparent;padding:8px 14px;flex-shrink:0}
+  .sidenav a.active,.sidenav a:hover{border-bottom-color:var(--accent);border-left:none;background:transparent}
+  .five-grid{grid-template-columns:repeat(3,1fr)}
+  .contrast-section{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr;max-width:420px}
+}
+@media(max-width:600px){
+  .hero h1{font-size:1.7rem}
+  .nav-links{display:none}
+  .five-grid{grid-template-columns:repeat(2,1fr)}
+  .audit-section,.core-section,.proof-section,.final-cta{padding:24px}
+}
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Audit-Ready Manufacturing | BIS, ISO, IATF, OEM Supplier Audits | Clicarity">
+<meta name="twitter:description" content="Indian manufacturers face BIS surveillance, ISO 9001 renewals, IATF audits, and OEM supplier audits. Clicarity gives you batch-wise traceability, process record">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+    Audit Readiness
+  </div>
+  <h1>Your next audit is coming.<br><em>Your records should already be ready.</em></h1>
+  <p class="hero-sub">BIS surveillance visits. ISO 9001 renewals. IATF supplier audits. OEM quality assessments from Tata, Mahindra, and L&T. Every one of these auditors walks in asking for the same thing — batch records, traceability from raw material to dispatch, wastage data, and process compliance evidence. Clicarity builds all of it every day, as you operate. You don't prepare for audits. You're always ready.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank">Book a Demo</a>
+    <a class="btn btn-outline" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20to%20know%20how%20Clicarity%20helps%20with%20audit%20readiness" target="_blank">Ask on WhatsApp</a>
+  </div>
+  <div class="hero-proof">
+    <div class="proof-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      BIS, ISO 9001, IATF 16949 ready
+    </div>
+    <div class="proof-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Tata, Mahindra, L&T OEM audits
+    </div>
+    <div class="proof-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Full traceability — raw material to dispatch
+    </div>
+    <div class="proof-pill">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Go live in 5 days
+    </div>
+  </div>
+</section>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- STICKY SIDENAV -->
+  <aside class="sidenav" id="sidenav">
+    <div class="sidenav-title">Jump to Section</div>
+    <a href="#core-argument">Why Every Audit Asks the Same Thing</a>
+    <a href="#bis">BIS Surveillance</a>
+    <a href="#iso9001">ISO 9001</a>
+    <a href="#iatf">IATF 16949</a>
+    <a href="#greenpro">GreenPro Certification</a>
+    <a href="#oem">OEM Supplier Audits</a>
+    <a href="#fssai">FSSAI</a>
+    <a href="#drug-inspector">Drug Inspector</a>
+    <a href="#contrast">Before vs After</a>
+    <a href="#proof">What Customers Say</a>
+    <a href="#pricing">Pricing</a>
+  </aside>
+
+  <!-- CONTENT -->
+  <div class="content-area">
+
+    <!-- CORE ARGUMENT -->
+    <div id="core-argument" class="core-section">
+      <div class="audit-label">The Core Insight</div>
+      <div class="audit-h2">Every audit asks for the same five things.</div>
+      <p class="audit-lead">BIS, ISO, IATF, OEM, FSSAI — the certification bodies are different. The auditors are different. The checklists look different. But strip them back and every single audit is asking for the same five categories of evidence. Clicarity builds all five as a natural by-product of your daily operations.</p>
+      <div class="five-grid">
+        <div class="five-item">
+          <div class="five-icon">📋</div>
+          <div class="five-label">Batch Records</div>
+        </div>
+        <div class="five-item">
+          <div class="five-icon">🔗</div>
+          <div class="five-label">Raw Material Traceability</div>
+        </div>
+        <div class="five-item">
+          <div class="five-icon">📊</div>
+          <div class="five-label">Process Compliance Data</div>
+        </div>
+        <div class="five-item">
+          <div class="five-icon">♻️</div>
+          <div class="five-label">Wastage & Yield Records</div>
+        </div>
+        <div class="five-item">
+          <div class="five-icon">✅</div>
+          <div class="five-label">Corrective Action Evidence</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:16px 20px;margin-top:24px;font-size:0.9rem;color:rgba(255,255,255,0.8);line-height:1.7">
+        <strong style="color:white">The difference with Clicarity:</strong> You are not compiling records for an audit. You are showing an auditor records that were created because that is how your production runs — every day, every batch, every stage. That is a fundamentally different answer to give an auditor.
+      </div>
+    </div>
+
+    <!-- BIS -->
+    <div id="bis" class="audit-section">
+      <div class="audit-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        BIS Surveillance
+      </div>
+      <div class="audit-h2">Bureau of Indian Standards — Surveillance & Grant of Licence</div>
+      <p class="audit-lead">BIS surveillance visits happen without warning. The inspector checks whether your factory is still manufacturing to the IS standard you were licensed for. They pull batch records, ask for material test certificates, check rejection rates, and look at whether your in-process controls are actually being followed — not just documented in a manual.</p>
+      <table class="req-table">
+        <thead>
+          <tr><th>What the BIS Inspector Asks For</th><th>Where It Lives in Clicarity</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Batch manufacturing records — what was produced, when, in what quantity</td>
+            <td>Every batch has a timestamped record from start to finish — operator, quantity, stage, duration.<div class="clicarity-answer">✓ Auto-generated as production runs</div></td>
+          </tr>
+          <tr>
+            <td>Raw material traceability — which supplier lot was used in which batch</td>
+            <td>Every job records the incoming material lot number at receipt stage — traceable from raw to finished product.<div class="clicarity-answer">✓ Lot-wise traceability at every stage</div></td>
+          </tr>
+          <tr>
+            <td>In-process quality check records — were checks done and what were the results</td>
+            <td>Each in-process inspection is a logged stage with result, timestamp, and operator.<div class="clicarity-answer">✓ Every check recorded with pass/fail</div></td>
+          </tr>
+          <tr>
+            <td>Rejection and rework records — what was rejected, why, and what was done</td>
+            <td>Rejection reason is logged at every stage. Rework is a tracked stage with its own record.<div class="clicarity-answer">✓ Rejection rate by batch and stage</div></td>
+          </tr>
+          <tr>
+            <td>Calibration and equipment records — is your production equipment maintained</td>
+            <td>Equipment-wise production history shows when each machine last ran and on what.<div class="clicarity-answer">✓ Machine-wise job history preserved</div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-box">
+        <strong>Common BIS finding that Clicarity prevents:</strong> "Records found to be incomplete / filled retrospectively." With Clicarity, every entry is timestamped at the moment it is made. A record created 3 days after the batch completed shows a 3-day gap — visible to any auditor. When records build in real time, this finding disappears.
+      </div>
+    </div>
+
+    <!-- ISO 9001 -->
+    <div id="iso9001" class="audit-section">
+      <div class="audit-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        ISO 9001
+      </div>
+      <div class="audit-h2">ISO 9001:2015 — Quality Management System Surveillance & Renewal</div>
+      <p class="audit-lead">ISO 9001 auditors are not looking for a perfect quality system — they are looking for evidence that your quality system is actually being followed. The most common reason for non-conformances is not that manufacturers do not have procedures. It is that they cannot prove the procedures were followed. Clicarity is the proof.</p>
+      <table class="req-table">
+        <thead>
+          <tr><th>ISO 9001 Clause Requirement</th><th>How Clicarity Provides Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Clause 8.1 — Operational planning and control</td>
+            <td>Every job has a defined sequence of stages. No stage can be skipped without a record.<div class="clicarity-answer">✓ Process sequence enforced and recorded</div></td>
+          </tr>
+          <tr>
+            <td>Clause 8.4 — Control of externally provided processes</td>
+            <td>Vendor operations are tracked stages. Vendor TAT, quality outcomes, and lot numbers recorded.<div class="clicarity-answer">✓ Vendor performance data over time</div></td>
+          </tr>
+          <tr>
+            <td>Clause 8.5.2 — Identification and traceability</td>
+            <td>Every batch traceable from incoming material lot to dispatch — by job ID, date, operator, and stage.<div class="clicarity-answer">✓ Full forward and backward traceability</div></td>
+          </tr>
+          <tr>
+            <td>Clause 8.6 — Release of products and services</td>
+            <td>Dispatch is a locked stage that requires QC clearance. No batch can ship without the release confirmation logged.<div class="clicarity-answer">✓ Release gate enforced — audit trail preserved</div></td>
+          </tr>
+          <tr>
+            <td>Clause 8.7 — Control of nonconforming outputs</td>
+            <td>Every rejection and rework is a tracked stage with reason code, quantity, and resolution.<div class="clicarity-answer">✓ Nonconformance log auto-built</div></td>
+          </tr>
+          <tr>
+            <td>Clause 9.1 — Monitoring, measurement, analysis</td>
+            <td>Stage-wise cycle times, rejection rates, vendor TATs, and yield percentages — all measurable over time.<div class="clicarity-answer">✓ Trend data available from day one</div></td>
+          </tr>
+          <tr>
+            <td>Clause 10.2 — Nonconformity and corrective action</td>
+            <td>Rejection patterns visible by stage and batch — the data that drives corrective action is already there.<div class="clicarity-answer">✓ Root cause data built into every record</div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-box">
+        <strong>What ISO auditors call "objective evidence"</strong> is exactly what Clicarity produces — timestamped, operator-attributed records showing that your process was followed, at each stage, on each batch, every day. Not because an audit was coming. Because that is how your production runs.
+      </div>
+    </div>
+
+    <!-- IATF -->
+    <div id="iatf" class="audit-section">
+      <div class="audit-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        IATF 16949
+      </div>
+      <div class="audit-h2">IATF 16949 — Automotive Quality Management System</div>
+      <p class="audit-lead">IATF 16949 is the automotive industry's quality standard — required by most OEM customers in the Tier 1 and Tier 2 supply chain. It builds on ISO 9001 with additional requirements specific to automotive production: drawing revision control, PPAP traceability, control plan adherence, and statistical process monitoring. Clicarity covers the operational evidence layer that IATF auditors scrutinise most.</p>
+      <table class="req-table">
+        <thead>
+          <tr><th>IATF Requirement</th><th>Clicarity Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drawing and specification revision control — production always on current approved revision</td>
+            <td>Drawing revision is locked at job creation. Production floor works only on the approved version. Superseded drawings inaccessible.<div class="clicarity-answer">✓ Revision control enforced — not assumed</div></td>
+          </tr>
+          <tr>
+            <td>PPAP traceability — every production part traceable to its process, material, and equipment</td>
+            <td>Every job records material heat/lot number, machine used, and operator at each operation.<div class="clicarity-answer">✓ Full PPAP traceability chain</div></td>
+          </tr>
+          <tr>
+            <td>Control plan adherence — evidence that in-process controls are actually being followed</td>
+            <td>In-process inspection is a mandatory stage with a recorded result. Jobs cannot proceed without completion.<div class="clicarity-answer">✓ Control plan steps enforced as stages</div></td>
+          </tr>
+          <tr>
+            <td>Supplier management — incoming quality data and approved supplier performance</td>
+            <td>Every incoming material is a logged stage. Supplier rejection rate visible over time by supplier and material type.<div class="clicarity-answer">✓ Incoming QC history by supplier</div></td>
+          </tr>
+          <tr>
+            <td>Scrap and rework records — quantities, reasons, and corrective actions</td>
+            <td>Rejection at every stage logged with quantity and reason code. Rework tracked as a separate stage.<div class="clicarity-answer">✓ Scrap and rework log by operation</div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-box">
+        <strong>The automotive supply chain runs on data.</strong> When your OEM customer's quality engineer asks for production records during a supplier development visit, having them available in 5 minutes — not 5 days — changes how your supplier relationship is perceived.
+      </div>
+    </div>
+
+    <!-- GREENPRO -->
+    <div id="greenpro" class="audit-section">
+      <div class="audit-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97-5.571 8-9.956 8-13a8 8 0 1 0-16 0c0 3.044 3.03 7.429 8 13z"/></svg>
+        GreenPro Certification
+      </div>
+      <div class="audit-h2">GreenPro — CII Green Product Certification</div>
+      <p class="audit-lead">GreenPro certification requires manufacturers to demonstrate resource efficiency — reduced material wastage, energy consumption tracking, and environmental impact data. These are not aspirational numbers. Auditors ask for actual production data showing input quantities versus output quantities, wastage percentages, and process improvement over time. Clicarity captures this data at the source — not from estimates.</p>
+      <table class="req-table">
+        <thead>
+          <tr><th>GreenPro Requirement</th><th>Clicarity Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Material efficiency — input vs output quantity at each stage</td>
+            <td>Every stage tracks quantity in and quantity out. Wastage percentage calculated automatically per batch and per stage.<div class="clicarity-answer">✓ Stage-wise material utilisation data</div></td>
+          </tr>
+          <tr>
+            <td>Wastage reduction over time — evidence of improvement</td>
+            <td>Historical wastage data from every batch allows trend analysis — before and after process changes.<div class="clicarity-answer">✓ Time-series wastage data from day one</div></td>
+          </tr>
+          <tr>
+            <td>Batch-wise resource consumption — not averaged estimates</td>
+            <td>Every batch records actual quantities — not planned. The data is real, not retrospective.<div class="clicarity-answer">✓ Actual batch data — not estimates</div></td>
+          </tr>
+          <tr>
+            <td>Process documentation — evidence that sustainable practices are systematic</td>
+            <td>Stage sequence is enforced — not ad hoc. Every run follows the same documented process.<div class="clicarity-answer">✓ Process consistency demonstrated through records</div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-box">
+        <strong>GreenPro auditors specifically look for data that was not collected for the audit.</strong> Records that have been maintained continuously over months — with variation, correction, and improvement — are far more credible than clean numbers prepared in the weeks before assessment.
+      </div>
+    </div>
+
+    <!-- OEM SUPPLIER AUDITS -->
+    <div id="oem" class="audit-section">
+      <div class="audit-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        OEM Supplier Audits
+      </div>
+      <div class="audit-h2">Tata, Mahindra, L&T, Bosch — OEM Supplier Quality Assessments</div>
+      <p class="audit-lead">OEM supplier development teams visit Tier 1 and Tier 2 manufacturers to assess whether they can consistently deliver quality components. These assessments are not about certifications on the wall — they are about watching your production run and asking to see records from last month, last quarter, and last year. Manufacturers who can answer with data, not estimates, get preferred supplier status. Those who cannot get development plans — or delisted.</p>
+      <table class="req-table">
+        <thead>
+          <tr><th>What OEM Auditors Typically Ask</th><th>Clicarity Answer</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Show me batch records from the last 3 months for this part number"</td>
+            <td>Every job is searchable by part number, date range, and customer. Full batch history retrieved in seconds.<div class="clicarity-answer">✓ Searchable job history</div></td>
+          </tr>
+          <tr>
+            <td>"What is your rejection rate at final inspection for this component?"</td>
+            <td>Rejection rate by job, part number, and time period — visible immediately.<div class="clicarity-answer">✓ Rejection data by component</div></td>
+          </tr>
+          <tr>
+            <td>"How do you control drawing revisions on your shop floor?"</td>
+            <td>Drawing revision is locked at job creation. Only current approved revision is accessible to operators.<div class="clicarity-answer">✓ Revision control demonstrated live</div></td>
+          </tr>
+          <tr>
+            <td>"Show me a heat/lot trace for this component — which material batch was it from?"</td>
+            <td>Every job records incoming material lot number. Forward trace: lot to finished component. Backward trace: component to lot.<div class="clicarity-answer">✓ Full lot traceability in both directions</div></td>
+          </tr>
+          <tr>
+            <td>"What corrective actions have you taken on quality issues in the last 6 months?"</td>
+            <td>Rejection pattern data by stage and time period shows where issues occurred and when they changed — natural CAPA evidence.<div class="clicarity-answer">✓ Trend data supports corrective action evidence</div></td>
+          </tr>
+          <tr>
+            <td>"How do you ensure your vendors meet quality requirements?"</td>
+            <td>Vendor operations are tracked stages with TAT data, rejection rates at incoming inspection, and lot traceability.<div class="clicarity-answer">✓ Vendor performance history</div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-box">
+        <strong>Preferred supplier status is not given to manufacturers with the best facilities.</strong> It is given to manufacturers whose quality team can answer every question in the room — with data, not memory. Clicarity is what makes that possible.
+      </div>
+    </div>
+
+    <!-- FSSAI -->
+    <div id="fssai" class="audit-section">
+      <div class="audit-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        FSSAI
+      </div>
+      <div class="audit-h2">FSSAI — Food Safety and Standards Authority of India</div>
+      <p class="audit-lead">FSSAI inspections focus on traceability, hygiene, and documented production controls for food and food packaging businesses. Inspectors look for batch records that show what raw materials went into each lot, when products were produced, and what quality checks were done before dispatch. For food packaging companies in particular, the ability to trace a batch backward from a consumer complaint to the exact production run is a regulatory requirement.</p>
+      <table class="req-table">
+        <thead>
+          <tr><th>FSSAI Inspection Requirement</th><th>Clicarity Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Batch-wise raw material records — supplier, lot, and testing status</td>
+            <td>Every batch records incoming material lot and supplier. Testing stage logged with result before production proceeds.<div class="clicarity-answer">✓ Supplier lot traceability at receipt</div></td>
+          </tr>
+          <tr>
+            <td>Production records — date, batch size, and operator</td>
+            <td>Every batch has a full production record — timestamped, operator-attributed, stage by stage.<div class="clicarity-answer">✓ Auto-generated batch records</div></td>
+          </tr>
+          <tr>
+            <td>In-process hygiene and quality checks</td>
+            <td>Quality check points are mandatory stages — they cannot be bypassed without a logged record.<div class="clicarity-answer">✓ In-process checks enforced and recorded</div></td>
+          </tr>
+          <tr>
+            <td>Recall readiness — can you trace and isolate a batch quickly</td>
+            <td>Any batch is traceable by lot number, production date, or customer. Isolation is a status change, not a paper chase.<div class="clicarity-answer">✓ Batch isolation in minutes</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DRUG INSPECTOR -->
+    <div id="drug-inspector" class="audit-section">
+      <div class="audit-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        Drug Inspector Visits
+      </div>
+      <div class="audit-h2">Drug Inspector — Schedule M and GMP Compliance</div>
+      <p class="audit-lead">Pharmaceutical packaging manufacturers and drug manufacturers are subject to Drug Inspector visits under Schedule M of the Drugs and Cosmetics Act. Inspectors check batch manufacturing records, in-process controls, equipment qualification, and whether the actual production matches the approved manufacturing process. The BMR — Batch Manufacturing Record — is the central document. Clicarity builds it automatically.</p>
+      <table class="req-table">
+        <thead>
+          <tr><th>Drug Inspector / Schedule M Requirement</th><th>Clicarity Evidence</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Batch Manufacturing Record — complete record of each batch production</td>
+            <td>Every stage update auto-generates a timestamped entry. The BMR builds itself as production runs.<div class="clicarity-answer">✓ Auto-generated BMR from stage records</div></td>
+          </tr>
+          <tr>
+            <td>Line clearance records — confirmation that previous batch residues are removed</td>
+            <td>Line clearance is a mandatory logged stage with timestamp and operator confirmation.<div class="clicarity-answer">✓ Line clearance enforced before every batch</div></td>
+          </tr>
+          <tr>
+            <td>In-process quality control records</td>
+            <td>IPC checks are mandatory stages — logged with result, sampling point, and operator.<div class="clicarity-answer">✓ IPC records auto-built</div></td>
+          </tr>
+          <tr>
+            <td>Material dispensing records — quantities dispensed vs BOM</td>
+            <td>Dispensed quantities are logged against BOM at the start of every batch. Deviations flagged.<div class="clicarity-answer">✓ Dispensing records with deviation flag</div></td>
+          </tr>
+          <tr>
+            <td>Batch release records — QC sign-off before dispatch</td>
+            <td>Dispatch is a locked stage requiring QA release confirmation. No batch moves without the release logged.<div class="clicarity-answer">✓ Release gate enforced with audit trail</div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-box">
+        <strong>Schedule M requires that BMRs be completed during production — not after.</strong> When an inspector finds batch records that are clearly filled in after the fact, the non-conformance is serious. With Clicarity, every record is timestamped at the moment of entry. The record is provably contemporaneous.
+      </div>
+    </div>
+
+    <!-- CONTRAST -->
+    <div id="contrast">
+      <div style="text-align:center;margin-bottom:20px">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">Before & After</div>
+        <div style="font-family:var(--font-display);font-size:1.35rem;font-weight:800;color:var(--text)">Audit week. Two different realities.</div>
+      </div>
+      <div class="contrast-section">
+        <div class="contrast-card contrast-before">
+          <div class="contrast-label">Without Clicarity</div>
+          <ul class="contrast-list">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+              3 weeks of preparation before audit date
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+              QA team pulling records from registers, WhatsApp messages, and Excel files
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+              Batch records with gaps, estimates, and retrospective entries
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+              Traceability request takes 2-3 days to compile
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+              "Records found to be incomplete" — non-conformance raised
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+              Production disrupted for a week before and during audit
+            </li>
+          </ul>
+        </div>
+        <div class="contrast-card contrast-after">
+          <div class="contrast-label">With Clicarity</div>
+          <ul class="contrast-list">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              No audit preparation — records were being built every day
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Auditor asks for a batch record — retrieved in 30 seconds
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Every record timestamped at point of creation — provably contemporaneous
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Full lot traceability retrieved in minutes — raw material to dispatch
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Auditor notes record-keeping as strength — no major findings
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Production runs normally on audit day — nothing to hide, nothing to prepare
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROOF QUOTE -->
+    <div id="proof" class="proof-section">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px">From the Floor</div>
+      <p class="proof-quote-text">"We had a customer audit from one of our OEM clients. They asked to trace a specific component batch from raw material to delivery. <em>We did it in 4 minutes.</em> The auditor noted it as a best practice. Before Clicarity, that same request would have taken 2 days of manual record retrieval across three departments."</p>
+      <div class="proof-attr">
+        <div class="proof-avatar">QM</div>
+        <div>
+          <div class="proof-name">Quality Manager</div>
+          <div class="proof-role">Precision Engineering Component Manufacturer — Pune</div>
+        </div>
+      </div>
+      <div style="height:24px"></div>
+      <p class="proof-quote-text">"Now I can see at which stage the loss is happening <em>while the job is still running</em> — not after the batch is complete and we're counting the damage."</p>
+      <div class="proof-attr">
+        <div class="proof-avatar">UV</div>
+        <div>
+          <div class="proof-name">Uday Vora</div>
+          <div class="proof-role">HC Boxes — Rigid Box Manufacturer, Mumbai · Featured in <a href="/printweek/" style="color:inherit;font-weight:inherit;">PrintWeek India</a> &amp; <a href="/print-bulletin/" style="color:inherit;font-weight:inherit;">Print Bulletin</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div id="pricing" class="pricing-section">
+      <h2>Less than the cost of one failed audit.</h2>
+      <p class="sub">One non-conformance, one rework instruction, one loss of preferred supplier status costs more than Clicarity costs for a year. Full setup included. Go live in 5 days.</p>
+      <div class="pricing-grid">
+        <div class="pc">
+          <div class="pc-name">Single Licence</div>
+          <div class="pc-desc">Full production visibility from day one.</div>
+          <div class="list-price">₹1,00,000 / year</div>
+          <div class="price-row"><span class="price-num">₹30,000</span><span class="price-per">/ year</span></div>
+          <div class="early-badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Early Access — price locked for as long as you stay
+          </div>
+          <div class="reframe"><strong>₹82 a day.</strong> Less than a daily meal for one person — for your entire team's visibility, all year.</div>
+          <div class="billing-note">1 user · Annual billing · No hidden fees · Full setup by Clicarity team</div>
+          <a class="pc-cta" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Clicarity%20Single%20Licence" target="_blank">Get a Quote</a>
+        </div>
+        <div class="pc feat">
+          <div class="pop-badge">Most Popular</div>
+          <div class="pc-name">Multi Licence</div>
+          <div class="pc-desc">Full command of your entire operation.</div>
+          <div class="list-price">₹3,00,000 / year</div>
+          <div class="price-row"><span class="price-num">₹55,000</span><span class="price-per">/ year</span></div>
+          <div class="early-badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Early Access — price locked for as long as you stay
+          </div>
+          <div class="reframe"><strong>₹150 a day.</strong> Less than the cost of one missed delivery — for full visibility across your entire team.</div>
+          <div class="billing-note">Unlimited users · Annual billing · No hidden fees · Full setup by Clicarity team</div>
+          <a class="pc-cta" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Clicarity%20Multi%20Licence" target="_blank">Get a Quote</a>
+        </div>
+      </div>
+      <p class="pricing-footer">Annual billing only · Full setup by the Clicarity team · Go live in 5 days · Early Access pricing locked for your account for as long as you stay</p>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="final-cta">
+      <h2>Book a demo. We'll show you exactly what your next audit would look like.</h2>
+      <p>We'll map your production workflow on the call — and show you every audit evidence point that Clicarity would have built automatically from day one.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" style="background:white;color:var(--accent);border-color:white;font-weight:700" href="https://calendly.com/clicarity/demo" target="_blank">Book Demo</a>
+        <a class="btn" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3)" href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20to%20know%20how%20Clicarity%20helps%20with%20audit%20readiness" target="_blank">WhatsApp Us</a>
+      </div>
+      <div class="micro">
+        <span>Go live in 5 days</span>
+        <span>No training required</span>
+        <span>Full setup by Clicarity team</span>
+        <span>Early Access pricing locked for life</span>
+      </div>
+    </div>
+
+  </div><!-- end content-area -->
+</div><!-- end page-body -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Clicarity. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="https://www.clicarity.com">Home</a>
+      <a href="https://www.clicarity.com/pages">Industries</a>
+      <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy Policy</a>
+      <a href="https://www.clicarity.com/terms">Terms</a>
+      <a href="https://www.linkedin.com/company/clicarity" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Highlight active sidenav link on scroll
+(function(){
+  const sections = document.querySelectorAll('[id]');
+  const links = document.querySelectorAll('.sidenav a');
+  const navH = 64 + 24 + 8;
+  function onScroll(){
+    let current = '';
+    sections.forEach(s=>{
+      const top = s.getBoundingClientRect().top;
+      if(top <= navH + 40) current = s.id;
+    });
+    links.forEach(l=>{
+      l.classList.remove('active');
+      if(l.getAttribute('href') === '#' + current) l.classList.add('active');
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
+HTMLEOF

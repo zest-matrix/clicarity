@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Clicarity — Profit is Hidden in Your Processes</title>
+<meta name="description" content="Discover where your business is losing profit. Clicarity gives manufacturers real-time visibility of production costs, wastage and delays — so profit stops hiding.">
+<meta property="og:title" content="Clicarity — Profit is Hidden in Your Processes">
+<meta property="og:description" content="Discover where your business is losing profit. Clicarity gives manufacturers real-time visibility of production costs, wastage and delays — so profit stops hiding.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #f9f8f6;
+    --surface: #ffffff;
+    --text: #0f0e0d;
+    --muted: #6b6860;
+    --accent: #186eac;
+    --accent-light: #e8f2f9;
+    --accent-hover: #238edb;
+    --green: #00b37e;
+    --border: #e8e5e0;
+    --radius: 16px;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 5%; background: rgba(249,248,246,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .logo { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: var(--accent); letter-spacing: -0.5px; text-decoration: none; }
+  .nav-cta { display: flex; gap: 12px; align-items: center; }
+
+  .btn { padding: 10px 22px; border-radius: 100px; font-family: var(--font-body); font-weight: 500; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; border: none; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+  .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-primary { background: var(--accent); color: white; box-shadow: 0 4px 14px rgba(26,86,219,0.25); }
+  .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,86,219,0.35); }
+  .btn-white { background: white; color: var(--accent); font-weight: 600; }
+  .btn-white:hover { background: #f0f4ff; transform: translateY(-2px); }
+  .btn-ghost { background: rgba(255,255,255,0.12); color: white; border: 1.5px solid rgba(255,255,255,0.3); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.2); }
+  .btn-wa { background: #25D366; color: white; }
+  .btn-wa:hover { background: #1da855; transform: translateY(-1px); }
+  .btn-lg { padding: 14px 32px !important; font-size: 0.95rem !important; font-weight: 600 !important; }
+
+  /* ── HERO ── */
+  .hero { padding: 72px 5% 64px; max-width: 860px; margin: 0 auto; text-align: center; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 600; padding: 5px 14px; border-radius: 100px; margin-bottom: 24px; letter-spacing: 0.3px; }
+  .badge-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.5px; color: var(--text); margin-bottom: 16px; }
+  h1 span { color: var(--accent); }
+  h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.4vw, 2.1rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.2px; margin-bottom: 14px; }
+  h3 { font-family: var(--font-display); }
+
+  .what-is { display: inline-block; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 8px 20px; font-size: 0.88rem; color: var(--muted); margin-bottom: 28px; }
+  .what-is strong { color: var(--text); }
+
+  .hero-sub { font-size: 1.08rem; color: var(--muted); line-height: 1.8; margin-bottom: 36px; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+  .hero-actions .btn { padding: 14px 28px; font-size: 0.95rem; }
+
+  .social-proof { display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .avatar-stack { display: flex; }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; border: 2px solid white; background: linear-gradient(135deg, #667eea, #764ba2); margin-left: -10px; display: flex; align-items: center; justify-content: center; font-size: 0.68rem; color: white; font-weight: 700; }
+  .avatar:first-child { margin-left: 0; }
+  .avatar:nth-child(2) { background: linear-gradient(135deg, #f093fb, #f5576c); }
+  .avatar:nth-child(3) { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+  .proof-text { font-size: 0.83rem; color: var(--muted); }
+  .proof-text strong { color: var(--text); }
+
+  /* ── VIDEO ── */
+  .video-section { max-width: 860px; margin: 0 auto; padding: 0 5% 72px; }
+  .video-wrap { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 60px rgba(0,0,0,0.08); background: #000; position: relative; }
+  .video-wrap::before { content: ''; display: block; padding-top: 56.25%; }
+  .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .video-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding: 14px 20px; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); flex-wrap: wrap; gap: 12px; }
+  .vf-left { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--muted); }
+  .play-icon { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 9px; color: white; flex-shrink: 0; }
+  .vf-right a { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .vf-right a:hover { text-decoration: underline; }
+
+  /* ── STATS BAND ── */
+  .stats-band { background: var(--text); color: white; padding: 40px 5%; display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center; }
+  .stat-item .num { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: white; line-height: 1; margin-bottom: 6px; letter-spacing: -0.3px; }
+  .stat-item .num span { color: #60a5fa; }
+  .stat-item p { font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+
+  /* ── SECTION ── */
+  section { max-width: 1200px; margin: 0 auto; padding: 80px 5%; }
+  .section-tag { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: block; }
+  .section-sub { font-size: 1rem; color: var(--muted); max-width: 560px; line-height: 1.72; margin-bottom: 44px; }
+
+  /* ── PAIN ── */
+  .pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 40px; }
+  .pain-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; transition: all 0.2s; }
+  .pain-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); transform: translateY(-2px); border-color: #fca5a5; }
+  .pain-icon { font-size: 1.6rem; margin-bottom: 12px; }
+  .pain-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 7px; line-height: 1.3; }
+  .pain-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+
+  /* ── COST OF INACTION ── */
+  .cost-box { background: #fff8f8; border: 1.5px solid #fecaca; border-radius: var(--radius); padding: 40px 44px; margin-top: 48px; display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
+  .cost-icon { font-size: 2.8rem; flex-shrink: 0; margin-top: 4px; }
+  .cost-content h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; color: var(--text); line-height: 1.3; }
+  .cost-content p { font-size: 0.92rem; color: var(--muted); line-height: 1.75; margin-bottom: 16px; }
+  .cost-items { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .cost-item { background: #fee2e2; color: #991b1b; font-size: 0.8rem; font-weight: 600; padding: 6px 14px; border-radius: 100px; }
+
+  /* ── HOW IT WORKS ── */
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 48px; position: relative; }
+  .steps::before { content: ''; position: absolute; top: 36px; left: calc(16.66% + 24px); right: calc(16.66% + 24px); height: 2px; background: linear-gradient(90deg, var(--accent-light), var(--accent), var(--accent-light)); z-index: 0; }
+  .step-card { background: white; border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--border); position: relative; transition: all 0.3s; margin: 8px; z-index: 1; }
+  .step-card:hover { box-shadow: 0 12px 40px rgba(26,86,219,0.1); transform: translateY(-4px); border-color: rgba(26,86,219,0.2); }
+  .step-num-circle { width: 48px; height: 48px; border-radius: 50%; background: var(--accent-light); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--accent); margin-bottom: 20px; }
+  .step-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+  .step-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+  /* ── FEATURES ── */
+  .features-section { background: var(--text); padding: 80px 5%; color: white; }
+  .features-inner { max-width: 1200px; margin: 0 auto; }
+  .features-header { margin-bottom: 48px; }
+  .features-header .section-tag { color: #60a5fa; }
+  .features-header h2 { color: white; }
+  .features-header p { color: rgba(255,255,255,0.55); max-width: 560px; font-size: 1rem; line-height: 1.7; margin-top: 12px; }
+  .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .fcard { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 32px 28px; transition: all 0.3s; display: flex; flex-direction: column; gap: 0; }
+  .fcard:hover { background: rgba(255,255,255,0.09); border-color: rgba(96,165,250,0.25); transform: translateY(-3px); }
+  .fcard-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(96,165,250,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 18px; }
+  .fcard h3 { font-size: 1rem; font-weight: 700; color: white; margin-bottom: 10px; line-height: 1.3; }
+  .fcard p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; flex: 1; }
+  .fcard-desire { font-size: 0.8rem; color: #93c5fd; margin-top: 14px; font-style: italic; line-height: 1.6; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.07); }
+
+  /* ── IMAGINE ── */
+  .imagine-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 40px; background: var(--border); border-radius: var(--radius); overflow: hidden; }
+  .imagine-card { background: white; padding: 36px 32px; transition: background 0.2s; }
+  .imagine-card:hover { background: var(--accent-light); }
+  .imagine-moment { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: block; }
+  .imagine-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; line-height: 1.35; color: var(--text); }
+  .imagine-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.72; }
+
+  /* ── CASE STUDIES ── */
+  .case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+  .case-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: all 0.2s; display: flex; flex-direction: column; }
+  .case-card:hover { box-shadow: 0 10px 32px rgba(26,86,219,0.09); transform: translateY(-3px); border-color: rgba(26,86,219,0.2); }
+  .case-industry { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 16px; }
+  .case-before-after { display: flex; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; flex: 1; }
+  .case-ba { flex: 1; padding: 14px; }
+  .case-ba.before { background: #fff8f8; border-right: 1px solid var(--border); }
+  .case-ba.after { background: #f0fdf4; }
+  .case-ba-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px; }
+  .case-ba.before .case-ba-label { color: #ef4444; }
+  .case-ba.after .case-ba-label { color: var(--green); }
+  .case-ba p { font-size: 0.8rem; color: var(--text); line-height: 1.55; font-weight: 500; }
+  .case-result strong { color: var(--accent); display: block; font-size: 1.1rem; margin-bottom: 3px; font-family: var(--font-display); font-weight: 700; }
+  .case-result p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+  .case-confidential { font-size: 0.7rem; color: var(--muted); margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); font-style: italic; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonial-section { background: var(--text); padding: 80px 5%; color: white; }
+  .testimonial-inner { max-width: 1200px; margin: 0 auto; }
+  .testimonial-header { text-align: center; margin-bottom: 48px; }
+  .testimonial-header .section-tag { color: #60a5fa; }
+  .testimonial-header h2 { color: white; margin-bottom: 0; }
+  .testimonial-header p { color: rgba(255,255,255,0.4); margin-top: 10px; font-size: 0.85rem; font-style: italic; }
+  .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .tcard { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 20px; transition: all 0.3s; }
+  .tcard:hover { background: rgba(255,255,255,0.09); border-color: rgba(96,165,250,0.3); }
+  .tcard-stars { color: #fbbf24; font-size: 0.9rem; letter-spacing: 2px; }
+  .tcard-quote { font-size: 1.02rem; line-height: 1.78; color: rgba(255,255,255,0.88); flex: 1; }
+  .tcard-quote strong { color: white; font-weight: 600; }
+  .tcard-results { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tresult { background: rgba(96,165,250,0.12); border: 1px solid rgba(96,165,250,0.2); color: #93c5fd; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
+  .tcard-author { display: flex; align-items: center; gap: 14px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .tcard-avatar { width: 44px; height: 44px; min-width: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; color: white; }
+  .tcard-author strong { display: block; font-weight: 700; font-size: 0.9rem; color: white; }
+  .tcard-author span { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+  .tcard-confidential { font-size: 0.7rem; color: rgba(255,255,255,0.28); font-style: italic; margin-top: -10px; }
+
+  /* ── WHO IT'S FOR ── */
+  .audience-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 40px; }
+  .audience-card { background: white; border-radius: var(--radius); padding: 28px 30px; border: 1px solid var(--border); display: flex; gap: 18px; align-items: flex-start; transition: all 0.2s; }
+  .audience-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.07); transform: translateY(-2px); }
+  .aud-icon { width: 48px; height: 48px; min-width: 48px; border-radius: 12px; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+  .audience-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+  .audience-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── INDUSTRY STRIP ── */
+  .logo-strip { background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 32px 5%; text-align: center; }
+  .logo-strip p { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+  .logo-tiles { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .logo-tile { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 9px 18px; font-size: 0.82rem; font-weight: 600; color: var(--muted); white-space: nowrap; transition: all 0.2s; }
+  .logo-tile:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+
+  /* ── PRICING SIGNAL ── */
+  .pricing-signal { background: var(--accent-light); border: 1.5px solid rgba(26,86,219,0.2); border-radius: var(--radius); padding: 40px 44px; margin-top: 0; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .ps-left h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+  .ps-left p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; max-width: 480px; }
+  .ps-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .ps-pill { background: white; border: 1px solid rgba(26,86,219,0.2); color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 6px 14px; border-radius: 100px; }
+  .ps-right { flex-shrink: 0; text-align: center; }
+  .ps-right .ps-price { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+
+  /* ── FOUNDER TRUST ── */
+  .founder-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 56px 5%; }
+  .founder-inner { max-width: 860px; margin: 0 auto; display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; }
+  .founder-avatar-wrap { flex-shrink: 0; text-align: center; }
+  .founder-avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #6366f1); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: white; margin-bottom: 10px; margin-left: auto; margin-right: auto; }
+  .founder-name { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+  .founder-role { font-size: 0.75rem; color: var(--muted); }
+  .founder-content blockquote { font-size: 1rem; line-height: 1.8; color: var(--text); font-style: italic; margin-bottom: 16px; }
+  .founder-content blockquote strong { font-style: normal; color: var(--accent); }
+  .founder-note { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+  .saas-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .saas-badge { display: flex; align-items: center; gap: 6px; background: var(--bg); border: 1px solid var(--border); border-radius: 100px; padding: 5px 14px; font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+  .saas-badge span { color: var(--green); font-size: 0.85rem; }
+
+  /* ── KPI GRID ── */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 40px; }
+  .kpi-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; display: flex; flex-direction: column; gap: 10px; transition: all 0.25s; }
+  .kpi-card:hover { box-shadow: 0 8px 28px rgba(26,86,219,0.1); transform: translateY(-3px); border-color: rgba(26,86,219,0.2); }
+  .kpi-icon { font-size: 1.5rem; line-height: 1; }
+  .kpi-metric { font-family: var(--font-display); font-size: 0.92rem; font-weight: 700; color: var(--text); }
+  .kpi-detail { font-size: 0.78rem; color: var(--accent); font-weight: 500; }
+
+  /* ── INLINE CTA STRIP ── */
+  .cta-strip { background: var(--accent-light); border-top: 1px solid rgba(26,86,219,0.15); border-bottom: 1px solid rgba(26,86,219,0.15); padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .cta-strip p { font-size: 1rem; font-weight: 600; color: var(--accent); max-width: 540px; line-height: 1.5; }
+  .cta-strip-actions { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
+
+  /* ── FAQ ── */
+  .faq-list { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-top: 36px; }
+  .faq-item { background: white; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.2s; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item:hover { background: var(--accent-light); }
+  .faq-q { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; font-weight: 600; font-size: 0.95rem; gap: 12px; }
+  .faq-arrow { font-size: 1.1rem; color: var(--muted); transition: transform 0.3s; flex-shrink: 0; }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a { max-height: 0; overflow: hidden; font-size: 0.9rem; color: var(--muted); line-height: 1.7; transition: max-height 0.35s ease, padding 0.3s ease; padding: 0 24px; }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 20px; }
+
+  /* ── FINAL CTA ── */
+  .cta-section { background: var(--accent); padding: 80px 5%; text-align: center; color: white; }
+  .cta-section h2 { color: white; margin-bottom: 14px; max-width: 600px; margin-left: auto; margin-right: auto; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .cta-section .cta-sub { color: rgba(255,255,255,0.72); margin-bottom: 36px; font-size: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+  .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  .trust-row { display: flex; justify-content: center; gap: 24px; margin-top: 28px; flex-wrap: wrap; }
+  .trust-item { font-size: 0.8rem; color: rgba(255,255,255,0.62); display: flex; align-items: center; gap: 5px; }
+  .trust-item::before { content: ''; display:inline-block; width:14px; height:14px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.9)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center/contain; }
+
+  /* ── FOOTER ── */
+  footer { background: #0a0a09; padding: 40px 5%; color: rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; flex-wrap: wrap; gap: 16px; }
+  footer .logo { color: white; opacity: 0.8; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: white; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .case-grid { grid-template-columns: 1fr; }
+    .kpi-grid { grid-template-columns: repeat(2,1fr); }
+    .steps::before { display: none; }
+    .steps { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .stats-band { grid-template-columns: repeat(2,1fr); padding: 40px 5%; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+    .testimonial-grid { grid-template-columns: 1fr; }
+    .audience-grid { grid-template-columns: 1fr; }
+    .imagine-grid { grid-template-columns: 1fr; }
+    .cta-strip { flex-direction: column; text-align: center; }
+    .cta-strip-actions { justify-content: center; }
+    .pricing-signal { flex-direction: column; }
+    .founder-inner { flex-direction: column; align-items: center; text-align: center; }
+    .saas-badges { justify-content: center; }
+    footer { flex-direction: column; align-items: center; text-align: center; }
+    .nav-cta .btn-outline { display: none; }
+    .cost-box { flex-direction: column; padding: 28px 24px; }
+  }
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clicarity — Profit is Hidden in Your Processes">
+<meta name="twitter:description" content="Discover where your business is losing profit. Clicarity gives manufacturers real-time visibility of production costs, wastage and delays — so profit stops hidi">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+<link rel="canonical" href="https://www.clicarity.com/profit.html/">
+</head>
+<body>
+
+<!-- ══ LUCIDE SVG SPRITE ══ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- calendar -->
+  <symbol id="ic-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+  </symbol>
+  <!-- message-circle (whatsapp/chat) -->
+  <symbol id="ic-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </symbol>
+  <!-- play -->
+  <symbol id="ic-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="5 3 19 12 5 21 5 3"/>
+  </symbol>
+  <!-- help-circle -->
+  <symbol id="ic-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+  </symbol>
+  <!-- trending-down -->
+  <symbol id="ic-trending-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/>
+  </symbol>
+  <!-- trash-2 -->
+  <symbol id="ic-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+  </symbol>
+  <!-- phone -->
+  <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.43 2 2 0 0 1 3.55 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6 6l1.8-1.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/>
+  </symbol>
+  <!-- settings -->
+  <symbol id="ic-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+  </symbol>
+  <!-- bar-chart-2 -->
+  <symbol id="ic-barchart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+  </symbol>
+  <!-- dollar-sign -->
+  <symbol id="ic-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+  </symbol>
+  <!-- eye -->
+  <symbol id="ic-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+  </symbol>
+  <!-- clock -->
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+  </symbol>
+  <!-- layers (wastage/stages) -->
+  <symbol id="ic-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+  </symbol>
+  <!-- bell -->
+  <symbol id="ic-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+  </symbol>
+  <!-- link -->
+  <symbol id="ic-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+  </symbol>
+  <!-- factory -->
+  <symbol id="ic-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/>
+  </symbol>
+  <!-- lock -->
+  <symbol id="ic-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+  </symbol>
+  <!-- shield -->
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </symbol>
+  <!-- check-circle -->
+  <symbol id="ic-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+  </symbol>
+  <!-- package (distribution) -->
+  <symbol id="ic-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+  </symbol>
+  <!-- wrench (services) -->
+  <symbol id="ic-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+  </symbol>
+  <!-- hard-hat (construction) -->
+  <symbol id="ic-hardhat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a8 8 0 0 1 16 0v3"/>
+  </symbol>
+  <!-- printer -->
+  <symbol id="ic-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+  </symbol>
+  <!-- shirt (garment) -->
+  <symbol id="ic-shirt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/>
+  </symbol>
+  <!-- cog (engineering) -->
+  <symbol id="ic-cog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+  </symbol>
+  <!-- truck (logistics) -->
+  <symbol id="ic-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+  </symbol>
+  <!-- shopping-cart (fmcg) -->
+  <symbol id="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+  </symbol>
+  <!-- recycle -->
+  <symbol id="ic-recycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="1.5 8.5 1.5 3.5 6.5 3.5"/><path d="M1.5 3.5l5 5.5"/><polyline points="22.5 8.5 22.5 3.5 17.5 3.5"/><path d="M22.5 3.5l-5 5.5"/><path d="M5 19.5a7 7 0 0 1 0-14h14a7 7 0 0 1 0 14"/><polyline points="12 15.5 16 19.5 12 23.5"/>
+  </symbol>
+  <!-- refresh-cw -->
+  <symbol id="ic-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+  </symbol>
+  <!-- search -->
+  <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+  </symbol>
+  <!-- chevron-down -->
+  <symbol id="ic-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"/>
+  </symbol>
+  <!-- check -->
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="20 6 9 17 4 12"/>
+  </symbol>
+  <!-- star -->
+  <symbol id="ic-star" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+  </symbol>
+  <!-- cloud (AWS) -->
+  <symbol id="ic-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+  </symbol>
+  <!-- database (postgres) -->
+  <symbol id="ic-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+  </symbol>
+  <!-- arrow-right -->
+  <symbol id="ic-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+  </symbol>
+  <!-- users -->
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  </symbol>
+  <!-- zap (fast/efficiency) -->
+  <symbol id="ic-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+</svg>
+
+<style>
+  .ic { display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .ic svg { width:100%; height:100%; display:block; }
+  .pain-icon .ic { width:28px; height:28px; }
+  .cost-icon .ic { width:40px; height:40px; }
+  .fcard-icon .ic { width:28px; height:28px; }
+  .aud-icon .ic { width:28px; height:28px; }
+  .kpi-icon .ic { width:26px; height:26px; }
+  .saas-badge .ic { width:16px; height:16px; }
+  .btn .ic { width:16px; height:16px; }
+  .play-icon .ic { width:14px; height:14px; }
+  .logo-tile .ic { width:15px; height:15px; }
+  .tcard-confidential .ic { width:13px; height:13px; }
+  .case-confidential .ic { width:13px; height:13px; }
+  .trust-item .ic { width:14px; height:14px; }
+  .faq-arrow .ic { width:18px; height:18px; }
+  .ps-pill .ic { width:13px; height:13px; }
+  .tcard-stars { display:flex; gap:3px; align-items:center; }
+  .tcard-stars .ic { width:16px; height:16px; color:#fbbf24; }
+</style>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="badge"><span class="badge-dot"></span> 12,000+ jobs tracked & counting</div>
+
+  <div class="what-is">A <strong>cloud-based process tracking system</strong> — built for businesses that run jobs, orders, and production daily</div>
+
+  <h1>Profit is Hidden Between<br/>Your <span>On-Going Processes</span></h1>
+  <p class="hero-sub">
+    Every business has processes. Most have no real visibility into them. That gap — between what's happening and what you think is happening — is exactly where time, money, and growth quietly disappear.
+  </p>
+  <div class="hero-actions">
+    <a href="https://calendly.com/clicarity/demo" class="btn btn-primary" target="_blank"><span class="ic"><svg><use href="#ic-calendar"/></svg></span> Book a Free Demo</a>
+    <a href="#video" class="btn btn-outline"><span class="ic"><svg><use href="#ic-play"/></svg></span> Watch How It Works</a>
+  </div>
+  <div class="social-proof">
+    <div class="avatar-stack">
+      <div class="avatar">RS</div>
+      <div class="avatar">MK</div>
+      <div class="avatar">PJ</div>
+    </div>
+        <div class="proof-text"><strong>12,000+ jobs tracked</strong> Zero follow-ups.</div>
+  </div>
+</section>
+
+<!-- ══ VIDEO #1 — EARLY ══ -->
+<div class="video-section" id="video">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/4_ZfiAPwy_I?rel=0&modestbranding=1&color=white" title="Clicarity — See How It Works" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="video-foot">
+    <div class="vf-left"><div class="play-icon"><span class="ic"><svg><use href="#ic-play"/></svg></span></div><span>90 seconds &nbsp;·&nbsp; Watch it. Then ask yourself if this is what your business needs.</span></div>
+    <div class="vf-right"><a href="https://calendly.com/clicarity/demo" target="_blank">Convinced? Book your demo →</a></div>
+  </div>
+</div>
+
+<!-- ══ STATS BAND ══ -->
+<div class="stats-band">
+  <div class="stat-item"><div class="num">35<span>–55%</span></div><p>Faster job completion</p></div>
+  <div class="stat-item"><div class="num">70<span>%</span></div><p>Fewer follow-up calls</p></div>
+  <div class="stat-item">
+    <div class="num">100<span>%</span></div>
+    <p>Mirrored to Your Processes</p>
+  </div>
+  <div class="stat-item"><div class="num">90<span>%</span></div><p>Less manual coordination</p></div>
+</div>
+
+<!-- ══ INLINE CTA #1 ══ -->
+<div class="cta-strip">
+  <p>Seen enough to be curious? Let's walk through it for your specific business — free, no commitment.</p>
+  <div class="cta-strip-actions">
+    <a href="https://calendly.com/clicarity/demo" class="btn btn-primary" target="_blank"><span class="ic"><svg><use href="#ic-calendar"/></svg></span> Book a Free Demo</a>
+    <a href="https://wa.me/919867800451" class="btn btn-wa" target="_blank"><span class="ic"><svg><use href="#ic-message"/></svg></span> WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- ══ PAIN — THE REALITY ══ -->
+<section>
+  <span class="section-tag">The Reality Right Now</span>
+  <h2>Sound Familiar?</h2>
+  <p class="section-sub">These aren't unusual problems. They happen every day in well-run businesses — simply because there's no live visibility into what's happening inside the operation.</p>
+
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-icon"><span class="ic"><svg><use href="#ic-help"/></svg></span></div>
+      <h3>Nobody knows where a job actually is</h3>
+      <p>Every status update requires a call, a message, or walking to the floor. The real picture is never just there — someone always has to find it.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon"><span class="ic"><svg><use href="#ic-trending-down"/></svg></span></div>
+      <h3>Deadlines slip before anyone knows</h3>
+      <p>A job sits idle at one stage for hours. By the time someone notices, the delivery date is already at risk. Delays don't announce themselves.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon"><span class="ic"><svg><use href="#ic-trash"/></svg></span></div>
+      <h3>Wastage shows up only at month-end</h3>
+      <p>Material disappears between stages. Nobody tracks it in real time. You find out about the damage when it's already in your numbers.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon"><span class="ic"><svg><use href="#ic-phone"/></svg></span></div>
+      <h3>Everyone is chasing everyone</h3>
+      <p>Managers calling operators. Supervisors messaging teams. WhatsApp groups overflowing. Busy all day — but no single person has the complete picture.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon"><span class="ic"><svg><use href="#ic-settings"/></svg></span></div>
+      <h3>Hard work, but still falling short</h3>
+      <p>Your team is putting in the effort. But without visibility, effort alone cannot prevent delays. It's not a people problem — it's a system gap.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon"><span class="ic"><svg><use href="#ic-barchart"/></svg></span></div>
+      <h3>You can sense the leakage — but can't see it</h3>
+      <p>Margins feel tighter than they should. Something is costing you. But without process-level data, you can't pinpoint exactly where.</p>
+    </div>
+  </div>
+
+  <!-- COST OF INACTION -->
+  <div class="cost-box">
+    <div class="cost-icon"><span class="ic"><svg><use href="#ic-dollar"/></svg></span></div>
+    <div class="cost-content">
+      <h3>Every day without visibility is costing you more than you realise.</h3>
+      <p>A single delayed delivery doesn't just affect one order — it affects client trust, repeat business, and your team's morale. Multiply that across 20, 50, or 200 jobs a month, and the invisible cost becomes very real, very fast.</p>
+      <p>Most businesses don't fix this because they assume it requires an expensive ERP or a complex implementation. It doesn't. Clicarity was built specifically for this — and nothing else.</p>
+      <div class="cost-items">
+        <span class="cost-item">Missed deliveries</span>
+        <span class="cost-item">Lost client trust</span>
+        <span class="cost-item">Untracked wastage</span>
+        <span class="cost-item">Management time on follow-ups</span>
+        <span class="cost-item">Decisions made without data</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section style="background: var(--bg); padding-top: 0;">
+  <span class="section-tag">How It Works</span>
+  <h2>Three Steps. That's It.</h2>
+  <p class="section-sub">No lengthy implementation. No IT team required. No learning curve for your floor staff.</p>
+
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-num-circle">1</div>
+      <h3>You share how your business works</h3>
+      <p>Tell us your job stages, your terminology, and how work moves through your operation. Everything in your language — not ours.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num-circle">2</div>
+      <h3>We build it around your process</h3>
+      <p>The Clicarity team configures everything for you — your forms, your stages, your workflow. You don't touch a single setting.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num-circle">3</div>
+      <h3>Your team uses just two screens</h3>
+      <p>Create a job. Update a status. That's all anyone on your team ever needs to do. Visibility happens automatically for everyone else.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INLINE CTA #2 ══ -->
+<div class="cta-strip">
+  <p>Want to see exactly how this would be set up for your business? That's what the demo is for.</p>
+  <div class="cta-strip-actions">
+    <a href="https://calendly.com/clicarity/demo" class="btn btn-primary" target="_blank"><span class="ic"><svg><use href="#ic-calendar"/></svg></span> Book a Free Demo</a>
+  </div>
+</div>
+
+<!-- ══ FEATURES ══ -->
+<div class="features-section">
+  <div class="features-inner">
+    <div class="features-header">
+      <span class="section-tag">What You Get</span>
+      <h2>Everything Your Operations<br/>Were Always Missing.</h2>
+      <p>Not another tool to learn. Just the visibility your business has needed — built around your process, your language, your team.</p>
+    </div>
+    <div class="features-grid">
+      <div class="fcard">
+        <div class="fcard-icon"><span class="ic"><svg><use href="#ic-eye"/></svg></span></div>
+        <h3>Live Job Status for Every Job</h3>
+        <p>Every job's current stage, visible to your entire team — at any moment, without asking anyone.</p>
+        <div class="fcard-desire">Never ask "what's the status?" again.</div>
+      </div>
+      <div class="fcard">
+        <div class="fcard-icon"><span class="ic"><svg><use href="#ic-clock"/></svg></span></div>
+        <h3>See Delays Before They Happen</h3>
+        <p>Know exactly where a job is stuck and since when. Act before a bottleneck becomes a missed deadline.</p>
+        <div class="fcard-desire">From reactive firefighting to proactive control.</div>
+      </div>
+      <div class="fcard">
+        <div class="fcard-icon"><span class="ic"><svg><use href="#ic-layers"/></svg></span></div>
+        <h3>Stage-wise Wastage Tracking</h3>
+        <p>Track input, output, and wastage at every stage. See exactly where material is leaking — and stop it.</p>
+        <div class="fcard-desire">Recover margins you didn't know you were losing.</div>
+      </div>
+      <div class="fcard">
+        <div class="fcard-icon"><span class="ic"><svg><use href="#ic-bell"/></svg></span></div>
+        <h3>Automatic WhatsApp Alerts</h3>
+        <p>The right person is notified automatically when a job reaches their stage. No app to download. No login needed.</p>
+        <div class="fcard-desire">Your team stays in sync — without you holding it together.</div>
+      </div>
+      <div class="fcard">
+        <div class="fcard-icon"><span class="ic"><svg><use href="#ic-link"/></svg></span></div>
+        <h3>Works With Your Existing ERP</h3>
+        <p>Already on an ERP or CRM? Clicarity syncs live both ways via API. No double entry. No disruption.</p>
+        <div class="fcard-desire">Add visibility without replacing what already works.</div>
+      </div>
+      <div class="fcard">
+        <div class="fcard-icon"><span class="ic"><svg><use href="#ic-factory"/></svg></span></div>
+        <h3>Machine & Process Scheduling</h3>
+        <p>Structured job data enables smart scheduling. Every operator knows what's happening, where, and what's next.</p>
+        <div class="fcard-desire">Less floor confusion. More output. Same team.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ IMAGINE — DESIRE ══ -->
+<section>
+  <span class="section-tag">Picture This</span>
+  <h2>What Running Your Business<br/>With Visibility Actually Feels Like.</h2>
+  <p class="section-sub">This is the daily experience of every business currently using Clicarity.</p>
+
+  <div class="imagine-grid">
+    <div class="imagine-card">
+      <span class="imagine-moment">Every Morning</span>
+      <h3>You open one screen and see every active job — live.</h3>
+      <p>Which jobs are on track. Which need attention. What's delayed. No meeting required. No WhatsApp group to scroll through. The picture is just there.</p>
+    </div>
+    <div class="imagine-card">
+      <span class="imagine-moment">During the Day</span>
+      <h3>A job moves forward — the right person is notified automatically.</h3>
+      <p>No calls from you. No "please update me." Your team keeps moving because the system keeps everyone informed — in real time, on WhatsApp.</p>
+    </div>
+    <div class="imagine-card">
+      <span class="imagine-moment">Before a Delay Hits</span>
+      <h3>You see a job has been idle for 2 hours. You act.</h3>
+      <p>You redirect. The deadline is saved. The client never knew there was a risk — because you caught it before it became one.</p>
+    </div>
+    <div class="imagine-card">
+      <span class="imagine-moment">End of Month</span>
+      <h3>You can finally see where your margins are actually going.</h3>
+      <p>Stage-wise wastage. Process bottlenecks. Which jobs consistently run over time. Data you've never had before — now structured, visible, and yours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CASE STUDIES ══ -->
+<section style="padding-top: 0;">
+  <span class="section-tag">Real Results</span>
+  <h2>What Changed for Businesses<br/>That Made the Switch.</h2>
+  <p class="section-sub">Names and company details are kept confidential at client request. All results are genuine.</p>
+
+  <div class="case-grid">
+    <div class="case-card">
+      <div class="case-industry">Offset Printing</div>
+      <div class="case-before-after">
+        <div class="case-ba before">
+          <div class="case-ba-label">Before</div>
+          <p>40+ status calls every single day. No one knew where jobs were between departments.</p>
+        </div>
+        <div class="case-ba after">
+          <div class="case-ba-label">After</div>
+          <p>Zero status calls. Every job visible on one screen. Managers stopped chasing entirely.</p>
+        </div>
+      </div>
+      <div class="case-result">
+        <strong>~18% faster turnaround</strong>
+        <p>Fewer delayed deliveries. Clear stage-wise tracking. Dispatch accuracy significantly improved.</p>
+      </div>
+      <div class="case-confidential"><span class="ic"><svg><use href="#ic-lock"/></svg></span> Company name withheld — shared in confidence</div>
+    </div>
+    <div class="case-card">
+      <div class="case-industry">Industrial Manufacturing</div>
+      <div class="case-before-after">
+        <div class="case-ba before">
+          <div class="case-ba-label">Before</div>
+          <p>Machines running, but tracking done on paper and WhatsApp. No structured visibility at all.</p>
+        </div>
+        <div class="case-ba after">
+          <div class="case-ba-label">After</div>
+          <p>Every job and component tracked live. Machine planning improved. Wastage captured at every stage.</p>
+        </div>
+      </div>
+      <div class="case-result">
+        <strong>90% less manual coordination</strong>
+        <p>Wastage reduced. Dispatch became predictable. Better utilisation across all shifts.</p>
+      </div>
+      <div class="case-confidential"><span class="ic"><svg><use href="#ic-lock"/></svg></span> Company name withheld — shared in confidence</div>
+    </div>
+    <div class="case-card">
+      <div class="case-industry">Trading & Distribution</div>
+      <div class="case-before-after">
+        <div class="case-ba before">
+          <div class="case-ba-label">Before</div>
+          <p>Collections were slow. Warehouse and accounts coordination was chaotic every single day.</p>
+        </div>
+        <div class="case-ba after">
+          <div class="case-ba-label">After</div>
+          <p>Orders, dispatch, and collections in one live view. Teams in sync automatically — no coordination overhead.</p>
+        </div>
+      </div>
+      <div class="case-result">
+        <strong>Collections 30% faster</strong>
+        <p>Fewer missed orders. Dispatch accuracy improved. Zero coordination calls to the warehouse team.</p>
+      </div>
+      <div class="case-confidential"><span class="ic"><svg><use href="#ic-lock"/></svg></span> Company name withheld — shared in confidence</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<div class="testimonial-section">
+  <div class="testimonial-inner">
+    <div class="testimonial-header">
+      <span class="section-tag">What Businesses Say</span>
+      <h2>In Their Own Words</h2>
+      <p>Names and company details withheld at client request. All feedback is genuine and unedited.</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="tcard">
+        <div class="tcard-stars"><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span></div>
+        <p class="tcard-quote">"We used to call each other for job status all day. <strong>Now everything is visible on one screen.</strong> We didn't add people. We added clarity — and it changed everything."</p>
+        <div class="tcard-results">
+          <span class="tresult">18% faster TAT</span>
+          <span class="tresult">Zero status calls</span>
+          <span class="tresult">Full stage visibility</span>
+        </div>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background: linear-gradient(135deg,#667eea,#764ba2)">VT</div>
+          <div><strong>V.T.</strong><span>Owner, Offset Printing Business</span></div>
+        </div>
+        <div class="tcard-confidential"><span class="ic"><svg><use href="#ic-lock"/></svg></span> Full name withheld — shared in confidence</div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span></div>
+        <p class="tcard-quote">"We had machines running but no real tracking. <strong>Now every job and component is visible live.</strong> We stopped guessing. We started tracking."</p>
+        <div class="tcard-results">
+          <span class="tresult">Better machine planning</span>
+          <span class="tresult">Wastage reduced</span>
+          <span class="tresult">Predictable dispatch</span>
+        </div>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background: linear-gradient(135deg,#f093fb,#f5576c)">SJ</div>
+          <div><strong>S.J.</strong><span>Owner, Manufacturing Unit</span></div>
+        </div>
+        <div class="tcard-confidential"><span class="ic"><svg><use href="#ic-lock"/></svg></span> Full name withheld — shared in confidence</div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span></div>
+        <p class="tcard-quote">"My team was always busy but deliveries were always late. Now <strong>I can see exactly where a job is stuck before it becomes a problem.</strong> That single change saved us."</p>
+        <div class="tcard-results">
+          <span class="tresult">30% faster deliveries</span>
+          <span class="tresult">Bottlenecks caught early</span>
+          <span class="tresult">Fewer escalations</span>
+        </div>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">RK</div>
+          <div><strong>R.K.</strong><span>Director, Distribution Company</span></div>
+        </div>
+        <div class="tcard-confidential"><span class="ic"><svg><use href="#ic-lock"/></svg></span> Full name withheld — shared in confidence</div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span><span class="ic"><svg><use href="#ic-star"/></svg></span></div>
+        <p class="tcard-quote">"No complex setup. No IT team. <strong>My floor staff were using it within an hour.</strong> I kept asking myself why we didn't do this sooner."</p>
+        <div class="tcard-results">
+          <span class="tresult">Rapid team adoption</span>
+          <span class="tresult">Zero training needed</span>
+          <span class="tresult">Full floor visibility</span>
+        </div>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background: linear-gradient(135deg,#43e97b,#38f9d7)">AP</div>
+          <div><strong>A.P.</strong><span>MD, Garment Manufacturing</span></div>
+        </div>
+        <div class="tcard-confidential"><span class="ic"><svg><use href="#ic-lock"/></svg></span> Full name withheld — shared in confidence</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ WHO IT'S FOR ══ -->
+<section>
+  <span class="section-tag">Who It's Built For</span>
+  <h2>If Jobs Move Through Stages<br/>in Your Business — This Is for You.</h2>
+  <p class="section-sub">The industry doesn't matter. If someone in your business asks "what's the status?" more than once a day, Clicarity will change how you operate.</p>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="aud-icon"><span class="ic"><svg><use href="#ic-factory"/></svg></span></div>
+      <div><h3>Manufacturing & Production</h3><p>Track every job from raw material to dispatch — across shifts, teams, and components. Know where delays are forming before they hit your delivery date.</p></div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon"><span class="ic"><svg><use href="#ic-package"/></svg></span></div>
+      <div><h3>Trading & Distribution</h3><p>Connect warehouses, accounts, and sales in one live view. Orders, dispatch, and collections tracked without a single status call.</p></div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon"><span class="ic"><svg><use href="#ic-wrench"/></svg></span></div>
+      <div><h3>Services & Field Operations</h3><p>Assign jobs to field teams or vendors, track progress live, and know completion status — without chasing anyone.</p></div>
+    </div>
+    <div class="audience-card">
+      <div class="aud-icon"><span class="ic"><svg><use href="#ic-hardhat"/></svg></span></div>
+      <div><h3>Projects & Contracting</h3><p>Track milestones, sub-tasks, and vendor work in one place. Every stakeholder sees only what's relevant to them.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDUSTRY STRIP ══ -->
+<div class="logo-strip">
+  <p>Industries currently using Clicarity</p>
+  <div class="logo-tiles">
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-printer"/></svg></span> Offset Printing</div>
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-cog"/></svg></span> Industrial Manufacturing</div>
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-package"/></svg></span> Trading & Distribution</div>
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-shirt"/></svg></span> Garment Production</div>
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-cog"/></svg></span> Engineering Works</div>
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-hardhat"/></svg></span> Contracting</div>
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-truck"/></svg></span> Logistics</div>
+    <div class="logo-tile"><span class="ic"><svg><use href="#ic-cart"/></svg></span> FMCG Distribution</div>
+  </div>
+</div>
+
+<!-- ══ RESULTS — WHAT IMPROVES ══ -->
+<section>
+  <span class="section-tag">What Gets Better</span>
+  <h2>Visibility Improves Every Metric<br/>That Matters.</h2>
+  <p class="section-sub">When every job is tracked and every stage is visible, the improvements show up across your entire operation — not just one department.</p>
+
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-clock"/></svg></span></div><div class="kpi-metric">Cycle Time</div><div class="kpi-detail">Clear job movement at every stage</div></div>
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-calendar"/></svg></span></div><div class="kpi-metric">On-Time Delivery</div><div class="kpi-detail">Scheduling + automatic alerts</div></div>
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-recycle"/></svg></span></div><div class="kpi-metric">Wastage</div><div class="kpi-detail">Quantity tracked stage by stage</div></div>
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-refresh"/></svg></span></div><div class="kpi-metric">Work-in-Progress</div><div class="kpi-detail">Process-wise pending clarity</div></div>
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-factory"/></svg></span></div><div class="kpi-metric">Machine Utilisation</div><div class="kpi-detail">Workload visible at all times</div></div>
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-barchart"/></svg></span></div><div class="kpi-metric">Lead Time</div><div class="kpi-detail">Bottlenecks caught before they escalate</div></div>
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-search"/></svg></span></div><div class="kpi-metric">Rejection Rate</div><div class="kpi-detail">Lot-wise traceability at every stage</div></div>
+    <div class="kpi-card"><div class="kpi-icon"><span class="ic"><svg><use href="#ic-phone"/></svg></span></div><div class="kpi-metric">Follow-Up Calls</div><div class="kpi-detail">70% reduction on average</div></div>
+  </div>
+</section>
+
+<!-- ══ PRICING SIGNAL ══ -->
+<section style="padding-top: 0;">
+  <div class="pricing-signal">
+    <div class="ps-left">
+      <h3>Simple Pricing. Built for Businesses of Every Size.</h3>
+      <p>Clicarity is an annual licence — not a per-user subscription. Add your entire team, your floor staff, your vendors — the cost stays the same. No surprises. No monthly billing anxiety. The Clicarity team handles the complete setup for you.</p>
+      <div class="ps-pills">
+        <span class="ps-pill"><span class="ic"><svg><use href="#ic-check"/></svg></span> No per-user fees</span>
+        <span class="ps-pill"><span class="ic"><svg><use href="#ic-check"/></svg></span> Annual licence</span>
+        <span class="ps-pill"><span class="ic"><svg><use href="#ic-check"/></svg></span> Full setup included</span>
+        <span class="ps-pill"><span class="ic"><svg><use href="#ic-check"/></svg></span> Works with your ERP</span>
+        <span class="ps-pill"><span class="ic"><svg><use href="#ic-check"/></svg></span> Hosted securely on AWS</span>
+      </div>
+    </div>
+    <div class="ps-right">
+      <div class="ps-price">Pricing based on your business size & needs</div>
+      <a href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Clicarity" class="btn btn-primary" target="_blank">Get a Quote →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INLINE CTA #3 ══ -->
+<div class="cta-strip">
+  <p>These improvements start from the moment your process goes live. Let's show you how — no commitment needed.</p>
+  <div class="cta-strip-actions">
+    <a href="https://calendly.com/clicarity/demo" class="btn btn-primary" target="_blank"><span class="ic"><svg><use href="#ic-calendar"/></svg></span> Book a Free Demo</a>
+    <a href="https://wa.me/919867800451" class="btn btn-wa" target="_blank"><span class="ic"><svg><use href="#ic-message"/></svg></span> WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- ══ FOUNDER TRUST ══ -->
+<div class="founder-section">
+  <div class="founder-inner">
+    <div class="founder-avatar-wrap">
+      <div class="founder-avatar">P</div>
+      <div class="founder-name">Puneet</div>
+      <div class="founder-role">Founder & CEO, Clicarity</div>
+    </div>
+    <div class="founder-content">
+      <blockquote>"We built Clicarity because we saw the same problem everywhere — businesses working hard, but flying blind inside their own operations. <strong>The gap wasn't effort. It was visibility.</strong> Clicarity exists to close that gap — simply, quickly, and without disrupting how your business already works."</blockquote>
+      <p class="founder-note">Clicarity is a focused team that obsesses over one problem: making business operations visible, simple, and fast. Built in India, for businesses that run on trust, timelines, and teamwork.</p>
+      <div class="saas-badges">
+        <div class="saas-badge"><span class="ic"><svg><use href="#ic-cloud"/></svg></span> Hosted on AWS Cloud</div>
+        <div class="saas-badge"><span class="ic"><svg><use href="#ic-database"/></svg></span> PostgreSQL Database</div>
+        <div class="saas-badge"><span class="ic"><svg><use href="#ic-shield"/></svg></span> Enterprise-grade Security</div>
+        <div class="saas-badge"><span class="ic"><svg><use href="#ic-link"/></svg></span> API Integrations Available</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ VIDEO #2 ══ -->
+<section>
+  <span class="section-tag">Watch Again or Share With Your Team</span>
+  <h2>The 90-Second Explanation<br/>Worth Sharing.</h2>
+  <p class="section-sub">Share this with your operations manager, co-founder, or floor supervisor. See if they see what you see.</p>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/4_ZfiAPwy_I?rel=0&modestbranding=1&color=white" title="Clicarity — Process Tracking" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="video-foot" style="margin-top: 14px;">
+    <div class="vf-left"><div class="play-icon"><span class="ic"><svg><use href="#ic-play"/></svg></span></div><span>1 min 30 sec &nbsp;·&nbsp; The clearest explanation of what Clicarity does.</span></div>
+    <div class="vf-right"><a href="https://calendly.com/clicarity/demo" target="_blank">Book your free demo →</a></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section style="max-width: 800px;">
+  <span class="section-tag">Questions</span>
+  <h2>Everything You Want to Know<br/>Before Booking.</h2>
+
+  <div class="faq-list">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What exactly is Clicarity? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">Clicarity is a cloud-based job process tracking system. It tracks how every job moves through your business — from creation to completion — giving your entire team live visibility without any calls or follow-ups. It runs on AWS with a PostgreSQL database, making it enterprise-grade in reliability while being simple enough for the factory floor.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How is this different from an ERP? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">ERPs manage everything — accounting, inventory, HR, payroll. Clicarity does one thing exceptionally well: tracking how jobs move through your process stages in real time. That's why it's faster to adopt, simpler to use, and actually gets used on the shop floor. Most businesses already have an ERP — Clicarity plugs in alongside it through a live API sync, so there's no double entry and no disruption.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Does my team need to learn new software? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">No. The update screen has just two fields — a Job ID and a Status. A team member on the factory floor with zero technology experience can use it in under a minute. Clicarity adapts to your language and your terminology. Your team never changes how they work — they just have a better system underneath them.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">We coordinate heavily on WhatsApp. Will this disrupt that? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">Not at all — it improves it. Clicarity integrates with WhatsApp so your team still gets updates there, but now they're automatic and structured. Instead of a flood of messages asking for status, the right person gets a clean notification the moment a job reaches their stage. Same channel. Far less noise.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can vendors and external partners use it? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">Yes. Vendors get their own login and can only see and update their assigned jobs. Their updates flow directly into your live dashboard — without any calls, follow-ups, or coordination effort from your side.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How does billing work? Is there a per-user cost? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">No per-user charges. Clicarity is billed as an annual licence for your business. Add as many team members as your operation needs — your cost stays the same. Single licence for one process or location, multi-licence for businesses with multiple processes or teams.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Who handles the setup? Do we need an IT team? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">The Clicarity team handles everything. You share your process stages, your terminology, and your current job format. We configure the entire system around your workflow. No IT involvement. No disruption to your operations. No configuration on your end.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Is our business data secure? <span class="faq-arrow"><span class="ic"><svg><use href="#ic-chevron-down"/></svg></span></span></div>
+      <div class="faq-a">Completely. Clicarity runs on AWS Cloud with a PostgreSQL database — enterprise-grade infrastructure. We do not store your data beyond what your process requires, we don't sell it, and we don't access it. Your data belongs entirely to your business.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══ -->
+<div class="cta-section">
+  <h2>Your Processes Are Running Right Now.<br/>Do You Know What's Happening Inside Them?</h2>
+  <p class="cta-sub">Book a free demo and we'll walk through exactly how Clicarity works for your specific operation. No generic presentation — your actual process, mapped live, on the call.</p>
+  <div class="cta-actions">
+    <a href="https://calendly.com/clicarity/demo" class="btn btn-white btn-lg" target="_blank"><span class="ic"><svg><use href="#ic-calendar"/></svg></span> Book a Free Demo</a>
+    <a href="https://wa.me/919867800451?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Clicarity" class="btn btn-ghost btn-lg" target="_blank"><span class="ic"><svg><use href="#ic-message"/></svg></span> WhatsApp Us Instead</a>
+  </div>
+  <div class="trust-row">
+    <div class="trust-item">No commitment required</div>
+    <div class="trust-item">No per-user fees</div>
+    <div class="trust-item">Full setup by Clicarity team</div>
+    <div class="trust-item">Works with your existing ERP</div>
+    <div class="trust-item">Hosted securely on AWS</div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="logo">Clicarity</div>
+  <p>© 2026 Clicarity. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://www.clicarity.com/privacy-policy" target="_blank">Privacy Policy</a>
+    <a href="https://www.clicarity.com/terms" target="_blank">Terms & Conditions</a>
+    <a href="https://www.clicarity.com" target="_blank">Visit Full Website</a>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(a => a.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+</script>
+</body>
+</html>

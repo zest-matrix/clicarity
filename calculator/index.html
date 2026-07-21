@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost of Production Delay Calculator — How Much … | Clicarity</title>
+<meta name="description" content="Enter your factory numbers and see exactly how much production delays are costing you every month. Free calculator for Indian manufacturers and MSMEs.">
+<meta property="og:title" content="Cost of Delay Calculator — Clicarity">
+<meta property="og:description" content="See exactly what production delays are costing your Indian factory every month. Free, instant, no signup.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--accent-light:#E8F2F9;--dark:#0E0D0B;--red:#991B1B;--red-light:#FEF2F2;--green:#0A7C52;--green-light:#E6F5EE;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--radius:14px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+.btn{padding:12px 28px;border-radius:100px;font-family:var(--font-body);font-weight:600;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:white}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+.hero{background:var(--dark);padding:56px 5% 44px;text-align:center}
+.hero-inner{max-width:640px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:white;line-height:1.15;margin-bottom:10px;letter-spacing:-0.02em}
+.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.45);line-height:1.75}
+
+/* CALC LAYOUT */
+.calc-wrap{max-width:900px;margin:0 auto;padding:56px 5%;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.inputs-col{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px}
+.inputs-title{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--text);margin-bottom:24px}
+
+.field{margin-bottom:22px}
+.field:last-child{margin-bottom:0}
+.field-label{font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:6px;display:block}
+.field-sub{font-size:0.75rem;color:var(--muted);margin-bottom:8px}
+.field-row{display:flex;align-items:center;gap:0;border:1.5px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.2s}
+.field-row:focus-within{border-color:var(--accent)}
+.field-prefix,.field-suffix{padding:10px 12px;background:var(--bg);font-size:0.85rem;color:var(--muted);font-weight:500;border:none;white-space:nowrap}
+.field-input{flex:1;padding:10px 12px;font-size:0.95rem;font-family:var(--font-body);border:none;outline:none;background:white;color:var(--text);min-width:0}
+.field-slider{width:100%;-webkit-appearance:none;height:4px;border-radius:100px;background:var(--border);outline:none;margin-top:8px}
+.field-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer}
+.slider-labels{display:flex;justify-content:space-between;font-size:0.7rem;color:var(--muted);margin-top:4px}
+
+/* RESULTS */
+.results-col{display:flex;flex-direction:column;gap:16px;position:sticky;top:130px}
+.result-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;text-align:center}
+.result-box.highlight{background:var(--dark);border-color:transparent}
+.result-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px}
+.result-box .result-label{color:var(--muted)}
+.result-box.highlight .result-label{color:rgba(255,255,255,0.35)}
+.result-number{font-family:var(--font-display);font-size:2.4rem;font-weight:800;color:var(--text);line-height:1;margin-bottom:4px}
+.result-box.highlight .result-number{color:white}
+.result-box.red-box .result-number{color:var(--red)}
+.result-sub{font-size:0.78rem;color:var(--muted)}
+.result-box.highlight .result-sub{color:rgba(255,255,255,0.3)}
+
+.insight-box{background:var(--accent-light);border:1px solid #C8DFF0;border-radius:var(--radius);padding:18px}
+.insight-text{font-size:0.85rem;color:var(--accent);line-height:1.65;font-weight:500}
+
+.cta-box{background:var(--accent);border-radius:20px;padding:28px;text-align:center}
+.cta-box h3{font-family:var(--font-display);font-size:1.05rem;font-weight:800;color:white;margin-bottom:8px}
+.cta-box p{font-size:0.82rem;color:rgba(255,255,255,0.7);margin-bottom:16px;line-height:1.6}
+.btn-white{background:white;color:var(--accent);padding:10px 20px;border-radius:100px;font-weight:700;font-size:0.85rem;text-decoration:none;display:inline-flex;gap:6px;align-items:center;transition:all 0.2s}
+.btn-white:hover{transform:translateY(-1px)}
+
+/* ASSUMPTIONS */
+.assumptions{max-width:900px;margin:0 auto;padding:0 5% 48px}
+.assume-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px}
+.assume-title{font-size:0.78rem;font-weight:700;color:var(--muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.08em}
+.assume-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.assume-item{font-size:0.8rem;color:var(--muted);display:flex;gap:8px}
+.assume-item::before{content:'·';color:var(--border)}
+
+footer{background:var(--dark);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.8rem;color:rgba(255,255,255,0.25)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.25);text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,0.7)}
+@media(max-width:700px){.calc-wrap{grid-template-columns:1fr}.results-col{position:static}}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cost of Production Delay Calculator — How Much Are Delays Costing Your Factory? | Clicarity">
+<meta name="twitter:description" content="Enter your factory numbers and see exactly how much production delays are costing you every month. Free calculator for Indian manufacturers and MSMEs.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Free · Instant · No signup</div>
+    <h1>What are production delays costing your factory?</h1>
+    <p class="hero-sub">Enter your numbers below. See your actual monthly and annual loss — before you make any decision about Clicarity.</p>
+  </div>
+</div>
+
+<div class="calc-wrap">
+  <!-- INPUTS -->
+  <div class="inputs-col">
+    <div class="inputs-title">Your factory numbers</div>
+
+    <div class="field">
+      <label class="field-label" for="orderValue">Average order / job value</label>
+      <div class="field-sub">What a typical job is worth to your business</div>
+      <div class="field-row">
+        <div class="field-prefix">₹</div>
+        <input class="field-input" type="number" id="orderValue" value="25000" min="1000" max="10000000" oninput="calculate()">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="ordersPerMonth">Jobs / orders per month</label>
+      <div class="field-sub">Total jobs you complete or attempt in a month</div>
+      <div class="field-row">
+        <input class="field-input" type="number" id="ordersPerMonth" value="30" min="1" max="500" oninput="calculate()">
+        <div class="field-suffix">jobs</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label">% of jobs affected by delays each month</label>
+      <div class="field-sub">How many of your jobs have at least one day of unexpected delay?</div>
+      <input class="field-slider" type="range" id="delayPct" min="5" max="80" value="30" oninput="updateSlider('delayPct','delayPctVal'); calculate()">
+      <div class="slider-labels"><span>5%</span><span id="delayPctVal" style="font-weight:700;color:var(--text)">30%</span><span>80%</span></div>
+    </div>
+
+    <div class="field">
+      <label class="field-label">Average delay per affected job (days)</label>
+      <div class="field-sub">When a job gets delayed, how many days does it typically slip?</div>
+      <input class="field-slider" type="range" id="delayDays" min="0.5" max="7" step="0.5" value="2" oninput="updateSlider('delayDays','delayDaysVal'); calculate()">
+      <div class="slider-labels"><span>0.5d</span><span id="delayDaysVal" style="font-weight:700;color:var(--text)">2 days</span><span>7d</span></div>
+    </div>
+
+    <div class="field">
+      <label class="field-label">Your daily revenue target (optional)</label>
+      <div class="field-sub">Used to calculate opportunity cost of delays — leave as 0 to skip</div>
+      <div class="field-row">
+        <div class="field-prefix">₹</div>
+        <input class="field-input" type="number" id="dailyRevenue" value="0" min="0" oninput="calculate()">
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results-col">
+    <div class="result-box highlight">
+      <div class="result-label">Monthly loss to delays</div>
+      <div class="result-number" id="monthlyLoss">₹0</div>
+      <div class="result-sub">Direct cost of production delays per month</div>
+    </div>
+
+    <div class="result-box red-box">
+      <div class="result-label">Annual loss</div>
+      <div class="result-number" id="annualLoss">₹0</div>
+      <div class="result-sub">What you lose every year at current delay rate</div>
+    </div>
+
+    <div class="result-box">
+      <div class="result-label">Delayed jobs per month</div>
+      <div class="result-number" id="delayedJobs">0</div>
+      <div class="result-sub">Jobs affected by at least one day of delay</div>
+    </div>
+
+    <div class="result-box">
+      <div class="result-label">Cost per delayed job</div>
+      <div class="result-number" id="costPerJob">₹0</div>
+      <div class="result-sub">Average direct cost per delayed job</div>
+    </div>
+
+    <div class="insight-box" id="insightBox">
+      <div class="insight-text" id="insightText">Enter your numbers above to see your personalised insight.</div>
+    </div>
+
+    <div class="cta-box">
+      <h3>See where your delays are happening</h3>
+      <p>A free demo shows you exactly which stages in your factory are causing the most delay — and what it looks like fixed.</p>
+      <a class="btn-white" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo →</a>
+    </div>
+  </div>
+</div>
+
+<div class="assumptions">
+  <div class="assume-box">
+    <div class="assume-title">How this is calculated</div>
+    <div class="assume-grid">
+      <div class="assume-item">Monthly loss = delayed jobs × (order value × delay impact factor)</div>
+      <div class="assume-item">Delay impact factor: 15% of order value per delayed job (conservative)</div>
+      <div class="assume-item">Includes direct costs: client penalties, rush charges, rework, idle time</div>
+      <div class="assume-item">Does not include indirect costs: client relationship damage, lost repeat orders</div>
+      <div class="assume-item">Actual losses are typically 20–35% higher than shown here</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:3rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy">
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+    <a href="https://www.clicarity.com/terms">Terms</a>
+  </div>
+  <div>© 2026 Clicarity &nbsp;·&nbsp; <a href="/mumbai/" style="color:inherit;opacity:0.6">Mumbai</a> · <a href="/surat/" style="color:inherit;opacity:0.6">Surat</a> · <a href="/tirupur/" style="color:inherit;opacity:0.6">Tirupur</a> · <a href="/delhi/" style="color:inherit;opacity:0.6">Delhi</a> · <a href="/pune/" style="color:inherit;opacity:0.6">Pune</a> · <a href="/ludhiana/" style="color:inherit;opacity:0.6">Ludhiana</a></div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n >= 10000000) return '₹' + (n/10000000).toFixed(1) + 'Cr';
+  if (n >= 100000) return '₹' + (n/100000).toFixed(1) + 'L';
+  if (n >= 1000) return '₹' + (n/1000).toFixed(1) + 'K';
+  return '₹' + Math.round(n).toLocaleString('en-IN');
+}
+
+function updateSlider(sliderId, labelId) {
+  const val = document.getElementById(sliderId).value;
+  const label = document.getElementById(labelId);
+  if (sliderId === 'delayPct') label.textContent = val + '%';
+  else label.textContent = val + (val == 1 ? ' day' : ' days');
+}
+
+function calculate() {
+  const orderVal = parseFloat(document.getElementById('orderValue').value) || 0;
+  const ordersPerMonth = parseFloat(document.getElementById('ordersPerMonth').value) || 0;
+  const delayPct = parseFloat(document.getElementById('delayPct').value) / 100;
+  const delayDays = parseFloat(document.getElementById('delayDays').value);
+  const dailyRev = parseFloat(document.getElementById('dailyRevenue').value) || 0;
+
+  const delayedJobs = Math.round(ordersPerMonth * delayPct);
+  const delayImpact = 0.15; // 15% of order value per delayed job
+  const extraDayFactor = Math.min(delayDays * 0.05, 0.25); // extra per day
+  const totalImpact = delayImpact + extraDayFactor;
+
+  const monthlyLoss = delayedJobs * orderVal * totalImpact;
+  const opportunityCost = dailyRev > 0 ? delayedJobs * delayDays * (dailyRev / ordersPerMonth) * 0.3 : 0;
+  const totalMonthly = monthlyLoss + opportunityCost;
+  const annual = totalMonthly * 12;
+  const costPerJob = delayedJobs > 0 ? totalMonthly / delayedJobs : 0;
+
+  document.getElementById('monthlyLoss').textContent = fmt(totalMonthly);
+  document.getElementById('annualLoss').textContent = fmt(annual);
+  document.getElementById('delayedJobs').textContent = delayedJobs;
+  document.getElementById('costPerJob').textContent = fmt(costPerJob);
+
+  // Insight text
+  let insight = '';
+  if (totalMonthly < 10000) {
+    insight = `At ${Math.round(delayPct*100)}% delay rate, your losses are relatively low — but ${delayedJobs} delayed jobs per month still means ${delayedJobs * 12} disappointed clients per year.`;
+  } else if (totalMonthly < 100000) {
+    insight = `You're losing approximately ${fmt(totalMonthly)} per month to delays. Over a year, that's ${fmt(annual)} — enough to hire another operator, upgrade equipment, or invest in a new client relationship.`;
+  } else {
+    insight = `${fmt(totalMonthly)} per month is a significant loss. At this level, production visibility isn't a nice-to-have — every delayed job is a direct hit to margin. Clicarity typically pays for itself in the first week.`;
+  }
+  document.getElementById('insightText').textContent = insight;
+}
+
+calculate();
+</script>
+</body>
+</html>

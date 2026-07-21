@@ -1,0 +1,33 @@
+# robots.txt — clicarity.com
+# Updated: 2026-03-19
+
+User-agent: *
+Allow: /
+
+# Allow all major crawlers including LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://www.clicarity.com/sitemap.xml

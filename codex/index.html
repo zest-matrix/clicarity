@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex — Quality, Compliance &amp; Certification Guide | Clicarity</title>
+<meta name="description" content="Free reference guide for every quality and compliance standard for Indian businesses. ISO 9001, FSSAI, HACCP, ISO 27001, GMP, GST and 30 more. Official sources only.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://clicarity.com/codex">
+<meta property="og:title" content="Codex — Quality &amp; Compliance Guide | Clicarity">
+<meta property="og:description" content="Every quality and compliance standard for Indian businesses. Free reference. Official sources only.">
+<meta property="og:url" content="https://clicarity.com/codex">
+<link rel="icon" type="image/png" href="https://click.wa.expert/Images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f9f8f6;--surface:#ffffff;--text:#0f0e0d;--muted:#6b6860;--accent:#186eac;--accent-light:#e8f2f9;--border:#e8e5e0;--radius:14px;--fd:'Plus Jakarta Sans',sans-serif;--fb:'Inter',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(249,248,246,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;display:block}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--muted);font-size:.88rem;font-weight:500;text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-cta a{padding:9px 20px;border-radius:100px;font-size:.88rem;font-weight:500;text-decoration:none;border:1.5px solid var(--border);color:var(--text);transition:all .2s;background:transparent}
+.nav-cta a:hover{border-color:var(--accent);color:var(--accent)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .25s}
+.mob{display:none;position:fixed;inset:0;z-index:200;background:var(--bg);flex-direction:column;padding:20px 5% 32px}
+.mob.open{display:flex}
+.mob-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.mob-close{background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--text);line-height:1}
+.mob-links{display:flex;flex-direction:column}
+.mob-links a{padding:13px 0;font-size:1rem;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border)}
+.mob-links a:last-child{border-bottom:none}
+.mob-cta{margin-top:24px}
+.mob-cta a{display:block;text-align:center;padding:13px;border-radius:100px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem}
+.hero{padding:56px 5% 36px;max-width:1180px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--accent-light);color:var(--accent);font-size:.73rem;font-weight:700;letter-spacing:.4px;padding:5px 13px;border-radius:100px;margin-bottom:16px;font-family:var(--fd)}
+.hero-badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%}
+.hero h1{font-family:var(--fd);font-size:clamp(1.9rem,4vw,3rem);font-weight:800;line-height:1.12;margin-bottom:14px}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:560px;margin-bottom:24px}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap}
+.hero-stat{font-size:.83rem;color:var(--muted)}
+.hero-stat strong{color:var(--text);font-weight:700;font-family:var(--fd)}
+.also-strip{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:11px 5%}
+.also-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.also-label{font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
+.also-links{display:flex;gap:7px;flex-wrap:wrap}
+.also-link{font-size:.78rem;font-weight:600;color:var(--accent);background:var(--accent-light);padding:4px 11px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:opacity .15s}
+.also-link:hover{opacity:.75}
+.search-wrap{padding:28px 5% 0;max-width:1180px;margin:0 auto}
+.search-box{position:relative;max-width:600px}
+.search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.search-input{width:100%;padding:15px 20px 15px 48px;border:2px solid var(--accent);border-radius:100px;font-size:1rem;font-family:var(--fb);background:var(--surface);color:var(--text);outline:none;transition:all .2s;box-shadow:0 4px 20px rgba(24,110,172,.12)}
+.search-input::placeholder{color:var(--muted)}
+.search-input:focus{border-color:var(--accent);box-shadow:0 4px 28px rgba(24,110,172,.2)}
+.tabs-wrap{padding:20px 5% 0;max-width:1180px;margin:0 auto}
+.tabs{display:flex;gap:7px;flex-wrap:wrap}
+.tab{padding:6px 15px;border-radius:100px;font-size:.8rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:transparent;color:var(--muted);font-family:var(--fb);transition:all .15s}
+.tab:hover{border-color:var(--accent);color:var(--accent)}
+.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.grid-wrap{max-width:1180px;margin:0 auto;padding:24px 5% 48px}
+.pillar{margin-bottom:36px}
+.pillar.gone{display:none}
+.pillar-label{font-family:var(--fd);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px 14px;text-decoration:none;display:flex;flex-direction:column;transition:all .2s;color:inherit}
+.card:hover{box-shadow:0 6px 24px rgba(24,110,172,.1);transform:translateY(-2px);border-color:rgba(24,110,172,.25)}
+.card-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;flex-shrink:0;background:var(--accent-light)}
+.card-icon svg{width:15px;height:15px}
+.card-name{font-family:var(--fd);font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:5px;line-height:1.3}
+.card-desc{font-size:.77rem;color:var(--muted);line-height:1.55;margin-bottom:10px;flex:1}
+.card-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.card-tag{font-size:.62rem;font-weight:600;padding:2px 8px;border-radius:100px;background:var(--bg);border:1px solid var(--border);color:var(--muted)}
+.card-tag.mandatory{background:var(--accent-light);color:var(--accent);border-color:var(--accent-light)}
+.card-verified{font-size:.63rem;color:var(--muted);display:flex;align-items:center;gap:5px;margin-top:auto;padding-top:8px;border-top:1px solid var(--border)}
+.card-dot{width:5px;height:5px;border-radius:50%;background:#16a34a;flex-shrink:0}
+.no-results{text-align:center;padding:48px 0;color:var(--muted);font-size:.9rem;display:none}
+footer{background:#0f0e0d;color:rgba(255,255,255,.4);padding:36px 5%;margin-top:16px}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.footer-logo img{height:26px;opacity:.55}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.78rem;transition:color .15s}
+.footer-links a:hover{color:rgba(255,255,255,.75)}
+.footer-copy{width:100%;text-align:center;font-size:.75rem;margin-top:10px;opacity:.35}
+.wa-fab{position:fixed;bottom:22px;right:22px;width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:90;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:transform .15s}
+.wa-fab:hover{transform:scale(1.08)}
+@media(max-width:1024px){.card-grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.ham{display:flex}.hero{padding:40px 5% 28px}.card-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.card-grid{grid-template-columns:1fr}.hero h1{font-size:1.7rem}}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Codex — Quality, Compliance &amp; Certification Guide | Clicarity">
+<meta name="twitter:description" content="Free reference guide for every quality and compliance standard for Indian businesses. ISO 9001, FSSAI, HACCP, ISO 27001, GMP, GST and 30 more. Official sources ">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="mob" id="mob">
+  <div class="mob-top">
+    <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:2.2rem">
+    <button class="mob-close" id="mobClose">&times;</button>
+  </div>
+  <div class="mob-links">
+    <a href="/codex">Codex Home</a>
+    <a href="/codex/glossary">Glossary</a>
+    <a href="/codex/compare">Compare</a>
+    <a href="/codex/starter">Starter Packs</a>
+    <a href="/codex/checklist">Checklists</a>
+    <a href="https://www.clicarity.com">Clicarity.com</a>
+  </div>
+  <div class="mob-cta">
+    <a href="https://click.wa.expert" target="_blank" rel="noopener">Login</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge"><span class="hero-badge-dot"></span>Free &middot; Official sources only &middot; No agents</div>
+  <h1>Every Certification<br>Your Business Needs.<br><span>One Place.</span></h1>
+  <p class="hero-sub">Every quality, compliance, and regulatory standard for Indian businesses explained clearly. What it is, who needs it, what auditors check. Official sources only.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>33</strong> certification guides</div>
+    <div class="hero-stat"><strong>187</strong> glossary terms</div>
+    <div class="hero-stat"><strong>9</strong> audit checklists</div>
+    <div class="hero-stat"><strong>7</strong> comparisons</div>
+    <div class="hero-stat"><strong>5</strong> industry starter packs</div>
+  </div>
+</div>
+
+<div class="also-strip">
+  <div class="also-inner">
+    <span class="also-label">Also on Codex</span>
+    <div class="also-links">
+      <a href="/codex/compare" class="also-link">&#9878; Compare standards</a>
+      <a href="/codex/starter" class="also-link">&#128218; Starter packs</a>
+      <a href="/codex/checklist" class="also-link">&#9745; Audit checklists</a>
+      <a href="/codex/glossary" class="also-link">&#128196; Glossary</a>
+    </div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <div class="search-box">
+    <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M12 12l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <input class="search-input" id="searchInput" type="search" placeholder="Search — ISO 9001, FSSAI, HACCP, GST&hellip;" autocomplete="off" spellcheck="false">
+  </div>
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-cat="all">All</button>
+    <button class="tab" data-cat="quality">Quality &amp; Ops</button>
+    <button class="tab" data-cat="food">Food &amp; Safety</button>
+    <button class="tab" data-cat="environment">Environment</button>
+    <button class="tab" data-cat="security">IT &amp; Security</button>
+    <button class="tab" data-cat="health">Health &amp; Safety</button>
+    <button class="tab" data-cat="export">Export &amp; Trade</button>
+    <button class="tab" data-cat="finance">Finance &amp; Legal</button>
+    <button class="tab" data-cat="hr">HR &amp; People</button>
+    <button class="tab" data-cat="digital">Digital &amp; IT</button>
+  </div>
+</div>
+
+<div class="grid-wrap">
+
+  <div class="pillar" id="p-quality">
+    <div class="pillar-label">Quality &amp; Operations</div>
+    <div class="card-grid">
+      <a href="/codex/iso9001" class="card" data-cat="quality" data-search="iso 9001 quality management system qms manufacturing services audit tender export">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 10l2.5 2.5 4.5-4.5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">ISO 9001</div>
+        <div class="card-desc">International quality management system. Required for government tenders, export contracts, and large B2B supply chains.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Required for tenders</span><span class="card-tag">QMS</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/iatf16949" class="card" data-cat="quality" data-search="iatf 16949 automotive quality oem tier1 tier2 apqp ppap fmea maruti tata">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="var(--accent)" stroke-width="1.5"/><circle cx="10" cy="10" r="3" stroke="var(--accent)" stroke-width="1.5"/></svg></div>
+        <div class="card-name">IATF 16949</div>
+        <div class="card-desc">Automotive supply chain quality standard. Mandatory for Tier 1 and Tier 2 suppliers to all major OEMs in India.</div>
+        <div class="card-tags"><span class="card-tag mandatory">OEM mandatory</span><span class="card-tag">Automotive</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/bis-isi-mark" class="card" data-cat="quality" data-search="bis isi mark bureau indian standards mandatory product certification electrical cement helmet">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l1.5 4.5H16l-3.5 2.5 1.5 4.5L10 12l-4 2.5 1.5-4.5L4 7.5h4.5z" stroke="var(--accent)" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">BIS / ISI Mark</div>
+        <div class="card-desc">India's mandatory product certification. Required for 500+ regulated categories including electrical equipment, cement, and helmets.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Mandatory products</span><span class="card-tag">BIS</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/six-sigma-lean" class="card" data-cat="quality" data-search="six sigma lean dmaic green belt black belt kaizen 5s waste defect reduction">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M4 16L10 4l6 12" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 11h7" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">Six Sigma &amp; Lean</div>
+        <div class="card-desc">Process improvement methodologies. DMAIC for defect reduction. Belt certification through ASQ or IASSC.</div>
+        <div class="card-tags"><span class="card-tag">DMAIC</span><span class="card-tag">Kaizen</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/sops" class="card" data-cat="quality" data-search="sop standard operating procedure documentation written audit process">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M5 6h10M5 10h10M5 14h6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">SOPs</div>
+        <div class="card-desc">Standard Operating Procedures. Foundation of every certification. If it is not written down, it does not exist.</div>
+        <div class="card-tags"><span class="card-tag">Documentation</span><span class="card-tag">All certs</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/tqm" class="card" data-cat="quality" data-search="tqm total quality management continuous improvement culture pdca deming">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 10l2.5 2.5 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">TQM</div>
+        <div class="card-desc">Total Quality Management. A company-wide culture where every person and every process is committed to quality every day.</div>
+        <div class="card-tags"><span class="card-tag">Culture</span><span class="card-tag">Improvement</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/internal-audit" class="card" data-cat="quality" data-search="internal audit iso 9001 qms capa nonconformance auditor programme annual">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M4 5h12M4 10h8M4 15h5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">Internal Audit</div>
+        <div class="card-desc">Mandatory for all ISO standards. Annual programme, independent auditors, CAPA for every finding raised.</div>
+        <div class="card-tags"><span class="card-tag">ISO requirement</span><span class="card-tag">CAPA</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/skill-matrix" class="card" data-cat="quality" data-search="skill matrix training competence records iso 9001 clause 7.2 audit">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" rx="1.5" stroke="var(--accent)" stroke-width="1.3"/><rect x="11" y="3" width="6" height="6" rx="1.5" stroke="var(--accent)" stroke-width="1.3"/><rect x="3" y="11" width="6" height="6" rx="1.5" stroke="var(--accent)" stroke-width="1.3"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="var(--accent)" stroke-width="1.3"/></svg></div>
+        <div class="card-name">Skill Matrix</div>
+        <div class="card-desc">Competence records for ISO audits. Maps every role's required skills against current levels. Training attendance alone is not sufficient.</div>
+        <div class="card-tags"><span class="card-tag">ISO 9001 cl.7.2</span><span class="card-tag">HR</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/iso13485" class="card" data-cat="quality" data-search="iso 13485 medical devices qms dhr dhf risk mdr 2017 cdsco">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="card-name">ISO 13485</div>
+        <div class="card-desc">Quality management for medical device manufacturers. Required for CE marking, FDA, and India MDR 2017 Class B and above.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Medical devices</span><span class="card-tag">CDSCO</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar" id="p-food">
+    <div class="pillar-label">Food &amp; Safety</div>
+    <div class="card-grid">
+      <a href="/codex/fssai" class="card" data-cat="food" data-search="fssai food safety standards authority india licence registration mandatory food business turnover">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">FSSAI</div>
+        <div class="card-desc">India's mandatory food safety licence. Every commercial food business must hold a valid FSSAI licence before operating.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Mandatory India</span><span class="card-tag">Food</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/haccp" class="card" data-cat="food" data-search="haccp hazard analysis critical control points ccp food safety 7 principles export">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l7 14H3L10 3z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 9v4M10 14.5v.5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">HACCP</div>
+        <div class="card-desc">7 Codex food safety principles. Identifies critical control points in food production. Foundation for ISO 22000, BRCGS, and FSSC 22000.</div>
+        <div class="card-tags"><span class="card-tag">CCP</span><span class="card-tag">Food export</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/iso22000" class="card" data-cat="food" data-search="iso 22000 food safety management system fsms prp international global export retail">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 10l2.5 2.5 4.5-4.5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">ISO 22000</div>
+        <div class="card-desc">International Food Safety Management System. HACCP inside a full management system. Required by major retail chains and hotel groups.</div>
+        <div class="card-tags"><span class="card-tag">FSMS</span><span class="card-tag">Retail buyers</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/brc-fssc22000" class="card" data-cat="food" data-search="brcgs fssc 22000 food safety gfsi retail supermarket tesco uk fmcg multinational">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l1.5 4.5H16l-3.5 2.5 1.5 4.5L10 12l-4 2.5 1.5-4.5L4 7.5h4.5z" stroke="var(--accent)" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">BRCGS / FSSC 22000</div>
+        <div class="card-desc">GFSI-benchmarked food safety standards. BRCGS for UK supermarkets. FSSC 22000 for multinational food manufacturers.</div>
+        <div class="card-tags"><span class="card-tag">GFSI</span><span class="card-tag">UK retail</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/gmp" class="card" data-cat="food" data-search="gmp good manufacturing practice schedule m pharma ayurvedic drugs cdsco bmr batch">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M6 3h8a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="var(--accent)" stroke-width="1.5"/><path d="M8 7h4M8 10h4M8 13h2" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <div class="card-name">GMP &mdash; Schedule M</div>
+        <div class="card-desc">Good Manufacturing Practice. Mandatory for all drug and pharmaceutical manufacturers in India. Revised Schedule M 2023.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Drug licence req.</span><span class="card-tag">Pharma</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar" id="p-environment">
+    <div class="pillar-label">Environment &amp; Energy</div>
+    <div class="card-grid">
+      <a href="/codex/iso14001" class="card" data-cat="environment" data-search="iso 14001 environmental management system ems sustainability aspects spcb eu export">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3c1 3 4 5 4 8a4 4 0 01-8 0c0-3 3-5 4-8z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">ISO 14001</div>
+        <div class="card-desc">Environmental management system. Required by EU buyers and sustainability-focused supply chains. Integrates with ISO 9001.</div>
+        <div class="card-tags"><span class="card-tag">EMS</span><span class="card-tag">EU buyers</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/esg-brsr" class="card" data-cat="environment" data-search="esg brsr sebi listed companies environmental social governance sustainability reporting">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 16l5-6.5 4 4 4-7 3.5 4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">ESG / BRSR</div>
+        <div class="card-desc">Business Responsibility and Sustainability Report. Mandatory for top 1000 listed companies under SEBI LODR from FY 2022-23.</div>
+        <div class="card-tags"><span class="card-tag mandatory">SEBI mandatory</span><span class="card-tag">Listed cos.</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/greenpro" class="card" data-cat="environment" data-search="greenpro eco label cii india green product certification igbc sustainability">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 17c0-5 4-8 4-8s-4 0-4 3c0-3-4-3-4-3s4 3 4 8z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">GreenPro</div>
+        <div class="card-desc">India's national eco-label administered by CII-ITC. Certifies products meet environmental criteria across their full life cycle.</div>
+        <div class="card-tags"><span class="card-tag">Eco-label</span><span class="card-tag">CII</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/iso50001" class="card" data-cat="environment" data-search="iso 50001 energy management system seu enpi baseline electricity consumption efficiency">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M11 3l-4 8h6l-4 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">ISO 50001</div>
+        <div class="card-desc">Energy management system. Requires energy baseline, Significant Energy Uses, and measurable improvement targets.</div>
+        <div class="card-tags"><span class="card-tag">EnMS</span><span class="card-tag">Energy</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar" id="p-security">
+    <div class="pillar-label">IT &amp; Information Security</div>
+    <div class="card-grid">
+      <a href="/codex/iso27001" class="card" data-cat="security" data-search="iso 27001 information security isms soa annex a cyber data protection saas enterprise">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l7 3v5c0 3.5-3 6-7 7-4-1-7-3.5-7-7V6l7-3z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">ISO 27001</div>
+        <div class="card-desc">International information security management system. 93 Annex A controls. Required by European and Indian enterprise buyers.</div>
+        <div class="card-tags"><span class="card-tag">ISMS</span><span class="card-tag">Enterprise</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/dpdp-act" class="card" data-cat="security" data-search="dpdp act 2023 india digital personal data protection privacy meity mandatory penalty">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="4" y="8" width="12" height="9" rx="2" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 8V6a3 3 0 016 0v2" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">DPDP Act 2023</div>
+        <div class="card-desc">India's Digital Personal Data Protection Act. Mandatory for all organisations processing personal data of Indians. Penalties up to Rs 250 crore.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Indian law</span><span class="card-tag">Privacy</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/soc2" class="card" data-cat="security" data-search="soc 2 security audit saas aicpa trust services us enterprise cpa type ii">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l7 3v5c0 3.5-3 6-7 7-4-1-7-3.5-7-7V6l7-3z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 10l2 2 4-4" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">SOC 2</div>
+        <div class="card-desc">US enterprise security attestation from a licensed CPA firm. Type II covers 12-month operating effectiveness. Required by US SaaS buyers.</div>
+        <div class="card-tags"><span class="card-tag">US market</span><span class="card-tag">SaaS</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar" id="p-health">
+    <div class="pillar-label">Health &amp; Safety</div>
+    <div class="card-grid">
+      <a href="/codex/iso45001" class="card" data-cat="health" data-search="iso 45001 occupational health safety ohs management workers factory ohsas 18001 replaced">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z" stroke="var(--accent)" stroke-width="1.5"/><path d="M10 7v4l2.5 2.5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">ISO 45001</div>
+        <div class="card-desc">Occupational health and safety management. Replaced OHSAS 18001 (withdrawn March 2021). Worker participation mandatory under Clause 5.4.</div>
+        <div class="card-tags"><span class="card-tag">OH&amp;S</span><span class="card-tag">Factory</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/factories-act" class="card" data-cat="health" data-search="factories act 1948 india mandatory factory licence 10 workers inspector register compliance">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 17V8l4-4 4 4 4-4v13H3z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 17v-5h4v5" stroke="var(--accent)" stroke-width="1.3"/></svg></div>
+        <div class="card-name">Factories Act 1948</div>
+        <div class="card-desc">Mandatory India legislation for all factories. Covers licences, working hours, safety, and welfare. Required for 10 or more power-using workers.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Indian law</span><span class="card-tag">Factory</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar" id="p-export">
+    <div class="pillar-label">Export &amp; Trade</div>
+    <div class="card-grid">
+      <a href="/codex/ce-marking" class="card" data-cat="export" data-search="ce marking eu europe mandatory product safety conformity directives technical file">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M13 7.5A5 5 0 108 15h5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">CE Marking</div>
+        <div class="card-desc">Mandatory EU conformity mark. Required for regulated products in EU, EEA, and Northern Ireland. Self-declared against applicable EU Directives.</div>
+        <div class="card-tags"><span class="card-tag mandatory">EU mandatory</span><span class="card-tag">Export</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/rohs-reach" class="card" data-cat="export" data-search="rohs reach eu hazardous substances chemicals electronics restriction lead mercury cadmium svhc echa">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l7 14H3L10 3z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 9v4M10 14.5v.5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">RoHS &amp; REACH</div>
+        <div class="card-desc">EU hazardous substance regulations for electronics and chemicals. SVHC candidate list updated twice yearly by ECHA.</div>
+        <div class="card-tags"><span class="card-tag mandatory">EU mandatory</span><span class="card-tag">Chemicals</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/apeda-agmark" class="card" data-cat="export" data-search="apeda agmark agricultural export india rcmc registration grading basmati rice food spice">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3c0 4-4 6-4 10h8c0-4-4-6-4-10z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 17h6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">APEDA &amp; AGMARK</div>
+        <div class="card-desc">India's agricultural export registrations. RCMC mandatory before first export of scheduled products. AGMARK for grading certification.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Export mandatory</span><span class="card-tag">Agriculture</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/gots-oekotex" class="card" data-cat="export" data-search="gots oeko-tex textile organic cotton chemical safety garment export india eu us buyer">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M5 4c2 0 5 2 5 6s3 6 5 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/><path d="M15 4c-2 0-5 2-5 6s-3 6-5 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">GOTS &amp; OEKO-TEX</div>
+        <div class="card-desc">Textile sustainability certifications. GOTS for organic fibre chain of custody. OEKO-TEX for harmful substance testing on finished articles.</div>
+        <div class="card-tags"><span class="card-tag">Textile</span><span class="card-tag">EU buyers</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar" id="p-finance">
+    <div class="pillar-label">Finance &amp; Legal</div>
+    <div class="card-grid">
+      <a href="/codex/gst-compliance" class="card" data-cat="finance" data-search="gst compliance india reconciliation itc gstr filing process tax audit sop">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M5 3h10a1 1 0 011 1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 7h6M7 10h6M7 13h3" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <div class="card-name">GST Compliance</div>
+        <div class="card-desc">GST filing processes, ITC reconciliation, and e-invoicing for Indian businesses. GSTR-2B reconciliation before every filing.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Indian law</span><span class="card-tag">Tax</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+       </div>
+  </div>
+
+  <div class="pillar" id="p-hr">
+    <div class="pillar-label">HR &amp; People</div>
+    <div class="card-grid">
+      <a href="/codex/sa8000" class="card" data-cat="hr" data-search="sa8000 social accountability labour rights fair wages working hours export western buyers">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3" stroke="var(--accent)" stroke-width="1.5"/><path d="M4 17c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">SA8000</div>
+        <div class="card-desc">Social accountability standard. 9 worker rights elements. Worker interviews mandatory. Required by European and US fashion and consumer goods buyers.</div>
+        <div class="card-tags"><span class="card-tag">Social</span><span class="card-tag">Export</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/people-sops" class="card" data-cat="hr" data-search="people sop hr onboarding appraisal grievance exit documentation posh factories act">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M5 6h10M5 10h8M5 14h5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="card-name">People SOPs</div>
+        <div class="card-desc">HR documentation every ISO audit checks. Onboarding, appraisal, grievance, exit, and POSH. Written procedures, not informal practice.</div>
+        <div class="card-tags"><span class="card-tag">HR</span><span class="card-tag">ISO req.</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="pillar" id="p-digital">
+    <div class="pillar-label">Digital &amp; IT</div>
+    <div class="card-grid">
+      <a href="/codex/itil" class="card" data-cat="digital" data-search="itil it service management incident change problem axelos peoplecert service desk itsm">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 9h6M7 12h4" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <div class="card-name">ITIL</div>
+        <div class="card-desc">World's most adopted IT service management framework. ITIL 4 Foundation via PeopleCert. Required in many IT outsourcing contracts.</div>
+        <div class="card-tags"><span class="card-tag">ITSM</span><span class="card-tag">IT services</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/cmmi" class="card" data-cat="digital" data-search="cmmi capability maturity model software it services isaca levels 3 government defence tender">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M4 16V8l3-3 3 3 3-3 3 3v8" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <div class="card-name">CMMI</div>
+        <div class="card-desc">Capability Maturity Model. Level 3 mandatory for most government and defence IT contracts in India. Appraised by ISACA-registered Lead Appraisers.</div>
+        <div class="card-tags"><span class="card-tag mandatory">Govt IT req.</span><span class="card-tag">Software</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+      <a href="/codex/it-sops" class="card" data-cat="digital" data-search="it sop backup access control incident response change management iso 27001 soc 2">
+        <div class="card-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l7 3v5c0 3.5-3 6-7 7-4-1-7-3.5-7-7V6l7-3z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 10h4M10 8v4" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <div class="card-name">IT SOPs</div>
+        <div class="card-desc">IT documented procedures for incident response, change management, access control, and backup. Required by ISO 27001, SOC 2, and PCI-DSS.</div>
+        <div class="card-tags"><span class="card-tag">ISO 27001</span><span class="card-tag">SOC 2</span></div>
+        <div class="card-verified"><span class="card-dot"></span>Verified March 2026</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="no-results" id="noResults">No certifications match your search. Try a different keyword.</div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity"></div>
+    <div class="footer-links">
+      <a href="/codex">Codex Home</a>
+      <a href="/codex/glossary">Glossary</a>
+      <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy Policy</a>
+      <a href="https://www.clicarity.com/terms">Terms</a>
+      <a href="https://www.clicarity.com">Clicarity.com</a>
+    </div>
+  </div>
+  <div class="footer-copy">&copy; 2026 Clicarity. All rights reserved. &middot; Mumbai, Maharashtra &middot; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7018151c1c1f30131c191311021904095e131f1d">[email&#160;protected]</a></div>
+</footer>
+
+<a href="https://wa.me/919867800451" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.49"/></svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mob');
+const mobClose = document.getElementById('mobClose');
+ham.addEventListener('click', function() { mob.classList.add('open'); ham.classList.add('open'); });
+mobClose.addEventListener('click', function() { mob.classList.remove('open'); ham.classList.remove('open'); });
+mob.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { mob.classList.remove('open'); ham.classList.remove('open'); }); });
+document.querySelectorAll('.tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+    this.classList.add('active');
+    filterCards(this.dataset.cat, document.getElementById('searchInput').value.trim().toLowerCase());
+  });
+});
+document.getElementById('searchInput').addEventListener('input', function() {
+  var q = this.value.trim().toLowerCase();
+  var cat = document.querySelector('.tab.active').dataset.cat;
+  filterCards(cat, q);
+});
+function filterCards(cat, q) {
+  var total = 0;
+  document.querySelectorAll('.pillar').forEach(function(pillar) {
+    var visible = 0;
+    pillar.querySelectorAll('.card').forEach(function(card) {
+      var matchCat = cat === 'all' || card.dataset.cat === cat;
+      var matchQ = !q || card.dataset.search.includes(q) || card.querySelector('.card-name').textContent.toLowerCase().includes(q);
+      var show = matchCat && matchQ;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    pillar.classList.toggle('gone', visible === 0);
+    total += visible;
+  });
+  document.getElementById('noResults').style.display = total === 0 ? 'block' : 'none';
+}
+</script>
+
+</body>
+</html>

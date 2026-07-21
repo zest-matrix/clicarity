@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clicarity ISO Checklist</title>
+<meta name="description" content="Free ISO 9001 internal audit checklist for Indian manufacturers. Download and use immediately — no signup required. Built by Clicarity.">
+<meta property="og:title" content="Clicarity ISO Checklist">
+<meta property="og:description" content="Free ISO 9001 internal audit checklist for Indian manufacturers. Download and use immediately — no signup required. Built by Clicarity.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --red:#E84545; --amber:#F5A623; --green:#2ECC71;
+  --blue:#1B6CA8; --purple:#7B5EA7; --teal:#0F6E56;
+  --light:#F8F7F4; --ink:#1A1A2E; --muted:#6B6B7B; --border:#E2E0DC;
+}
+body { font-family:'Nunito Sans',sans-serif; background:var(--light); color:var(--ink); padding:28px 20px 80px; max-width:860px; margin:0 auto; }
+
+/* HEADER */
+.header { text-align:center; margin-bottom:32px; padding:28px 24px; background:var(--blue); border-radius:20px; color:white; }
+.header .logo { font-family:'Nunito',sans-serif; font-weight:900; font-size:30px; letter-spacing:-1px; margin-bottom:4px; }
+.header h1 { font-family:'Nunito',sans-serif; font-weight:800; font-size:20px; opacity:.95; margin-bottom:6px; }
+.header p { font-size:13px; opacity:.75; line-height:1.5; }
+
+/* HOW TO USE */
+.how-to { background:white; border-radius:14px; padding:18px 22px; margin-bottom:28px; border:2px solid var(--border); }
+.how-to h2 { font-family:'Nunito',sans-serif; font-weight:800; font-size:14px; color:var(--blue); margin-bottom:10px; text-transform:uppercase; letter-spacing:.5px; }
+.legend { display:flex; gap:18px; flex-wrap:wrap; }
+.legend-item { display:flex; align-items:center; gap:7px; font-size:12px; font-weight:600; }
+.dot { width:18px; height:18px; border-radius:50%; flex-shrink:0; }
+.dot.red { background:var(--red); } .dot.amber { background:var(--amber); } .dot.green { background:var(--green); }
+
+/* PROGRESS */
+.progress-wrap { background:white; border-radius:14px; padding:16px 22px; margin-bottom:28px; border:2px solid var(--border); position:sticky; top:10px; z-index:10; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+.progress-label { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.progress-label span:first-child { font-family:'Nunito',sans-serif; font-weight:800; font-size:13px; }
+.progress-label span:last-child { font-family:'Nunito',sans-serif; font-weight:900; font-size:17px; color:var(--blue); }
+.progress-bar { height:11px; background:var(--border); border-radius:8px; overflow:hidden; }
+.progress-fill { height:100%; background:linear-gradient(90deg,var(--blue),var(--green)); border-radius:8px; transition:width .4s ease; width:0%; }
+
+/* PHASE */
+.phase { margin-bottom:32px; }
+.phase-header { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.phase-number { font-family:'Nunito',sans-serif; font-weight:900; font-size:13px; width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; flex-shrink:0; }
+.phase-title { font-family:'Nunito',sans-serif; font-weight:900; font-size:19px; }
+.phase-sub { font-size:11px; color:var(--muted); font-weight:600; margin-top:2px; }
+
+/* TASK CARD */
+.task-card { background:white; border-radius:13px; padding:16px 18px; margin-bottom:8px; border:2px solid var(--border); display:grid; grid-template-columns:34px 1fr auto; gap:12px; align-items:start; }
+.task-card.done { background:#F9FFF9; border-color:#C8F0D8; }
+.task-card.done .task-title { text-decoration:line-through; color:var(--muted); }
+.checkbox { width:30px; height:30px; border-radius:7px; border:2.5px solid var(--border); margin-top:2px; flex-shrink:0; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:17px; transition:all .15s; background:var(--light); }
+.checkbox:hover { border-color:var(--green); background:#f0fdf4; }
+.checkbox.checked { background:var(--green); border-color:var(--green); color:white; }
+.task-title { font-family:'Nunito',sans-serif; font-weight:800; font-size:14px; color:var(--ink); margin-bottom:4px; line-height:1.35; }
+.task-desc { font-size:12.5px; color:var(--muted); line-height:1.6; }
+.task-desc strong { color:var(--ink); font-weight:700; }
+.task-tag { font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; white-space:nowrap; align-self:start; margin-top:3px; text-transform:uppercase; letter-spacing:.3px; }
+.tag-9001 { background:#E1F5EE; color:#0F6E56; }
+.tag-27001 { background:#EEEDFE; color:#534AB7; }
+.tag-both { background:#E6F1FB; color:#1B6CA8; }
+
+/* FIND IT BOX — where in Puneet's doc */
+.find-it {
+  background:#F0F7FF;
+  border:2px solid #B5D4F4;
+  border-radius:10px;
+  padding:12px 16px;
+  margin-top:7px;
+  margin-left:46px;
+  margin-bottom:4px;
+}
+.find-it .find-label {
+  font-family:'Nunito',sans-serif;
+  font-weight:800;
+  font-size:11px;
+  color:#1B6CA8;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  margin-bottom:5px;
+}
+.find-it p { font-size:12.5px; color:#154F82; line-height:1.55; }
+.find-it p strong { color:#0D3A6B; }
+
+/* ASK BOX */
+.ask-box { background:#FFFBF0; border:2px dashed var(--amber); border-radius:10px; padding:12px 16px; margin-top:7px; margin-left:46px; margin-bottom:4px; }
+.ask-box .ask-label { font-family:'Nunito',sans-serif; font-weight:800; font-size:11px; color:#C27A00; text-transform:uppercase; letter-spacing:.4px; margin-bottom:5px; }
+.ask-box p { font-size:12.5px; color:#7A5500; line-height:1.55; }
+
+/* CONTENT BOXES — embedded content from toolkit */
+.content-box { background:#FAFAFA; border:1.5px solid var(--border); border-radius:10px; padding:14px 16px; margin-top:10px; margin-left:0; }
+.content-box .content-label { font-family:'Nunito',sans-serif; font-weight:800; font-size:11px; text-transform:uppercase; letter-spacing:.4px; margin-bottom:8px; }
+.content-box.green-box { background:#E1F5EE; border-color:#5DCAA5; }
+.content-box.green-box .content-label { color:#0F6E56; }
+.content-box.purple-box { background:#EEEDFE; border-color:#AFA9EC; }
+.content-box.purple-box .content-label { color:#534AB7; }
+.content-box.blue-box { background:#E6F1FB; border-color:#85B7EB; }
+.content-box.blue-box .content-label { color:#1B6CA8; }
+.content-box.amber-box { background:#FAEEDA; border-color:#FAC775; }
+.content-box.amber-box .content-label { color:#BA7517; }
+.content-text { font-size:12.5px; color:var(--ink); line-height:1.65; font-style:italic; }
+.content-item { font-size:12.5px; color:var(--ink); line-height:1.7; padding-left:14px; position:relative; }
+.content-item::before { content:"•"; position:absolute; left:0; color:var(--muted); }
+.scope-check { margin-top:8px; font-size:12px; font-weight:700; color:var(--muted); display:flex; align-items:center; gap:6px; }
+.scope-check input { width:16px; height:16px; cursor:pointer; }
+.placeholder-row { display:flex; gap:8px; margin-top:6px; align-items:baseline; font-size:12.5px; }
+.placeholder-label { font-weight:700; color:var(--ink); min-width:180px; flex-shrink:0; }
+.placeholder-line { border-bottom:1.5px solid var(--border); flex:1; min-width:80px; height:16px; }
+
+/* PHASE COLOURS */
+.p1 .phase-number { background:#E84545; } .p1 .phase-title { color:#E84545; }
+.p2 .phase-number { background:#F5A623; } .p2 .phase-title { color:#C07800; }
+.p3 .phase-number { background:#1B6CA8; } .p3 .phase-title { color:#1B6CA8; }
+.p4 .phase-number { background:#7B5EA7; } .p4 .phase-title { color:#7B5EA7; }
+.p5 .phase-number { background:#2ECC71; } .p5 .phase-title { color:#1A8C4E; }
+.p6 .phase-number { background:#E84545; } .p6 .phase-title { color:#E84545; }
+
+.connector { display:flex; align-items:center; gap:8px; margin:4px 0 20px 16px; color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.connector::before { content:''; display:block; width:2px; height:18px; background:var(--border); border-radius:2px; }
+.print-btn { display:block; margin:0 auto 28px; padding:13px 34px; background:var(--blue); color:white; border:none; border-radius:11px; font-family:'Nunito',sans-serif; font-weight:800; font-size:14px; cursor:pointer; }
+.print-btn:hover { background:#154F82; }
+@media print { body { background:white; padding:16px; } .progress-wrap { position:static; box-shadow:none; } .task-card { break-inside:avoid; } .phase { break-inside:avoid; } .print-btn { display:none; } .clicarity-box { border:2px solid #1B6CA8 !important; } @page { margin:1.2cm; size:A4; } }
+
+/* CLICARITY ACTION BOX */
+.clicarity-box {
+  background:#EEF7FF;
+  border:2px solid #85B7EB;
+  border-radius:10px;
+  padding:12px 16px;
+  margin-top:7px;
+  margin-left:46px;
+  margin-bottom:4px;
+}
+.clicarity-box .cli-label {
+  font-family:'Nunito',sans-serif;
+  font-weight:900;
+  font-size:11px;
+  color:#1B6CA8;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:6px;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.cli-row {
+  display:flex;
+  gap:6px;
+  align-items:baseline;
+  font-size:12px;
+  margin-bottom:4px;
+  line-height:1.5;
+}
+.cli-key {
+  font-weight:700;
+  color:#0D3A6B;
+  min-width:100px;
+  flex-shrink:0;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+}
+.cli-val {
+  color:#154F82;
+  font-size:12.5px;
+}
+.cli-val strong {
+  color:#0D3A6B;
+  font-weight:800;
+}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #E4E0D8;position:sticky;top:0;z-index:100;}
+.nav-logo img{height:72px;width:auto;display:block;}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clicarity ISO Checklist">
+<meta name="twitter:description" content="Free ISO 9001 internal audit checklist for Indian manufacturers. Download and use immediately — no signup required. Built by Clicarity.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+<link rel="canonical" href="https://www.clicarity.com/intern-checklist-iso9001.html/">
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+
+<div class="header">
+  <div class="logo">CLICARITY</div>
+  <h1>ISO Certification — Your Step by Step Checklist</h1>
+  <p>Everything you need is on this page · Tick each box when done · After each step — update Clicarity with Job ID: <strong>ISO-001</strong></p>
+</div>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print This Checklist</button>
+
+<div class="progress-wrap">
+  <div class="progress-label"><span>Your progress</span><span id="progress-text">0 of 0 done</span></div>
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+</div>
+
+<div class="how-to">
+  <h2>How to use this checklist</h2>
+  <div class="legend">
+    <div class="legend-item"><div class="dot amber"></div>Orange box = ask Puneet</div>
+    <div class="legend-item"><div class="dot" style="background:#1B6CA8;"></div>Blue box = find it in Puneet's doc</div>
+    <div class="legend-item"><div class="dot" style="background:#0891B2;width:18px;height:18px;border-radius:4px;"></div>Teal box = do this in Clicarity</div>
+    <div class="legend-item"><div class="dot green"></div>Tick box = step done ✓</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 1 — SET UP FOLDER -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p1">
+  <div class="phase-header">
+    <div class="phase-number">1</div>
+    <div>
+      <div class="phase-title">Set Up Your Google Drive Folder</div>
+      <div class="phase-sub">Do this first · Takes about 30 minutes · You can do this alone</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t1">
+    <div class="checkbox" onclick="toggle('t1')"></div>
+    <div class="task-content">
+      <div class="task-title">Open Google Drive on your computer</div>
+      <div class="task-desc">Go to <strong>drive.google.com</strong> and log in with your Clicarity Google account.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t2">
+    <div class="checkbox" onclick="toggle('t2')"></div>
+    <div class="task-content">
+      <div class="task-title">Create a new folder called exactly: <strong>Clicarity ISO</strong></div>
+      <div class="task-desc">Click the big <strong>+ New</strong> button on the left → click <strong>Folder</strong> → type the name → click <strong>Create</strong>.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t3">
+    <div class="checkbox" onclick="toggle('t3')"></div>
+    <div class="task-content">
+      <div class="task-title">Share this folder with Puneet so he can also see it</div>
+      <div class="task-desc">Right-click the folder → <strong>Share</strong> → type Puneet's email → make sure he has <strong>Editor</strong> access → click <strong>Send</strong>.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t4">
+    <div class="checkbox" onclick="toggle('t4')"></div>
+    <div class="task-content">
+      <div class="task-title">Create these 9 sub-folders inside <strong>Clicarity ISO</strong></div>
+      <div class="task-desc">Open the <strong>Clicarity ISO</strong> folder. Create one folder for each name below. <strong>Copy the names exactly.</strong></div>
+      <div class="content-box blue-box" style="margin-top:10px;">
+        <div class="content-label">Create these 9 folders — exact names</div>
+        <div class="content-item">1-Scope</div>
+        <div class="content-item">2-Policies</div>
+        <div class="content-item">3-Risks</div>
+        <div class="content-item">4-Assets</div>
+        <div class="content-item">5-Objectives</div>
+        <div class="content-item">6-Procedures</div>
+        <div class="content-item">7-Audit</div>
+        <div class="content-item">8-Review</div>
+        <div class="content-item">9-CB-Readiness</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t5">
+    <div class="checkbox" onclick="toggle('t5')"></div>
+    <div class="task-content">
+      <div class="task-title">Save Puneet's big Word document (the Toolkit) inside the <strong>Clicarity ISO</strong> folder</div>
+      <div class="task-desc">The file is called <strong>Clicarity_ISO_Toolkit_v1.docx</strong>. Keep it there. You will only open it when this checklist says so — and this checklist will tell you exactly which page to go to.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_Setup_Scope → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form:</span><span class="cli-val">No form fields at this stage</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">Nothing to upload yet</span></div>
+</div>
+<div class="connector">done with step 1 — move to step 2</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 2 — COMPANY DETAILS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p2">
+  <div class="phase-header">
+    <div class="phase-number">2</div>
+    <div>
+      <div class="phase-title">Fill In the Company Details</div>
+      <div class="phase-sub">Folder: 1-Scope · Takes about 1–2 hours · Ask Puneet for the answers</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t6">
+    <div class="checkbox" onclick="toggle('t6')"></div>
+    <div class="task-content">
+      <div class="task-title">Open the Toolkit · Go to <strong>Section 1 — page 4</strong></div>
+      <div class="task-desc">You will see a table called <strong>"1.1 Organisation Profile"</strong>. It has two columns: the left column has field names, the right column has text in <strong>[square brackets]</strong>. Those are the placeholders you need to fill in.</div>
+      <div class="find-it" style="margin-left:0; margin-top:10px;">
+        <div class="find-label">📄 What it looks like in Puneet's doc</div>
+        <p>It is a blue and white table. The first row has a dark blue header. Look for the words <strong>"Legal name"</strong>, <strong>"Number of employees"</strong>, <strong>"Udyam registration"</strong>. Fill in only the rows that have <strong>[PLACEHOLDER]</strong> written in them.</p>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet — write his answers here before filling in the doc</div>
+    <div class="placeholder-row"><span class="placeholder-label">Number of employees:</span><div class="placeholder-line"></div></div>
+    <div class="placeholder-row"><span class="placeholder-label">Udyam number:</span><div class="placeholder-line"></div></div>
+    <div class="placeholder-row"><span class="placeholder-label">Date founded:</span><div class="placeholder-line"></div></div>
+  </div>
+
+  <div class="task-card" id="t7" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t7')"></div>
+    <div class="task-content">
+      <div class="task-title">Read the two Scope Statements in the same Section 1 · Check they sound right for Clicarity</div>
+      <div class="task-desc">Scroll down a little from the profile table. You will see a section called <strong>"1.2 Scope of Certification"</strong>. It has two sentences — one green row, one purple row. Read both out loud slowly.</div>
+      <div class="find-it" style="margin-left:0; margin-top:10px;">
+        <div class="find-label">📄 The two sentences are exactly these — read them now</div>
+        <div class="content-box green-box" style="margin-top:8px; margin-bottom:8px;">
+          <div class="content-label">ISO 9001 Scope — Quality</div>
+          <div class="content-text">"Design, development, deployment, and customer support of a cloud-based job tracking and operations dashboard platform (Clicarity) for small and medium-sized enterprises, delivered via web and mobile interface, from offices at Lower Parel West, Mumbai."</div>
+          <div class="scope-check"><input type="checkbox"> This sounds correct for Clicarity</div>
+        </div>
+        <div class="content-box purple-box" style="margin-top:8px;">
+          <div class="content-label">ISO 27001 Scope — Security</div>
+          <div class="content-text">"Information security management for the design, development, hosting, and delivery of Clicarity — a SaaS operations platform — including customer data processing, cloud infrastructure (AWS), third-party integrations (WhatsApp, Google Sheets), and internal IT systems at Lower Parel West, Mumbai."</div>
+          <div class="scope-check"><input type="checkbox"> This sounds correct for Clicarity</div>
+        </div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet if anything sounds wrong</div>
+    <p>I read both scope sentences. Can you check if these are correct? I have marked: ________________________</p>
+  </div>
+
+  <div class="task-card" id="t8" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t8')"></div>
+    <div class="task-content">
+      <div class="task-title">Save the Toolkit document · Put a copy in folder <strong>1-Scope</strong></div>
+      <div class="task-desc">After filling in the placeholders, save the file. Then drag a copy into the <strong>1-Scope</strong> folder on Google Drive. Name it: <strong>Clicarity-Scope-v1.docx</strong></div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_Quality_Policy_Shared → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form fields:</span><span class="cli-val">Document number: QP-001 · Date signed · Signed by: Puneet · How shared: WhatsApp Group · Date shared</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">Quality-Policy-Signed.pdf + Policy-Shared-Proof.jpg</span></div>
+</div>
+<div class="connector">done with step 2 — move to step 3</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 3 — POLICIES -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p3">
+  <div class="phase-header">
+    <div class="phase-number">3</div>
+    <div>
+      <div class="phase-title">Get the Two Policies Printed and Signed</div>
+      <div class="phase-sub">Folder: 2-Policies · Takes 1 day · Puneet must sign both · You do the printing and scanning</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t9">
+    <div class="checkbox" onclick="toggle('t9')"></div>
+    <div class="task-content">
+      <div class="task-title">Open the Toolkit · Go to <strong>Section 2.1 — approximately page 8</strong></div>
+      <div class="task-desc">You will see a large green box with the heading <strong>"CLICARITY — QUALITY POLICY"</strong> written in green letters at the top. The whole box is the Quality Policy document.</div>
+      <div class="find-it" style="margin-left:0; margin-top:10px;">
+        <div class="find-label">📄 What it looks like — the Quality Policy</div>
+        <p>It is a big box with a <strong>green left border</strong> and a light green background. It starts with <strong>"CLICARITY — QUALITY POLICY"</strong> in large green text. It has the document number <strong>QP-001</strong> at the top. It ends with a signature line at the bottom.</p>
+      </div>
+    </div>
+    <span class="task-tag tag-9001">9001</span>
+  </div>
+
+  <div class="task-card" id="t10">
+    <div class="checkbox" onclick="toggle('t10')"></div>
+    <div class="task-content">
+      <div class="task-title">Copy the Quality Policy text onto a new Word document · Add Clicarity's logo at the top</div>
+      <div class="task-desc">Open a blank Word document. Copy everything inside the green box. Paste it. Add Clicarity's logo to the top. Fill in today's date where it says <strong>[PLACEHOLDER: Date]</strong>. This is the official letterhead version.</div>
+    </div>
+    <span class="task-tag tag-9001">9001</span>
+  </div>
+
+  <div class="task-card" id="t11">
+    <div class="checkbox" onclick="toggle('t11')"></div>
+    <div class="task-content">
+      <div class="task-title">Print the Quality Policy · Give it to Puneet to sign with a real pen</div>
+      <div class="task-desc">He signs on the line that says <strong>"Signed: ___"</strong>. He writes today's date next to it. <strong>Do not type the signature — it must be a real pen signature.</strong></div>
+    </div>
+    <span class="task-tag tag-9001">9001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 What to say to Puneet</div>
+    <p>This is the Quality Policy for ISO. I need your pen signature on the line at the bottom, and today's date next to it. I will then scan it.</p>
+  </div>
+
+  <div class="task-card" id="t12" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t12')"></div>
+    <div class="task-content">
+      <div class="task-title">Scan the signed Quality Policy or take a very clear photo · Save as PDF</div>
+      <div class="task-desc">Use your phone camera or office scanner. Make sure the whole page is visible, the signature is clear, and nothing is cut off. Save the file as: <strong>Quality-Policy-Signed.pdf</strong> · Upload to folder <strong>2-Policies</strong>.</div>
+    </div>
+    <span class="task-tag tag-9001">9001</span>
+  </div>
+
+  <div class="task-card" id="t13">
+    <div class="checkbox" onclick="toggle('t13')"></div>
+    <div class="task-content">
+      <div class="task-title">Now do the same for the Information Security Policy · Open Toolkit <strong>Section 2.2 — approximately page 10</strong></div>
+      <div class="task-desc">Look for a large box with a <strong>purple left border</strong> and light purple background. It starts with <strong>"CLICARITY — INFORMATION SECURITY POLICY"</strong> in purple letters. Document number is <strong>ISP-001</strong>.</div>
+      <div class="find-it" style="margin-left:0; margin-top:10px;">
+        <div class="find-label">📄 What it looks like — the Security Policy</div>
+        <p>Same layout as the Quality Policy but <strong>purple colour</strong> instead of green. It also ends with a signature line. Do exactly the same steps: copy to letterhead → print → get signed → scan → save as <strong>Security-Policy-Signed.pdf</strong> → upload to <strong>2-Policies</strong>.</p>
+      </div>
+    </div>
+    <span class="task-tag tag-27001">27001</span>
+  </div>
+
+  <div class="task-card" id="t14">
+    <div class="checkbox" onclick="toggle('t14')"></div>
+    <div class="task-content">
+      <div class="task-title">Send both signed PDFs to the whole team on WhatsApp</div>
+      <div class="task-desc">Share both PDF files in the team WhatsApp group. Write this exact message: <strong>"These are Clicarity's official ISO policies. Please read both."</strong> Take a screenshot of the sent message.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t15">
+    <div class="checkbox" onclick="toggle('t15')"></div>
+    <div class="task-content">
+      <div class="task-title">Save the WhatsApp screenshot into folder <strong>2-Policies</strong></div>
+      <div class="task-desc">Name it: <strong>Policy-WhatsApp-Proof.jpg</strong>. This screenshot is your proof that the policies were shared with the team.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_Risk_Register_Done → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form fields:</span><span class="cli-val">Total risks identified · Number of HIGH risks (score ≥15) · Date of risk session · Signed by: Puneet · Next review date (6 months from today)</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">Clicarity-Risk-Register-v1.docx (signed version)</span></div>
+</div>
+<div class="connector">done with step 3 — move to step 4</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 4 — RISK REGISTER -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p4">
+  <div class="phase-header">
+    <div class="phase-number">4</div>
+    <div>
+      <div class="phase-title">Fill In the Risk Register</div>
+      <div class="phase-sub">Folder: 3-Risks · Takes 2–3 hours · Do this with Puneet</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t16">
+    <div class="checkbox" onclick="toggle('t16')"></div>
+    <div class="task-content">
+      <div class="task-title">Open the Toolkit · Go to <strong>Section 3 — approximately page 13</strong></div>
+      <div class="task-desc">You will see the heading <strong>"Section 3 — Combined Risk Register"</strong>. Below it there are two tables. Read every row. You do not need to understand all the technical words — just read each risk sentence slowly.</div>
+      <div class="find-it" style="margin-left:0; margin-top:10px;">
+        <div class="find-label">📄 What it looks like — the Risk Register</div>
+        <p>There are two tables with <strong>5 columns</strong> each. The column headers are: <strong>Risk Description · L (1–5) · I (1–5) · Score · Treatment</strong>. The first table is for Quality risks. The second table is for Security risks. Some rows already have scores filled in.</p>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet before you start this table</div>
+    <p>Can you sit with me for 30 minutes to go through the risk list? I will read each risk out loud and you tell me if it applies to us or not. Then I will fill in the numbers.</p>
+  </div>
+
+  <div class="task-card" id="t17" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t17')"></div>
+    <div class="task-content">
+      <div class="task-title">For every risk row — fill in the <strong>L</strong> number and the <strong>I</strong> number</div>
+      <div class="task-desc">Use the guide below. <strong>L = Likelihood</strong> (how likely is this problem to happen?). <strong>I = Impact</strong> (how big is the damage if it happens?). Write a number from 1 to 5 in each column.</div>
+      <div class="content-box amber-box" style="margin-top:10px;">
+        <div class="content-label">The scoring guide — 1 to 5</div>
+        <div class="content-item"><strong>1</strong> = Very unlikely to happen / Very small problem</div>
+        <div class="content-item"><strong>2</strong> = Unlikely / Small problem</div>
+        <div class="content-item"><strong>3</strong> = Possible / Medium problem</div>
+        <div class="content-item"><strong>4</strong> = Likely / Big problem</div>
+        <div class="content-item"><strong>5</strong> = Very likely to happen / Huge problem</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t18">
+    <div class="checkbox" onclick="toggle('t18')"></div>
+    <div class="task-content">
+      <div class="task-title">Save the Risk Register into folder <strong>3-Risks</strong></div>
+      <div class="task-desc">Save the Toolkit document first. Then copy just the Section 3 content into a new document. Name it: <strong>Clicarity-Risk-Register-v1.docx</strong> · Save into <strong>3-Risks</strong>.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_KPI_Tracking_Started → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form fields:</span><span class="cli-val">Objective 1–4 names + targets · KPI tracking start date (today)</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">Clicarity-Assets-v1.docx</span></div>
+  <div class="cli-row"><span class="cli-key">Note:</span><span class="cli-val">Stage 07 KPI tracking now runs in parallel — update it every month</span></div>
+</div>
+<div class="connector">done with step 4 — move to step 5</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 5 — ASSETS & PROCESSES -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p3">
+  <div class="phase-header">
+    <div class="phase-number">5</div>
+    <div>
+      <div class="phase-title">Check the Assets and Processes Lists</div>
+      <div class="phase-sub">Folder: 4-Assets · Takes 1–2 hours · Ask Lakshy for tech questions</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t19">
+    <div class="checkbox" onclick="toggle('t19')"></div>
+    <div class="task-content">
+      <div class="task-title">Open the Toolkit · Go to <strong>Section 4 — approximately page 17</strong></div>
+      <div class="task-desc">You will see the heading <strong>"Section 4 — Asset and Process Inventory"</strong>. There are two tables on this page.</div>
+      <div class="find-it" style="margin-left:0; margin-top:10px;">
+        <div class="find-label">📄 What the two tables look like</div>
+        <p><strong>Table 1 — Section 4.1:</strong> Heading says "Core Business Processes". It lists 8 processes like Onboarding, Development, Support. <br><br><strong>Table 2 — Section 4.2:</strong> Heading says "Information Asset Register". It lists 10 items like customer data, laptops, passwords.</p>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t20">
+    <div class="checkbox" onclick="toggle('t20')"></div>
+    <div class="task-content">
+      <div class="task-title">Read each row in Table 1 · Does each process actually happen at Clicarity?</div>
+      <div class="task-desc">Read each row out loud. If something is wrong or missing, <strong>highlight that row in yellow</strong>. Do not delete anything yourself.</div>
+    </div>
+    <span class="task-tag tag-9001">9001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet about Table 1</div>
+    <p>I highlighted these rows in yellow because I am not sure they are correct: ________________________. Can you tell me what to change?</p>
+  </div>
+
+  <div class="task-card" id="t21" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t21')"></div>
+    <div class="task-content">
+      <div class="task-title">Read each row in Table 2 · Does each asset exist at Clicarity?</div>
+      <div class="task-desc">Read each row. If something is missing or wrong, highlight it in yellow. Pay attention to the <strong>Classification column</strong> — "Restricted" rows are the most important ones.</div>
+    </div>
+    <span class="task-tag tag-27001">27001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Lakshy about Table 2 tech items</div>
+    <p>Lakshy — can you check Table 2 in Section 4.2 of the Toolkit? I need to know if the "Where stored" column is correct for our AWS and GitHub setup.</p>
+  </div>
+
+  <div class="task-card" id="t22" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t22')"></div>
+    <div class="task-content">
+      <div class="task-title">Save Section 4 into folder <strong>4-Assets</strong></div>
+      <div class="task-desc">Copy just the Section 4 content into a new document. Name it: <strong>Clicarity-Assets-v1.docx</strong> · Save into <strong>4-Assets</strong>.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now — Assets & Processes</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_KPI_Tracking_Started → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form fields:</span><span class="cli-val">KPI tracking start date: today's date</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">Clicarity-Assets-v1.docx</span></div>
+  <div class="cli-row"><span class="cli-key">⚠ Monthly reminder:</span><span class="cli-val">Every month from now — update Job ISO-001 → Status: <strong>ISO_KPI_Month1_Done</strong>, then Month2, then Month3. Fill in the actual KPI numbers each time.</span></div>
+</div>
+<div class="connector">done with step 5 — move to step 6</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 6 — WRITE THE 10 SOPs -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p4">
+  <div class="phase-header">
+    <div class="phase-number">6</div>
+    <div>
+      <div class="phase-title">Write the 10 Short Procedure Documents (SOPs)</div>
+      <div class="phase-sub">Folder: 6-Procedures · Biggest step · One SOP per day · Ask Puneet or Lakshy for each one</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t23">
+    <div class="checkbox" onclick="toggle('t23')"></div>
+    <div class="task-content">
+      <div class="task-title">What is an SOP? Read this first before you start</div>
+      <div class="task-desc">SOP means <strong>Standard Operating Procedure</strong>. It is just a simple 1-page document that explains how Clicarity does something. You write it in bullet points. There are no right or wrong words — just describe what actually happens.</div>
+      <div class="content-box blue-box" style="margin-top:10px;">
+        <div class="content-label">Every SOP must have these 4 things at the top</div>
+        <div class="content-item">SOP Number and Name — example: <strong>SOP-01 Customer Onboarding</strong></div>
+        <div class="content-item">Version and Date — example: <strong>Version 1.0 · April 2026</strong></div>
+        <div class="content-item">Owner — the person responsible — example: <strong>Prakash</strong></div>
+        <div class="content-item">Steps — numbered list of what happens, in order</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t24">
+    <div class="checkbox" onclick="toggle('t24')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 1 — Customer Onboarding · Save as <strong>SOP-01-Onboarding.docx</strong></div>
+      <div class="task-desc">Write what happens from the moment a customer pays, to the moment their Clicarity dashboard is live. Who does what? In what order? How long does each step take?</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet before writing SOP 1</div>
+    <p>Can you walk me through the onboarding steps one by one, from the moment someone pays? I will write them down as you talk.</p>
+  </div>
+
+  <div class="task-card" id="t25" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t25')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 2 — Software Releases · Save as <strong>SOP-02-Releases.docx</strong></div>
+      <div class="task-desc">Write how a new feature or bug fix goes from idea to live. Who tests it? Who approves it? What happens if something breaks after going live?</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Lakshy before writing SOP 2</div>
+    <p>Lakshy — how do you release a new feature or fix a bug? I need to write down the steps from start to finish. Can you explain it to me in simple words?</p>
+  </div>
+
+  <div class="task-card" id="t26" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t26')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 3 — Customer Support · Save as <strong>SOP-03-Support.docx</strong></div>
+      <div class="task-desc">A customer sends a complaint or question. Write exactly what happens next. Who receives it? Who replies? By when? How is it marked as solved?</div>
+    </div>
+    <span class="task-tag tag-9001">9001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Jayesh or Puneet before writing SOP 3</div>
+    <p>How do we handle customer support today? Who gets the message first and what are the steps to resolve it?</p>
+  </div>
+
+  <div class="task-card" id="t27" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t27')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 4 — Data Backup and Recovery · Save as <strong>SOP-04-Backup.docx</strong></div>
+      <div class="task-desc">Write how Clicarity backs up customer data. How often? Where does it go? If AWS has a problem and data is lost — what are the steps to get it back?</div>
+    </div>
+    <span class="task-tag tag-27001">27001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Lakshy before writing SOP 4</div>
+    <p>Lakshy — can you explain to me in simple steps: how often is our data backed up, where is it stored, and what do we do if we need to restore it? I will write it as a one-page document.</p>
+  </div>
+
+  <div class="task-card" id="t28" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t28')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 5 — Who Has Access to What · Save as <strong>SOP-05-Access.docx</strong></div>
+      <div class="task-desc">Write a list of all company systems (AWS, GitHub, Google, WhatsApp API). For each one — who has login access? What happens to that access when someone leaves the team?</div>
+    </div>
+    <span class="task-tag tag-27001">27001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Lakshy before writing SOP 5</div>
+    <p>Lakshy — for each system we use (AWS, GitHub, etc.) — who has access? And what is the process when someone new joins or someone leaves? I will write this as our official Access Policy.</p>
+  </div>
+
+  <div class="task-card" id="t29" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t29')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 6 — Security Incident Response · Save as <strong>SOP-06-Incident.docx</strong></div>
+      <div class="task-desc">What do we do if someone hacks our system, or customer data is leaked? Write the steps for the first 24 hours. Who do we call first? Who do we tell? How do we fix it?</div>
+    </div>
+    <span class="task-tag tag-27001">27001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet and Lakshy together for SOP 6</div>
+    <p>If our system is hacked or data is leaked — what do we do? Who is the first person to act? I need to write down the steps for the first 24 hours.</p>
+  </div>
+
+  <div class="task-card" id="t30" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t30')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 7 — Supplier and Vendor Review · Save as <strong>SOP-07-Suppliers.docx</strong></div>
+      <div class="task-desc">Clicarity uses AWS, Meta (WhatsApp), and Google. Write that we review these providers once a year — check their terms, check if there were any problems, confirm they are still the right choice.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t31">
+    <div class="checkbox" onclick="toggle('t31')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 8 — Internal Audit Process · Save as <strong>SOP-08-Audit.docx</strong></div>
+      <div class="task-desc">Write that Clicarity runs an internal audit once a year using this checklist. One person checks another person's work. Findings are written down. Problems are fixed. A report is saved.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t32">
+    <div class="checkbox" onclick="toggle('t32')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 9 — Staff Joining and Leaving · Save as <strong>SOP-09-Offboarding.docx</strong></div>
+      <div class="task-desc">When someone joins: what accounts do they get? Who sets them up? When someone leaves: what accounts are removed? <strong>Same day they leave — not later.</strong></div>
+    </div>
+    <span class="task-tag tag-27001">27001</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet before writing SOP 9</div>
+    <p>When a new team member joins, what accounts and access do they get? And when someone leaves, what is removed and who removes it?</p>
+  </div>
+
+  <div class="task-card" id="t33" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t33')"></div>
+    <div class="task-content">
+      <div class="task-title">SOP 10 — Document Version Control · Save as <strong>SOP-10-Documents.docx</strong></div>
+      <div class="task-desc">Write how all ISO documents are managed. Every document has a version number (v1.0, v2.0). When something changes — a new version is saved. Old versions are kept but marked OLD. Prakash is responsible for this.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t34">
+    <div class="checkbox" onclick="toggle('t34')"></div>
+    <div class="task-content">
+      <div class="task-title">Save all 10 SOPs into folder <strong>6-Procedures</strong></div>
+      <div class="task-desc">Check you have all 10 files: SOP-01 through SOP-10. Each one should be saved with the correct file name as shown above. If any are missing — go back and write them.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now — SOPs Complete</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_SOPs_Complete → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form fields:</span><span class="cli-val">SOP 01–10 status: all Approved · Date all 10 approved · Approved by: Puneet</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">10 separate PDFs — upload each SOP individually: SOP-01.pdf through SOP-10.pdf</span></div>
+</div>
+<div class="connector">done with step 6 — move to step 7</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 7 — INTERNAL AUDIT -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p5">
+  <div class="phase-header">
+    <div class="phase-number">7</div>
+    <div>
+      <div class="phase-title">Run the Internal Audit</div>
+      <div class="phase-sub">Folder: 7-Audit · Takes 1 full day · Do this with Puneet — he answers, you write</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t35">
+    <div class="checkbox" onclick="toggle('t35')"></div>
+    <div class="task-content">
+      <div class="task-title">Print the questions below · Book a full day with Puneet · Go through every question together</div>
+      <div class="task-desc">You read each question. Puneet answers. You write <strong>C</strong>, <strong>NC</strong>, or <strong>OFI</strong> next to each one. Write what proof Puneet shows in the notes column.</div>
+      <div class="content-box amber-box" style="margin-top:10px;">
+        <div class="content-label">What the 3 ratings mean — use only these letters</div>
+        <div class="content-item"><strong>C</strong> = Conforming. We do this. We have proof.</div>
+        <div class="content-item"><strong>NC</strong> = Nonconformity. We do NOT do this yet. Must be fixed before real audit.</div>
+        <div class="content-item"><strong>OFI</strong> = Opportunity for Improvement. We do it but not perfectly.</div>
+      </div>
+      <div class="content-box blue-box" style="margin-top:10px;">
+        <div class="content-label">📋 The audit questions — read each one to Puneet · write C, NC or OFI</div>
+        <div class="content-item">1. Is the Quality Policy signed, dated, and shared with all staff? (show the WhatsApp screenshot)</div>
+        <div class="content-item">2. Is the Information Security Policy signed, dated, and shared with all staff?</div>
+        <div class="content-item">3. Can Puneet say what our quality and security objectives are from memory?</div>
+        <div class="content-item">4. Is the Risk Register completed with scores for every row — quality AND security risks?</div>
+        <div class="content-item">5. Has the Risk Register been reviewed in the last 6 months?</div>
+        <div class="content-item">6. Are all 10 SOPs written, approved by Puneet, and saved in the correct folder?</div>
+        <div class="content-item">7. Do the SOPs describe what actually happens — not what we wish happened? (spot check 2)</div>
+        <div class="content-item">8. Do we have training records for every team member with signatures?</div>
+        <div class="content-item">9. Do we have 3 months of KPI data recorded?</div>
+        <div class="content-item">10. Are our KPI targets being met? If not — is there a corrective action plan?</div>
+        <div class="content-item">11. If a customer complained recently — can we show what we did about it?</div>
+        <div class="content-item">12. Is there a list of approved suppliers (AWS, Meta, Google)? Have they been reviewed?</div>
+        <div class="content-item">13. Is MFA (two-step login) turned on for ALL admin accounts — AWS, GitHub, Google? (Lakshy shows proof)</div>
+        <div class="content-item">14. Are all API keys stored in AWS Secrets Manager — not written in code? (Lakshy shows proof)</div>
+        <div class="content-item">15. When was the last backup recovery test? Can we show the test record?</div>
+        <div class="content-item">16. Have all staff completed security awareness training? Show attendance record.</div>
+        <div class="content-item">17. Has a penetration test been conducted? Show the report and remediation log.</div>
+        <div class="content-item">18. Are all ISO documents saved in the correct Google Drive folders with version numbers?</div>
+        <div class="content-item">19. Has the access rights list been reviewed in the last 6 months? (who has access to what)</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet to sit with you for this whole step</div>
+    <p>I need you to sit with me for this audit. I will read each question out loud. You answer yes or no. If yes — I will write C (Conforming). If no — I will write NC (Nonconformity). We need proof for each yes answer.</p>
+  </div>
+
+  <div class="task-card" id="t36" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t36')"></div>
+    <div class="task-content">
+      <div class="task-title">For every question: write <strong>C</strong>, <strong>NC</strong>, or <strong>OFI</strong> in the Rating column</div>
+      <div class="task-desc">Use only these three letters. Write the proof or evidence in the Notes column.</div>
+      <div class="content-box amber-box" style="margin-top:10px;">
+        <div class="content-label">What the 3 ratings mean</div>
+        <div class="content-item"><strong>C</strong> = Conforming. We do this. We have proof.</div>
+        <div class="content-item"><strong>NC</strong> = Nonconformity. We do NOT do this yet. It needs to be fixed.</div>
+        <div class="content-item"><strong>OFI</strong> = Opportunity for Improvement. We do it but not perfectly.</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t37">
+    <div class="checkbox" onclick="toggle('t37')"></div>
+    <div class="task-content">
+      <div class="task-title">Make a list of every row marked <strong>NC</strong> · Fix every single one before moving to Step 8</div>
+      <div class="task-desc">For each NC — write what needs to be done, who will do it, and by when. <strong>Do not move to Step 8 until every NC is fixed and changed to C.</strong></div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet about each NC</div>
+    <p>I found these NC items in the audit: ________________________. What do we need to do to fix each one? Can you tell me the action and who is responsible?</p>
+  </div>
+
+  <div class="task-card" id="t38" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t38')"></div>
+    <div class="task-content">
+      <div class="task-title">Type up the completed audit as a report · Save into folder <strong>7-Audit</strong></div>
+      <div class="task-desc">Name it: <strong>Internal-Audit-Report-v1.docx</strong>. Include the date the audit was done, who did it, and a summary of findings at the top.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_Audit_Complete → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form fields:</span><span class="cli-val">Audit date · Auditor name · Total questions: 19 · C count · NC count · OFI count · All NCs fixed: Yes · Date NCs fixed</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">Internal-Audit-Report-v1.docx + any NC correction evidence</span></div>
+  <div class="cli-row"><span class="cli-key">Also update:</span><span class="cli-val">Stage 07 KPI — make sure Month 1, 2, and 3 are all marked Done before moving forward</span></div>
+</div>
+<div class="connector">done with step 7 — move to step 8</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE 8 — MANAGEMENT REVIEW -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p5">
+  <div class="phase-header">
+    <div class="phase-number">8</div>
+    <div>
+      <div class="phase-title">Hold the Management Review Meeting</div>
+      <div class="phase-sub">Folder: 8-Review · Takes 2 hours · Puneet runs the meeting · You write the notes</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t39">
+    <div class="checkbox" onclick="toggle('t39')"></div>
+    <div class="task-content">
+      <div class="task-title">Print the 12 agenda items below · Book a 2-hour meeting with Puneet</div>
+      <div class="task-desc">This is a formal meeting — not a casual chat. Print this page. During the meeting, Puneet answers each item. You write the notes in the space next to each one. <strong>Do not leave any item blank.</strong></div>
+      <div class="content-box blue-box" style="margin-top:10px;">
+        <div class="content-label">📋 Print this agenda — write Puneet's answers next to each item during the meeting</div>
+        <div class="content-item">1. Actions from last review — are they all completed? _______________</div>
+        <div class="content-item">2. Internal audit results — what were the findings? _______________</div>
+        <div class="content-item">3. Customer feedback — any complaints this period? _______________</div>
+        <div class="content-item">4. KPI performance — are we hitting our targets? _______________</div>
+        <div class="content-item">5. Process performance — where are we strong, where are we weak? _______________</div>
+        <div class="content-item">6. Security incidents — any breaches or near-misses this period? _______________</div>
+        <div class="content-item">7. Supplier performance — any issues with AWS, Meta, or Google? _______________</div>
+        <div class="content-item">8. Risks — any new risks identified or changes to existing ones? _______________</div>
+        <div class="content-item">9. Resources — do we need more people, tools, or training? _______________</div>
+        <div class="content-item">10. Changes — anything new that could affect our quality or security system? _______________</div>
+        <div class="content-item">11. Objectives — are our quality and security targets still right for this period? _______________</div>
+        <div class="content-item">12. Actions from THIS meeting — who does what by when? _______________</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 What to say to book this meeting</div>
+    <p>Puneet — can we book 2 hours for the ISO Management Review meeting? I will print the agenda and write the notes. You just need to answer the 12 questions on the list. We must have signed minutes from this meeting before calling the Certification Body.</p>
+  </div>
+
+  <div class="task-card" id="t40" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t40')"></div>
+    <div class="task-content">
+      <div class="task-title">During the meeting — write notes in the <strong>Notes column</strong> for every agenda item</div>
+      <div class="task-desc">Do not leave any row blank. Even if the answer is short — write something. These notes become the official minutes.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t41">
+    <div class="checkbox" onclick="toggle('t41')"></div>
+    <div class="task-content">
+      <div class="task-title">After the meeting — type up the minutes · Get Puneet to sign the bottom</div>
+      <div class="task-desc">Type your handwritten notes into the Word document. At the bottom of the document add: Date, Puneet's name, and a signature line. Print it. He signs. Scan it. Save into folder <strong>8-Review</strong> as: <strong>Management-Review-Minutes-v1.docx</strong></div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<div class="clicarity-box">
+  <div class="cli-label">📊 Update in Clicarity now</div>
+  <div class="cli-row"><span class="cli-key">Job ID:</span><span class="cli-val"><strong>ISO-001</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Status:</span><span class="cli-val"><strong>ISO_MgmtReview_Signed → Done</strong></span></div>
+  <div class="cli-row"><span class="cli-key">Form fields:</span><span class="cli-val">Meeting date · Format: In-person/Google Meet/WhatsApp Video · Attendees names · Previous actions done: Yes/No · New actions assigned: count · Signed by: Puneet · Next review date (12 months from today)</span></div>
+  <div class="cli-row"><span class="cli-key">Upload:</span><span class="cli-val">Management-Review-Minutes-v1.docx (signed and scanned)</span></div>
+</div>
+<div class="connector">done with step 8 — one final step</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHASE FINAL — CALL THE CB -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="phase p6">
+  <div class="phase-header">
+    <div class="phase-number">✓</div>
+    <div>
+      <div class="phase-title">Contact the Certification Body</div>
+      <div class="phase-sub">Folder: 9-CB-Readiness · Only do this when EVERY box above is ticked</div>
+    </div>
+  </div>
+
+  <div class="task-card" id="t42">
+    <div class="checkbox" onclick="toggle('t42')"></div>
+    <div class="task-content">
+      <div class="task-title">Check that all 9 Google Drive folders have files in them</div>
+      <div class="task-desc">Open each folder one by one. If any folder is empty — stop and go back to fill it. <strong>Do not send any emails until every folder has at least one document.</strong></div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+
+  <div class="task-card" id="t43">
+    <div class="checkbox" onclick="toggle('t43')"></div>
+    <div class="task-content">
+      <div class="task-title">Go through every item below · Every single one must be Done before sending emails to CBs</div>
+      <div class="task-desc">Read each item. If it is done and the file is saved in Google Drive — tick it. If anything is not done — go back and finish it first. <strong>Do not contact any Certification Body until every item below is ticked.</strong></div>
+      <div class="content-box blue-box" style="margin-top:10px;">
+        <div class="content-label">📋 Pre-audit readiness — tick every item · Done means file is saved in Google Drive</div>
+        <div class="content-item">☐ Scope statement agreed and saved in folder 1-Scope</div>
+        <div class="content-item">☐ Quality Policy — signed PDF saved in folder 2-Policies</div>
+        <div class="content-item">☐ Information Security Policy — signed PDF saved in folder 2-Policies</div>
+        <div class="content-item">☐ Both policies shared with whole team — WhatsApp screenshot saved</div>
+        <div class="content-item">☐ Roles and responsibilities document saved in folder 2-Policies</div>
+        <div class="content-item">☐ Risk Register — quality and security risks rated and signed — saved in folder 3-Risks</div>
+        <div class="content-item">☐ Asset and process inventory saved in folder 4-Assets</div>
+        <div class="content-item">☐ Quality and security objectives with 3 months of KPI data saved in folder 5-Objectives</div>
+        <div class="content-item">☐ All 10 SOPs written, approved by Puneet, saved in folder 6-Procedures</div>
+        <div class="content-item">☐ MFA turned on for all admin accounts — screenshot saved as proof</div>
+        <div class="content-item">☐ API keys confirmed in AWS Secrets Manager — not in code</div>
+        <div class="content-item">☐ Penetration test completed — report and remediation log saved</div>
+        <div class="content-item">☐ Internal audit completed — all NCs fixed — report saved in folder 7-Audit</div>
+        <div class="content-item">☐ Training records for all staff with signatures — saved in folder 6-Procedures</div>
+        <div class="content-item">☐ Management review meeting held — signed minutes saved in folder 8-Review</div>
+        <div class="content-item">☐ Backup recovery test completed — test record saved</div>
+        <div class="content-item">☐ Udyam registration certificate ready</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet to check this list with you before sending emails</div>
+    <p>I have gone through the 17-item list in Section 9 of the Toolkit. Can you check my Done/Not Done marks before I contact the Certification Bodies?</p>
+  </div>
+
+  <div class="task-card" id="t44" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t44')"></div>
+    <div class="task-content">
+      <div class="task-title">Send this email to 3 Certification Bodies to ask for a quote</div>
+      <div class="task-desc">Copy the email below exactly. Send it to all three email addresses. <strong>Do not change the subject line.</strong></div>
+      <div class="content-box blue-box" style="margin-top:10px;">
+        <div class="content-label">📧 Copy this email — send to all 3 companies below</div>
+        <p style="font-size:12.5px; color:var(--ink); margin-bottom:8px;"><strong>Subject:</strong> ISO 9001 + ISO 27001 Certification Quote Request — SaaS Company, 2 employees, Mumbai</p>
+        <p style="font-size:12.5px; color:var(--ink); line-height:1.7;">Dear Team,<br><br>
+        We are Clicarity, a SaaS job tracking platform based in Mumbai. We are seeking ISO 9001:2015 and ISO 27001:2022 certification together as a combined audit.<br><br>
+        Our details: 2 employees · Single location · Cloud-based software product (AWS infrastructure) · Udyam registered MSME<br><br>
+        Could you please send us a quote for: (1) Combined Stage 1 + Stage 2 audit, (2) Annual surveillance audit cost, (3) Total 3-year cost estimate.<br><br>
+        Thank you.<br>
+        Regards,<br>
+        [Your name]<br>
+        Clicarity<br>
+        contact@clicarity.com · +91 98678 00451</p>
+      </div>
+      <div class="content-box amber-box" style="margin-top:10px;">
+        <div class="content-label">📮 Send to these 3 companies</div>
+        <div class="content-item"><strong>Bureau Veritas India:</strong> india@bureauveritas.com</div>
+        <div class="content-item"><strong>SGS India:</strong> in.sales@sgs.com</div>
+        <div class="content-item"><strong>DNV India:</strong> india.info@dnv.com</div>
+      </div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+  <div class="ask-box">
+    <div class="ask-label">💬 Ask Puneet to check before sending</div>
+    <p>I have written the emails to the 3 Certification Bodies. Can you check my draft before I send? I just need 2 minutes of your time.</p>
+  </div>
+
+  <div class="task-card" id="t45" style="margin-top:8px;">
+    <div class="checkbox" onclick="toggle('t45')"></div>
+    <div class="task-content">
+      <div class="task-title">Save all quote replies into folder <strong>9-CB-Readiness</strong> · Show Puneet all 3 quotes</div>
+      <div class="task-desc">When the quotes arrive by email — save each one as a PDF into <strong>9-CB-Readiness</strong>. Name them: <strong>Quote-BureauVeritas.pdf · Quote-SGS.pdf · Quote-DNV.pdf</strong>. Puneet decides which one to use — not you.</div>
+    </div>
+    <span class="task-tag tag-both">BOTH</span>
+  </div>
+</div>
+
+<script>
+const TOTAL = document.querySelectorAll('.task-card').length;
+function toggle(id) {
+  const card = document.getElementById(id);
+  const box = card.querySelector('.checkbox');
+  const done = box.classList.contains('checked');
+  if (done) { box.classList.remove('checked'); box.textContent=''; card.classList.remove('done'); }
+  else { box.classList.add('checked'); box.textContent='✓'; card.classList.add('done'); }
+  updateProgress();
+}
+function updateProgress() {
+  const doneCount = document.querySelectorAll('.checkbox.checked').length;
+  const pct = Math.round((doneCount/TOTAL)*100);
+  document.getElementById('progress-fill').style.width = pct+'%';
+  document.getElementById('progress-text').textContent = doneCount+' of '+TOTAL+' done';
+}
+updateProgress();
+</script>
+</body>
+</html>

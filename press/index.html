@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Press Kit — Clicarity | Media, Investors & Partners</title>
+<meta name="description" content="Press kit for Clicarity — company story, traction, press coverage, founder bio and downloadable assets for journalists, investors and partners.">
+<meta property="og:title" content="Press Kit — Clicarity">
+<meta property="og:description" content="Company story, traction, press coverage and assets for journalists and investors.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/press/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--accent-light:#E8F2F9;--dark:#0E0D0B;--dark2:#1A1917;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--radius:14px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+.btn{padding:11px 24px;border-radius:100px;font-family:var(--font-body);font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:white}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* HERO */
+.hero{background:var(--dark);padding:60px 5% 52px}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:white;line-height:1.15;margin-bottom:12px;letter-spacing:-0.02em}
+.hero-sub{font-size:0.97rem;color:rgba(255,255,255,0.45);line-height:1.75;max-width:480px;margin-bottom:24px}
+.hero-contact{display:flex;gap:10px;flex-wrap:wrap}
+.contact-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:8px 16px;font-size:0.82rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:all 0.2s}
+.contact-chip:hover{border-color:rgba(255,255,255,0.3);color:white}
+.hero-logo-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:28px;display:flex;align-items:center;justify-content:center;min-width:180px}
+.hero-logo-box img{height:60px;width:auto;filter:brightness(0) invert(1);opacity:0.85}
+
+/* SECTIONS */
+.section{padding:56px 5%;border-bottom:1px solid var(--border)}
+.section.alt{background:var(--surface)}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px}
+.section-title{font-family:var(--font-display);font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:800;color:var(--text);margin-bottom:20px;letter-spacing:-0.01em}
+
+/* ONE LINER */
+.one-liner-box{background:var(--dark);border-radius:var(--radius);padding:28px 32px;display:flex;align-items:center;gap:20px}
+.one-liner-text{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:white;line-height:1.5;flex:1}
+.copy-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);padding:8px 16px;border-radius:100px;font-size:0.78rem;cursor:pointer;font-family:var(--font-body);transition:all 0.2s;white-space:nowrap}
+.copy-btn:hover{background:rgba(255,255,255,0.14);color:white}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:24px}
+.stat-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.stat-n{font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--text);line-height:1}
+.stat-l{font-size:0.78rem;color:var(--muted);margin-top:4px}
+
+/* PRESS CARDS */
+.press-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.press-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-decoration:none;color:var(--text);transition:all 0.2s;border-top:2px solid var(--accent)}
+.press-card:nth-child(2){border-top-color:#C10000}
+.press-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.07);transform:translateY(-2px)}
+.press-pub{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px}
+.press-badge{font-size:0.68rem;font-weight:700;padding:3px 10px;border-radius:4px;color:white}
+.press-badge.pw{background:var(--accent)}
+.press-badge.pb{background:#C10000}
+.press-headline{font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--text)}
+.press-meta{font-size:0.78rem;color:var(--muted)}
+.press-link{display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:var(--accent);font-weight:600;margin-top:12px;text-decoration:none}
+
+/* FOUNDER */
+.founder-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;gap:24px;align-items:flex-start}
+.founder-avatar{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:white;flex-shrink:0}
+.founder-name{font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.founder-role{font-size:0.82rem;color:var(--muted);margin-bottom:12px}
+.founder-bio{font-size:0.88rem;color:var(--text);line-height:1.7}
+
+/* ASSETS */
+.assets-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:24px}
+.asset-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;text-decoration:none;color:var(--text);transition:all 0.2s}
+.asset-card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(0,0,0,0.06)}
+.asset-icon{font-size:2rem;margin-bottom:8px}
+.asset-name{font-weight:700;font-size:0.85rem;margin-bottom:4px}
+.asset-desc{font-size:0.75rem;color:var(--muted)}
+
+/* VISION */
+.vision-band{background:var(--dark2);padding:52px 5%}
+.vision-inner{max-width:800px;margin:0 auto}
+.vision-band h2{font-family:var(--font-display);font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:800;color:white;margin-bottom:16px}
+.vision-band p{font-size:0.95rem;color:rgba(255,255,255,0.45);line-height:1.8;margin-bottom:12px}
+
+footer{background:var(--dark);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.8rem;color:rgba(255,255,255,0.25)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.25);text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,0.7)}
+@media(max-width:700px){.hero-inner,.press-grid{grid-template-columns:1fr}.hero-logo-box{display:none}.founder-card{flex-direction:column}}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Press Kit — Clicarity | Media, Investors & Partners">
+<meta name="twitter:description" content="Press kit for Clicarity — company story, traction, press coverage, founder bio and downloadable assets for journalists, investors and partners.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">For press, investors & partners</div>
+      <h1>Press Kit</h1>
+      <p class="hero-sub">Everything you need to write about Clicarity — company story, traction numbers, press coverage, founder bio, and downloadable assets.</p>
+      <div class="hero-contact">
+        <a class="contact-chip" href="https://wa.me/919867800451" target="_blank">📱 WhatsApp the founder</a>
+        <a class="contact-chip" href="mailto:puneet@clicarity.com">✉️ puneet@clicarity.com</a>
+      </div>
+    </div>
+    <div class="hero-logo-box">
+      <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity logo">
+    </div>
+  </div>
+</div>
+
+<!-- ONE LINER -->
+<div class="section alt">
+  <div class="section-inner">
+    <div class="section-label">Company one-liner</div>
+    <h2 class="section-title">How to describe Clicarity</h2>
+    <div class="one-liner-box">
+      <div class="one-liner-text" id="oneliner">Clicarity is India's simplest production tracking system — built for manufacturers who need real-time job visibility without ERP complexity.</div>
+      <button class="copy-btn" onclick="copyText()">Copy</button>
+    </div>
+    <p style="font-size:0.82rem;color:var(--muted);margin-top:12px;">Tag line: <strong>Click. Track. Grow.</strong> &nbsp;·&nbsp; Founded: June 2025 &nbsp;·&nbsp; HQ: Mumbai, India &nbsp;·&nbsp; Website: www.clicarity.com</p>
+  </div>
+</div>
+
+<!-- TRACTION -->
+<div class="section">
+  <div class="section-inner">
+    <div class="section-label">Traction</div>
+    <h2 class="section-title">By the numbers</h2>
+    <div class="stats-grid">
+      <div class="stat-box"><div class="stat-n">Jun 2025</div><div class="stat-l">Official launch date</div></div>
+      <div class="stat-box"><div class="stat-n">2</div><div class="stat-l">Magazine features in 2 months</div></div>
+      <div class="stat-box"><div class="stat-n">40,000+</div><div class="stat-l">Industry readers reached via PrintWeek</div></div>
+      <div class="stat-box"><div class="stat-n">10+</div><div class="stat-l">Industries served</div></div>
+      <div class="stat-box"><div class="stat-n">Mumbai</div><div class="stat-l">Primary market — expanding across India</div></div>
+      <div class="stat-box"><div class="stat-n">2030</div><div class="stat-l">Target: SME IPO</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRESS COVERAGE -->
+<div class="section alt">
+  <div class="section-inner">
+    <div class="section-label">Press coverage</div>
+    <h2 class="section-title">In the media</h2>
+    <div class="press-grid">
+      <div class="press-card">
+        <div class="press-pub"><span class="press-badge pw">PrintWeek India</span></div>
+        <div class="press-headline">"Clicarity eases the tech reset"</div>
+        <div class="press-meta">April 2026 · Vol 18, Issue 12 · Pages 28–29 · 2-page case study spread · 40,000+ readers · 350+ cities</div>
+        <a class="press-link" href="https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834" target="_blank" rel="noopener">Read online ↗</a>
+        <a class="press-link" href="/printweek/" style="margin-left:12px;">Feature page ↗</a>
+      </div>
+      <div class="press-card">
+        <div class="press-pub"><span class="press-badge pb">Print Bulletin</span></div>
+        <div class="press-headline">"From Chaos to Clarity — Clicarity"</div>
+        <div class="press-meta">May 2026 · Vol 64, Issue 5 · Pages 20–21 · Learning Curve feature · BMPA & MMS · Mumbai</div>
+        <a class="press-link" href="/print-bulletin/">Feature page ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<div class="section">
+  <div class="section-inner">
+    <div class="section-label">Founder</div>
+    <h2 class="section-title">The person behind Clicarity</h2>
+    <div class="founder-card">
+      <div class="founder-avatar">PR</div>
+      <div>
+        <div class="founder-name">Puneet Rawat</div>
+        <div class="founder-role">Founder & CEO — Clicarity</div>
+        <div class="founder-bio">
+          Mumbai-based printpreneur with nearly two decades in the printing and packaging industry. As a student in the United States, Puneet observed systems and dignity of labour that India's factory floors lacked. Back in India, he saw the same communication gap everywhere: owners making 12 calls before 10am, supervisors with no real answers, workers doing honest work without visibility to show for it.<br><br>
+          In June 2025, he founded Clicarity — a lightweight production tracking system designed to give every factory owner real-time visibility of their shop floor, without the complexity of traditional ERP. The system is built around one belief: <em>"The team is not weak. They work hard. It is the system that is missing."</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ASSETS -->
+<div class="section alt">
+  <div class="section-inner">
+    <div class="section-label">Brand assets</div>
+    <h2 class="section-title">Downloadable assets</h2>
+    <div class="assets-grid">
+      <a class="asset-card" href="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" target="_blank" download>
+        <div class="asset-icon">🖼️</div>
+        <div class="asset-name">Logo — Light</div>
+        <div class="asset-desc">PNG, transparent background</div>
+      </a>
+      <div class="asset-card" style="opacity:0.5;cursor:default">
+        <div class="asset-icon">🖼️</div>
+        <div class="asset-name">Logo — Dark</div>
+        <div class="asset-desc">Coming soon</div>
+      </div>
+      <div class="asset-card" style="opacity:0.5;cursor:default">
+        <div class="asset-icon">📄</div>
+        <div class="asset-name">One-Page Brief</div>
+        <div class="asset-desc">Company overview PDF — coming soon</div>
+      </div>
+      <div class="asset-card" style="opacity:0.5;cursor:default">
+        <div class="asset-icon">📷</div>
+        <div class="asset-name">Founder Photo</div>
+        <div class="asset-desc">High-res — coming soon</div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:var(--muted);margin-top:16px;">For additional assets or custom requests — <a href="https://wa.me/919867800451" style="color:var(--accent)">WhatsApp us</a> or email <a href="mailto:puneet@clicarity.com" style="color:var(--accent)">puneet@clicarity.com</a></p>
+  </div>
+</div>
+
+<!-- VISION -->
+<div class="vision-band">
+  <div class="vision-inner">
+    <h2>The road ahead</h2>
+    <p>Clicarity's long-term goal is to reach 700–800 clients across India's printing, packaging, and manufacturing sectors — and to achieve an SME IPO (small and medium enterprises public offering) by 2030.</p>
+    <p>The vision is one of inclusivity and professional growth. By digitising traditionally noisy environments with streamlined interfaces, the industry becomes more attractive to a generation that expects digital upgrades. This transition also provides a path to empower workers by creating clear, system-based communication that bypasses traditional ego-driven hurdles.</p>
+    <p style="color:rgba(255,255,255,0.25);font-size:0.85rem;margin-top:20px;">Clicarity has already secured several clients across printing and manufacturing sectors. The company offers three to six-month trials to prove that visibility leads to tangible results.</p>
+  </div>
+</div>
+
+<footer>
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:3rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy">
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+    <a href="https://www.clicarity.com/terms">Terms</a>
+  </div>
+  <div>© 2026 Clicarity &nbsp;·&nbsp; <a href="/mumbai/" style="color:inherit;opacity:0.6">Mumbai</a> · <a href="/surat/" style="color:inherit;opacity:0.6">Surat</a> · <a href="/tirupur/" style="color:inherit;opacity:0.6">Tirupur</a> · <a href="/delhi/" style="color:inherit;opacity:0.6">Delhi</a> · <a href="/pune/" style="color:inherit;opacity:0.6">Pune</a> · <a href="/ludhiana/" style="color:inherit;opacity:0.6">Ludhiana</a></div>
+</footer>
+
+<script>
+function copyText() {
+  const text = document.getElementById('oneliner').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+</script>
+</body>
+</html>

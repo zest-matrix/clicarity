@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask Clicarity — AI Assistant for Indian Manufacturers</title>
+<meta name="description" content="Ask anything about Clicarity — production tracking, factory visibility, pricing, industries. Honest answers instantly.">
+<meta property="og:title" content="Ask Clicarity — AI Assistant">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://www.clicarity.com/ask/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f9f8f6;--surface:#fff;--surface2:#f2f0ec;
+  --text:#0f0e0d;--muted:#6b6860;--accent:#186eac;
+  --accent-light:#e8f2f9;--green:#25D366;--border:#e8e5e0;
+  --user-bg:#186eac;--ai-bg:#fff;
+  --font-display:'Plus Jakarta Sans',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --radius:18px;--radius-sm:10px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);display:flex;flex-direction:column;overflow:hidden;font-size:15px;line-height:1.6}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:rgba(249,248,246,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);flex-shrink:0;z-index:100}
+.nav-logo img{height:4rem;width:auto;display:block}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:0.85rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.btn-wa{background:var(--green);color:white;padding:7px 16px;border-radius:100px;font-weight:600;font-size:0.82rem;text-decoration:none;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d}
+.btn-demo{background:var(--accent);color:white;padding:8px 18px;border-radius:100px;font-weight:600;font-size:0.85rem;text-decoration:none;transition:all 0.2s}
+.btn-demo:hover{background:#1580C8}
+
+/* LAYOUT */
+.chat-layout{flex:1;display:flex;flex-direction:column;max-width:800px;width:100%;margin:0 auto;padding:0 16px;min-height:0}
+
+/* MESSAGES */
+.messages{flex:1;overflow-y:auto;padding:24px 0 8px;display:flex;flex-direction:column;gap:20px;scroll-behavior:smooth}
+.messages::-webkit-scrollbar{width:4px}
+.messages::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+
+/* WELCOME */
+.welcome{display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px 16px;gap:14px}
+.welcome-logo{width:52px;height:52px;background:var(--accent-light);border:1px solid #C8DFF0;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.welcome h1{font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:var(--text);letter-spacing:-0.02em}
+.welcome p{font-size:0.88rem;color:var(--muted);max-width:400px;line-height:1.65}
+.status-badge{display:inline-flex;align-items:center;gap:5px;background:#E6F9F0;border:1px solid #A7EDD0;border-radius:100px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:#0A7C52}
+.status-dot{width:5px;height:5px;border-radius:50%;background:#0A7C52;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 8px}
+.chip{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:7px 14px;border-radius:100px;font-size:0.78rem;cursor:pointer;transition:all 0.2s;font-family:var(--font-body)}
+.chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
+
+/* MESSAGES */
+.msg{display:flex;gap:10px;align-items:flex-start;animation:fadeUp 0.2s ease}
+.msg.user{flex-direction:row-reverse}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:700;margin-top:2px}
+.avatar.ai{background:var(--accent-light);border:1px solid #C8DFF0;color:var(--accent)}
+.avatar.user{background:var(--surface2);border:1px solid var(--border);color:var(--muted)}
+
+.bubble{max-width:80%;padding:12px 16px;font-size:0.88rem;line-height:1.75}
+.msg.ai .bubble{background:var(--ai-bg);border:1px solid var(--border);border-radius:4px var(--radius) var(--radius) var(--radius);box-shadow:0 1px 3px rgba(0,0,0,0.04);color:var(--text)}
+.msg.user .bubble{background:var(--user-bg);color:white;border-radius:var(--radius) 4px var(--radius) var(--radius)}
+
+/* Markdown in bubble */
+.bubble p{margin-bottom:8px}
+.bubble p:last-child{margin-bottom:0}
+.bubble strong{font-weight:600}
+.bubble em{font-style:italic;opacity:0.8}
+.bubble ul,.bubble ol{padding-left:20px;margin:6px 0}
+.bubble li{margin-bottom:4px}
+.bubble a{color:var(--accent);text-decoration:none}
+.bubble a:hover{text-decoration:underline}
+.bubble code{background:var(--surface2);padding:1px 5px;border-radius:4px;font-size:0.82rem;font-family:monospace}
+.bubble h3{font-size:0.95rem;font-weight:700;margin:10px 0 4px}
+.bubble hr{border:none;border-top:1px solid var(--border);margin:10px 0}
+
+/* TYPING */
+.typing{display:none;align-items:center;gap:10px}
+.typing.show{display:flex}
+.typing-bubble{background:var(--ai-bg);border:1px solid var(--border);border-radius:4px var(--radius) var(--radius) var(--radius);padding:12px 16px;display:flex;gap:4px;align-items:center}
+.typing-bubble span{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:dot 1.2s infinite}
+.typing-bubble span:nth-child(2){animation-delay:0.2s}
+.typing-bubble span:nth-child(3){animation-delay:0.4s}
+@keyframes dot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+
+/* STREAMING CURSOR */
+.cursor{display:inline-block;width:2px;height:14px;background:var(--accent);margin-left:1px;animation:cursor 0.8s infinite;vertical-align:middle}
+@keyframes cursor{0%,100%{opacity:1}50%{opacity:0}}
+
+/* ERROR */
+.error-bubble{background:#FEF2F2;border:1px solid #FECACA;border-radius:4px var(--radius) var(--radius) var(--radius);padding:10px 14px;font-size:0.85rem;color:#991B1B;max-width:80%}
+
+/* INPUT */
+.input-area{padding:10px 0 16px;flex-shrink:0}
+.input-box{display:flex;gap:8px;align-items:flex-end;background:var(--surface);border:1.5px solid var(--border);border-radius:16px;padding:10px 10px 10px 16px;transition:border-color 0.2s;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.input-box:focus-within{border-color:var(--accent)}
+#input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:0.9rem;line-height:1.5;resize:none;min-height:22px;max-height:120px;overflow-y:auto}
+#input::placeholder{color:var(--muted)}
+.input-actions{display:flex;gap:6px;align-items:center;flex-shrink:0}
+
+/* MIC BUTTON */
+.mic-btn{width:34px;height:34px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0}
+.mic-btn:hover{background:var(--accent-light);border-color:var(--accent)}
+.mic-btn.recording{background:#FEE2E2;border-color:#EF4444;animation:pulse-red 1s infinite}
+@keyframes pulse-red{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,0.3)}50%{box-shadow:0 0 0 6px rgba(239,68,68,0)}}
+.mic-btn svg{width:15px;height:15px}
+
+/* SEND BUTTON */
+.send-btn{width:34px;height:34px;border-radius:10px;background:var(--accent);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0}
+.send-btn:hover{background:#1580C8}
+.send-btn:disabled{background:#C8DFF0;cursor:not-allowed}
+.send-btn svg{width:15px;height:15px;color:white}
+
+/* FOOTER */
+.chat-footer{text-align:center;padding:4px 0 10px;font-size:0.68rem;color:var(--muted);flex-shrink:0}
+.chat-footer a{color:var(--accent);text-decoration:none}
+
+/* HISTORY PANEL */
+.history-btn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:0.78rem;display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:6px;transition:all 0.2s}
+.history-btn:hover{background:var(--surface2);color:var(--text)}
+
+
+/* GUIDED FLOW */
+.guided{display:flex;flex-direction:column;gap:14px;padding:8px 0;max-width:520px;margin:0 auto;width:100%}
+.guided-q{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.guided-step{font-size:0.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px}
+.guided-question{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:14px}
+.guided-options{display:flex;flex-wrap:wrap;gap:8px}
+.guided-opt{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:9px 16px;border-radius:100px;font-size:0.85rem;cursor:pointer;transition:all 0.2s;font-family:var(--font-body)}
+.guided-opt:hover{border-color:var(--accent);background:var(--accent-light);color:var(--accent)}
+.guided-input-row{display:flex;gap:8px;margin-top:4px}
+.guided-input-row input{flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-body);font-size:0.88rem;outline:none}
+.guided-input-row input:focus{border-color:var(--accent)}
+.guided-input-row button{background:var(--accent);color:white;border:none;border-radius:10px;padding:10px 18px;font-weight:600;font-size:0.85rem;cursor:pointer}
+
+@media(max-width:680px){
+  .nav-links{display:none}
+  .bubble{max-width:88%}
+  .btn-wa{font-size:0.75rem;padding:6px 12px}
+  .btn-demo{font-size:0.75rem;padding:6px 12px}
+  .nav-right{gap:6px}
+  nav{padding:10px 14px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" width="160" height="64" loading="eager"></a></div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="btn-demo" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="chat-layout">
+  <div class="messages" id="messages">
+
+    <div class="welcome" id="welcome">
+      <div class="welcome-logo">🏭</div>
+      <div class="status-badge"><span class="status-dot"></span>AI Online</div>
+      <h1>Ask Clicarity anything</h1>
+      <p>Answer 3 quick questions for a personalised answer — or just type your question below.</p>
+      <div class="chips">
+        <button class="chip" onclick="startGuided()" style="background:var(--accent);color:white;border-color:var(--accent);font-weight:600">✨ Find out if Clicarity fits — 3 questions</button>
+      </div>
+      <div class="chips" style="margin-top:4px">
+        <button class="chip" onclick="ask(this)">How much does it cost?</button>
+        <button class="chip" onclick="ask(this)">How is it different from WhatsApp groups?</button>
+        <button class="chip" onclick="ask(this)">How quickly can we go live?</button>
+      </div>
+    </div>
+
+    <div class="typing" id="typing">
+      <div class="avatar ai">C</div>
+      <div class="typing-bubble"><span></span><span></span><span></span></div>
+    </div>
+
+  </div>
+
+  <div class="input-area">
+    <div class="input-box">
+      <textarea id="input" placeholder="Ask anything about Clicarity…" rows="1" autocomplete="off" spellcheck="true"></textarea>
+      <div class="input-actions">
+        <button class="mic-btn" id="micBtn" title="Voice input" onclick="toggleVoice()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </button>
+        <button class="send-btn" id="sendBtn" onclick="send()" title="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-footer">
+    AI may make mistakes — for anything important <a href="https://wa.me/919867800451" target="_blank">WhatsApp Puneet directly</a> · <a href="https://calendly.com/clicarity/demo" target="_blank">Book a demo</a>
+  </div>
+</div>
+
+<script>
+const WORKER = 'https://clicarity-chat.contact-4b6.workers.dev';
+const SESSION_ID = 'sess_' + Math.random().toString(36).slice(2, 10) + '_' + Date.now();
+const HISTORY_KEY = 'clicarity_chat_v1';
+
+let history = [];
+let busy = false;
+let recognition = null;
+let isRecording = false;
+
+const msgEl = document.getElementById('messages');
+const inputEl = document.getElementById('input');
+const sendBtn = document.getElementById('sendBtn');
+const typingEl = document.getElementById('typing');
+const welcomeEl = document.getElementById('welcome');
+const micBtn = document.getElementById('micBtn');
+
+// ── Load chat history ──────────────────────────────────────────
+try {
+  const saved = localStorage.getItem(HISTORY_KEY);
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    if (parsed.messages && parsed.messages.length > 0) {
+      history = parsed.messages;
+      welcomeEl.style.display = 'none';
+      parsed.display.forEach(d => addBubble(d.role, d.text, false));
+    }
+  }
+} catch(e) {}
+
+// ── Auto-resize textarea ───────────────────────────────────────
+inputEl.addEventListener('input', () => {
+  inputEl.style.height = 'auto';
+  inputEl.style.height = Math.min(inputEl.scrollHeight, 120) + 'px';
+});
+
+inputEl.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }
+});
+
+// ── Chip click ─────────────────────────────────────────────────
+function ask(btn) {
+  inputEl.value = btn.textContent;
+  send();
+}
+
+// ── Send message ───────────────────────────────────────────────
+async function send() {
+  const text = inputEl.value.trim();
+  if (!text || busy) return;
+
+  if (welcomeEl) welcomeEl.style.display = 'none';
+  inputEl.value = '';
+  inputEl.style.height = 'auto';
+
+  addBubble('user', text);
+  history.push({ role: 'user', content: text });
+  saveHistory();
+
+  setLoading(true);
+
+  try {
+    const res = await fetch(WORKER, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: history, stream: true, session_id: SESSION_ID }),
+    });
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    setLoading(false);
+
+    // Create AI bubble for streaming
+    const { el: bubble, setText } = createStreamBubble();
+    let fullText = '';
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6).trim();
+        if (data === '[DONE]') continue;
+        try {
+          const json = JSON.parse(data);
+          if (json.type === 'content_block_delta' && json.delta?.type === 'text_delta') {
+            fullText += json.delta.text;
+            setText(fullText);
+            scrollBottom();
+          }
+        } catch(e) {}
+      }
+    }
+
+    // Finalise bubble
+    bubble.innerHTML = renderMarkdown(fullText);
+    history.push({ role: 'assistant', content: fullText });
+    saveHistory();
+
+  } catch(err) {
+    setLoading(false);
+    addError('Something went wrong. Please try again or <a href="https://wa.me/919867800451" target="_blank">WhatsApp us</a>.');
+  } finally {
+    busy = false;
+    sendBtn.disabled = false;
+  }
+}
+
+// ── Bubble helpers ─────────────────────────────────────────────
+function addBubble(role, text, animate = true) {
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  if (!animate) div.style.animation = 'none';
+
+  const av = document.createElement('div');
+  av.className = `avatar ${role}`;
+  av.textContent = role === 'ai' ? 'C' : 'You';
+
+  const bub = document.createElement('div');
+  bub.className = 'bubble';
+  bub.innerHTML = role === 'ai' ? renderMarkdown(text) : escapeHtml(text);
+
+  div.appendChild(av);
+  div.appendChild(bub);
+  msgEl.insertBefore(div, typingEl);
+  scrollBottom();
+  return bub;
+}
+
+function createStreamBubble() {
+  const div = document.createElement('div');
+  div.className = 'msg ai';
+
+  const av = document.createElement('div');
+  av.className = 'avatar ai';
+  av.textContent = 'C';
+
+  const bub = document.createElement('div');
+  bub.className = 'bubble';
+  bub.innerHTML = '<span class="cursor"></span>';
+
+  div.appendChild(av);
+  div.appendChild(bub);
+  msgEl.insertBefore(div, typingEl);
+
+  return {
+    el: bub,
+    setText: (t) => {
+      bub.innerHTML = escapeHtml(t) + '<span class="cursor"></span>';
+    }
+  };
+}
+
+function addError(html) {
+  const div = document.createElement('div');
+  div.className = 'msg ai';
+  const av = document.createElement('div');
+  av.className = 'avatar ai';
+  av.textContent = 'C';
+  const bub = document.createElement('div');
+  bub.className = 'error-bubble';
+  bub.innerHTML = html;
+  div.appendChild(av);
+  div.appendChild(bub);
+  msgEl.insertBefore(div, typingEl);
+  scrollBottom();
+}
+
+// ── Markdown renderer ──────────────────────────────────────────
+function renderMarkdown(text) {
+  if (!text) return '';
+
+  let html = text
+    // Bold
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    // Italic
+    .replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em>$1</em>')
+    // Inline code
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    // H3
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    // Horizontal rule
+    .replace(/^---$/gm, '<hr>')
+    // Unordered lists
+    .replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
+    // Numbered lists
+    .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+    // Links
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+  // Wrap consecutive <li> in <ul>
+  html = html.replace(/(<li>.*?<\/li>(\n|$))+/gs, match => '<ul>' + match + '</ul>');
+
+  // Paragraphs — split by double newline
+  const blocks = html.split(/\n\n+/);
+  html = blocks.map(block => {
+    block = block.trim();
+    if (!block) return '';
+    if (block.startsWith('<h3>') || block.startsWith('<ul>') || block.startsWith('<hr>')) return block;
+    // Wrap remaining text blocks in <p>
+    return '<p>' + block.replace(/\n/g, '<br>') + '</p>';
+  }).filter(Boolean).join('\n');
+
+  return html;
+}
+
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ── Loading state ──────────────────────────────────────────────
+function setLoading(state) {
+  busy = state;
+  sendBtn.disabled = state;
+  typingEl.classList.toggle('show', state);
+  if (state) scrollBottom();
+}
+
+function scrollBottom() {
+  msgEl.scrollTop = msgEl.scrollHeight;
+}
+
+// ── Save history ───────────────────────────────────────────────
+function saveHistory() {
+  try {
+    const display = [];
+    document.querySelectorAll('.msg').forEach(m => {
+      const role = m.classList.contains('user') ? 'user' : 'ai';
+      const bub = m.querySelector('.bubble,.error-bubble');
+      if (bub) display.push({ role, text: bub.textContent.trim() });
+    });
+    localStorage.setItem(HISTORY_KEY, JSON.stringify({ messages: history, display }));
+  } catch(e) {}
+}
+
+
+// ── GUIDED FLOW ────────────────────────────────────────────────
+const guidedAnswers = {};
+const guidedSteps = [
+  {
+    key: 'industry',
+    step: 'Question 1 of 3',
+    q: 'What does your business make or do?',
+    options: ['Printing & Packaging','Garments & Textiles','Engineering / Manufacturing','Pharma','Food Processing','Other']
+  },
+  {
+    key: 'volume',
+    step: 'Question 2 of 3',
+    q: 'How many jobs/orders run at a time?',
+    options: ['Under 20','20–50','50–100','100+']
+  },
+  {
+    key: 'pain',
+    step: 'Question 3 of 3',
+    q: "What's your biggest daily frustration?",
+    options: ['No idea where jobs are','Too many status calls','Jobs delivered late','Material wastage','Vendor delays','Team accountability']
+  }
+];
+
+function startGuided() {
+  welcomeEl.style.display = 'none';
+  showGuidedStep(0);
+}
+
+function showGuidedStep(i) {
+  const existing = document.getElementById('guidedBox');
+  if (existing) existing.remove();
+
+  if (i >= guidedSteps.length) {
+    finishGuided();
+    return;
+  }
+
+  const s = guidedSteps[i];
+  const box = document.createElement('div');
+  box.className = 'guided';
+  box.id = 'guidedBox';
+  box.innerHTML = `
+    <div class="guided-q">
+      <div class="guided-step">${s.step}</div>
+      <div class="guided-question">${s.q}</div>
+      <div class="guided-options">
+        ${s.options.map(o => `<button class="guided-opt" onclick="answerGuided('${s.key}', this.textContent, ${i})">${o}</button>`).join('')}
+      </div>
+    </div>
+  `;
+  msgEl.insertBefore(box, typingEl);
+  scrollBottom();
+}
+
+function answerGuided(key, value, i) {
+  guidedAnswers[key] = value;
+  const box = document.getElementById('guidedBox');
+  if (box) {
+    box.querySelector('.guided-options').innerHTML = `<span style="font-size:0.85rem;color:var(--accent);font-weight:600">✓ ${value}</span>`;
+  }
+  setTimeout(() => showGuidedStep(i + 1), 300);
+}
+
+function finishGuided() {
+  const a = guidedAnswers;
+  const msg = `I run a ${a.industry || 'business'} operation with ${a.volume || 'several'} jobs at a time. My biggest frustration is: ${a.pain || 'tracking jobs'}. Based on this, is Clicarity right for me and how would it specifically help? Keep it short.`;
+  inputEl.value = msg;
+  send();
+}
+
+// ── Voice input ────────────────────────────────────────────────
+function toggleVoice() {
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    alert('Voice input is not supported on this browser. Try Chrome or Safari.');
+    return;
+  }
+
+  if (isRecording) {
+    recognition?.stop();
+    return;
+  }
+
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SR();
+  recognition.lang = 'en-IN';
+  recognition.continuous = false;
+  recognition.interimResults = true;
+
+  recognition.onstart = () => {
+    isRecording = true;
+    micBtn.classList.add('recording');
+    micBtn.title = 'Recording... tap to stop';
+  };
+
+  recognition.onresult = (e) => {
+    const transcript = Array.from(e.results)
+      .map(r => r[0].transcript)
+      .join('');
+    inputEl.value = transcript;
+    inputEl.style.height = 'auto';
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 120) + 'px';
+  };
+
+  recognition.onend = () => {
+    isRecording = false;
+    micBtn.classList.remove('recording');
+    micBtn.title = 'Voice input';
+    if (inputEl.value.trim()) send();
+  };
+
+  recognition.onerror = () => {
+    isRecording = false;
+    micBtn.classList.remove('recording');
+  };
+
+  recognition.start();
+}
+</script>
+</body>
+</html>

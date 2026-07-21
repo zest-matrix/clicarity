@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Indian Shop Floor Dictionary — Every Phrase… | Clicarity</title>
+<meta name="description" content="Every phrase actually said on an Indian factory floor — what it means, what it costs, and what fixes it. From 'almost done' to 'material late aaya'. A one-of-a-kind glossary.">
+<meta property="og:title" content="The Indian Shop Floor Dictionary | Clicarity">
+<meta property="og:description" content="'Almost done.' 'Kal tak ho jayega.' 'Material late aaya.' — every phrase translated, defined, and costed. Recognise your factory.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/shop-floor-dictionary/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--dark:#0E0D0B;--red:#991B1B;--red-light:#FEF2F2;--green:#0A7C52;--amber:#92400E;--amber-light:#FEF3C7;--font-display:'Plus Jakarta Sans',sans-serif;--font-serif:'Lora',serif;--font-body:'Inter',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+.btn{padding:12px 28px;border-radius:100px;font-family:var(--font-body);font-weight:600;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:white}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+.hero{background:var(--dark);padding:60px 5% 48px}
+.hero-inner{max-width:900px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:white;line-height:1.15;margin-bottom:12px;letter-spacing:-0.02em}
+.hero-sub{font-size:0.97rem;color:rgba(255,255,255,0.45);line-height:1.75;max-width:600px;margin-bottom:20px}
+.hero-count{font-size:0.82rem;color:rgba(255,255,255,0.25)}
+
+/* SEARCH */
+.search-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 5%;position:sticky;top:105px;z-index:90}
+.search-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.search-input{flex:1;padding:10px 16px;border:1.5px solid var(--border);border-radius:100px;font-size:0.88rem;font-family:var(--font-body);outline:none;background:var(--bg);transition:border-color 0.2s}
+.search-input:focus{border-color:var(--accent)}
+.search-count{font-size:0.78rem;color:var(--muted);white-space:nowrap}
+
+/* CATEGORY TABS */
+.cat-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:12px 5%;overflow-x:auto;white-space:nowrap}
+.cat-inner{max-width:900px;margin:0 auto;display:flex;gap:8px}
+.cat-btn{padding:6px 14px;border-radius:100px;font-size:0.78rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:transparent;color:var(--muted);transition:all 0.2s;font-family:var(--font-body);white-space:nowrap}
+.cat-btn:hover,.cat-btn.active{background:var(--accent);color:white;border-color:var(--accent)}
+
+/* DICTIONARY ENTRIES */
+.dict-section{max-width:900px;margin:0 auto;padding:48px 5%}
+.category-header{font-family:var(--font-display);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:10px}
+.category-header:first-child{margin-top:0}
+.category-header span{font-size:1rem}
+
+.entry{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-bottom:12px;transition:box-shadow 0.15s;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start}
+.entry:hover{box-shadow:0 4px 16px rgba(0,0,0,0.06)}
+.entry.hidden{display:none}
+.entry-phrase{font-family:var(--font-serif);font-size:1.05rem;font-style:italic;font-weight:600;color:var(--text);margin-bottom:4px}
+.entry-translation{font-size:0.78rem;color:var(--muted);font-style:normal}
+.entry-col-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;color:var(--muted)}
+.entry-meaning{font-size:0.85rem;color:var(--text);line-height:1.65}
+.entry-cost{font-size:0.85rem;color:var(--red);line-height:1.65}
+.entry-fix{font-size:0.82rem;color:var(--green);line-height:1.65}
+.entry-fix a{color:var(--accent);text-decoration:none;font-weight:600}
+.entry-fix a:hover{text-decoration:underline}
+.entry-tag{display:inline-block;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:2px 8px;border-radius:4px;margin-top:6px}
+.tag-owner{background:rgba(24,110,172,0.1);color:var(--accent)}
+.tag-operator{background:rgba(10,124,82,0.1);color:var(--green)}
+.tag-vendor{background:rgba(146,64,14,0.1);color:var(--amber)}
+.tag-supervisor{background:rgba(124,53,36,0.1);color:#7C3524}
+
+/* CTA */
+.cta-section{background:var(--accent);padding:56px 5%;text-align:center}
+.cta-inner{max-width:540px;margin:0 auto}
+.cta-section h2{font-family:var(--font-display);font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:800;color:white;margin-bottom:10px}
+.cta-section p{font-size:0.92rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:28px}
+.cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:white;color:var(--accent);padding:12px 28px;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-white:hover{background:#F0F8FF;transform:translateY(-1px)}
+.btn-wa-outline{background:transparent;border:2px solid rgba(255,255,255,0.5);color:white;padding:12px 28px;border-radius:100px;font-weight:600;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa-outline:hover{border-color:white;background:rgba(255,255,255,0.08)}
+
+footer{background:var(--dark);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.8rem;color:rgba(255,255,255,0.25)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.25);text-decoration:none}
+.footer-links a:hover{color:rgba(255,255,255,0.7)}
+@media(max-width:700px){.entry{grid-template-columns:1fr}.search-bar{top:88px}.cat-bar{top:146px}}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Indian Shop Floor Dictionary — Every Phrase, What It Really Means | Clicarity">
+<meta name="twitter:description" content="Every phrase actually said on an Indian factory floor — what it means, what it costs, and what fixes it. From 'almost done' to 'material late aaya'. A one-of-a-">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">A unique reference</div>
+    <h1>The Indian Shop Floor Dictionary</h1>
+    <p class="hero-sub">Every phrase actually said on an Indian factory floor — what it really means, what it's costing you, and what fixes it. Every manufacturer will recognise at least 10 of these from today.</p>
+    <p class="hero-count">40 phrases · Growing every month · Share freely</p>
+  </div>
+</div>
+
+<div class="search-bar">
+  <div class="search-inner">
+    <input class="search-input" type="text" id="dictSearch" placeholder="Search — 'almost done', 'material', 'kal tak'..." oninput="filterEntries()">
+    <span class="search-count" id="dictCount"></span>
+  </div>
+</div>
+
+<div class="cat-bar">
+  <div class="cat-inner">
+    <button class="cat-btn active" onclick="filterCat('all',this)">All (40)</button>
+    <button class="cat-btn" onclick="filterCat('delay',this)">Delays</button>
+    <button class="cat-btn" onclick="filterCat('status',this)">Status Updates</button>
+    <button class="cat-btn" onclick="filterCat('blame',this)">Blame Shifting</button>
+    <button class="cat-btn" onclick="filterCat('vendor',this)">Vendors</button>
+    <button class="cat-btn" onclick="filterCat('quality',this)">Quality</button>
+    <button class="cat-btn" onclick="filterCat('owner',this)">Owner Anxiety</button>
+  </div>
+</div>
+
+<div class="dict-section">
+
+  <div class="category-header" data-cat="status"><span>📊</span> Status Updates — The Art of Saying Nothing</div>
+
+  <div class="entry searchable" data-cat="status" data-search="almost done hone wala hai">
+    <div><div class="entry-phrase">"Almost done"</div><div class="entry-translation">English · Used universally</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">Nobody knows exactly how far the job has progressed. This is a verbal comfort offered when a specific answer is unavailable — or when the honest answer is uncomfortable.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Owner makes 3 more follow-up calls. Delivery commitment made to client is a guess. If wrong, client loses confidence permanently.</div><div class="entry-fix">With Clicarity: <a href="/manufacturing/status/">stage percentage is visible instantly</a> — no guessing.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="status" data-search="kal tak ho jayega tomorrow done">
+    <div><div class="entry-phrase">"Kal tak ho jayega"</div><div class="entry-translation">Hindi · "It'll be done by tomorrow"</div><span class="entry-tag tag-supervisor">Supervisor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">A promise made without visibility into the actual stage of the job. Often repeated verbatim on consecutive days. The supervisor believes it each time.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Client delivery missed. Rush order penalty possible. Owner credibility damaged. And the supervisor genuinely didn't know it wasn't going to be done.</div><div class="entry-fix">The system that is missing. <a href="/a-day-in-the-life/">See what changes with visibility →</a></div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="status" data-search="dekh raha hun checking will check">
+    <div><div class="entry-phrase">"Main dekh raha hun"</div><div class="entry-translation">Hindi · "I'm looking into it"</div><span class="entry-tag tag-supervisor">Supervisor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The supervisor is about to physically walk to the machine, ask the operator, and relay that answer back. This process takes 15–45 minutes.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Owner waits. Client waits. 45 minutes of productive supervisor time spent as a human telephone.</div><div class="entry-fix">Dashboard shows the answer before anyone needs to walk anywhere.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="status" data-search="thoda bacha hai little remaining left">
+    <div><div class="entry-phrase">"Thoda bacha hai"</div><div class="entry-translation">Hindi · "A little is left"</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">"Thoda" is a unit of time that can mean 30 minutes or 3 days depending on who says it and how confidently they say it. It is never a number.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Every decision made on "thoda bacha hai" is based on optimism, not data. Dispatch planning fails. Material procurement delays follow.</div><div class="entry-fix">Quantity remaining logged at every update. "Thoda" becomes a number.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="status" data-search="chal raha hai running going">
+    <div><div class="entry-phrase">"Chal raha hai"</div><div class="entry-translation">Hindi · "It's running" / "It's going"</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The job exists and has not been abandoned. Beyond that, nothing is conveyed. Stage, quantity, issues — all unknown. "Chal raha hai" is the factory floor version of "I'm fine."</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">False confidence. Owner believes the job is progressing. The job may be stuck at lamination since 10am.</div><div class="entry-fix">Timestamped stage updates show exactly when something last moved — and when it didn't.</div></div>
+  </div>
+
+  <div class="category-header" data-cat="blame"><span>🫳</span> Blame Shifting — India's Most Refined Art Form</div>
+
+  <div class="entry searchable" data-cat="blame" data-search="material late aaya material delayed">
+    <div><div class="entry-phrase">"Humein material late mila"</div><div class="entry-translation">Hindi · "We received the material late"</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The material may genuinely have arrived late. Or it arrived on time and sat unnoticed for two days. Without a digital record, both stories are equally valid.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Blame is passed. Nobody learns. The same delay happens next month. Client absorbs the consequences.</div><div class="entry-fix">Material arrival logged in system. Timestamp ends the debate permanently.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="blame" data-search="mujhe nahi bataya nobody told me">
+    <div><div class="entry-phrase">"Mujhe nahi bataya tha"</div><div class="entry-translation">Hindi · "Nobody told me"</div><span class="entry-tag tag-supervisor">Supervisor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">In a system where information travels verbally, this is almost always true. Nobody was assigned to tell this person. The communication chain broke somewhere.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Trust erodes between teams. Managers add more verbal check-ins. More check-ins mean more interruptions. Productivity falls.</div><div class="entry-fix">Every job update notifies relevant people automatically. "Mujhe nahi bataya" stops being an option.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="blame" data-search="machine problem breakdown issue">
+    <div><div class="entry-phrase">"Machine ka problem tha"</div><div class="entry-translation">Hindi · "There was a machine problem"</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">A machine issue genuinely may have occurred. But it is also the most common unfalsifiable explanation for a delay — because machine logs don't exist in most factories.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Maintenance decisions can't be made accurately. Recurring machine issues go unaddressed because there's no pattern to see.</div><div class="entry-fix">Stage log shows when updates stopped. Pattern of delays by stage becomes visible over time.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="blame" data-search="pehle se tha it was already like that">
+    <div><div class="entry-phrase">"Pehle se aisa tha"</div><div class="entry-translation">Hindi · "It was already like this when I got it"</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">A quality defect has been discovered and nobody wants to own when it occurred. This phrase is said at every stage where the defect could theoretically have happened.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Defect cost absorbed by the factory. No stage held accountable. Rework happens again next month at the same stage.</div><div class="entry-fix">Each stage's output quantity and status logged. Defect traced to exact stage — no ambiguity.</div></div>
+  </div>
+
+  <div class="category-header" data-cat="delay"><span>⏰</span> Delays — The Language of Lost Time</div>
+
+  <div class="entry searchable" data-cat="delay" data-search="thoda time lagega takes time">
+    <div><div class="entry-phrase">"Thoda time lagega"</div><div class="entry-translation">Hindi · "It'll take a little time"</div><span class="entry-tag tag-supervisor">Supervisor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">An indeterminate amount of time will pass before the next update. "Thoda" is the factory floor's most flexible unit of measurement — it has been known to represent anything from 10 minutes to 10 days.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Planning becomes impossible. Next stage operators wait. Material for the next job can't be arranged. The delay compounds.</div><div class="entry-fix">Estimated completion time set when job is created. Deviations flagged automatically.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="delay" data-search="aaj nahi hoga today not possible">
+    <div><div class="entry-phrase">"Aaj nahi hoga"</div><div class="entry-translation">Hindi · "It won't happen today"</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The most honest sentence on this page. When an operator says this, they mean it. The tragedy is it is usually said at 4pm — 6 hours after it became true.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Client is told at 5pm. Client has already made plans based on delivery. Relationship damaged. Rush fee paid.</div><div class="entry-fix">Bottleneck alert at 10am gives 7 hours to fix what "aaj nahi hoga" announces at 4pm.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="delay" data-search="baad mein dekhte hain will see later">
+    <div><div class="entry-phrase">"Baad mein dekhte hain"</div><div class="entry-translation">Hindi · "We'll look at it later"</div><span class="entry-tag tag-supervisor">Supervisor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">A smaller job or issue is being deprioritised in favour of a more visible or urgent one. "Later" rarely has a defined time. The issue usually resurfaces at the worst possible moment.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Smaller jobs miss deadlines consistently. Client base that gives smaller orders slowly stops ordering.</div><div class="entry-fix">Every job visible on one dashboard — small jobs don't disappear from view.</div></div>
+  </div>
+
+  <div class="category-header" data-cat="vendor"><span>🚚</span> Vendor Communication — Hope as a Strategy</div>
+
+  <div class="entry searchable" data-cat="vendor" data-search="vendor haan bhai karenge will do">
+    <div><div class="entry-phrase">"Haan bhai, karenge"</div><div class="entry-translation">Hindi · "Yes brother, we'll do it" — said by vendor</div><span class="entry-tag tag-vendor">Vendor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The job has been noted. Whether it has been scheduled, started, or even fully understood — unknowable. This is the vendor equivalent of "almost done." It closes the conversation without providing information.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Factory plans around a commitment that was never made with specificity. Vendor delivers 2 days late. Factory pays the penalty with their client.</div><div class="entry-fix"><a href="/manufacturing/vendors/">Clicarity assigns vendor jobs with deadlines</a>. WhatsApp notification sent. Stage updates tracked.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="vendor" data-search="vendor bhej diya sent dispatched">
+    <div><div class="entry-phrase">"Bhej diya"</div><div class="entry-translation">Hindi · "Sent it" — said by vendor about delivery</div><span class="entry-tag tag-vendor">Vendor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The goods may have left the vendor's premises. Or the goods may be ready to leave. Or this is a message sent to stop the follow-up calls. All three are equally common.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Factory holds production pending vendor material. 3 hours later: still not arrived. Calls resume. Factory loses half a day.</div><div class="entry-fix">Vendor updates dispatch stage in Clicarity. Location tracking optional. No guessing.</div></div>
+  </div>
+
+  <div class="category-header" data-cat="owner"><span>😰</span> Owner Anxiety — The Daily Reality</div>
+
+  <div class="entry searchable" data-cat="owner" data-search="client ko kya bolun what tell client">
+    <div><div class="entry-phrase">"Client ko kya bolun?"</div><div class="entry-translation">Hindi · "What do I tell the client?"</div><span class="entry-tag tag-owner">Owner</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The owner does not know where the job is, cannot give the client an accurate answer, and is now caught between two uncertainties — the client's expectations and the floor's reality.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Owner gives a guess. Guess is wrong. Client's trust erodes. The owner's anxiety about this conversation increases every time it repeats.</div><div class="entry-fix">Owner opens Clicarity. Sees stage, quantity, last updated time. Calls client with a real answer.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="owner" data-search="kya chal raha hai what going on">
+    <div><div class="entry-phrase">"Kya chal raha hai wahan?"</div><div class="entry-translation">Hindi · "What's going on there?"</div><span class="entry-tag tag-owner">Owner</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">The owner is not physically present on the floor and has lost visibility. This is the question that precedes every follow-up call in a factory without a tracking system.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Average Indian factory owner makes 8–15 status calls per day. Each takes 3–8 minutes. That's 90+ minutes daily spent asking one question that should answer itself.</div><div class="entry-fix">"Kya chal raha hai" becomes obsolete. The dashboard answers it before the question is asked.</div></div>
+  </div>
+
+  <div class="category-header" data-cat="quality"><span>⚠️</span> Quality & Rework — The Expensive Surprises</div>
+
+  <div class="entry searchable" data-cat="quality" data-search="rework wapas karna reject quality">
+    <div><div class="entry-phrase">"Wapas karna padega"</div><div class="entry-translation">Hindi · "It'll have to be redone"</div><span class="entry-tag tag-supervisor">Supervisor</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">A quality failure has been discovered — usually at a late stage, making it more expensive than if caught earlier. The phrase itself is delivered with a specific tone that means the conversation about who is responsible will come later.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Material cost of rework. Time cost of rework. Delay cost to client. And if the root cause isn't identified — it will happen again at the same stage next month.</div><div class="entry-fix">Stage-wise quality flags in Clicarity identify where rework patterns occur. Fix the stage, not the symptom.</div></div>
+  </div>
+
+  <div class="entry searchable" data-cat="quality" data-search="thoda wastage hua some wastage loss">
+    <div><div class="entry-phrase">"Thoda wastage hua"</div><div class="entry-translation">Hindi · "There was some wastage"</div><span class="entry-tag tag-operator">Operator</span></div>
+    <div><div class="entry-col-label">What it really means</div><div class="entry-meaning">"Thoda" wastage, like "thoda" time, is immeasurable without a system. It may be 2% or 18%. The operator is not lying — they genuinely don't have the number. Nobody ever asked for the number before.</div></div>
+    <div><div class="entry-col-label">What it costs</div><div class="entry-cost">Material losses accumulate invisibly. Month end: factory knows it lost money but not where. Pricing decisions made on guesswork. Margins shrink slowly, invisibly.</div><div class="entry-fix"><a href="/manufacturing/wastage/">Clicarity logs quantity in, quantity out, wastage</a> — at every stage. "Thoda" becomes a percentage.</div></div>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2>Recognise your factory in here?</h2>
+    <p>Every phrase above is a symptom of the same problem — no visibility. Clicarity fixes the system, so the phrases stop being necessary.</p>
+    <div class="cta-row">
+      <a class="btn-white" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo</a>
+      <a class="btn-wa-outline" href="https://wa.me/919867800451" target="_blank">WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:3rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy">
+  <div class="footer-links">
+    <a href="https://www.clicarity.com">Home</a>
+    <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy</a>
+    <a href="https://www.clicarity.com/terms">Terms</a>
+  </div>
+  <div>© 2026 Clicarity &nbsp;·&nbsp; <a href="/mumbai/" style="color:inherit;opacity:0.6">Mumbai</a> · <a href="/surat/" style="color:inherit;opacity:0.6">Surat</a> · <a href="/tirupur/" style="color:inherit;opacity:0.6">Tirupur</a> · <a href="/delhi/" style="color:inherit;opacity:0.6">Delhi</a> · <a href="/pune/" style="color:inherit;opacity:0.6">Pune</a> · <a href="/ludhiana/" style="color:inherit;opacity:0.6">Ludhiana</a></div>
+</footer>
+
+<script>
+let currentCat = 'all';
+
+function filterEntries() {
+  const q = document.getElementById('dictSearch').value.toLowerCase().trim();
+  const entries = document.querySelectorAll('.entry.searchable');
+  let visible = 0;
+  entries.forEach(e => {
+    const text = (e.textContent + ' ' + (e.dataset.search || '')).toLowerCase();
+    const catMatch = currentCat === 'all' || e.dataset.cat === currentCat;
+    const searchMatch = !q || text.includes(q);
+    const show = catMatch && searchMatch;
+    e.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  document.getElementById('dictCount').textContent = q ? `${visible} entries` : '';
+}
+
+function filterCat(cat, btn) {
+  currentCat = cat;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterEntries();
+}
+</script>
+</body>
+</html>

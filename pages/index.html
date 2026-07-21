@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Pages | Clicarity</title>
+<meta name="description" content="Explore all Clicarity features, industry solutions and resources. Production tracking software built for Indian manufacturers and MSMEs.">
+<meta property="og:title" content="All Pages | Clicarity">
+<meta property="og:description" content="Explore all Clicarity features, industry solutions and resources. Production tracking software built for Indian manufacturers and MSMEs.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+  --bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;
+  --border:#E4E0D8;--accent:#186EAC;--accent-light:#E8F2F9;
+  --green:#0A7C52;--green-light:#E6F5EE;
+  --amber:#92400E;--amber-light:#FEF3C7;
+  --font-display:'Plus Jakarta Sans',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --radius:16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.btn{padding:10px 22px;border-radius:100px;font-family:var(--font-body);font-weight:500;font-size:0.88rem;cursor:pointer;transition:all 0.2s;border:none;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 4px 14px rgba(24,110,172,0.2)}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+@media(max-width:768px){.btn-outline{display:none}}
+
+/* HERO */
+.hero{max-width:680px;margin:0 auto;padding:60px 5% 44px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);color:var(--accent);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px}
+.eyebrow-dot{width:5px;height:5px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+h1{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;line-height:1.2;letter-spacing:-0.3px;margin-bottom:12px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:460px;margin:0 auto}
+
+/* PAGE BODY */
+.page-body{max-width:1060px;margin:0 auto;padding:40px 5% 80px}
+
+/* CATEGORY */
+.cat{margin-bottom:52px}
+.cat-header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.cat-label{font-family:var(--font-display);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.cat-line{flex:1;height:1px;background:var(--border)}
+.cat-count{font-size:0.7rem;font-weight:600;color:var(--muted);background:white;border:1px solid var(--border);padding:2px 10px;border-radius:100px;white-space:nowrap}
+
+/* CARD GRID */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:860px){.card-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.card-grid{grid-template-columns:1fr}}
+
+/* PAGE CARD */
+.page-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s,border-color 0.2s;display:flex;flex-direction:column}
+.page-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-2px);border-color:var(--card-color,var(--accent))}
+
+/* TOGGLE BAR */
+.toggle-bar{display:flex;padding:10px 10px 0;gap:6px}
+.toggle-btn{flex:1;padding:7px 10px;border-radius:8px;border:none;font-family:var(--font-body);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all 0.18s;background:transparent;color:var(--muted)}
+.toggle-btn.active-global{background:var(--accent-light);color:var(--accent)}
+.toggle-btn.active-india{background:#FFF8F0;color:#92400E}
+
+/* CARD BODY */
+.card-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+.card-icon-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.card-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card-title{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--text);line-height:1.3}
+.card-desc{font-size:0.78rem;color:var(--muted);line-height:1.6;margin-bottom:14px;flex:1}
+/* India desc hidden by default */
+.india-desc{display:none}
+
+/* CARD FOOTER */
+.card-foot{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border)}
+.card-url-global,.card-url-india{font-size:0.72rem;font-weight:600;color:var(--muted);font-family:monospace;background:var(--bg);padding:3px 9px;border-radius:5px}
+.card-url-india{display:none;background:#FFF8F0;color:#92400E}
+.card-cta{font-size:0.78rem;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:gap 0.15s}
+.card-cta:hover{gap:8px}
+.card-cta-india{display:none;font-size:0.78rem;font-weight:600;color:#92400E;text-decoration:none;display:none;align-items:center;gap:4px;transition:gap 0.15s}
+.card-cta-india:hover{gap:8px}
+
+/* INDIA MODE */
+.page-card.india-mode .global-desc{display:none}
+.page-card.india-mode .india-desc{display:block}
+.page-card.india-mode .card-url-global{display:none}
+.page-card.india-mode .card-url-india{display:block}
+.page-card.india-mode .card-cta{display:none}
+.page-card.india-mode .card-cta-india{display:inline-flex}
+.page-card.india-mode .toggle-btn.active-global{background:transparent;color:var(--muted)}
+.page-card.india-mode .toggle-btn.active-india{background:#FFF8F0;color:#92400E}
+
+/* BADGE */
+.card-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:100px;margin-left:auto}
+.badge-live{background:var(--green-light);color:var(--green)}
+.badge-soon{background:var(--amber-light);color:var(--amber)}
+
+/* MANUFACTURING FEATURED */
+.mfg-featured{background:#0E0D0B;border-radius:18px;padding:28px 28px 24px;margin-bottom:12px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;position:relative;overflow:hidden}
+.mfg-featured::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(24,110,172,0.18),transparent 70%);pointer-events:none}
+.mfg-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(24,110,172,0.15);color:#7AB8D9;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;margin-bottom:10px}
+.mfg-featured h2{font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:white;line-height:1.3;margin-bottom:6px}
+.mfg-featured h2 span{color:#186EAC}
+.mfg-featured p{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;max-width:380px}
+.mfg-btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn-mfg{background:var(--accent);color:white;padding:9px 18px;border-radius:100px;font-size:0.8rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.2s}
+.btn-mfg:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-mfg-ghost{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.12);padding:9px 18px;border-radius:100px;font-size:0.8rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.2s}
+.btn-mfg-ghost:hover{background:rgba(255,255,255,0.12)}
+.stage-mini{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px;min-width:160px}
+.sm-row{display:flex;align-items:center;gap:7px;padding:5px 9px;border-radius:5px;margin-bottom:3px;font-size:0.72rem}
+.sm-row.done{background:rgba(10,124,82,0.14);color:#86EFAC}
+.sm-row.stuck{background:rgba(239,68,68,0.14);color:#FCA5A5;font-weight:600}
+.sm-row.wait{color:rgba(255,255,255,0.22)}
+.sm-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+@media(max-width:700px){.mfg-featured{grid-template-columns:1fr}.stage-mini{display:none}}
+
+/* CAMPAIGN CARDS */
+.camp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.camp-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:20px 22px;display:flex;align-items:flex-start;gap:14px;transition:all 0.2s}
+.camp-card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.07);transform:translateY(-2px);border-color:var(--accent)}
+.camp-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.camp-card h3{font-family:var(--font-display);font-size:0.88rem;font-weight:700;margin-bottom:4px}
+.camp-card p{font-size:0.77rem;color:var(--muted);line-height:1.55;margin-bottom:10px}
+@media(max-width:540px){.camp-grid{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:#0E0D0B;padding:28px 5%}
+.footer-inner{max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer img{height:36px;width:auto;filter:brightness(0) invert(1);opacity:0.45}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{font-size:0.75rem;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:white}
+.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.2)}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px);}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VDQQRVG0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C5VDQQRVG0');</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="All Pages | Clicarity">
+<meta name="twitter:description" content="Explore all Clicarity features, industry solutions and resources. Production tracking software built for Indian manufacturers and MSMEs.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+<link rel="canonical" href="https://www.clicarity.com/pages/">
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<main>
+
+<div class="hero">
+  <div class="eyebrow"><div class="eyebrow-dot"></div>All Landing Pages</div>
+  <h1>Every page we've built.<br><em>Find yours.</em></h1>
+  <p class="hero-sub">Click Global or 🇮🇳 India on any card to switch versions. More pages being added regularly.</p>
+</div>
+
+<div class="page-body">
+
+  <!-- ─── MANUFACTURING ─── -->
+  <div class="cat">
+    <div class="cat-header">
+      <div class="cat-label">Manufacturing</div>
+      <div class="cat-line"></div>
+      <div class="cat-count">9 pages · All live</div>
+    </div>
+
+    <div class="mfg-featured">
+      <div>
+        <div class="mfg-tag">⚙️ &nbsp;Primary Vertical</div>
+        <h2>Manufacturing Process Tracking<br><span>See where every job gets stuck.</span></h2>
+        <p>Stage-by-stage production visibility from raw material to dispatch. Bottlenecks caught before deadlines slip. Built for the factory floor.</p>
+        <div class="mfg-btns">
+          <a class="btn-mfg" href="https://www.clicarity.com/manufacturing" target="_blank">Global →</a>
+          <a class="btn-mfg-ghost" href="https://www.clicarity.com/in/manufacturing" target="_blank">🇮🇳 India →</a>
+        </div>
+      </div>
+      <div class="stage-mini">
+        <div style="font-size:0.62rem;font-weight:700;color:rgba(255,255,255,0.3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">Job #1042 — Live</div>
+        <div class="sm-row done"><div class="sm-dot" style="background:#0A7C52"></div>Raw Material ✓</div>
+        <div class="sm-row done"><div class="sm-dot" style="background:#0A7C52"></div>Production ✓</div>
+        <div class="sm-row stuck"><div class="sm-dot" style="background:#EF4444"></div>QC — Stuck 4h 12m</div>
+        <div class="sm-row wait"><div class="sm-dot" style="background:rgba(255,255,255,0.12)"></div>Packing</div>
+        <div class="sm-row wait"><div class="sm-dot" style="background:rgba(255,255,255,0.12)"></div>Dispatch</div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <!-- Wastage -->
+      <div class="page-card" style="--card-color:#F59E0B">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#FEF3C7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 16 4-4 4 4 4-4"/></svg></div>
+            <div class="card-title">Material Wastage</div>
+          </div>
+          <div class="card-desc global-desc">You know material is getting lost. You don't know where. See it stage by stage — while the job is still running.</div>
+          <div class="card-desc india-desc">India version. ₹ context. Tally FAQ. No hidden charges. Stage-wise quantity tracking.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/manufacturing/wastage</div>
+            <div class="card-url-india">/in/manufacturing/wastage</div>
+            <a class="card-cta" href="https://www.clicarity.com/manufacturing/wastage" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/manufacturing/wastage" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delays -->
+      <div class="page-card" style="--card-color:#EF4444">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#FEF2F2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="card-title">Production Delays</div>
+          </div>
+          <div class="card-desc global-desc">Jobs running late. You don't know where they got stuck. See every bottleneck before the deadline slips.</div>
+          <div class="card-desc india-desc">India version. ₹ context. Tally FAQ. No hidden charges. Live stage delay visibility.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/manufacturing/delays</div>
+            <div class="card-url-india">/in/manufacturing/delays</div>
+            <a class="card-cta" href="https://www.clicarity.com/manufacturing/delays" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/manufacturing/delays" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div class="page-card" style="--card-color:#186EAC">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#E8F2F9"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#186EAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <div class="card-title">Live Job Status</div>
+          </div>
+          <div class="card-desc global-desc">Stop spending your morning asking where each job is. Every job on one screen. No calls needed.</div>
+          <div class="card-desc india-desc">India version. WhatsApp framed as broken system. Tally FAQ. No hidden charges.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/manufacturing/status</div>
+            <div class="card-url-india">/in/manufacturing/status</div>
+            <a class="card-cta" href="https://www.clicarity.com/manufacturing/status" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/manufacturing/status" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vendors -->
+      <div class="page-card" style="--card-color:#0E7490">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#ECFEFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg></div>
+            <div class="card-title">Vendor Delays</div>
+          </div>
+          <div class="card-desc global-desc">Vendor late on a component. You find out when production stops. Early warning changes everything.</div>
+          <div class="card-desc india-desc">India version. Tally FAQ. No hidden charges. Vendor WhatsApp portal.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/manufacturing/vendors</div>
+            <div class="card-url-india">/in/manufacturing/vendors</div>
+            <a class="card-cta" href="https://www.clicarity.com/manufacturing/vendors" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/manufacturing/vendors" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rework -->
+      <div class="page-card" style="--card-color:#0A7C52">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" disabled>Global</button>
+          <button class="toggle-btn" disabled>🇮🇳 India</button>
+          <span class="card-badge badge-soon">Coming Soon</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#E6F5EE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.47"/></svg></div>
+            <div class="card-title">Rework & Rejections</div>
+          </div>
+          <div class="card-desc global-desc">Same stage causing rework every month. Without stage data you can't break the pattern.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/manufacturing/rework</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dispatch -->
+      <div class="page-card" style="--card-color:#186EAC">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#E8F2F9"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#186EAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <div class="card-title">Dispatch Bottlenecks</div>
+          </div>
+          <div class="card-desc global-desc">Job is done. Client is waiting. Dispatch doesn't know. Finished goods sit while invoices stay unsent.</div>
+          <div class="card-desc india-desc">India version. Tally billing integration. No hidden charges.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/manufacturing/dispatch</div>
+            <div class="card-url-india">/in/manufacturing/dispatch</div>
+            <a class="card-cta" href="https://www.clicarity.com/manufacturing/dispatch" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/manufacturing/dispatch" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visibility -->
+      <div class="page-card" style="--card-color:#0A7C52">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#E6F5EE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="card-title">Floor Visibility</div>
+          </div>
+          <div class="card-desc global-desc">See every job on your production floor from anywhere — phone, tablet, or desktop. Without being there.</div>
+          <div class="card-desc india-desc">India version. Tally FAQ. No hidden charges. View from anywhere.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/manufacturing/visibility</div>
+            <div class="card-url-india">/in/manufacturing/visibility</div>
+            <a class="card-cta" href="https://www.clicarity.com/manufacturing/visibility" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/manufacturing/visibility" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end manufacturing cat -->
+
+
+  <!-- ─── GENERAL PAIN POINTS ─── -->
+  <div class="cat">
+    <div class="cat-header">
+      <div class="cat-label">General — By Pain Point</div>
+      <div class="cat-line"></div>
+      <div class="cat-count">6 pages · Live</div>
+    </div>
+
+    <div class="card-grid">
+
+      <!-- Cash -->
+      <div class="page-card" style="--card-color:#991B1B" data-global-url="https://www.clicarity.com/cash" data-india-url="https://www.clicarity.com/in/cash">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#FEF2F2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="card-title">Protect Your Cash Flow</div>
+          </div>
+          <div class="card-desc global-desc">For businesses losing margin to operational waste they can't see. Delays, rework, coordination overhead — all invisible until month-end.</div>
+          <div class="card-desc india-desc">Same page in ₹. Tally FAQ, WhatsApp CTA, Mumbai client names. "Kya status hai?" language.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/cash</div>
+            <div class="card-url-india">/in/cash</div>
+            <a class="card-cta" href="https://www.clicarity.com/cash" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/cash" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk -->
+      <div class="page-card" style="--card-color:#0A7C52" data-global-url="https://www.clicarity.com/risk" data-india-url="https://www.clicarity.com/in/risk">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#E6F5EE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A7C52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div class="card-title">30-Day Results Guarantee</div>
+          </div>
+          <div class="card-desc global-desc">For cautious buyers. Measurable improvement in 30 days or we work with you until you see it. Risk removed before you commit.</div>
+          <div class="card-desc india-desc">India version. No hidden charges. INR ROI examples. Floor staff adoption FAQ. Tally coexistence.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/risk</div>
+            <div class="card-url-india">/in/risk</div>
+            <a class="card-cta" href="https://www.clicarity.com/risk" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/risk" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hiring -->
+      <div class="page-card" style="--card-color:#6B21A8" data-global-url="https://www.clicarity.com/hiring" data-india-url="https://www.clicarity.com/in/hiring">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#F3E8FF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B21A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="card-title">Avoid Adding Headcount</div>
+          </div>
+          <div class="card-desc global-desc">For founders under pressure to hire. Your team has 37 hrs/week of invisible capacity locked in coordination. Free it before hiring.</div>
+          <div class="card-desc india-desc">India version. WhatsApp as the broken system. INR capacity cost examples. "No hidden charges".</div>
+          <div class="card-foot">
+            <div class="card-url-global">/hiring</div>
+            <div class="card-url-india">/in/hiring</div>
+            <a class="card-cta" href="https://www.clicarity.com/hiring" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/hiring" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Save -->
+      <div class="page-card" style="--card-color:#92400E" data-global-url="https://www.clicarity.com/save" data-india-url="https://www.clicarity.com/in/save">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#FEF3C7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="card-title">Cut Costs, Keep Your Team</div>
+          </div>
+          <div class="card-desc global-desc">For CFOs under margin pressure. Cut 15–25% of operating costs by eliminating waste — without touching headcount or capacity.</div>
+          <div class="card-desc india-desc">India version. ₹ cost breakdown. Tally FAQ. Indian business context and "no hidden charges" signal.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/save</div>
+            <div class="card-url-india">/in/save</div>
+            <a class="card-cta" href="https://www.clicarity.com/save" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/save" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faster -->
+      <div class="page-card" style="--card-color:#0E7490" data-global-url="https://www.clicarity.com/faster" data-india-url="https://www.clicarity.com/in/faster">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#ECFEFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="card-title">Get Paid Faster</div>
+          </div>
+          <div class="card-desc global-desc">Shorten the gap between job complete and payment received. Fix the billing cycle on your side — not by chasing clients harder.</div>
+          <div class="card-desc india-desc">India version. WhatsApp handoff delays as cycle killers. "Job ka status kya hai?" framing. INR billing examples.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/faster</div>
+            <div class="card-url-india">/in/faster</div>
+            <a class="card-cta" href="https://www.clicarity.com/faster" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/faster" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROI -->
+      <div class="page-card" style="--card-color:#186EAC" data-global-url="https://www.clicarity.com/roi" data-india-url="https://www.clicarity.com/in/roi">
+        <div class="toggle-bar">
+          <button class="toggle-btn active-global" onclick="switchMode(this,'global')">Global</button>
+          <button class="toggle-btn" onclick="switchMode(this,'india')">🇮🇳 India</button>
+          <span class="card-badge badge-live">Live</span>
+        </div>
+        <div class="card-body">
+          <div class="card-icon-row">
+            <div class="card-icon" style="background:#E8F2F9"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#186EAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+            <div class="card-title">Prove ROI Before Committing</div>
+          </div>
+          <div class="card-desc global-desc">Baseline set on day one. ROI measured on day 30. Your data — not our projections. For CFOs and procurement teams.</div>
+          <div class="card-desc india-desc">India version. ₹80,000/month from status call reduction. "Rupees not projections". CFO-shareable day-30 report.</div>
+          <div class="card-foot">
+            <div class="card-url-global">/roi</div>
+            <div class="card-url-india">/in/roi</div>
+            <a class="card-cta" href="https://www.clicarity.com/roi" target="_blank">Visit →</a>
+            <a class="card-cta-india" href="https://www.clicarity.com/in/roi" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end pain points cat -->
+
+
+  <!-- ─── CAMPAIGNS ─── -->
+  <div class="cat">
+    <div class="cat-header">
+      <div class="cat-label">Campaign & Awareness</div>
+      <div class="cat-line"></div>
+      <div class="cat-count">2 pages · Live</div>
+    </div>
+    <div class="camp-grid">
+      <div class="camp-card">
+        <div class="camp-icon" style="background:#FEF3C7">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div>
+          <h3>Profit is Hidden in Your Processes</h3>
+          <p>Ad landing page for paid campaigns. For business owners who sense margin is leaking but can't locate it.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:0.7rem;font-weight:600;color:var(--muted);font-family:monospace;background:var(--bg);padding:3px 9px;border-radius:5px;">/profit</span>
+            <a href="https://www.clicarity.com/profit" target="_blank" style="font-size:0.78rem;font-weight:600;color:var(--accent);text-decoration:none;">Visit →</a>
+          </div>
+        </div>
+      </div>
+      <div class="camp-card">
+        <div class="camp-icon" style="background:#E8F2F9">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#186EAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <h3>Stop Chasing Job Updates</h3>
+          <p>Awareness page. For business owners who recognise the daily pain of status calls and WhatsApp chasing.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:0.7rem;font-weight:600;color:var(--muted);font-family:monospace;background:var(--bg);padding:3px 9px;border-radius:5px;">/chase</span>
+            <a href="https://www.clicarity.com/Chase.html" target="_blank" style="font-size:0.78rem;font-weight:600;color:var(--accent);text-decoration:none;">Visit →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Industry Pages Hub -->
+  <div style="padding:0 5% 72px;max-width:1100px;margin:0 auto">
+    <div style="padding-top:48px;border-top:1px solid var(--border)">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">Industry Pages</div>
+      <p style="font-size:0.88rem;color:#6B6860;margin-bottom:32px">Each page shows the full workflow for that industry — every stage, every bottleneck, and where Clicarity fits. Browse by category below.</p>
+      
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Print & Packaging</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/printing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🖨️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Printing</div><div style="font-size:0.75rem;color:#6B6860">/printing</div></a><a href="/packaging" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">📦</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Packaging</div><div style="font-size:0.75rem;color:#6B6860">/packaging</div></a><a href="/rigid-boxes" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🎁</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Rigid Boxes</div><div style="font-size:0.75rem;color:#6B6860">/rigid-boxes</div></a><a href="/wide-format-printing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🖼️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Wide Format & Signage</div><div style="font-size:0.75rem;color:#6B6860">/wide-format-printing</div></a><a href="/label-printing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏷️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Label Printing</div><div style="font-size:0.75rem;color:#6B6860">/label-printing</div></a><a href="/corrugation" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">📫</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Corrugation Plants</div><div style="font-size:0.75rem;color:#6B6860">/corrugation</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Textile & Apparel</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/textile" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🧵</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Textile</div><div style="font-size:0.75rem;color:#6B6860">/textile</div></a><a href="/garments" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">👗</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Garments</div><div style="font-size:0.75rem;color:#6B6860">/garments</div></a><a href="/footwear" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">👟</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Footwear</div><div style="font-size:0.75rem;color:#6B6860">/footwear</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Metals & Engineering</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/engineering" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">⚙️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Engineering</div><div style="font-size:0.75rem;color:#6B6860">/engineering</div></a><a href="/sheet-metal" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔧</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Sheet Metal</div><div style="font-size:0.75rem;color:#6B6860">/sheet-metal</div></a><a href="/automotive-components" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🚗</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Automotive Components</div><div style="font-size:0.75rem;color:#6B6860">/automotive-components</div></a><a href="/cnc-machining" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔩</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">CNC Machining</div><div style="font-size:0.75rem;color:#6B6860">/cnc-machining</div></a><a href="/steel-processing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏗️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Steel Processing</div><div style="font-size:0.75rem;color:#6B6860">/steel-processing</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Fabrication & Assembly</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/electrical-panels" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">⚡</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Electrical Panels</div><div style="font-size:0.75rem;color:#6B6860">/electrical-panels</div></a><a href="/aluminium-glass" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🪟</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Aluminium & Glass</div><div style="font-size:0.75rem;color:#6B6860">/aluminium-glass</div></a><a href="/kitchen-manufacturing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🍳</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Kitchen Manufacturing</div><div style="font-size:0.75rem;color:#6B6860">/kitchen-manufacturing</div></a><a href="/rubber-products" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔴</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Rubber Products</div><div style="font-size:0.75rem;color:#6B6860">/rubber-products</div></a><a href="/hvac-manufacturing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">❄️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">HVAC Manufacturing</div><div style="font-size:0.75rem;color:#6B6860">/hvac-manufacturing</div></a><a href="/solar-panel-assembly" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔆</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Solar Panel Assembly</div><div style="font-size:0.75rem;color:#6B6860">/solar-panel-assembly</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Plastics, Chemicals & Materials</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/plastics" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏭</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Plastics & Injection Moulding</div><div style="font-size:0.75rem;color:#6B6860">/plastics</div></a><a href="/chemicals-paints" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🧪</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Chemicals & Paints</div><div style="font-size:0.75rem;color:#6B6860">/chemicals-paints</div></a><a href="/pipe-manufacturing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔧</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Pipe Manufacturing</div><div style="font-size:0.75rem;color:#6B6860">/pipe-manufacturing</div></a><a href="/wire-cable" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔌</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Wire & Cable</div><div style="font-size:0.75rem;color:#6B6860">/wire-cable</div></a><a href="/plywood" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🪵</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Plywood</div><div style="font-size:0.75rem;color:#6B6860">/plywood</div></a><a href="/paper-mills" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">📄</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Paper Mills</div><div style="font-size:0.75rem;color:#6B6860">/paper-mills</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Food, Pharma & Consumer</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/food-processing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🍱</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Food Processing</div><div style="font-size:0.75rem;color:#6B6860">/food-processing</div></a><a href="/pharma-packaging" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">💊</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Pharma Packaging</div><div style="font-size:0.75rem;color:#6B6860">/pharma-packaging</div></a><a href="/dairy-plants" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🥛</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Dairy Plants</div><div style="font-size:0.75rem;color:#6B6860">/dairy-plants</div></a><a href="/ayurveda" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🌿</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Ayurveda & Nutraceuticals</div><div style="font-size:0.75rem;color:#6B6860">/ayurveda</div></a><a href="/candles" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🕯️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Candle & Home Fragrance</div><div style="font-size:0.75rem;color:#6B6860">/candles</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Ceramics, Building Materials & Energy</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/ceramic-tiles" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔲</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Ceramic & Tiles</div><div style="font-size:0.75rem;color:#6B6860">/ceramic-tiles</div></a><a href="/construction-materials" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏗️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Construction Materials</div><div style="font-size:0.75rem;color:#6B6860">/construction-materials</div></a><a href="/solar-installation" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">☀️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Solar Installation</div><div style="font-size:0.75rem;color:#6B6860">/solar-installation</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Electronics & Technology</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/electronics" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔌</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Electronics Assembly</div><div style="font-size:0.75rem;color:#6B6860">/electronics</div></a><a href="/solar-panel-assembly" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🔆</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Solar Panel Assembly</div><div style="font-size:0.75rem;color:#6B6860">/solar-panel-assembly</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Furniture & Interiors</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/furniture" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🪑</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Furniture</div><div style="font-size:0.75rem;color:#6B6860">/furniture</div></a><a href="/interior-design" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🛋️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Interior Design & Fit-Out</div><div style="font-size:0.75rem;color:#6B6860">/interior-design</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Jewellery & Luxury</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/jewellery" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">💍</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Jewellery</div><div style="font-size:0.75rem;color:#6B6860">/jewellery</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Construction & Real Estate</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/construction" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏗️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Construction</div><div style="font-size:0.75rem;color:#6B6860">/construction</div></a><a href="/real-estate" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏢</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Real Estate Development</div><div style="font-size:0.75rem;color:#6B6860">/real-estate</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Industrial & EPC Projects</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/industrial-projects" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏭</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Industrial Projects</div><div style="font-size:0.75rem;color:#6B6860">/industrial-projects</div></a><a href="/shipbuilding" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">⚓</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Shipbuilding</div><div style="font-size:0.75rem;color:#6B6860">/shipbuilding</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Precision & Regulated Manufacturing</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/aerospace-components" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">✈️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Aerospace Components</div><div style="font-size:0.75rem;color:#6B6860">/aerospace-components</div></a><a href="/medical-devices" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏥</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Medical Devices</div><div style="font-size:0.75rem;color:#6B6860">/medical-devices</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Design & Revision</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/design-revision" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">📐</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Design Revision</div><div style="font-size:0.75rem;color:#6B6860">/design-revision</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Trade & Commerce</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/export-trading" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🚢</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Export & Trading</div><div style="font-size:0.75rem;color:#6B6860">/export-trading</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Events & Services</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/events-production" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🎬</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Events & Production</div><div style="font-size:0.75rem;color:#6B6860">/events-production</div></a><a href="/recruitment" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">👥</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Recruitment</div><div style="font-size:0.75rem;color:#6B6860">/recruitment</div></a>
+      </div>
+    </div>
+    <div style="margin-bottom:36px">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)">Professional Services</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <a href="/legal-services" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">⚖️</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Legal Services</div><div style="font-size:0.75rem;color:#6B6860">/legal-services</div></a><a href="/healthcare" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🏥</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Healthcare & Clinics</div><div style="font-size:0.75rem;color:#6B6860">/healthcare</div></a><a href="/education-training" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:block;transition:all 0.2s" onmouseover="this.style.borderColor='#186EAC'" onmouseout="this.style.borderColor='#E4E0D8'"><div style="font-size:1rem;margin-bottom:6px">🎓</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;color:#0E0D0B;margin-bottom:4px">Education & Training</div><div style="font-size:0.75rem;color:#6B6860">/education-training</div></a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" width="168" height="56" loading="lazy">
+    <div class="footer-links">
+      <a href="https://www.clicarity.com">Home</a>
+      <a href="https://www.clicarity.com/codex">Codex</a>
+      <a href="/manufacturers/">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy">Privacy Policy</a>
+      <a href="https://www.clicarity.com/terms">Terms</a>
+    </div>
+    <div class="footer-copy">© 2026 Clicarity. Mumbai, India.</div>
+  </div>
+</footer>
+
+<script>
+function switchMode(btn, mode) {
+  const card = btn.closest('.page-card');
+  if (mode === 'india') {
+    card.classList.add('india-mode');
+  } else {
+    card.classList.remove('india-mode');
+  }
+}
+</script>
+
+</body>
+</html>

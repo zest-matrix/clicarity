@@ -1,0 +1,137 @@
+# Clicarity — llms.txt
+# This file helps LLMs understand what Clicarity is and what pages are available.
+# Learn more about llms.txt: https://llmstxt.org
+
+# WHAT IS CLICARITY?
+Clicarity is a live job process tracking system built for businesses that run jobs, orders, and production daily. It solves two core operational problems: JSR (Job Status Report — not knowing where a job is) and TAT (Turnaround Time — jobs taking too long). Businesses go live in 24 hours using just two screens. No ERP replacement. No training. No per-user fees.
+
+# WHO IS IT FOR?
+Any business handling 20–500 jobs per month where teams use WhatsApp and manual calls to track job status. Industries: manufacturing, trading, distribution, services, contracting, logistics, garment production, printing, engineering.
+
+# WHAT PROBLEMS DOES IT SOLVE?
+- Cash leaking through invisible delays, rework, and wastage
+- Not knowing where any job is without making a call
+- Jobs running late because delays form silently
+- Management time wasted chasing status updates
+- Slow billing and collections due to lack of process visibility
+- Decisions made without real operational data
+
+# PAGES ON THIS SITE
+
+## Home
+URL: https://www.clicarity.com/
+Description: Main product page. Explains Clicarity, its two-screen approach, features, pricing, testimonials, and how to get started.
+
+## Profit — Operational Profit Recovery
+URL: https://www.clicarity.com/profit
+Description: Landing page focused on how businesses recover hidden profit through process visibility. Covers wastage, delays, and rework as margin killers.
+
+## Cash — Protect Your Cash Flow (Global)
+URL: https://www.clicarity.com/cash
+Description: Landing page for business owners and CFOs concerned about cash leakage. Explains six ways operations drain cash invisibly and how Clicarity stops each one. USD pricing. Targets global businesses trying to protect cash flow in uncertain economic conditions.
+
+## Cash India — Apna Cash Flow Protect Karein (India)
+URL: https://www.clicarity.com/in/cash
+Description: Indian version of the cash flow protection landing page. INR pricing scaled to Indian SMB reality. Content in Hinglish (Hindi + English mix) for Indian business owners. Covers same six cash leak scenarios with Indian business context and rupee amounts. Includes hreflang linking to global version.
+
+
+## Risk — Zero Risk. Proven ROI. (Global)
+URL: https://www.clicarity.com/risk
+Description: Landing page addressing three core fears businesses have before buying software: no ROI, economic uncertainty, and poor past adoption. Built around a 30-day results guarantee. USD pricing. Targets global buyers who are cautious and need proof before committing.
+
+## Risk India — Zero Risk. Proven ROI. (India)
+URL: https://www.clicarity.com/in/risk
+Description: Indian version of the risk/ROI landing page. INR context. Addresses same three fears with Indian business framing. 30-day results guarantee. Targets Indian SMBs who need fast, measurable payback before committing to software spend.
+
+
+## Hiring — Do More Without Hiring (Global)
+URL: https://www.clicarity.com/hiring
+Description: Landing page for founders and COOs who are considering hiring but suspect the real issue is coordination overhead. Reframes hiring as a visibility problem first. Shows how existing teams can handle 30-40% more jobs with live operational visibility. USD pricing.
+
+## Hiring India — Do More Without Hiring (India)
+URL: https://www.clicarity.com/in/hiring
+Description: Indian version of the hiring avoidance page. WhatsApp coordination framing. Floor staff adoption addressed directly. "Kya status hai?" language. INR pricing. No hidden charges trust signal. Tally/ERP FAQ. Targets Indian founders and ops heads considering headcount expansion.
+
+
+## Save — Cut Operating Costs (Global)
+URL: https://www.clicarity.com/save
+Description: Landing page targeting CFOs and business owners under pressure to cut costs. Reframes cost-cutting away from headcount toward operational waste elimination. Shows 15-25% operating cost reduction without redundancies. USD pricing. Specific metrics: rework rate, idle time, wastage percentage, coordination overhead.
+
+## Save India — Cut Operating Costs (India)
+URL: https://www.clicarity.com/in/save
+Description: Indian version of the cost reduction page. INR pricing. WhatsApp coordination framed as hidden cost centre. Tally/ERP FAQ. "No hidden charges" trust signal. Targets Indian business owners and CFOs facing margin pressure who want to cut costs the right way.
+
+
+## Faster — Get Paid Faster. Fulfill Faster. (Global)
+URL: https://www.clicarity.com/faster
+Description: Landing page targeting businesses with slow billing, fulfillment, and collections cycles. Reframes collections as an operational problem, not a client problem. Shows how live job visibility shortens every cycle from order to payment by 25-40%. USD pricing. Unique hero visual: order-to-payment timeline diagram.
+
+## Faster India — Get Paid Faster. Fulfill Faster. (India)
+URL: https://www.clicarity.com/in/faster
+Description: Indian version of the cycle speed page. WhatsApp handoff delays framed as cycle killers. Tally/ERP FAQ. Floor staff adoption question. "No hidden charges" trust signal. INR pricing. Addresses Indian payment culture context — collections improve when your side of the cycle is faster.
+
+
+## ROI — Prove the ROI (Global)
+URL: https://www.clicarity.com/roi
+Description: Trust-closer landing page for buyers who need hard numbers before committing. No fear hook — assumes interest is already established. Hero visual shows a 30-day ROI baseline card with real before/after metrics. Six measurable metrics with dollar values. Methodology explained in full. CFO-shareable day-30 report. USD pricing.
+
+## ROI India — Prove the ROI (India)
+URL: https://www.clicarity.com/in/roi
+Description: Indian version of the ROI proof page. INR examples throughout (₹80,000/month from status call reduction alone). Addresses the mismatch between global ROI benchmarks and Indian operations. Tally/ERP FAQ. "No hidden charges" trust signal. Designed for Indian buyers who need to justify spend in rupees to a CFO or board.
+
+
+## Manufacturing — Manufacturing Process Tracking (Global)
+URL: https://www.clicarity.com/manufacturing
+Description: Industry-specific landing page for manufacturing businesses. Addresses production floor bottlenecks, stage-wise tracking, shift handover gaps, QC holds, vendor delays, and rework loops. Hero shows a live production stage tracker (Raw Material → Machining → QC stuck 4hrs → Packing → Dispatch). No ERP/CRM comparison. The competitor is invisibility. Industries: printing, packaging, garments, engineering, sheet metal, plastic moulding, food processing, electronics assembly. USD pricing.
+
+## Manufacturing India — Manufacturing Process Tracking (India)
+URL: https://www.clicarity.com/in/manufacturing
+Description: Indian version of the manufacturing landing page. WhatsApp coordination framed as the current (broken) system. Tally coexistence FAQ. Real Indian client case studies: Vivek Tibrewala (GP Offset, Mumbai) and Sanjit Mithani (Four Speed Manufacture, Mumbai). "Job ka status kya hai?" language. INR pricing. No hidden charges.
+
+
+## Manufacturing Wastage — Material Loss Visibility (Global)
+URL: https://www.clicarity.com/manufacturing/wastage
+Description: For manufacturers losing material they can only see at month-end. Hero shows stage-wise quantity table with Pasting losing 110 units in red. Three sections: why it happens, what changes, one proof (Uday Vora, HC Boxes). Short sentences, no jargon.
+
+## Manufacturing Wastage India
+URL: https://www.clicarity.com/in/manufacturing/wastage
+Description: India version. Tally FAQ. No hidden charges. INR context.
+
+## Manufacturing Delays (Global)
+URL: https://www.clicarity.com/manufacturing/delays
+Description: For manufacturers whose jobs run late and can never pinpoint where the delay started. Hero shows live job board with QC stuck 4h 22m. Vivek Tibrewala testimonial.
+
+## Manufacturing Delays India
+URL: https://www.clicarity.com/in/manufacturing/delays
+Description: India version. Tally FAQ. No hidden charges.
+
+## Manufacturing Status — Live Job Visibility (Global)
+URL: https://www.clicarity.com/manufacturing/status
+Description: For manufacturers who spend mornings chasing status by phone. Hero shows 5-job live board, zero calls needed. Vivek morning visibility quote.
+
+## Manufacturing Status India
+URL: https://www.clicarity.com/in/manufacturing/status
+Description: India version. WhatsApp framed as broken system. Tally FAQ. No hidden charges.
+
+## Pages Hub
+URL: https://www.clicarity.com/pages
+Description: Master index of all Clicarity landing pages. Cards for every page with Global/India toggle. Categories: Manufacturing, General Pain Points, Campaigns.
+
+
+## Case Study — GP Offset (Commercial Printing)
+URL: https://www.clicarity.com/case-study/gp-offset
+Description: Full case study of GP Offset, Mumbai commercial printer. Owner Vivek Tibrewala eliminated 40+ daily status calls and gained full production visibility. Covers the challenge, before/after, solution steps, results. As featured in PrintWeek India April 2026.
+
+## Case Study — HC Boxes / Hrimkar Creations (Rigid Box Manufacturing)
+URL: https://www.clicarity.com/case-study/hrimkar-creations
+Description: Full case study of Hrimkar Creations (HC Boxes), Mumbai rigid box manufacturer. Owner Uday Vora solved multi-component wastage tracking — 5-6 components per job tracked independently under one Job ID. Real-time leakage detection, automatic reconciliation, zero retraining. As featured in PrintWeek India April 2026.
+
+## Homepage — Pricing Section (Updated 2026-05-01)
+URL: https://www.clicarity.com/#pricing
+Description: Pricing section updated with prices shown (Single ₹30,000/yr, Multi ₹55,000/yr). Both cards show unlimited users badge, reframe lines (₹82/day and ₹150/day). Comparison table below shows capability-led comparison vs Zoho/Odoo/all-in-one platforms/WhatsApp+Paper. Capabilities compared: live bottleneck alerts, stage-wise wastage tracking, batch/lot-wise tracking, split component tracking, floor worker simplicity, go-live time (5 days), cost for 20 users, data ownership. No ERP or CRM language anywhere on homepage.
+
+# CONTACT
+Website: https://www.clicarity.com
+WhatsApp: https://wa.me/919867800451
+Demo booking: https://calendly.com/clicarity/demo
+Location: Mumbai, Maharashtra, India

@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /codex/
+Allow: /codex/glossary
+Disallow: /admin/
+Disallow: /staging/
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://clicarity.com/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1

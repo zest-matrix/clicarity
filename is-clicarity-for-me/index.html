@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Clicarity Right for Me? — 5-Question Quiz for I… | Clicarity</title>
+<meta name="description" content="Answer 5 questions about your factory. Get a personalised answer on whether Clicarity fits — and exactly how it would work for your specific situation.">
+<meta property="og:title" content="Is Clicarity Right for Me? — 5-Question Quiz">
+<meta property="og:description" content="5 questions. Personalised answer. No sales pressure — just honest guidance for Indian manufacturers.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<link rel="canonical" href="https://www.clicarity.com/is-clicarity-for-me/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F0;--surface:#fff;--text:#0E0D0B;--muted:#6B6860;--border:#E4E0D8;--accent:#186EAC;--accent-light:#E8F2F9;--dark:#0E0D0B;--green:#0A7C52;--green-light:#E6F5EE;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--radius:14px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo img{height:72px;width:auto;display:block}
+.btn-wa{background:#25D366;color:white;padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+.btn{padding:12px 28px;border-radius:100px;font-family:var(--font-body);font-weight:600;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 4px 14px rgba(24,110,172,0.2)}
+.btn-primary:hover{background:#1580C8;transform:translateY(-1px)}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.btn-ghost{background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7)}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.4);color:white}
+
+.hero{background:var(--dark);padding:60px 5% 48px;text-align:center}
+.hero-inner{max-width:640px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:white;line-height:1.15;margin-bottom:12px;letter-spacing:-0.02em}
+.hero-sub{font-size:0.97rem;color:rgba(255,255,255,0.45);line-height:1.75}
+
+/* QUIZ CONTAINER */
+.quiz-wrap{max-width:680px;margin:0 auto;padding:56px 5%}
+
+/* PROGRESS */
+.progress-bar{height:4px;background:var(--border);border-radius:100px;margin-bottom:40px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:100px;transition:width 0.4s ease}
+.progress-label{font-size:0.78rem;color:var(--muted);margin-bottom:8px;display:flex;justify-content:space-between}
+
+/* QUESTION CARD */
+.q-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:36px;display:none;animation:fadeIn 0.3s ease}
+.q-card.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.q-number{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+.q-text{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:8px}
+.q-sub{font-size:0.85rem;color:var(--muted);margin-bottom:28px;line-height:1.6}
+
+/* OPTIONS */
+.options{display:flex;flex-direction:column;gap:10px}
+.option{padding:14px 18px;border:1.5px solid var(--border);border-radius:var(--radius);cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:12px;font-size:0.92rem;font-weight:500;color:var(--text);background:var(--bg)}
+.option:hover{border-color:var(--accent);background:var(--accent-light);color:var(--accent)}
+.option.selected{border-color:var(--accent);background:var(--accent);color:white}
+.option-dot{width:18px;height:18px;border-radius:50%;border:2px solid currentColor;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.option.selected .option-dot::after{content:'';width:8px;height:8px;border-radius:50%;background:white;display:block}
+
+/* RESULT */
+.result-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;display:none;text-align:center}
+.result-card.active{display:block;animation:fadeIn 0.4s ease}
+.result-icon{font-size:3rem;margin-bottom:16px}
+.result-headline{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:12px;letter-spacing:-0.02em}
+.result-body{font-size:0.95rem;color:var(--text);line-height:1.75;margin-bottom:28px;text-align:left}
+.result-points{background:var(--bg);border-radius:var(--radius);padding:20px;margin-bottom:24px;text-align:left}
+.result-point{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:0.88rem}
+.result-point:last-child{margin-bottom:0}
+.result-point-icon{flex-shrink:0;margin-top:2px}
+.result-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.restart-link{font-size:0.82rem;color:var(--muted);cursor:pointer;text-decoration:underline}
+.restart-link:hover{color:var(--text)}
+.result-card.green .result-headline{color:var(--green)}
+.result-card.blue .result-headline{color:var(--accent)}
+.result-card.amber .result-headline{color:#92400E}
+
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(247,245,240,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#E4E0D8)}
+  .logo img{height:4.5rem;width:auto;display:block}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--muted,#6B6860);font-size:0.88rem;font-weight:500;transition:color 0.2s}
+  .nav-links a:hover{color:var(--text,#0E0D0B)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .btn{padding:10px 22px;border-radius:100px;font-weight:600;font-size:0.88rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;border:none;cursor:pointer}
+  .btn-wa{background:#25D366;color:white;display:inline-flex;align-items:center;gap:6px}
+  .btn-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-primary{background:#186EAC;color:white}
+  .btn-primary:hover{background:#1580C8}
+  @media(max-width:700px){.nav-links{display:none}}
+
+</style>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Is Clicarity Right for Me? — 5-Question Quiz for Indian Manufacturers">
+<meta name="twitter:description" content="Answer 5 questions about your factory. Get a personalised answer on whether Clicarity fits — and exactly how it would work for your specific situation.">
+<meta name="twitter:image" content="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Clicarity","url":"https://www.clicarity.com","logo":{"@type":"ImageObject","url":"https://clicarity.s3.eu-north-1.amazonaws.com/logo.png"},"description":"India's simplest production tracking system for manufacturers and MSMEs.","sameAs":["https://www.printweek.in/news/a-simple-system-that-simplified-the-factory-chaos-61834"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.clicarity.com"><img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:4.5rem;width:auto;display:block;"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.clicarity.com/#how-it-works">How It Works</a></li>
+    <li><a href="https://www.clicarity.com/pages">Industries</a></li>
+    <li><a href="https://www.clicarity.com/audit-ready">Audit Ready</a></li>
+    <li><a href="https://www.clicarity.com/#pricing">Pricing</a></li>
+    <li><a href="https://www.clicarity.com/#faq">Resources</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank" rel="noopener">Book Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">5 questions · 2 minutes · Honest answer</div>
+    <h1>Is Clicarity right for your factory?</h1>
+    <p class="hero-sub">Answer 5 questions about how your factory works today. We'll tell you honestly whether Clicarity fits — and exactly how it would work for your situation.</p>
+  </div>
+</div>
+
+<div class="quiz-wrap">
+  <div class="progress-label">
+    <span id="progressText">Question 1 of 5</span>
+    <span id="progressPct">0%</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+  <!-- Q1 -->
+  <div class="q-card active" id="q1">
+    <div class="q-number">Question 1 of 5</div>
+    <div class="q-text">How do you currently find out where a job is on the shop floor?</div>
+    <div class="q-sub">Think about what you actually do when a client asks for a status update.</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(1,'a')"><div class="option-dot"></div>I call or WhatsApp the supervisor and wait for a reply</div>
+      <div class="option" onclick="selectOption(1,'b')"><div class="option-dot"></div>I walk to the floor and check myself</div>
+      <div class="option" onclick="selectOption(1,'c')"><div class="option-dot"></div>I check a spreadsheet or paper record — usually updated end of day</div>
+      <div class="option" onclick="selectOption(1,'d')"><div class="option-dot"></div>I have a system that shows me live — but it's not quite right</div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-card" id="q2">
+    <div class="q-number">Question 2 of 5</div>
+    <div class="q-text">How many active jobs does your factory typically run at the same time?</div>
+    <div class="q-sub">Count all jobs currently on the floor, at any stage.</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(2,'a')"><div class="option-dot"></div>1–5 jobs at a time</div>
+      <div class="option" onclick="selectOption(2,'b')"><div class="option-dot"></div>5–15 jobs at a time</div>
+      <div class="option" onclick="selectOption(2,'c')"><div class="option-dot"></div>15–40 jobs at a time</div>
+      <div class="option" onclick="selectOption(2,'d')"><div class="option-dot"></div>40+ jobs at a time</div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q-card" id="q3">
+    <div class="q-number">Question 3 of 5</div>
+    <div class="q-text">What's the biggest daily pain in your production process?</div>
+    <div class="q-sub">Pick the one that feels most expensive or exhausting.</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(3,'a')"><div class="option-dot"></div>Not knowing where jobs are without calling someone</div>
+      <div class="option" onclick="selectOption(3,'b')"><div class="option-dot"></div>Vendors delivering late or going silent</div>
+      <div class="option" onclick="selectOption(3,'c')"><div class="option-dot"></div>Material wastage I can't track or explain</div>
+      <div class="option" onclick="selectOption(3,'d')"><div class="option-dot"></div>Rework and quality problems at the same stage, repeatedly</div>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="q-card" id="q4">
+    <div class="q-number">Question 4 of 5</div>
+    <div class="q-text">How tech-savvy is your average shop floor operator?</div>
+    <div class="q-sub">Be honest — this helps us tell you if adoption will be easy or hard.</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(4,'a')"><div class="option-dot"></div>Very comfortable — uses smartphones, apps, WhatsApp daily</div>
+      <div class="option" onclick="selectOption(4,'b')"><div class="option-dot"></div>Somewhat comfortable — uses WhatsApp but hesitant about new apps</div>
+      <div class="option" onclick="selectOption(4,'c')"><div class="option-dot"></div>Not very comfortable — prefers verbal communication or paper</div>
+      <div class="option" onclick="selectOption(4,'d')"><div class="option-dot"></div>Varies a lot — some are fine, some are resistant</div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q-card" id="q5">
+    <div class="q-number">Question 5 of 5</div>
+    <div class="q-text">What has stopped you from fixing this with software before?</div>
+    <div class="q-sub">Pick the most honest answer.</div>
+    <div class="options">
+      <div class="option" onclick="selectOption(5,'a')"><div class="option-dot"></div>Previous software was too complex or expensive to implement</div>
+      <div class="option" onclick="selectOption(5,'b')"><div class="option-dot"></div>My team resisted the change and it didn't stick</div>
+      <div class="option" onclick="selectOption(5,'c')"><div class="option-dot"></div>Haven't found something simple enough for my operators</div>
+      <div class="option" onclick="selectOption(5,'d')"><div class="option-dot"></div>Actually haven't tried — just never got around to it</div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="result-card green" id="result-strong">
+    <div class="result-icon">✅</div>
+    <div class="result-headline">Clicarity is built for your factory</div>
+    <div class="result-body">Based on your answers, your factory has exactly the problems Clicarity solves — and the conditions for it to work well. You're tracking jobs manually, you have enough volume to feel the pain, and your team is ready for a simple digital system.</div>
+    <div class="result-points">
+      <div class="result-point"><span class="result-point-icon">🎯</span><span>Your main pain — job status visibility — is Clicarity's core feature</span></div>
+      <div class="result-point"><span class="result-point-icon">📱</span><span>Your operators' WhatsApp comfort means adoption will be fast</span></div>
+      <div class="result-point"><span class="result-point-icon">⚡</span><span>Factories like yours typically go live in 3–5 days</span></div>
+    </div>
+    <div class="result-ctas">
+      <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo</a>
+      <a class="btn btn-outline" href="https://wa.me/919867800451" target="_blank">WhatsApp Us</a>
+    </div>
+    <span class="restart-link" onclick="restartQuiz()">Retake the quiz</span>
+  </div>
+
+  <div class="result-card blue" id="result-good">
+    <div class="result-icon">👍</div>
+    <div class="result-headline">Clicarity will work — with the right setup</div>
+    <div class="result-body">Your factory is a good fit for Clicarity, with one thing to keep in mind. You mentioned your team is hesitant about new software — which is very common. The good news is Clicarity is the simplest system in this space. We've seen resistant teams become advocates within two weeks once they see it working.</div>
+    <div class="result-points">
+      <div class="result-point"><span class="result-point-icon">🤝</span><span>We stay with you through the first two weeks — WhatsApp support throughout</span></div>
+      <div class="result-point"><span class="result-point-icon">🔧</span><span>System mirrors your existing process — minimal learning curve</span></div>
+      <div class="result-point"><span class="result-point-icon">📊</span><span>Results visible within the first week — builds team buy-in organically</span></div>
+    </div>
+    <div class="result-ctas">
+      <a class="btn btn-primary" href="https://calendly.com/clicarity/demo" target="_blank">Book Free Demo</a>
+      <a class="btn btn-outline" href="/honest-answers/">Read Honest Answers First</a>
+    </div>
+    <span class="restart-link" onclick="restartQuiz()">Retake the quiz</span>
+  </div>
+
+  <div class="result-card amber" id="result-talk">
+    <div class="result-icon">💬</div>
+    <div class="result-headline">Let's talk before you decide</div>
+    <div class="result-body">Your situation has some nuance — either your volume is very low right now, or you've had a difficult experience with software before. Neither disqualifies you, but we'd rather talk first than have you sign up and be disappointed.</div>
+    <div class="result-points">
+      <div class="result-point"><span class="result-point-icon">📞</span><span>A 15-minute WhatsApp call with Puneet will tell you more than any quiz</span></div>
+      <div class="result-point"><span class="result-point-icon">🔍</span><span>We'll look at your specific factory setup and tell you honestly what to expect</span></div>
+      <div class="result-point"><span class="result-point-icon">🚫</span><span>If it's not a good fit, we'll tell you — no pressure either way</span></div>
+    </div>
+    <div class="result-ctas">
+      <a class="btn btn-primary" href="https://wa.me/919867800451" target="_blank">WhatsApp Us First</a>
+      <a class="btn btn-outline" href="/try/">Try the Demo Sandbox</a>
+    </div>
+    <span class="restart-link" onclick="restartQuiz()">Retake the quiz</span>
+  </div>
+
+</div>
+
+<footer style="background:var(--dark);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.8rem;color:rgba(255,255,255,0.25)">
+  <img src="https://clicarity.s3.eu-north-1.amazonaws.com/logo.png" alt="Clicarity" style="height:3rem;width:auto;filter:brightness(0) invert(1);opacity:0.5;" loading="lazy">
+  <div style="display:flex;gap:20px">
+    <a href="https://www.clicarity.com" style="color:rgba(255,255,255,0.25);text-decoration:none">Home</a>
+    <a href="/manufacturers/" style="color:rgba(255,255,255,0.25);text-decoration:none">Manufacturer Hub</a>
+    <a href="https://www.clicarity.com/privacy-policy" style="color:rgba(255,255,255,0.25);text-decoration:none">Privacy</a>
+  </div>
+  <div>© 2026 Clicarity</div>
+</footer>
+
+<script>
+const answers = {};
+
+function selectOption(qNum, val) {
+  answers[qNum] = val;
+  const card = document.getElementById('q' + qNum);
+  card.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  const opts = card.querySelectorAll('.option');
+  const map = {a:0,b:1,c:2,d:3};
+  opts[map[val]].classList.add('selected');
+  setTimeout(() => nextQuestion(qNum), 400);
+}
+
+function nextQuestion(current) {
+  const next = current + 1;
+  const pct = Math.round((current / 5) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+
+  if (next <= 5) {
+    document.getElementById('q' + current).classList.remove('active');
+    document.getElementById('q' + next).classList.add('active');
+    document.getElementById('progressText').textContent = 'Question ' + next + ' of 5';
+  } else {
+    // Show result
+    document.getElementById('progressFill').style.width = '100%';
+    document.getElementById('progressPct').textContent = '100%';
+    document.getElementById('progressText').textContent = 'Your result';
+    document.getElementById('q5').classList.remove('active');
+    showResult();
+  }
+}
+
+function showResult() {
+  // Scoring logic — never a dead end, always a forward path
+  let score = 0;
+  // Q1: any answer shows pain — all are valid
+  if (answers[1] === 'a' || answers[1] === 'b') score += 3; // highest pain
+  if (answers[1] === 'c') score += 2;
+  if (answers[1] === 'd') score += 2;
+  // Q2: volume
+  if (answers[2] === 'a') score += 0; // very low volume
+  if (answers[2] === 'b') score += 2;
+  if (answers[2] === 'c') score += 3;
+  if (answers[2] === 'd') score += 3;
+  // Q3: all pains Clicarity solves
+  score += 2;
+  // Q4: tech comfort
+  if (answers[4] === 'a') score += 3;
+  if (answers[4] === 'b') score += 2;
+  if (answers[4] === 'c') score += 1;
+  if (answers[4] === 'd') score += 2;
+  // Q5: previous experience
+  if (answers[5] === 'a') score += 1; // bad experience but can be addressed
+  if (answers[5] === 'b') score += 1; // team resistance — needs care
+  if (answers[5] === 'c') score += 2; // hasn't found simple enough — Clicarity is it
+  if (answers[5] === 'd') score += 3; // ready to try
+
+  let resultId;
+  if (score >= 11) resultId = 'result-strong';
+  else if (score >= 7) resultId = 'result-good';
+  else resultId = 'result-talk';
+
+  document.getElementById(resultId).classList.add('active');
+  document.getElementById(resultId).scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function restartQuiz() {
+  Object.keys(answers).forEach(k => delete answers[k]);
+  document.querySelectorAll('.q-card, .result-card').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  document.getElementById('q1').classList.add('active');
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('progressText').textContent = 'Question 1 of 5';
+  document.getElementById('progressPct').textContent = '0%';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</body>
+</html>
